@@ -4,7 +4,7 @@
     "name": "alcatel OT-810",
     "price": 29130,
     "image": [
-      "img/products-img/phones/alcatel-ot-810.jfif",
+      "img/products-img/phones/alcatel-ot-810.jpg",
       "img/products-img/phones/Alcatel OT-810-Light-Chrome.jpg",
       "img/products-img/phones/Alcatel OT-810-Mystery-Pink.webp",
       "img/products-img/phones/Alcatel OT-810-Victorian-Blush.jpg"
@@ -100,7 +100,7 @@
     "name": "Motorola v505",
     "price": 26500,
     "image": [
-      "img/products-img/phones/motorola-v505.jfif",
+      "img/products-img/phones/motorola-v505.jpg",
       "img/products-img/phones/motorola-v505-blue.jpg",
       "img/products-img/phones/motorola-v505-silver.jpg"
     ],
@@ -117,19 +117,19 @@
     },
     "stock": 200,
     "colors": ["Blue", "Silver"],
-    "Manufacturer": "Motorola"
+    "Manufacturer": "Motorola, Inc."
   },
   {
     "id": 6,
     "name": "Nokia 3650",
     "price": 13240,
     "image": [
-      "img/products-img/phones/Nokia-3650.jfif",
+      "img/products-img/phones/Nokia-3650.jpg",
       "img/products-img/phones/nokia-3650-blue.jpg",
       "img/products-img/phones/nokia-3650-gray.jpg",
       "img/products-img/phones/nokia-3650-green.jpg",
       "img/products-img/phones/nokia-3650-pink.jpg",
-      "img/products-img/phones/Nokia-3650-red.jfif",
+      "img/products-img/phones/Nokia-3650-red.jpg",
       "img/products-img/phones/nokia-3650-yellow.jpg"
     ],
     "description": "/",
@@ -146,7 +146,77 @@
     },
     "stock": 200,
     "colors": ["Blue", "Gray", "Green", "Pink", "Red", "Yellow"],
-    "Manufacturer": ""
+    "Manufacturer": "Nokia Corporation"
+  },
+  {
+    "id": 7,
+    "name": "Nokie N90",
+    "price": 26480,
+    "image": "img/products-img/phones/Nokia-N90.jpg",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM/UMTS",
+      "Operating System": "Symbian OS 8.1a , Series 60 UI",
+      "CPU": "220 MHz ARM926EJ-S",
+      "Memory": "RS-DV-MMC, 64 MB included",
+      "Display": "TFT, 256K colors, 2.1 \", 35 x 41 mm, 14.0 cm2 (~24.6% screen-to-body ratio), 352 x 416 pixels (~259 ppi density), Second external TFT, 65K colors display (128 x 128 pixels), 90 deg rotating screen, 5-way navigation key, Side joystick",
+      "Battery": "Removable Li-Ion 760 mAh battery (BL-5B)",
+      "Weight": "173 g",
+      "Graphics": "/",
+      "Keyboard": "/"
+    },
+    "stock": 200,
+    "colors": "Standard",
+    "Manufacturer": "Nokia Corporation"
+  },
+  {
+    "id": 8,
+    "name": "Samsung SGH-A300",
+    "price": 6620,
+    "image": "img/products-img/phones/Samsung-SGH-A300.jpg",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM",
+      "Operating System": "Proprietary Samsung embedded software",
+      "CPU": "",
+      "Memory": "100 entries, 5 contact groups, 10 dialed, 10 received, 10 missed calls",
+      "Display": "Grayscale graphic, 4 shades, 128 x 128 pixels, 1:1 ratio, Second external display 80 x 48 pixels, Four way navigation keys, Dynamic font size, Softkeys",
+      "Battery": "Removable Li-Ion 900 mAh battery",
+      "Weight": "77 g",
+      "Graphics": "",
+      "Keyboard": ""
+    },
+    "stock": 200,
+    "colors": "Standard",
+    "Manufacturer": "Samsung Group"
+  },
+  {
+    "id": 9,
+    "name": "Samsung SGH-E620",
+    "price": 5300,
+    "image": [
+      "img/products-img/phones/Samsung-SGH-E620.jpg",
+      "img/products-img/phones/Samsung-SGH-E620-silver.jpg",
+      "img/products-img/phones/Samsung-SGH-E620-black.jpg"
+    ],
+    "description": "Samsung's first GSM model to combine Bluetooth with speaker-independent voice control, and first with an anti-bacterial coating. Other key features include a megapixel camera, dual color displays, and class 10 GPRS.",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM",
+      "Operating System": "Proprietary Samsung embedded software",
+      "CPU": "",
+      "Memory": "No Card Slot, 1000 x 10 fields, Photo call, 20 dialed, 20 received, 20 missed calls, 16 MB for photos and MP3, 4MB for Java apps, 3MB for email",
+      "Display": "TFT, 256K colors, 176 x 220 pixels, Second external TFT display, 265K colors (96 x 96 pixels)",
+      "Battery": "Removable Li-Ion 800 mAh battery",
+      "Weight": "85 g",
+      "Graphics": "",
+      "Keyboard": ""
+    },
+    "stock": 200,
+    "colors": ["Black", "Silver"],
+    "Manufacturer": "Samsung Group"
   },
   {
     "id": -1,
