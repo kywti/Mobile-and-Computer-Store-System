@@ -219,9 +219,80 @@
     "Manufacturer": "Samsung Group"
   },
   {
-    "id": -1,
+    "id": 10,
+    "name": "Sanyo VI-2300",
+    "price": 25160,
+    "image": [
+      "img/products-img/phones/Sanyo-VI-2300.jpg",
+      "img/products-img/phones/Sanyo-VI-2300-black.jpg",
+      "img/products-img/phones/Sanyo-VI-2300-blue.jpg",
+      "img/products-img/phones/Sanyo-VI-2300-silver.jpg"
+    ],
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "",
+      "Operating System": "Proprietary (Brew)",
+      "CPU": "",
+      "Memory": "",
+      "Display": "128 x 128 pixels LCD (STN)",
+      "Battery": "1000 mAh, Li - Ion Removable",
+      "Weight": "102 g",
+      "Graphics": "",
+      "Keyboard": ""
+    },
+    "stock": 200,
+    "colors": ["Blue", "Black", "Silver"],
+    "Manufacturer": "Sanyo Electric Co., Ltd."
+  },
+  {
+    "id": 11,
+    "name": "Sony CLIÉ PEG-NR70V handheld personal digital assistant (PDA)",
+    "price": 26480,
+    "image": "img/products-img/phones/Sony-Clié-PEG-NR70V.PNG",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "",
+      "Operating System": "Palm OS 4.1",
+      "CPU": "66 MHz Motorola DragonBall Super VZ",
+      "Memory": "16 MB RAM",
+      "Display": "320x480 pixel, 16-bit TFT color screen",
+      "Battery": "Non-removable Lithium ion rechargeable battery",
+      "Weight": "200 g",
+      "Graphics": "",
+      "Keyboard": "QWERTY keyboard + Graffiti area"
+    },
+    "stock": 200,
+    "colors": "Standard",
+    "Manufacturer": "Sony Corporation"
+  },
+  {
+    "id": 12,
     "name": "",
     "price": 0,
+    "image": "img/products-img/phones/",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "",
+      "Operating System": "",
+      "CPU": "",
+      "Memory": "",
+      "Display": "",
+      "Battery": "",
+      "Weight": "",
+      "Graphics": "",
+      "Keyboard": ""
+    },
+    "stock": 200,
+    "colors": "Standard",
+    "Manufacturer": ""
+  },
+  {
+    "id": -1,
+    "name": "Sony CLIÉ PEG-NX70V",
+    "price": 26480,
     "image": "img/products-img/phones/",
     "description": "/",
     "rating": "4,5/5",
