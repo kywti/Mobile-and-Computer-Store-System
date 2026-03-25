@@ -1,0 +1,173 @@
+[
+  {
+    "id": 1,
+    "name": "alcatel OT-810",
+    "price": 29130,
+    "image": [
+      "img/products-img/phones/alcatel-ot-810.jfif",
+      "img/products-img/phones/Alcatel OT-810-Light-Chrome.jpg",
+      "img/products-img/phones/Alcatel OT-810-Mystery-Pink.webp",
+      "img/products-img/phones/Alcatel OT-810-Victorian-Blush.jpg"
+    ],
+    "description": "OT-810 Glamour QWERTY Flip Mobile Phone",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM",
+      "Operating System": "Alcatel system",
+      "CPU": "208 MHz",
+      "Memory": "microSDHC (dedicated slot), 1000 contacts, Photo call, Call records, 50MB",
+      "Display": "TFT, 256K colors, 2.4\", 17.8 cm2 (~36.4% screen-to-body ratio), 320 x 240 pixels, 4:3 ratio (~167 ppi density)",
+      "Battery": "Removable Li-Ion 850 mAh batter",
+      "Weight": "93.8 g",
+      "Keyboard": "QWERTY"
+    },
+    "stock": 200,
+    "colors": ["Light Chrome", "Mystery Pink", "Victorian Blush"],
+    "Manufacturer": "Alcatel Mobile"
+  },
+  {
+    "id": 2,
+    "name": "i-mate PDA2k",
+    "price": 99300,
+    "image": "img/products-img/phones/i-mate-PDA2k.jpg",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM",
+      "Operating System": "Microsoft Windows Mobile 2003 SE PocketPC",
+      "CPU": "Intel PXA263 400 MHz",
+      "Memory": "SDIO/MMC, 128MB RAM, 64MB ROM",
+      "Display": "TFT resistive touchscreen, 65K colors, 3.5\", 53 x 71 mm, 37.9 cm2 (~42.4% screen-to-body ratio), 240 x 320 pixels, 3.5\", 4:3 ratio (~114 ppi density)",
+      "Battery": "Removable Li-Ion 1050 mAh battery",
+      "Weight": "210 g",
+      "Keyboard": "QWERTY"
+    },
+    "stock": 200,
+    "colors": "Standard",
+    "Manufacturer": "HTC Corporation"
+  },
+  {
+    "id": 3,
+    "name": "MITAC MIO DIGI WALKER 168",
+    "price": 99300,
+    "image": "img/products-img/phones/MITAC-MIO-DIGI-WALKER-168.jpg",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM",
+      "Operating System": "Microsoft Windows Mobile 2003 for Pocket PC Premium Edition (Ozone)",
+      "CPU": "Intel XScale PXA255, 2003, 32 bit, single-core, 32 Kbyte I-Cache, 32 Kbyte D-Cache",
+      "Memory": "SDRAM 100 MHzClock 64 MiB RAM",
+      "Display": "2.74x4.44x0.64\"",
+      "Battery": "Li-Ion 1350 mAh battery",
+      "Weight": "147 g",
+      "Graphics": "NVIDIA MediaQ",
+      "Keyboard": "QWERTY"
+    },
+    "stock": 200,
+    "colors": "Standard",
+    "Manufacturer": "MiTAC"
+  },
+  {
+    "id": 4,
+    "name": "Motorola T720",
+    "price": 5300,
+    "image": [
+      "img/products-img/phones/motorola-t720.jpg",
+      "img/products-img/phones/motorola-t720-grey.jpg",
+      "img/products-img/phones/motorola-t720-pacific.jpg",
+      "img/products-img/phones/motorola-t720-white.jpg"
+    ],
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM",
+      "Operating System": "Motorola Operating System",
+      "CPU": "39 MHz M-CORE M210",
+      "Memory": "1.75MB of dedicated shared memory for Java applications, ringtones, and wallpapers",
+      "Display": "120 x 160 pixels, 9 lines, 4:3 ratio",
+      "Battery": "Removable Li-Ion 1100 mAh battery (98481/SNN5595)",
+      "Weight": "100 g",
+      "Graphics": "/",
+      "Keyboard": "/"
+    },
+    "stock": 200,
+    "colors": "",
+    "Manufacturer": "Motorola, Inc."
+  },
+  {
+    "id": 5,
+    "name": "Motorola v505",
+    "price": 26500,
+    "image": [
+      "img/products-img/phones/motorola-v505.jfif",
+      "img/products-img/phones/motorola-v505-blue.jpg",
+      "img/products-img/phones/motorola-v505-silver.jpg"
+    ],
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM",
+      "Operating System": "Motorola Operating System",
+      "CPU": "52 MHz ARM7TDMI-S",
+      "Memory": "5-6 MB internal memory",
+      "Display": "176 x 220 px color TFT LCD",
+      "Battery": "3.7V Lithium-ion battery",
+      "Weight": "105 g"
+    },
+    "stock": 200,
+    "colors": ["Blue", "Silver"],
+    "Manufacturer": "Motorola"
+  },
+  {
+    "id": 6,
+    "name": "Nokia 3650",
+    "price": 13240,
+    "image": [
+      "img/products-img/phones/Nokia-3650.jfif",
+      "img/products-img/phones/nokia-3650-blue.jpg",
+      "img/products-img/phones/nokia-3650-gray.jpg",
+      "img/products-img/phones/nokia-3650-green.jpg",
+      "img/products-img/phones/nokia-3650-pink.jpg",
+      "img/products-img/phones/Nokia-3650-red.jfif",
+      "img/products-img/phones/nokia-3650-yellow.jpg"
+    ],
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM",
+      "Operating System": "Symbian 6.1, Series 60 v1.0 UI",
+      "CPU": "104 MHz ARM 9",
+      "Memory": "4MB, 3.4MB available to user",
+      "Display": "130×57×26 mm (5.1×2.2×1.0 in), 139 cm3",
+      "Battery": "Removable Li-Ion 850 mAh battery (BL-5C)",
+      "Weight": "130 g",
+      "Graphics": "/"
+    },
+    "stock": 200,
+    "colors": ["Blue", "Gray", "Green", "Pink", "Red", "Yellow"],
+    "Manufacturer": ""
+  },
+  {
+    "id": -1,
+    "name": "",
+    "price": 0,
+    "image": "img/products-img/phones/",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "",
+      "Operating System": "",
+      "CPU": "",
+      "Memory": "",
+      "Display": "",
+      "Battery": "",
+      "Weight": "",
+      "Graphics": "",
+      "Keyboard": ""
+    },
+    "stock": 200,
+    "colors": "",
+    "Manufacturer": ""
+  }
+]
