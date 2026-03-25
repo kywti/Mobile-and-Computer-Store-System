@@ -269,30 +269,153 @@
   },
   {
     "id": 12,
-    "name": "",
-    "price": 0,
-    "image": "img/products-img/phones/",
+    "name": "Sony CLIÉ PEG-NX70V",
+    "price": 26480,
+    "image": "img/products-img/phones/Sony-CLIE-PEG-NX70V.jpg",
     "description": "/",
     "rating": "4,5/5",
     "specs": {
-      "Network": "",
-      "Operating System": "",
+      "Network": "CompactFlash (CF) Type II slot",
+      "Operating System": "Palm OS 5.0",
+      "CPU": "Intel XScale PXA250 200 MHz",
+      "Memory": "SDRAM, 16MiB RAM",
+      "Display": "320 x 480 pixel color TFT touchscreen",
+      "Battery": "Li-ion polymer (LiPo)",
+      "Weight": "220 g",
+      "Graphics": "NVIDIA MediaQ MQ-1168",
+      "Keyboard": "Rotating screen \"clamshell\" design with integrated QWERTY keyboard"
+    },
+    "stock": 200,
+    "colors": "Standard",
+    "Manufacturer": "Sony Corporation"
+  },
+  {
+    "id": 13,
+    "name": "Sony Ericsson C1002S",
+    "price": 1325,
+    "image": [
+      "img/products-img/phones/Sony-Ericsson-C1002S.jpg",
+      "img/products-img/phones/Sony-Ericsson-C1002S-white.jpg"
+    ],
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "cdmaOne (CDMA)",
+      "Operating System": "proprietary, non-smart operating system",
       "CPU": "",
-      "Memory": "",
-      "Display": "",
-      "Battery": "",
-      "Weight": "",
+      "Memory": "data capacity of 200KB for user content and dedicated storage for emails (approximately 58KB for outbox and 125KB for inbox)",
+      "Display": "1.9\" 65,536-color TFT LCD with a resolution of pixels",
+      "Battery": "Continuous Talk Time: Approximately 200 minutes",
+      "Weight": "105 g",
+      "Graphics": "",
+      "Keyboard": ""
+    },
+    "stock": 200,
+    "colors": ["Orange", "White"],
+    "Manufacturer": "Sony Corporation"
+  },
+  {
+    "id": 14,
+    "name": "Sony Ericsson Xperia X10",
+    "price": 3975,
+    "image": [
+      "img/products-img/phones/Sony-Ericon-Xperia-X10.jpg",
+      "img/products-img/phones/Sony-Ericon-Xperia-X10-Black.jpg",
+      "img/products-img/phones/Sony-Ericon-Xperia-X10-Luster-White.jpg"
+    ],
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM / HSPA",
+      "Operating System": "Android 1.6 (Donut), upgradable to 2.3 (Gingerbread)",
+      "CPU": "1.0 GHz Scorpion",
+      "Memory": "microSDHC (dedicated slot), 8 GB included, 1GB 384MB RAM",
+      "Display": "TFT, 65K colors, 480 x 854 pixels, 16:9 ratio (~245 ppi density), Scratch-resistant glass, Timescape/Mediascape UI",
+      "Battery": "Removable Li-Po 1500 mAh battery (BST-41)",
+      "Weight": "135 g",
+      "Graphics": "Adreno 200",
+      "Keyboard": ""
+    },
+    "stock": 200,
+    "colors": ["Black", "White"],
+    "Manufacturer": "Sony Corporation"
+  },
+  {
+    "id": 15,
+    "name": "Sony Ericsson P910i",
+    "price": 10595,
+    "image": "img/products-img/phones/Sony-Ericsson-P910i.jpg",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM",
+      "Operating System": "Symbian 7.0, UIQ v2.1 UI",
+      "CPU": "32-bit Philips Nexperia PNX4000 156 MHz",
+      "Memory": "Memory Stick Duo Pro, up to 2 GB, 32 MB included, 64MB",
+      "Display": "TFT resistive touchscreen, 256K colors, 2.9\", 40 x 62 mm, 24.8 cm2, 208 x 320 pixels (~37.2% screen-to-body ratio), 3:2 ratio (~132 ppi density), Handwriting recognition, JogDial",
+      "Battery": "1260 mAh",
+      "Weight": "150 g",
       "Graphics": "",
       "Keyboard": ""
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": ""
+    "Manufacturer": "Sony Corporation"
+  },
+  {
+    "id": 16,
+    "name": "Sony Ericsson Z520",
+    "price": 6620,
+    "image": [
+      "img/products-img/phones/Sony-Ericsson-Z520i.jpg",
+      "img/products-img/phones/Sony-Ericsson-Z520i-blue.jpg",
+      "img/products-img/phones/Sony-Ericsson-Z520i-pink.jpg",
+      "img/products-img/phones/Sony-Ericsson-Z520i-silver.jpg",
+      "img/products-img/phones/Sony-Ericsson-Z520i-white.jpg"
+    ],
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM",
+      "Operating System": "Sony Ericsson Java Platform JP-5.",
+      "CPU": "ARM9-based processor running at 110 MHz. ",
+      "Memory": " 16 Mbytes internal memory (no card slot)",
+      "Display": "TFT, 65K colors, 1.8\", 29 x 35 mm, 10.2 cm2 (~23.8% screen-to-body ratio), 128 x 160 pixels (~114 ppi density), Second external CSTN display 4096 colors (101 x 80 pixels), Wallpapers, screensavers",
+      "Battery": "900mAh (Standard).",
+      "Weight": "96 g",
+      "Graphics": "",
+      "Keyboard": ""
+    },
+    "stock": 200,
+    "colors": ["Blue", "Pink", "Silver", "White"],
+    "Manufacturer": "Sony Corporation"
+  },
+  {
+    "id": 17,
+    "name": "T-Mobile Sidekick / T-Mobile Sidekick",
+    "price": 33105,
+    "image": "img/products-img/phones/T-Mobile-Sidekick.PNG",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Network": "GSM 1900 MHz (PCS)",
+      "Operating System": "Proprietary DangerOS",
+      "CPU": "",
+      "Memory": "128MB",
+      "Display": "2.6 x 4.5 x 1.1\", 240 x 160 pixels LCD (Grayscale)",
+      "Battery": "Li - Ion",
+      "Weight": "176 g",
+      "Graphics": "",
+      "Keyboard": "Scrollwheel, Pop out keyboard"
+    },
+    "stock": 200,
+    "colors": "Standard",
+    "Manufacturer": "Danger Inc,"
   },
   {
     "id": -1,
-    "name": "Sony CLIÉ PEG-NX70V",
-    "price": 26480,
+    "name": "",
+    "price": 0,
     "image": "img/products-img/phones/",
     "description": "/",
     "rating": "4,5/5",
