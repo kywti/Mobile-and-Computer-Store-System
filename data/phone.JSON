@@ -3,12 +3,7 @@
     "id": 1,
     "name": "alcatel OT-810",
     "price": 29130,
-    "image": [
-      "img/products-img/phones/alcatel-ot-810.jpg",
-      "img/products-img/phones/Alcatel OT-810-Light-Chrome.jpg",
-      "img/products-img/phones/Alcatel OT-810-Mystery-Pink.webp",
-      "img/products-img/phones/Alcatel OT-810-Victorian-Blush.jpg"
-    ],
+    "image": "img/products-img/phones/alcatel-ot-810.jpg",
     "description": "OT-810 Glamour QWERTY Flip Mobile Phone",
     "rating": "4,5/5",
     "specs": {
@@ -22,8 +17,21 @@
       "Keyboard": "QWERTY"
     },
     "stock": 200,
-    "colors": ["Light Chrome", "Mystery Pink", "Victorian Blush"],
-    "Manufacturer": "Alcatel Mobile"
+    "variants": [
+      {
+        "color": "Light Chrome",
+        "image": "img/products-img/phones/Alcatel OT-810-Light-Chrome.jpg"
+      },
+      {
+        "color": "Mystery Pink",
+        "image": "img/products-img/phones/Alcatel OT-810-Mystery-Pink.webp"
+      },
+      {
+        "color": "Victorian Blush",
+        "image": "img/products-img/phones/Alcatel OT-810-Victorian-Blush.jpg"
+      }
+    ],
+    "manufacturer": "Alcatel Mobile"
   },
   {
     "id": 2,
@@ -44,7 +52,7 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "HTC Corporation"
+    "manufacturer": "HTC Corporation"
   },
   {
     "id": 3,
@@ -66,18 +74,13 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "MiTAC"
+    "manufacturer": "MiTAC"
   },
   {
     "id": 4,
     "name": "Motorola T720",
     "price": 5300,
-    "image": [
-      "img/products-img/phones/motorola-t720.jpg",
-      "img/products-img/phones/motorola-t720-grey.jpg",
-      "img/products-img/phones/motorola-t720-pacific.jpg",
-      "img/products-img/phones/motorola-t720-white.jpg"
-    ],
+    "image": "img/products-img/phones/motorola-t720.jpg",
     "description": "/",
     "rating": "4,5/5",
     "specs": {
@@ -92,18 +95,27 @@
       "Keyboard": "/"
     },
     "stock": 200,
-    "colors": "",
-    "Manufacturer": "Motorola, Inc."
+    "variants": [
+      {
+        "color": "Grey",
+        "image": "img/products-img/phones/motorola-t720-grey.jpg"
+      },
+      {
+        "color": "Pacific",
+        "image": "img/products-img/phones/motorola-t720-pacific.jpg"
+      },
+      {
+        "color": "White",
+        "image": "img/products-img/phones/motorola-t720-white.jpg"
+      }
+    ],
+    "manufacturer": "Motorola, Inc."
   },
   {
     "id": 5,
     "name": "Motorola v505",
     "price": 26500,
-    "image": [
-      "img/products-img/phones/motorola-v505.jpg",
-      "img/products-img/phones/motorola-v505-blue.jpg",
-      "img/products-img/phones/motorola-v505-silver.jpg"
-    ],
+    "image": "img/products-img/phones/motorola-v505.jpg",
     "description": "/",
     "rating": "4,5/5",
     "specs": {
@@ -116,22 +128,23 @@
       "Weight": "105 g"
     },
     "stock": 200,
-    "colors": ["Blue", "Silver"],
-    "Manufacturer": "Motorola, Inc."
+    "variants": [
+      {
+        "color": "Blue",
+        "image": "img/products-img/phones/motorola-v505-blue.jpg"
+      },
+      {
+        "color": "Silver",
+        "image": "img/products-img/phones/motorola-v505-silver.jpg"
+      }
+    ],
+    "manufacturer": "Motorola, Inc."
   },
   {
     "id": 6,
     "name": "Nokia 3650",
     "price": 13240,
-    "image": [
-      "img/products-img/phones/Nokia-3650.jpg",
-      "img/products-img/phones/nokia-3650-blue.jpg",
-      "img/products-img/phones/nokia-3650-gray.jpg",
-      "img/products-img/phones/nokia-3650-green.jpg",
-      "img/products-img/phones/nokia-3650-pink.jpg",
-      "img/products-img/phones/Nokia-3650-red.jpg",
-      "img/products-img/phones/nokia-3650-yellow.jpg"
-    ],
+    "image": "img/products-img/phones/Nokia-3650.jpg",
     "description": "/",
     "rating": "4,5/5",
     "specs": {
@@ -145,8 +158,33 @@
       "Graphics": "/"
     },
     "stock": 200,
-    "colors": ["Blue", "Gray", "Green", "Pink", "Red", "Yellow"],
-    "Manufacturer": "Nokia Corporation"
+    "variants": [
+      {
+        "color": "Blue",
+        "image": "img/products-img/phones/nokia-3650-blue.jpg"
+      },
+      {
+        "color": "Grey",
+        "image": "img/products-img/phones/nokia-3650-gray.jpg"
+      },
+      {
+        "color": "Green",
+        "image": "img/products-img/phones/nokia-3650-green.jpg"
+      },
+      {
+        "color": "Pink",
+        "image": "img/products-img/phones/nokia-3650-pink.jpg"
+      },
+      {
+        "color": "Red",
+        "image": "img/products-img/phones/Nokia-3650-red.jpg"
+      },
+      {
+        "color": "Yellow",
+        "image": "img/products-img/phones/nokia-3650-yellow.jpg"
+      }
+    ],
+    "manufacturer": "Nokia Corporation"
   },
   {
     "id": 7,
@@ -168,7 +206,7 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "Nokia Corporation"
+    "manufacturer": "Nokia Corporation"
   },
   {
     "id": 8,
@@ -190,17 +228,13 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "Samsung Group"
+    "manufacturer": "Samsung Group"
   },
   {
     "id": 9,
     "name": "Samsung SGH-E620",
     "price": 5300,
-    "image": [
-      "img/products-img/phones/Samsung-SGH-E620.jpg",
-      "img/products-img/phones/Samsung-SGH-E620-silver.jpg",
-      "img/products-img/phones/Samsung-SGH-E620-black.jpg"
-    ],
+    "image": "img/products-img/phones/Samsung-SGH-E620.jpg",
     "description": "Samsung's first GSM model to combine Bluetooth with speaker-independent voice control, and first with an anti-bacterial coating. Other key features include a megapixel camera, dual color displays, and class 10 GPRS.",
     "rating": "4,5/5",
     "specs": {
@@ -215,19 +249,23 @@
       "Keyboard": ""
     },
     "stock": 200,
-    "colors": ["Black", "Silver"],
-    "Manufacturer": "Samsung Group"
+    "variants": [
+      {
+        "color": "Black",
+        "image": "img/products-img/phones/Samsung-SGH-E620-black.jpg"
+      },
+      {
+        "color": "Silver",
+        "image": "img/products-img/phones/Samsung-SGH-E620-silver.jpg"
+      }
+    ],
+    "manufacturer": "Samsung Group"
   },
   {
     "id": 10,
     "name": "Sanyo VI-2300",
     "price": 25160,
-    "image": [
-      "img/products-img/phones/Sanyo-VI-2300.jpg",
-      "img/products-img/phones/Sanyo-VI-2300-black.jpg",
-      "img/products-img/phones/Sanyo-VI-2300-blue.jpg",
-      "img/products-img/phones/Sanyo-VI-2300-silver.jpg"
-    ],
+    "image": "img/products-img/phones/Sanyo-VI-2300.jpg",
     "description": "/",
     "rating": "4,5/5",
     "specs": {
@@ -242,8 +280,21 @@
       "Keyboard": ""
     },
     "stock": 200,
-    "colors": ["Blue", "Black", "Silver"],
-    "Manufacturer": "Sanyo Electric Co., Ltd."
+    "variants": [
+      {
+        "color": "Blue",
+        "image": "img/products-img/phones/Sanyo-VI-2300-blue.jpg"
+      },
+      {
+        "color": "Black",
+        "image": "img/products-img/phones/Sanyo-VI-2300-black.jpg"
+      },
+      {
+        "color": "Silver",
+        "image": "img/products-img/phones/Sanyo-VI-2300-silver.jpg"
+      }
+    ],
+    "manufacturer": "Sanyo Electric Co., Ltd."
   },
   {
     "id": 11,
@@ -265,7 +316,7 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "Sony Corporation"
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 12,
@@ -287,16 +338,13 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "Sony Corporation"
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 13,
     "name": "Sony Ericsson C1002S",
     "price": 1325,
-    "image": [
-      "img/products-img/phones/Sony-Ericsson-C1002S.jpg",
-      "img/products-img/phones/Sony-Ericsson-C1002S-white.jpg"
-    ],
+    "image": "img/products-img/phones/Sony-Ericsson-C1002S.jpg",
     "description": "/",
     "rating": "4,5/5",
     "specs": {
@@ -311,18 +359,23 @@
       "Keyboard": ""
     },
     "stock": 200,
-    "colors": ["Orange", "White"],
-    "Manufacturer": "Sony Corporation"
+    "variants": [
+      {
+        "color": "Orange",
+        "image": "img/products-img/phones/Sony-Ericsson-C1002S.jpg"
+      },
+      {
+        "color": "White",
+        "image": "img/products-img/phones/Sony-Ericsson-C1002S-white.jpg"
+      }
+    ],
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 14,
     "name": "Sony Ericsson Xperia X10",
     "price": 3975,
-    "image": [
-      "img/products-img/phones/Sony-Ericon-Xperia-X10.jpg",
-      "img/products-img/phones/Sony-Ericon-Xperia-X10-Black.jpg",
-      "img/products-img/phones/Sony-Ericon-Xperia-X10-Luster-White.jpg"
-    ],
+    "image": "img/products-img/phones/Sony-Ericon-Xperia-X10.jpg",
     "description": "/",
     "rating": "4,5/5",
     "specs": {
@@ -337,8 +390,17 @@
       "Keyboard": ""
     },
     "stock": 200,
-    "colors": ["Black", "White"],
-    "Manufacturer": "Sony Corporation"
+    "variants": [
+      {
+        "color": "Black",
+        "image": "img/products-img/phones/Sony-Ericon-Xperia-X10-Black.jpg"
+      },
+      {
+        "color": "White",
+        "image": "img/products-img/phones/Sony-Ericon-Xperia-X10-Luster-White.jpg"
+      }
+    ],
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 15,
@@ -360,19 +422,13 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "Sony Corporation"
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 16,
     "name": "Sony Ericsson Z520",
     "price": 6620,
-    "image": [
-      "img/products-img/phones/Sony-Ericsson-Z520i.jpg",
-      "img/products-img/phones/Sony-Ericsson-Z520i-blue.jpg",
-      "img/products-img/phones/Sony-Ericsson-Z520i-pink.jpg",
-      "img/products-img/phones/Sony-Ericsson-Z520i-silver.jpg",
-      "img/products-img/phones/Sony-Ericsson-Z520i-white.jpg"
-    ],
+    "image": "img/products-img/phones/Sony-Ericsson-Z520i.jpg",
     "description": "/",
     "rating": "4,5/5",
     "specs": {
@@ -387,8 +443,25 @@
       "Keyboard": ""
     },
     "stock": 200,
-    "colors": ["Blue", "Pink", "Silver", "White"],
-    "Manufacturer": "Sony Corporation"
+    "variants": [
+      {
+        "color": "Blue",
+        "image": "img/products-img/phones/Sony-Ericsson-Z520i-blue.jpg"
+      },
+      {
+        "color": "Pink",
+        "image": "img/products-img/phones/Sony-Ericsson-Z520i-pink.jpg"
+      },
+      {
+        "color": "Silver",
+        "image": "img/products-img/phones/Sony-Ericsson-Z520i-silver.jpg"
+      },
+      {
+        "color": "White",
+        "image": "img/products-img/phones/Sony-Ericsson-Z520i-white.jpg"
+      }
+    ],
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 17,
@@ -410,7 +483,7 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "Danger Inc,"
+    "manufacturer": "Danger Inc,"
   },
   {
     "id": -1,
@@ -432,6 +505,12 @@
     },
     "stock": 200,
     "colors": "",
-    "Manufacturer": ""
+    "variants": [
+      {
+        "color": "",
+        "image": ""
+      }
+    ],
+    "manufacturer": ""
   }
 ]

@@ -23,7 +23,7 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "HP Inc."
+    "manufacturer": "HP Inc."
   },
   {
     "id": 2,
@@ -44,7 +44,7 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "HP Inc."
+    "manufacturer": "HP Inc."
   },
   {
     "id": 3,
@@ -65,7 +65,7 @@
     },
     "stock": 200,
     "colors": "Standard",
-    "Manufacturer": "Palm, Inc."
+    "manufacturer": "Palm, Inc."
   },
   {
     "id": -1,
@@ -85,7 +85,13 @@
       "Weight": ""
     },
     "stock": 200,
+    "variants": [
+      {
+        "color": "",
+        "image": ""
+      }
+    ],
     "colors": "",
-    "Manufacturer": ""
+    "manufacturer": ""
   }
 ]

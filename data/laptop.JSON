@@ -1,0 +1,165 @@
+[
+  {
+    "id": 1,
+    "name": "HP Omnibook XE3",
+    "price": 148955,
+    "image": [
+      "img/products-img/laptops/HP-Omnibook-XE3.jpg",
+      "img/products-img/laptops/hp-OmniBook-XE3-1.jpg"
+    ],
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Operating System": "Microsoft Windows 2000",
+      "CPU": "Intel Pentium III 650 MHz, Intel 440ZX Chipset",
+      "Memory": "SDRAM 64MB, 100MHz",
+      "Display": "12.1\", 800 x 600 (SVGA)",
+      "Storage": "5GB HDD",
+      "Battery": "Lithium Ion 5400 mAh",
+      "Dimensions": "33.1 cm x 27.3 cm x 4 cm",
+      "Weight": "3.2 kg",
+      "Graphics": "AGP 2x - S3 Savage/IX"
+    },
+    "stock": 200,
+    "colors": "Black",
+    "manufacturer": "HP, Inc."
+  },
+  {
+    "id": 2,
+    "name": "Apple iMac G3",
+    "price": 158885,
+    "image": "img/products-img/laptops/Apple-iMac-G3.jpg",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Operating System": "Mac OS 9.1 and Mac OS X 10.0.4",
+      "CPU": "500 MHz PowerPC G3 (755), 600 or 700 MHz PowerPC G3 (750CXe)",
+      "Memory": "64 MB, 128 MB or 256 MB max. 1 GB",
+      "Display": "15\" (viewable) screen with 1024 x 768 pixel resolution",
+      "Storage": "20 GB, 40 GB or 60 GB",
+      "Battery": "3.6V Lithium 1/2AA",
+      "Dimensions": "15.8\" (40.1 cm) in height, 15.2\" (38.6 cm) in width, and 17.6\" (44.7 cm) in depth",
+      "Weight": "15.8 kg",
+      "Graphics": "ATI Rage 128 Ultra graphics processor with 16 MB of memory"
+    },
+    "stock": 200,
+    "variants": [
+      {
+        "color": "Blue Dalmatian",
+        "image": "img/products-img/laptops/Apple-iMac-G3-blue-dalmatian.jpg"
+      },
+      {
+        "color": "Blueberry",
+        "image": "img/products-img/laptops/Apple-iMac-G3-blueberry.jpg"
+      },
+      {
+        "color": "Bondi",
+        "image": "img/products-img/laptops/Apple-iMac-G3-bondi.jpg"
+      },
+      {
+        "color": "Flower Power",
+        "image": "img/products-img/laptops/Apple-iMac-G3-flower-power.jpg"
+      },
+      {
+        "color": "Grape",
+        "image": "img/products-img/laptops/Apple-iMac-G3-grape.jpg"
+      },
+      {
+        "color": "Graphite",
+        "image": "img/products-img/laptops/Apple-iMac-G3-graphite.jpg"
+      },
+      {
+        "color": "Indigo",
+        "image": "img/products-img/laptops/Apple-iMac-G3-indigo.jpg"
+      },
+      {
+        "color": "Lime",
+        "image": "img/products-img/laptops/Apple-iMac-G3-lime.jpg"
+      },
+      {
+        "color": "Ruby",
+        "image": "img/products-img/laptops/Apple-iMac-G3-ruby.jpg"
+      },
+      {
+        "color": "Sage",
+        "image": "img/products-img/laptops/Apple-iMac-G3-sage.jpg"
+      },
+      {
+        "color": "Snow",
+        "image": "img/products-img/laptops/Apple-iMac-G3-snow.jpg"
+      },
+      {
+        "color": "Strawberry",
+        "image": "img/products-img/laptops/Apple-iMac-G3-strawberry.jpg"
+      },
+      {
+        "color": "Tangerine",
+        "image": "img/products-img/laptops/Apple-iMac-G3-tangerine.jpg"
+      }
+    ],
+    "manufacturer": "Apple, Inc."
+  },
+  {
+    "id": 3,
+    "name": "Apple Power Mac G4",
+    "price": 46345,
+    "image": "img/products-img/laptops/Apple-power-mac-g4-grey.jpg",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Operating System": "Mac OS 9",
+      "CPU": "PowerPC 7455 (G4)",
+      "Memory": "PC2700 DDR SDRAM",
+      "Display": "Dual Displays 1920x1200*",
+      "Storage": "80 GB HDD",
+      "Battery": "3.6V Lithium",
+      "Dimensions": "",
+      "Weight": "13.6 kg",
+      "Graphics": "Radeon 9000 Pro*"
+    },
+    "stock": 200,
+    "variants": [
+      {
+        "color": "Blue",
+        "image": "img/products-img/laptops/Apple-power-mac-g4-blue.jpg"
+      },
+      {
+        "color": "White",
+        "image": "img/products-img/laptops/Apple-power-mac-g4-white.jpg"
+      },
+      {
+        "color": "Grey",
+        "image": "img/products-img/laptops/Apple-power-mac-g4-grey.jpg"
+      }
+    ],
+    "manufacturer": ""
+  },
+  {
+    "id": -1,
+    "name": "",
+    "price": 0,
+    "image": "img/products-img/laptops/",
+    "description": "/",
+    "rating": "4,5/5",
+    "specs": {
+      "Operating System": "",
+      "CPU": "",
+      "Memory": "",
+      "Display": "",
+      "Storage": "",
+      "Battery": "",
+      "Dimensions": "",
+      "Weight": "",
+      "Graphics": ""
+    },
+    "stock": 200,
+    "colors": "",
+    "variants": [
+      {
+        "color": "",
+        "image": "img/products-img/laptops/"
+      }
+    ],
+    "manufacturer": ""
+  }
+]
