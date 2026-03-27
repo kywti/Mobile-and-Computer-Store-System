@@ -10,6 +10,12 @@ body {
   font-family: "Electrolize";
 }
 
+p,
+button,
+input {
+  font-family: "Electrolize";
+}
+
 .home-page-bg {
   display: flex;
   flex-direction: column;
@@ -158,20 +164,31 @@ button:hover {
   display: flex;
   align-items: center;
   gap: 15px;
-  background: #f4f4f4;
   padding: 12px;
   border-radius: 8px;
   margin-bottom: 15px;
+  border: solid black 1px;
 }
 
 .product-summary img {
-  width: 60px;
+  width: 70px;
 }
 
 .delete-btn {
+  padding-top: 5px;
   margin-left: auto;
-  height: 35px;
+  height: 40px;
+  width: 50px;
   font-size: 18px;
+}
+
+.delete-btn img {
+  height: 25px;
+  width: 25px;
+}
+
+.delete-btn:hover img {
+  content: url("/img/icons/delete-white.png");
 }
 
 .total-box {
