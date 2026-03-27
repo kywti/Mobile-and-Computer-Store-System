@@ -264,7 +264,8 @@ button:hover {
 .extra-description {
   font-family: "Digital Numbers";
   font-size: 10px;
-  padding: 10px 10px 30px 30px;
+  padding: 10px 0px 30px 30px;
+  margin-bottom: 0px;
 }
 
 .products-header {
@@ -290,16 +291,16 @@ button:hover {
   border: solid;
   border-color: black;
   border-radius: 6px;
-  border-width: 2px;
+  border-width: 1px;
 }
 
 .sort-input {
-  height: 44px;
+  height: 38px;
 }
 
 .sort-button {
-  height: 50px;
-  width: 50px;
+  height: 44px;
+  width: 44px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -314,17 +315,18 @@ button:hover {
   flex-direction: row;
   justify-content: space-evenly;
   gap: 330px;
-  height: 280px;
+  height: 200px;
   padding-top: 30px;
 }
 
 .bottom-area-text {
   color: white;
   cursor: pointer;
+  font-size: 10px;
 }
 
 .bottom-area-text-top {
-  font-size: 25px;
+  font-size: 16px;
 }
 
 .products-grid {
@@ -363,6 +365,9 @@ button:hover {
 
 .product-category {
   margin-top: 5px;
+  margin-bottom: 2px;
+  color: rgb(95, 95, 95);
+  font-size: 12px;
 }
 
 .product-info {
@@ -373,6 +378,11 @@ button:hover {
 
 .product-info p {
   margin: 0px;
+}
+
+.product-rating {
+  color: rgb(95, 95, 95);
+  font-size: 12px;
 }
 
 .product-buying-info {
@@ -389,10 +399,31 @@ button:hover {
   margin-bottom: 20px;
 }
 
+.product-details-link {
+  margin-bottom: 6px;
+  color: rgb(61, 61, 61);
+  font-size: 16px;
+}
+
 .add-to-basket-button {
   margin: 0px;
-  width: 60px;
-  height: 40px;
+  width: 45px;
+  height: 35px;
+  background-color: black;
+}
+
+.add-to-basket-button img {
+  height: 20px;
+  width: 20px;
+}
+
+.add-to-basket-button:hover {
+  background-color: white;
+  border: solid black 2px;
+}
+
+.add-to-basket-button:hover img {
+  content: url("/img/icons/shopping-basket.png");
 }
 
 .product-ad img {
@@ -400,6 +431,7 @@ button:hover {
   height: 100%;
   object-fit: contain;
 }
+<<<<<<< HEAD
 .product-ad {
   background-color: black;
 }
@@ -417,3 +449,5 @@ button:hover {
   opacity:1;
   margin-top:10px;
 }
+=======
+>>>>>>> 7a47c214dee250fdbf53002a8df640e2a476aebf
