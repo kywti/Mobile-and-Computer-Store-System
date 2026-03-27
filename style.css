@@ -1,0 +1,153 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    height: 100vh;
+    background: url("background.jpg") no-repeat center center/cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Form box */
+.form-box {
+    background: #eeeeee;
+    width: 420px;
+    padding: 40px;
+    border-radius: 6px;
+}
+
+/* Titles */
+.form-box h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.form-box h2 {
+    font-weight: normal;
+    margin-bottom: 5px;
+}
+
+/* Top text */
+.top-text {
+    font-size: 13px;
+    margin-bottom: 20px;
+}
+
+.top-text a {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Input groups */
+.input-group {
+    margin-bottom: 12px;
+}
+
+.input-group label {
+    font-size: 12px;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #aaa;
+    outline: none;
+}
+
+/* Row for first/last name */
+.row {
+    display: flex;
+    gap: 12px;
+}
+.row input {
+    width: 100%;
+}
+
+.row .input-group {
+    flex: 1; /* 🔥 this is the key */
+}
+
+/* Checkbox */
+.checkbox-group {
+    margin-top: 10px;
+}
+
+.checkbox {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+    font-size: 12px;
+    margin-bottom: 10px;
+}
+
+.checkbox input {
+    margin-top: 3px;
+}
+
+.checkbox span {
+    line-height: 1.4;
+}
+
+.checkbox a {
+    color: black;
+    text-decoration: underline;
+}
+
+/* Button */
+button {
+    width: 100%;
+    margin-top: 15px;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+button:hover {
+    background: #333;
+} 
+/* Forgot password */
+.forgot {
+    font-size: 12px;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    cursor: pointer;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding: 10px;
+    padding-right: 40px; /* space for emoji */
+    border: 1px solid #aaa;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 16px;
+}
