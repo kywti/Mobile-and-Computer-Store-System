@@ -18,22 +18,22 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/alcatel-ot-810.jpg",
+        "images": "../img/phones/alcatel-ot-810.jpg",
         "stock": 200
       },
       {
         "color": "Light Chrome",
-        "images": "img/products-img/phones/Alcatel OT-810-Light-Chrome.jpg",
+        "images": "../img/phones/Alcatel OT-810-Light-Chrome.jpg",
         "stock": 200
       },
       {
         "color": "Mystery Pink",
-        "images": "img/products-img/phones/Alcatel OT-810-Mystery-Pink.webp",
+        "images": "../img/phones/Alcatel OT-810-Mystery-Pink.webp",
         "stock": 200
       },
       {
         "color": "Victorian Blush",
-        "images": "img/products-img/phones/Alcatel OT-810-Victorian-Blush.jpg",
+        "images": "../img/phones/Alcatel OT-810-Victorian-Blush.jpg",
         "stock": 200
       }
     ],

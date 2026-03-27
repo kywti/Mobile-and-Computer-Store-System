@@ -1,0 +1,152 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+}
+
+p,
+button,
+input {
+  font-family: "Electrolize";
+}
+
+.home-page-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-image: url("/img/backgrounds/HomePageBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  width: 99vw;
+}
+
+.top-slogan {
+  margin-top: 80px;
+  margin-bottom: 30px;
+
+  color: white;
+  font-size: 50px;
+  font-family: "Audiowide";
+}
+
+.header {
+  height: 220px;
+  background-color: black;
+  opacity: 80%;
+
+  width: 83%;
+  min-width: 900px;
+
+  display: flex;
+  flex-direction: column;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 10px;
+  margin-bottom: -10px;
+}
+
+.logo {
+  color: white;
+  font-size: 50px;
+  font-family: "Audiowide";
+
+  padding-right: 30px;
+}
+
+.header-search-bar {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: row;
+  padding: 1px;
+}
+
+input {
+  flex-grow: 2;
+  border: none;
+  font-size: 22px;
+  padding-left: 20px;
+  border-radius: 8px;
+
+  margin-right: 10px;
+
+  height: 60px;
+}
+
+input:focus {
+  outline: none;
+}
+.header-search-bar:focus-within {
+  outline: 1px solid white;
+}
+
+button {
+  background: white;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+
+  margin-right: 20px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-radius: 8px;
+  height: 60px;
+}
+
+button:hover {
+  background: rgb(41, 41, 41);
+  color: white;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-button {
+  background-color: black;
+  color: white;
+}
+
+.home-page-main-area {
+  margin-bottom: 100px;
+  background-color: white;
+
+  width: 83%;
+  min-width: 900px;
+
+  height: auto;
+  min-height: 1000px;
+
+  display: flex;
+
+  justify-content: center;
+}
+
+.section-title {
+  font-family: "Audiowide";
+  font-size: 35px;
+}
