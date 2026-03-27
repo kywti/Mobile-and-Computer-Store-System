@@ -13,7 +13,6 @@ body {
     align-items: center;
 }
 
-/* Container */
 .container {
     width: 100%;
     display: flex;
@@ -21,7 +20,6 @@ body {
     align-items: center;
 }
 
-/* Form box */
 .form-box {
     background: #eeeeee;
     width: 420px;
@@ -29,7 +27,7 @@ body {
     border-radius: 6px;
 }
 
-/* Titles */
+
 .form-box h1 {
     text-align: center;
     margin-bottom: 20px;
@@ -41,7 +39,7 @@ body {
     margin-bottom: 5px;
 }
 
-/* Top text */
+
 .top-text {
     font-size: 13px;
     margin-bottom: 20px;
@@ -52,7 +50,7 @@ body {
     text-decoration: underline;
 }
 
-/* Input groups */
+
 .input-group {
     margin-bottom: 12px;
 }
@@ -70,7 +68,7 @@ body {
     outline: none;
 }
 
-/* Row for first/last name */
+
 .row {
     display: flex;
     gap: 12px;
@@ -80,10 +78,10 @@ body {
 }
 
 .row .input-group {
-    flex: 1; /* 🔥 this is the key */
+    flex: 1; 
 }
 
-/* Checkbox */
+
 .checkbox-group {
     margin-top: 10px;
 }
@@ -109,7 +107,7 @@ body {
     text-decoration: underline;
 }
 
-/* Button */
+
 button {
     width: 100%;
     margin-top: 15px;
@@ -124,7 +122,7 @@ button {
 button:hover {
     background: #333;
 } 
-/* Forgot password */
+
 .forgot {
     font-size: 12px;
     margin-top: 5px;
@@ -139,7 +137,7 @@ button:hover {
 .password-wrapper input {
     width: 100%;
     padding: 10px;
-    padding-right: 40px; /* space for emoji */
+    padding-right: 40px; 
     border: 1px solid #aaa;
 }
 

@@ -1,9 +1,8 @@
-/* ================= FONTS ================= */
 @import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 @import url("https://fonts.cdnfonts.com/css/digital-numbers");
 
-/* ================= GLOBAL ================= */
+
 *{
   box-sizing:border-box;
 }
@@ -14,7 +13,6 @@ html, body {
   font-family:"Electrolize";
 }
 
-/* ================= BACKGROUND ================= */
 .home-page-bg{
   display:flex;
   flex-direction:column;
@@ -27,7 +25,6 @@ html, body {
   width:100%;
 }
 
-/* ================= SLOGAN ================= */
 .top-slogan{
   margin-top:80px;
   margin-bottom:30px;
@@ -36,7 +33,6 @@ html, body {
   font-family:"Audiowide";
 }
 
-/* ================= HEADER ================= */
 .header{
   width:83%;
   min-width:900px;
@@ -44,13 +40,16 @@ html, body {
   background:rgba(0,0,0,0.78);
   display:flex;
   flex-direction:column;
+  align-items:center;  
 }
 
-/* header top */
+
 .header-top{
   display:flex;
+  justify-content:center;  
   align-items:center;
-  padding:20px 25px;
+  gap:30px;
+  padding:20px 0;
 }
 
 .logo{
@@ -60,9 +59,10 @@ html, body {
   margin-right:25px;
 }
 
-/* search bar */
+
 .header-search-bar{
   display:flex;
+  width:700px;
   flex-grow:1;
 }
 
@@ -79,7 +79,7 @@ html, body {
   outline:1px solid white;
 }
 
-/* buttons */
+
 button{
   border:none;
   border-radius:8px;
@@ -100,10 +100,13 @@ button:hover{
   width:38px;
 }
 
-/* nav menu */
+
 .header-bottom{
   display:flex;
-  justify-content:space-evenly;
+  justify-content:center;
+  align-items:center;
+  gap:50px;   
+  margin-bottom:10px;
 }
 
 .header-button{
@@ -113,7 +116,7 @@ button:hover{
   font-size:18px;
 }
 
-/* ================= WHITE CHECKOUT CARD ================= */
+
 .checkout-container{
   background:white;
   width:83%;
@@ -123,7 +126,7 @@ button:hover{
   box-shadow:0 0 25px rgba(0,0,0,0.25);
 }
 
-/* centered title */
+
 .section-title{
   font-family:"Audiowide";
   font-size:36px;
@@ -131,13 +134,13 @@ button:hover{
   margin-bottom:30px;
 }
 
-/* layout */
+
 .checkout-content{
   display:flex;
   gap:80px;
 }
 
-/* ================= ORDER SUMMARY ================= */
+
 .order-summary{
   width:35%;
 }
@@ -162,7 +165,7 @@ button:hover{
   font-size:18px;
 }
 
-/* black total box */
+
 .total-box{
   background:black;
   color:white;
@@ -177,7 +180,7 @@ button:hover{
   justify-content:space-between;
 }
 
-/* ================= CHECKOUT FORM ================= */
+
 .checkout-form{
   width:45%;
   display:flex;
@@ -185,7 +188,7 @@ button:hover{
   gap:12px;
 }
 
-/* section titles */
+
 .form-section-title{
   font-family:"Audiowide";
   font-size:20px;
@@ -193,7 +196,7 @@ button:hover{
   margin-bottom:5px;
 }
 
-/* inputs */
+
 .checkout-form input[type="text"],
 .checkout-form input[type="number"]{
   height:48px;
@@ -208,13 +211,17 @@ button:hover{
   border:1px solid black;
 }
 
-/* row inputs */
 .row{
   display:flex;
-  gap:10px;
+  gap:15px;
 }
 
-/* ================= MODERN RADIO BUTTONS ================= */
+.row .input-group{
+  flex:1;
+}
+
+
+
 .checkout-form label{
   display:flex;
   align-items:center;
@@ -244,7 +251,7 @@ button:hover{
   transform:translate(-50%,-50%);
 }
 
-/* ================= CONTINUE BUTTON ================= */
+
 .continue-btn{
   background:black;
   color:white;
@@ -257,4 +264,31 @@ button:hover{
 
 .continue-btn:hover{
   background:#222;
+}
+
+.input-group{
+  display:flex;
+  flex-direction:column;
+  gap:5px;
+  width:100%;
+}
+
+
+.input-group label{
+  font-size:14px;
+  color:#333;
+  margin-left:2px;
+}
+
+.main-form-title{
+  font-family:"Audiowide";
+  font-size:28px;
+  font-weight:bold;
+  margin-top:10px;
+  margin-bottom:10px;
+}
+.total-separator{
+  height:1px;
+  background:rgba(255,255,255,0.4);
+  margin:12px 0;
 }
