@@ -1,0 +1,261 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.cdnfonts.com/css/digital-numbers");
+
+/* ===== GLOBAL STYLES ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body {
+  font-family: "Electrolize", sans-serif;
+  height: 100%;
+  overflow-y: auto;
+}
+
+/* ===== BACKGROUND ===== */
+.home-page-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("/img/backgrounds/HomePageBg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 100vw;
+}
+
+/* ===== TOP SLOGAN ===== */
+.top-slogan {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 35px;
+  font-family: "Audiowide";
+  text-align: center;
+}
+
+/* ===== HEADER ===== */
+.header {
+  width: 70%;
+  min-width: 900px;
+  height: 170px;
+  background: rgba(0, 0, 0, 0.76);
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Top */
+.header-top {
+  display: flex;
+  align-items: center;
+  padding: 0 30px;
+  height: 120px;
+}
+
+.logo {
+  font-family: "Audiowide";
+  color: white;
+  font-size: 35px;
+  padding-right: 30px;
+}
+
+/* Search Bar */
+.header-search-bar {
+  display: flex;
+  flex-grow: 2;
+  gap: 10px;
+  align-items: center;
+}
+
+.header-search-bar input {
+  flex-grow: 2;
+  font-size: 22px;
+  padding-left: 20px;
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+}
+
+.header-search-bar input:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+/* Buttons & Icons */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  color: black;
+  font-size: 20px;
+  border: none;
+  cursor: pointer;
+  padding: 0 10px;
+  height: 50px;
+  border-radius: 8px;
+}
+
+button:hover {
+  background: #111;
+  color: white;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+/* Header Bottom */
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-button {
+  background: transparent;
+  font-family: "Digital Numbers";
+  color: white;
+  font-size: 13px;
+}
+
+.header-button:hover {
+  background: white;
+  color: black;
+}
+
+/* ===== MAIN WHITE CARD ===== */
+.checkout-container {
+  width: 70%;
+  min-width: 900px;
+  background: white;
+  padding: 40px;
+  margin: 30px 0 80px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Section Title */
+.section-title {
+  font-family: "Audiowide";
+  font-size: 24px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* ===== CONTENT FLEX ===== */
+.checkout-content {
+  display: flex;
+  justify-content: space-between;
+  gap: 50px;
+  width: 100%;
+}
+
+/* ===== LEFT SIDE: ORDER SUMMARY ===== */
+.order-summary {
+  width: 35%;
+}
+
+.product-summary {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: #f4f4f4;
+  padding: 10px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-summary img {
+  width: 60px;
+}
+
+.total-box {
+  background: black;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.total-box p,
+.total-box h4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* ===== RIGHT SIDE: SHIPPING DETAILS ===== */
+.checkout-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.checkout-form h4 {
+  font-family: "Audiowide";
+  margin-top: 15px;
+}
+
+.checkout-form p {
+  font-size: 14px;
+}
+
+/* Input Fields */
+.checkout-form input[type="text"],
+.checkout-form input[type="number"] {
+  height: 45px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  padding-left: 12px;
+  font-size: 15px;
+}
+
+.checkout-form input:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+/* Radio Buttons */
+.checkout-form input[type="radio"] {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.checkout-form input[type="radio"]:checked::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Confirm Button */
+.continue-btn {
+  background: black;
+  color: white;
+  height: 48px;
+  border-radius: 6px;
+  font-family: "Audiowide";
+  margin-top: 20px;
+}
+
+.continue-btn:hover {
+  background: #222;
+}
