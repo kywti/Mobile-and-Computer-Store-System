@@ -1,0 +1,323 @@
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.cdnfonts.com/css/digital-numbers");
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+}
+
+p,
+button,
+input {
+  font-family: "Electrolize";
+}
+
+.home-page-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+
+  background-image: url("/img/backgrounds/HomePageBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  width: 99vw;
+}
+
+.top-slogan {
+  margin-top: 80px;
+  margin-bottom: 30px;
+
+  color: white;
+  font-size: 50px;
+  font-family: "Audiowide";
+}
+
+.header,
+.bottom-area {
+  height: 220px;
+  background-color: rgba(0, 0, 0, 0.76);
+
+  width: 83%;
+  min-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
+.header-top {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 10px;
+  margin-bottom: -10px;
+}
+
+.logo {
+  color: white;
+  font-size: 50px;
+  font-family: "Audiowide";
+
+  padding-right: 30px;
+}
+
+.header-search-bar {
+  display: flex;
+  flex-grow: 2;
+  flex-direction: row;
+  padding: 1px;
+}
+
+input {
+  flex-grow: 2;
+  border: none;
+  font-size: 22px;
+  padding-left: 20px;
+  border-radius: 8px;
+
+  margin-right: 10px;
+
+  height: 60px;
+}
+
+input:focus {
+  outline: none;
+}
+.header-search-bar:focus-within {
+  outline: 1px solid white;
+}
+
+button {
+  background: white;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+
+  margin-right: 20px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  border-radius: 8px;
+  height: 60px;
+}
+
+button:hover {
+  background: rgb(19, 19, 19);
+  color: white;
+}
+
+.icon {
+  width: 40px;
+  height: 40px;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.header-button {
+  background-color: rgba(0, 0, 0, 0.76);
+  color: white;
+  font-family: "Digital Numbers";
+  font-size: 18px;
+}
+
+.search-button:hover img {
+  content: url("/img/icons/search-white.png");
+}
+
+.shopping-cart-button:hover img {
+  content: url("/img/icons/shopping-cart-white.png");
+}
+
+.profile-button:hover img {
+  content: url("/img/icons/profile-white.png");
+}
+
+.home-page-main-area-top {
+  margin-bottom: 25px;
+  background-color: white;
+
+  width: 83%;
+  min-width: 900px;
+
+  height: auto;
+  min-height: 680px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.section-title {
+  font-family: "Audiowide";
+  font-size: 35px;
+}
+
+.ads-container {
+  display: flex;
+  justify-content: space-evenly;
+
+  gap: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  flex-wrap: wrap;
+
+  margin-bottom: 20px;
+}
+
+.ad {
+  width: 100%;
+  max-width: 450px;
+  min-width: 100px;
+  height: auto;
+  flex: 1 1 200px;
+}
+
+.home-page-main-area-bottom {
+  background-color: white;
+
+  width: 83%;
+  min-width: 900px;
+
+  height: auto;
+  min-height: 800px;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: space-between;
+  width: 83%;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 25px;
+}
+
+.category-icon {
+  width: 100%;
+  max-width: 150px;
+  height: auto;
+  margin-bottom: 5px;
+  transition: all 0.1s ease;
+}
+
+.category-button {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  height: 230px;
+  width: 280px;
+
+  justify-items: center;
+  justify-content: space-around;
+
+  flex: 1 1 150px;
+  max-width: 350px;
+  min-width: 210px;
+
+  margin-right: 0px;
+
+  transition: all 0.1s ease;
+
+  font-size: 25px;
+}
+
+.category-button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  font-size: 38px;
+}
+
+.category-button:hover .category-icon {
+  transform: scale(0.85);
+}
+
+.extra-description {
+  font-family: "Digital Numbers";
+  font-size: 14px;
+  padding: 10px 10px 30px 30px;
+}
+
+.products-header {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.sort-search-bar {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  padding: 1px;
+  width: 400px;
+}
+
+.filler {
+  width: 400px;
+}
+
+.sort-button,
+.sort-input {
+  border: solid;
+  border-color: black;
+  border-radius: 6px;
+  border-width: 2px;
+  height: 60px;
+}
+
+.sort-button {
+  height: 66px;
+  padding-top: 8px;
+}
+
+.sort-button:hover img {
+  content: url("/img/icons/filter-white.png");
+}
+
+.bottom-area {
+  margin-bottom: 120px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 330px;
+  height: 280px;
+  padding-top: 30px;
+}
+
+.bottom-area-text {
+  color: white;
+  cursor: pointer;
+}
+
+.bottom-area-text-top {
+  font-size: 25px;
+}
+
+.products-grid {
+  display: grid;
+  grid-template-columns: auto auto auto;
+  background-color: dodgerblue;
+  padding: 10px;
+}
+
+.product {
+  height: 200px;
+  width: 150px;
+  background-color: red;
+}

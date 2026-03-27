@@ -3,9 +3,8 @@
     "id": 1,
     "name": "HP Compaq tc1100 tablet",
     "price": 18500,
-    "image": "img/products-img/tablets/HP-Compaq-tc1100.webp",
     "description": "HP Compaq tc1100 10.4\" Tablet PC with keyboard and pen",
-    "rating": "4,5/5",
+    "rating": 4.5,
     "specs": {
       "Operating System": "Windows XP Tablet PC Edition 2005",
       "CPU": [
@@ -21,17 +20,21 @@
       "Battery": "40 Wh Li-ion",
       "Weight": "1.4 kg (1.8 kg with keyboard)"
     },
-    "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "HP Inc."
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/tablets/HP-Compaq-tc1100.webp",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "HP"
   },
   {
     "id": 2,
     "name": "HP Compaq tc1100 tablet",
     "price": 172000,
-    "image": "img/products-img/tablets/hp-pavilion-tx1000_9rj3.jpg",
     "description": "12.1-inch convertible tablet PC released around 2007, designed for media and mobility. It features a rotating screen, a stylus for input, and a 1.3-megapixel webcam",
-    "rating": "4,5/5",
+    "rating": 4.5,
     "specs": {
       "Operating System": "Windows XP Tablet PC Edition 2005",
       "CPU": "AMD Turion(TM) 64 X2 Dual-Core",
@@ -42,38 +45,46 @@
       "Battery": "4-cell or 6-cell Lithium-ion",
       "Weight": "~1.7 kg to 1.9 kg"
     },
-    "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "HP Inc."
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/tablets/hp-pavilion-tx1000_9rj3.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "HP"
   },
   {
     "id": 3,
     "name": "Palm Z22 Color Touchscreen USB 32MB Memory PalmOS Lightweight PDA - For Parts",
     "price": 1060,
-    "image": "img/products-img/tablets/PALM-ZIRE-22-PDA.jpg",
     "description": "Palm Z22 Color Touchscreen USB 32MB Memory PalmOS Lightweight PDA - For Parts",
-    "rating": "4,5/5",
+    "rating": 4.5,
     "specs": {
       "Operating System": "Palm OS Garnet 5.4.9 (not upgradable)",
       "CPU": "200 MHz Samsung S3C2410 ARM920T-based processor",
       "Memory": "32 MB NVRAM (20 MB available to user, 4 MB dynamic heap",
-      "Storage": "/",
+      "Storage": "",
       "Display": "160x160 STN screen capable of displaying 4,096 colors (12 bit)",
       "Connectivity": "Infrared, USB",
       "Battery": "Internal rechargeable Lithium-ion battery, lasting up to 8 hours of active use or up to a week with casual use.",
       "Weight": "96 grams"
     },
-    "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "Palm, Inc."
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/tablets/PALM-ZIRE-22-PDA.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Palm"
   },
   {
     "id": -1,
     "name": "",
     "price": 0,
-    "image": "img/products-img/tablets/",
     "description": "",
-    "rating": "4,5/5",
+    "rating": 4.5,
     "specs": {
       "Operating System": "",
       "CPU": "",
@@ -84,8 +95,13 @@
       "Battery": "",
       "Weight": ""
     },
-    "stock": 200,
-    "colors": "",
-    "Manufacturer": ""
+    "variants": [
+      {
+        "color": "",
+        "images": "img/products-img/tablets/",
+        "stock": 200
+      }
+    ],
+    "manufacturer": ""
   }
 ]

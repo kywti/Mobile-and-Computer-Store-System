@@ -3,14 +3,8 @@
     "id": 1,
     "name": "alcatel OT-810",
     "price": 29130,
-    "image": [
-      "img/products-img/phones/alcatel-ot-810.jpg",
-      "img/products-img/phones/Alcatel OT-810-Light-Chrome.jpg",
-      "img/products-img/phones/Alcatel OT-810-Mystery-Pink.webp",
-      "img/products-img/phones/Alcatel OT-810-Victorian-Blush.jpg"
-    ],
     "description": "OT-810 Glamour QWERTY Flip Mobile Phone",
-    "rating": "4,5/5",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Alcatel system",
@@ -21,17 +15,36 @@
       "Weight": "93.8 g",
       "Keyboard": "QWERTY"
     },
-    "stock": 200,
-    "colors": ["Light Chrome", "Mystery Pink", "Victorian Blush"],
-    "Manufacturer": "Alcatel Mobile"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "../img/phones/alcatel-ot-810.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Light Chrome",
+        "images": "../img/phones/Alcatel OT-810-Light-Chrome.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Mystery Pink",
+        "images": "../img/phones/Alcatel OT-810-Mystery-Pink.webp",
+        "stock": 200
+      },
+      {
+        "color": "Victorian Blush",
+        "images": "../img/phones/Alcatel OT-810-Victorian-Blush.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Alcatel Mobile"
   },
   {
     "id": 2,
     "name": "i-mate PDA2k",
     "price": 99300,
-    "image": "img/products-img/phones/i-mate-PDA2k.jpg",
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Microsoft Windows Mobile 2003 SE PocketPC",
@@ -42,17 +55,21 @@
       "Weight": "210 g",
       "Keyboard": "QWERTY"
     },
-    "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "HTC Corporation"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/i-mate-PDA2k.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "HTC Corporation"
   },
   {
     "id": 3,
     "name": "MITAC MIO DIGI WALKER 168",
     "price": 99300,
-    "image": "img/products-img/phones/MITAC-MIO-DIGI-WALKER-168.jpg",
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Microsoft Windows Mobile 2003 for Pocket PC Premium Edition (Ozone)",
@@ -64,22 +81,21 @@
       "Graphics": "NVIDIA MediaQ",
       "Keyboard": "QWERTY"
     },
-    "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "MiTAC"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/MITAC-MIO-DIGI-WALKER-168.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "MiTAC"
   },
   {
     "id": 4,
     "name": "Motorola T720",
     "price": 5300,
-    "image": [
-      "img/products-img/phones/motorola-t720.jpg",
-      "img/products-img/phones/motorola-t720-grey.jpg",
-      "img/products-img/phones/motorola-t720-pacific.jpg",
-      "img/products-img/phones/motorola-t720-white.jpg"
-    ],
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Motorola Operating System",
@@ -88,24 +104,39 @@
       "Display": "120 x 160 pixels, 9 lines, 4:3 ratio",
       "Battery": "Removable Li-Ion 1100 mAh battery (98481/SNN5595)",
       "Weight": "100 g",
-      "Graphics": "/",
-      "Keyboard": "/"
+      "Graphics": "",
+      "Keyboard": ""
     },
-    "stock": 200,
-    "colors": "",
-    "Manufacturer": "Motorola, Inc."
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/motorola-t720.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Grey",
+        "images": "img/products-img/phones/motorola-t720-grey.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Pacific",
+        "images": "img/products-img/phones/motorola-t720-pacific.jpg",
+        "stock": 200
+      },
+      {
+        "color": "White",
+        "images": "img/products-img/phones/motorola-t720-white.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Motorola"
   },
   {
     "id": 5,
     "name": "Motorola v505",
     "price": 26500,
-    "image": [
-      "img/products-img/phones/motorola-v505.jpg",
-      "img/products-img/phones/motorola-v505-blue.jpg",
-      "img/products-img/phones/motorola-v505-silver.jpg"
-    ],
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Motorola Operating System",
@@ -116,24 +147,28 @@
       "Weight": "105 g"
     },
     "stock": 200,
-    "colors": ["Blue", "Silver"],
-    "Manufacturer": "Motorola, Inc."
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/motorola-v505.jpg"
+      },
+      {
+        "color": "Blue",
+        "images": "img/products-img/phones/motorola-v505-blue.jpg"
+      },
+      {
+        "color": "Silver",
+        "images": "img/products-img/phones/motorola-v505-silver.jpg"
+      }
+    ],
+    "manufacturer": "Motorola"
   },
   {
     "id": 6,
     "name": "Nokia 3650",
     "price": 13240,
-    "image": [
-      "img/products-img/phones/Nokia-3650.jpg",
-      "img/products-img/phones/nokia-3650-blue.jpg",
-      "img/products-img/phones/nokia-3650-gray.jpg",
-      "img/products-img/phones/nokia-3650-green.jpg",
-      "img/products-img/phones/nokia-3650-pink.jpg",
-      "img/products-img/phones/Nokia-3650-red.jpg",
-      "img/products-img/phones/nokia-3650-yellow.jpg"
-    ],
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Symbian 6.1, Series 60 v1.0 UI",
@@ -142,19 +177,47 @@
       "Display": "130×57×26 mm (5.1×2.2×1.0 in), 139 cm3",
       "Battery": "Removable Li-Ion 850 mAh battery (BL-5C)",
       "Weight": "130 g",
-      "Graphics": "/"
+      "Graphics": ""
     },
     "stock": 200,
-    "colors": ["Blue", "Gray", "Green", "Pink", "Red", "Yellow"],
-    "Manufacturer": "Nokia Corporation"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Nokia-3650.jpg"
+      },
+      {
+        "color": "Blue",
+        "images": "img/products-img/phones/nokia-3650-blue.jpg"
+      },
+      {
+        "color": "Grey",
+        "images": "img/products-img/phones/nokia-3650-gray.jpg"
+      },
+      {
+        "color": "Green",
+        "images": "img/products-img/phones/nokia-3650-green.jpg"
+      },
+      {
+        "color": "Pink",
+        "images": "img/products-img/phones/nokia-3650-pink.jpg"
+      },
+      {
+        "color": "Red",
+        "images": "img/products-img/phones/Nokia-3650-red.jpg"
+      },
+      {
+        "color": "Yellow",
+        "images": "img/products-img/phones/nokia-3650-yellow.jpg"
+      }
+    ],
+    "manufacturer": "Nokia Corporation"
   },
   {
     "id": 7,
     "name": "Nokie N90",
     "price": 26480,
-    "image": "img/products-img/phones/Nokia-N90.jpg",
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM/UMTS",
       "Operating System": "Symbian OS 8.1a , Series 60 UI",
@@ -163,20 +226,24 @@
       "Display": "TFT, 256K colors, 2.1 \", 35 x 41 mm, 14.0 cm2 (~24.6% screen-to-body ratio), 352 x 416 pixels (~259 ppi density), Second external TFT, 65K colors display (128 x 128 pixels), 90 deg rotating screen, 5-way navigation key, Side joystick",
       "Battery": "Removable Li-Ion 760 mAh battery (BL-5B)",
       "Weight": "173 g",
-      "Graphics": "/",
-      "Keyboard": "/"
+      "Graphics": "",
+      "Keyboard": ""
     },
     "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "Nokia Corporation"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Nokia-N90.jpg"
+      }
+    ],
+    "manufacturer": "Nokia Corporation"
   },
   {
     "id": 8,
     "name": "Samsung SGH-A300",
     "price": 6620,
-    "image": "img/products-img/phones/Samsung-SGH-A300.jpg",
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Proprietary Samsung embedded software",
@@ -188,21 +255,21 @@
       "Graphics": "",
       "Keyboard": ""
     },
-    "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "Samsung Group"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Samsung-SGH-A300.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Samsung Group"
   },
   {
     "id": 9,
     "name": "Samsung SGH-E620",
     "price": 5300,
-    "image": [
-      "img/products-img/phones/Samsung-SGH-E620.jpg",
-      "img/products-img/phones/Samsung-SGH-E620-silver.jpg",
-      "img/products-img/phones/Samsung-SGH-E620-black.jpg"
-    ],
     "description": "Samsung's first GSM model to combine Bluetooth with speaker-independent voice control, and first with an anti-bacterial coating. Other key features include a megapixel camera, dual color displays, and class 10 GPRS.",
-    "rating": "4,5/5",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Proprietary Samsung embedded software",
@@ -214,22 +281,31 @@
       "Graphics": "",
       "Keyboard": ""
     },
-    "stock": 200,
-    "colors": ["Black", "Silver"],
-    "Manufacturer": "Samsung Group"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Samsung-SGH-E620.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Black",
+        "images": "img/products-img/phones/Samsung-SGH-E620-black.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Silver",
+        "images": "img/products-img/phones/Samsung-SGH-E620-silver.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Samsung Group"
   },
   {
     "id": 10,
     "name": "Sanyo VI-2300",
     "price": 25160,
-    "image": [
-      "img/products-img/phones/Sanyo-VI-2300.jpg",
-      "img/products-img/phones/Sanyo-VI-2300-black.jpg",
-      "img/products-img/phones/Sanyo-VI-2300-blue.jpg",
-      "img/products-img/phones/Sanyo-VI-2300-silver.jpg"
-    ],
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "",
       "Operating System": "Proprietary (Brew)",
@@ -241,17 +317,36 @@
       "Graphics": "",
       "Keyboard": ""
     },
-    "stock": 200,
-    "colors": ["Blue", "Black", "Silver"],
-    "Manufacturer": "Sanyo Electric Co., Ltd."
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Sanyo-VI-2300.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Blue",
+        "images": "img/products-img/phones/Sanyo-VI-2300-blue.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Black",
+        "images": "img/products-img/phones/Sanyo-VI-2300-black.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Silver",
+        "images": "img/products-img/phones/Sanyo-VI-2300-silver.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Sanyo Electric"
   },
   {
     "id": 11,
     "name": "Sony CLIÉ PEG-NR70V handheld personal digital assistant (PDA)",
     "price": 26480,
-    "image": "img/products-img/phones/Sony-Clié-PEG-NR70V.PNG",
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "",
       "Operating System": "Palm OS 4.1",
@@ -263,17 +358,21 @@
       "Graphics": "",
       "Keyboard": "QWERTY keyboard + Graffiti area"
     },
-    "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "Sony Corporation"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Sony-Clié-PEG-NR70V.PNG",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 12,
     "name": "Sony CLIÉ PEG-NX70V",
     "price": 26480,
-    "image": "img/products-img/phones/Sony-CLIE-PEG-NX70V.jpg",
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "CompactFlash (CF) Type II slot",
       "Operating System": "Palm OS 5.0",
@@ -285,20 +384,21 @@
       "Graphics": "NVIDIA MediaQ MQ-1168",
       "Keyboard": "Rotating screen \"clamshell\" design with integrated QWERTY keyboard"
     },
-    "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "Sony Corporation"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Sony-CLIE-PEG-NX70V.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 13,
     "name": "Sony Ericsson C1002S",
     "price": 1325,
-    "image": [
-      "img/products-img/phones/Sony-Ericsson-C1002S.jpg",
-      "img/products-img/phones/Sony-Ericsson-C1002S-white.jpg"
-    ],
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "cdmaOne (CDMA)",
       "Operating System": "proprietary, non-smart operating system",
@@ -310,21 +410,31 @@
       "Graphics": "",
       "Keyboard": ""
     },
-    "stock": 200,
-    "colors": ["Orange", "White"],
-    "Manufacturer": "Sony Corporation"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Sony-Ericsson-C1002S.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Orange",
+        "images": "img/products-img/phones/Sony-Ericsson-C1002S.jpg",
+        "stock": 200
+      },
+      {
+        "color": "White",
+        "images": "img/products-img/phones/Sony-Ericsson-C1002S-white.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 14,
     "name": "Sony Ericsson Xperia X10",
     "price": 3975,
-    "image": [
-      "img/products-img/phones/Sony-Ericon-Xperia-X10.jpg",
-      "img/products-img/phones/Sony-Ericon-Xperia-X10-Black.jpg",
-      "img/products-img/phones/Sony-Ericon-Xperia-X10-Luster-White.jpg"
-    ],
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM / HSPA",
       "Operating System": "Android 1.6 (Donut), upgradable to 2.3 (Gingerbread)",
@@ -336,17 +446,31 @@
       "Graphics": "Adreno 200",
       "Keyboard": ""
     },
-    "stock": 200,
-    "colors": ["Black", "White"],
-    "Manufacturer": "Sony Corporation"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Sony-Ericon-Xperia-X10.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Black",
+        "images": "img/products-img/phones/Sony-Ericon-Xperia-X10-Black.jpg",
+        "stock": 200
+      },
+      {
+        "color": "White",
+        "images": "img/products-img/phones/Sony-Ericon-Xperia-X10-Luster-White.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 15,
     "name": "Sony Ericsson P910i",
     "price": 10595,
-    "image": "img/products-img/phones/Sony-Ericsson-P910i.jpg",
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Symbian 7.0, UIQ v2.1 UI",
@@ -358,23 +482,21 @@
       "Graphics": "",
       "Keyboard": ""
     },
-    "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "Sony Corporation"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Sony-Ericsson-P910i.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 16,
     "name": "Sony Ericsson Z520",
     "price": 6620,
-    "image": [
-      "img/products-img/phones/Sony-Ericsson-Z520i.jpg",
-      "img/products-img/phones/Sony-Ericsson-Z520i-blue.jpg",
-      "img/products-img/phones/Sony-Ericsson-Z520i-pink.jpg",
-      "img/products-img/phones/Sony-Ericsson-Z520i-silver.jpg",
-      "img/products-img/phones/Sony-Ericsson-Z520i-white.jpg"
-    ],
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Sony Ericsson Java Platform JP-5.",
@@ -386,17 +508,41 @@
       "Graphics": "",
       "Keyboard": ""
     },
-    "stock": 200,
-    "colors": ["Blue", "Pink", "Silver", "White"],
-    "Manufacturer": "Sony Corporation"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/Sony-Ericsson-Z520i.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Blue",
+        "images": "img/products-img/phones/Sony-Ericsson-Z520i-blue.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Pink",
+        "images": "img/products-img/phones/Sony-Ericsson-Z520i-pink.jpg",
+        "stock": 200
+      },
+      {
+        "color": "Silver",
+        "images": "img/products-img/phones/Sony-Ericsson-Z520i-silver.jpg",
+        "stock": 200
+      },
+      {
+        "color": "White",
+        "images": "img/products-img/phones/Sony-Ericsson-Z520i-white.jpg",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Sony Corporation"
   },
   {
     "id": 17,
     "name": "T-Mobile Sidekick / T-Mobile Sidekick",
     "price": 33105,
-    "image": "img/products-img/phones/T-Mobile-Sidekick.PNG",
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "GSM 1900 MHz (PCS)",
       "Operating System": "Proprietary DangerOS",
@@ -408,17 +554,21 @@
       "Graphics": "",
       "Keyboard": "Scrollwheel, Pop out keyboard"
     },
-    "stock": 200,
-    "colors": "Standard",
-    "Manufacturer": "Danger Inc,"
+    "variants": [
+      {
+        "color": "Standard",
+        "images": "img/products-img/phones/T-Mobile-Sidekick.PNG",
+        "stock": 200
+      }
+    ],
+    "manufacturer": "Danger"
   },
   {
     "id": -1,
     "name": "",
     "price": 0,
-    "image": "img/products-img/phones/",
-    "description": "/",
-    "rating": "4,5/5",
+    "description": "",
+    "rating": 4.5,
     "specs": {
       "Network": "",
       "Operating System": "",
@@ -430,8 +580,13 @@
       "Graphics": "",
       "Keyboard": ""
     },
-    "stock": 200,
-    "colors": "",
-    "Manufacturer": ""
+    "variants": [
+      {
+        "color": "",
+        "images": "img/products-img/phones/",
+        "stock": 200
+      }
+    ],
+    "manufacturer": ""
   }
 ]

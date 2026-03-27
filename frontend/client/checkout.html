@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/checkout.css">
+</head>
+
+<body class="home-page-bg">
+
+    <!-- SLOGAN -->
+    <h1 class="top-slogan">SOME INSPIRING TEXT</h1>
+
+    <!-- HEADER (reuse from home page) -->
+    <div class="header">
+        <div class="header-top">
+            <div class="logo">LOGO</div>
+
+            <div class="header-search-bar">
+                <input type="text" placeholder="What are you looking for?">
+                <button class="search-button">
+                    <img src="img/icons/search.png" class="icon">
+                </button>
+                <button class="profile-button">
+                    <img src="img/icons/profile.png" class="icon">
+                </button>
+                <button class="shopping-cart-button">
+                    <img src="img/icons/shopping-cart.png" class="icon">
+                </button>
+            </div>
+        </div>
+
+        <div class="header-bottom">
+            <button class="header-button">HOME</button>
+            <button class="header-button">PHONES</button>
+            <button class="header-button">LAPTOPS</button>
+            <button class="header-button">TABLETS</button>
+            <button class="header-button">ACCESSORIES</button>
+        </div>
+    </div>
+
+    <!-- CHECKOUT PANEL -->
+    <div class="checkout-container">
+
+        <h2 class="section-title">CHECKING OUT</h2>
+
+        <div class="checkout-content">
+
+            <!-- LEFT : ORDER SUMMARY -->
+            <div class="order-summary">
+
+                <h3>Order Summary</h3>
+
+                <div class="product-summary">
+                    <img src="img/products/phone.png">
+                    <div>
+                        <p>SAMSUNG S23+ FLIP PHONE</p>
+                        <span>$234.67</span>
+                    </div>
+                    <button class="delete-btn">🗑</button>
+                </div>
+
+                <div class="product-summary">
+                    <img src="img/products/tablet.png">
+                    <div>
+                        <p>TABLET THING</p>
+                        <span>$234.67</span>
+                    </div>
+                    <button class="delete-btn">🗑</button>
+                </div>
+
+                <div class="total-box">
+                    <p>Sub total <span>$254.67</span></p>
+                    <p>Shipping Fee <span>FREE</span></p>
+                    <h4>Total <span>$254.67</span></h4>
+                </div>
+
+            </div>
+
+            <!-- RIGHT : FORM -->
+            <div class="checkout-form">
+
+               <div class="form-section-title">Shipping Details</div>
+
+                <input placeholder="Full name">
+                <div class="row">
+                    <input placeholder="City">
+                    <input placeholder="State">
+                </div>
+                <input placeholder="Postal Code">
+
+                <h3>Delivery Options</h3>
+                <label><input type="radio" name="delivery" checked> Standard 5-7 days (FREE)</label>
+                <label><input type="radio" name="delivery"> 2-4 days (+5$)</label>
+                <label><input type="radio" name="delivery"> Same day (+15$)</label>
+
+                <h3>Payment Methods</h3>
+                <label><input type="radio" name="payment" checked> Pay on delivery</label>
+                <label><input type="radio" name="payment"> Online payment (EDAHABIA)</label>
+
+                <button class="continue-btn">CONTINUE</button>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
