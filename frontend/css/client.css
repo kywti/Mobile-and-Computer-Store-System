@@ -90,9 +90,6 @@ input {
 input:focus {
   outline: none;
 }
-.header-search-bar:focus-within {
-  outline: 1px solid white;
-}
 
 button {
   background: white;
@@ -127,7 +124,7 @@ button:hover {
 }
 
 .header-button {
-  background-color: rgba(0, 0, 0, 0.76);
+  background-color: transparent;
   color: white;
   font-family: "Digital Numbers";
   font-size: 18px;
@@ -311,13 +308,16 @@ button:hover {
 
 .products-grid {
   display: grid;
-  grid-template-columns: auto auto auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 500px);
   background-color: dodgerblue;
-  padding: 10px;
+  gap: 20px;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .product {
-  height: 200px;
-  width: 150px;
+  height: 100%;
+  width: 100%;
   background-color: red;
 }
