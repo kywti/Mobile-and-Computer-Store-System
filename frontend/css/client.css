@@ -130,6 +130,11 @@ button:hover {
   font-size: 18px;
 }
 
+.header-button:hover {
+  background-color: white;
+  color: black;
+}
+
 .search-button:hover img {
   content: url("/img/icons/search-white.png");
 }
