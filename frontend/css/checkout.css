@@ -315,3 +315,297 @@ button:hover {
 .right-separator {
   width: 40px;
 }
+<<<<<<< HEAD
+=======
+.total-separator{
+  height:1px;
+  background:rgba(255,255,255,0.4);
+  margin:12px 0;
+}/*
+@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
+@import url("https://fonts.cdnfonts.com/css/digital-numbers");
+
+html, body {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+  font-family: "Electrolize", sans-serif;
+}
+
+p, button, input {
+  font-family: "Electrolize", sans-serif;
+}
+
+.home-page-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("/img/backgrounds/HomePageBg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 99vw;
+}
+
+.top-slogan {
+  margin-top: 80px;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 50px;
+  font-family: "Audiowide", sans-serif;
+}
+
+.header {
+  width: 83%;
+  min-width: 900px;
+  background-color: rgba(0, 0, 0, 0.76);
+  display: flex;
+  flex-direction: column;
+  padding: 15px 20px;
+  gap: 10px;
+}
+
+.header-top {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.logo {
+  color: white;
+  font-family: "Audiowide", sans-serif;
+  font-size: 50px;
+}
+
+.header-search-bar {
+  flex-grow: 2;
+  display: flex;
+}
+
+.header-search-bar input {
+  flex-grow: 1;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  padding-left: 15px;
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.header-search-bar input:focus {
+  outline: 1px solid white;
+}
+
+.header-top button {
+  border: none;
+  border-radius: 8px;
+  height: 50px;
+  padding: 0 12px;
+  cursor: pointer;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header-top button:hover {
+  background: #111;
+  color: white;
+}
+
+.icon {
+  width: 35px;
+  height: 35px;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  gap: 25px;
+  padding-left: 5px;
+}
+
+.header-button {
+  background: transparent;
+  color: white;
+  font-family: "Digital Numbers", sans-serif;
+  font-size: 18px;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 6px;
+}
+
+.header-button:hover {
+  color: #ffd700;
+}
+
+
+.checkout-container {
+  background: white;
+  width: 83%;
+  min-width: 900px;
+  padding: 40px;
+  margin-bottom: 80px;
+  box-shadow: 0 0 25px rgba(0,0,0,0.25);
+}
+
+.section-title {
+  font-family: "Audiowide", sans-serif;
+  font-size: 36px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.checkout-content {
+  display: flex;
+  gap: 80px;
+}
+
+.order-summary {
+  width: 35%;
+}
+
+.product-summary {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  background: #f4f4f4;
+  padding: 12px;
+  border-radius: 8px;
+  margin-bottom: 15px;
+}
+
+.product-summary img {
+  width: 60px;
+}
+
+.delete-btn {
+  margin-left: auto;
+  height: 35px;
+  font-size: 18px;
+}
+
+.total-box {
+  background: black;
+  color: white;
+  padding: 20px;
+  border-radius: 6px;
+  margin-top: 20px;
+}
+
+.total-box p,
+.total-box h4 {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-separator {
+  height: 1px;
+  background: rgba(255,255,255,0.4);
+  margin: 12px 0;
+}
+
+.checkout-form {
+  width: 45%;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.main-form-title {
+  font-family: "Audiowide", sans-serif;
+  font-size: 28px;
+  font-weight: bold;
+  margin: 10px 0;
+}
+
+.form-section-title {
+  font-family: "Audiowide", sans-serif;
+  font-size: 20px;
+  margin: 10px 0 5px;
+}
+
+.input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+}
+
+.input-group label {
+  font-size: 14px;
+  color: #333;
+  margin-left: 2px;
+}
+
+.checkout-form input[type="text"],
+.checkout-form input[type="number"] {
+  height: 48px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  padding-left: 15px;
+  font-size: 16px;
+}
+
+.checkout-form input:focus {
+  outline: none;
+  border: 1px solid black;
+}
+
+.row {
+  display: flex;
+  gap: 15px;
+}
+
+.row .input-group {
+  flex: 1;
+}
+
+.checkout-form label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.checkout-form input[type="radio"] {
+  appearance: none;
+  width: 18px;
+  height: 18px;
+  border: 2px solid black;
+  border-radius: 50%;
+  position: relative;
+}
+
+.checkout-form input[type="radio"]:checked::before {
+  content: "";
+  width: 10px;
+  height: 10px;
+  background: black;
+  border-radius: 50%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.continue-btn {
+  background: black;
+  color: white;
+  margin-top: 25px;
+  height: 52px;
+  border-radius: 6px;
+  font-family: "Audiowide", sans-serif;
+  letter-spacing: 1px;
+  cursor: pointer;
+}
+
+.continue-btn:hover {
+  background: #222;
+}*/
+>>>>>>> b710d6e702f2b8ea9c18cf3d9833a6c720459508
