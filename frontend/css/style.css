@@ -3,153 +3,148 @@
 @import url("https://fonts.cdnfonts.com/css/digital-numbers");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
-    height: 100vh;
-    background: url("background.jpg") no-repeat center center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  height: 100vh;
+  background: url("background.jpg") no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .container {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .form-box {
-    background: #eeeeee;
-    width: 420px;
-    padding: 40px;
-    border-radius: 6px;
+  background: #eeeeee;
+  width: 420px;
+  padding: 40px;
+  border-radius: 6px;
 }
 
-
 .form-box h1 {
-    text-align: center;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
+  text-align: center;
+  margin-bottom: 20px;
+  letter-spacing: 2px;
 }
 
 .form-box h2 {
-    font-weight: normal;
-    margin-bottom: 5px;
+  font-weight: normal;
+  margin-bottom: 5px;
 }
 
-
 .top-text {
-    font-size: 13px;
-    margin-bottom: 20px;
+  font-size: 13px;
+  margin-bottom: 20px;
 }
 
 .top-text a {
-    color: black;
-    text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
 
-
 .input-group {
-    margin-bottom: 12px;
+  margin-bottom: 12px;
 }
 
 .input-group label {
-    font-size: 12px;
-    display: block;
-    margin-bottom: 4px;
+  font-size: 12px;
+  display: block;
+  margin-bottom: 4px;
 }
 
 .input-group input {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #aaa;
-    outline: none;
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #aaa;
+  outline: none;
 }
-
 
 .row {
-    display: flex;
-    gap: 12px;
+  display: flex;
+  gap: 12px;
 }
 .row input {
-    width: 100%;
+  width: 100%;
 }
 
 .row .input-group {
-    flex: 1; 
+  flex: 1;
 }
 
-
 .checkbox-group {
-    margin-top: 10px;
+  margin-top: 10px;
 }
 
 .checkbox {
-    display: flex;
-    align-items: flex-start;
-    gap: 8px;
-    font-size: 12px;
-    margin-bottom: 10px;
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;
+  font-size: 12px;
+  margin-bottom: 10px;
 }
 
 .checkbox input {
-    margin-top: 3px;
+  margin-top: 3px;
 }
 
 .checkbox span {
-    line-height: 1.4;
+  line-height: 1.4;
 }
+
 
 .checkbox a {
-    color: black;
-    text-decoration: underline;
+  color: black;
+  text-decoration: underline;
 }
 
-
 button {
-    width: 100%;
-    margin-top: 15px;
-    padding: 12px;
-    background: black;
-    color: white;
-    border: none;
-    cursor: pointer;
-    font-size: 14px;
+  width: 100%;
+  margin-top: 15px;
+  padding: 12px;
+  background: black;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
 }
 
 button:hover {
-    background: #333;
-} 
+  background: #333;
+}
 
 .forgot {
-    font-size: 12px;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    cursor: pointer;
+  font-size: 12px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  cursor: pointer;
 }
 
 .password-wrapper {
-    position: relative;
+  position: relative;
 }
 
 .password-wrapper input {
-    width: 100%;
-    padding: 10px;
-    padding-right: 40px; 
-    border: 1px solid #aaa;
+  width: 100%;
+  padding: 10px;
+  padding-right: 40px;
+  border: 1px solid #aaa;
 }
 
 .toggle-password {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
-    font-size: 16px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
 }
