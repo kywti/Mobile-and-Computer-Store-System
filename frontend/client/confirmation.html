@@ -1,109 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<title>Order Confirmation</title>
-<link rel="stylesheet" href="../css/confirmation.css">
+  <meta charset="UTF-8">
+  <title>Order Confirmation</title>
+  <link rel="stylesheet" href="../css/confirmation.css">
 </head>
 
 <body>
 <div class="home-page-bg">
 
-<p class="top-slogan">SOME INSPIRING TEXT</p>
+  <p class="top-slogan">SOME INSPIRING TEXT</p>
 
-<!-- HEADER (same as other pages) -->
-<div class="header">
-  <div class="header-top">
-    <p class="logo">LOGO</p>
+  <!-- HEADER -->
+  <div class="header">
 
-    <form class="header-search-bar">
-      <input placeholder="What are you looking for ?">
-      <button class="search-button">
-        <img class="icon" src="/img/icons/search.png">
+    <div class="header-top">
+      <p class="logo">LOGO</p>
+
+      <form class="header-search-bar">
+        <input type="text" placeholder="What are you looking for ?">
+        <button type="submit" class="search-button">
+          <img class="icon" src="/img/icons/search.png" alt="search">
+        </button>
+      </form>
+
+      <button class="profile-button">
+        <img class="icon" src="/img/icons/profile.png" alt="profile">
       </button>
-    </form>
 
-    <button class="profile-button">
-      <img class="icon" src="/img/icons/profile.png">
-    </button>
+      <button class="shopping-cart-button">
+        <img class="icon" src="/img/icons/shopping-cart.png" alt="cart">
+      </button>
+    </div>
 
-    <button class="shopping-cart-button">
-      <img class="icon" src="/img/icons/shopping-cart.png">
-    </button>
+    <div class="header-bottom">
+      <button class="header-button">HOME</button>
+      <button class="header-button">PHONES</button>
+      <button class="header-button">LAPTOPS</button>
+      <button class="header-button">TABLETS</button>
+      <button class="header-button">ACCESSORIES</button>
+    </div>
+
   </div>
 
-  <div class="header-bottom">
-    <button class="header-button">HOME</button>
-    <button class="header-button">PHONES</button>
-    <button class="header-button">LAPTOPS</button>
-    <button class="header-button">TABLETS</button>
-    <button class="header-button">ACCESSORIES</button>
+  <!-- MAIN -->
+  <div class="home-page-main-area-top">
+
+    <h2 class="section-title">ORDER CONFIRMATION</h2>
+
+    <div class="order-container">
+
+      <!-- LEFT -->
+      <div class="order-summary">
+        <h3>Order Summary</h3>
+
+        <div class="product-summary">
+          <img src="/img/phones/Sony-Ericsson-Z520i.jpg" alt="">
+          <div>
+            <p>SAMSUNG S23+ FLIP PHONE</p>
+            <span>$234.67</span>
+          </div>
+        </div>
+
+        <div class="product-summary">
+          <img src="/img/products/tablet.png" alt="">
+          <div>
+            <p>TABLET THING</p>
+            <span>$234.67</span>
+          </div>
+        </div>
+
+        <div class="order-total">
+          <p>Sub total <span>$254.67</span></p>
+          <p>Shipping Fee <span>FREE</span></p>
+          <hr>
+          <h4>Total <span>$254.67</span></h4>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="shipping-details">
+
+        <h3>Shipping</h3>
+
+        <h4>Contact Details</h4>
+        <p><strong>First Name:</strong> FIRST NAME</p>
+        <p><strong>Last Name:</strong> LAST NAME</p>
+        <p><strong>Email:</strong> ADDRESS@GMAIL.COM</p>
+        <p><strong>Phone:</strong> +2131111111</p>
+
+        <h4>Shipping Details</h4>
+        <p><strong>Address:</strong> 123 Main Street</p>
+        <p><strong>City:</strong> City</p>
+        <p><strong>State:</strong> State</p>
+        <p><strong>Postal Code:</strong> 11223</p>
+
+        <h4>Delivery Options</h4>
+        <p>Standard 5-7 Business days — FREE</p>
+
+        <h4>Payment Methods</h4>
+        <p>Pay on delivery</p>
+
+        <button class="continue-btn">CONFIRM ORDER</button>
+
+      </div>
+
+    </div>
   </div>
-</div>
 
-<!-- MAIN WHITE CARD -->
-<div class="home-page-main-area-top">
+  <!-- FOOTER -->
+  <div class="footer">
+    <div class="bottom-area">
 
-<h2 class="section-title">ORDER CONFIRMATION</h2>
+      <div class="bottom-area-text">
+        <p class="bottom-area-text-top">About</p>
+        <p>About Us</p>
+        <p>Careers</p>
+        <p>Franchising</p>
+        <p>Brand Blog</p>
+        <p>Press</p>
+      </div>
 
-<div class="order-container">
+      <div class="bottom-area-text">
+        <p class="bottom-area-text-top">Support</p>
+        <p>Repairs</p>
+        <p>Contact Us</p>
+        <p>FAQ</p>
+      </div>
 
-<!-- LEFT : ORDER SUMMARY -->
-<div class="order-summary">
-<h3>Order Summary</h3>
+      <div class="bottom-area-text">
+        <p class="bottom-area-text-top">Legal</p>
+        <p>Terms and Conditions</p>
+        <p>Cookies Policy</p>
+        <p>Privacy Policy</p>
+      </div>
 
-<div class="product-summary">
-  <img src="/img/phones/Sony-Ericsson-Z520i.jpg">
-  <div>
-    <p>SAMSUNG S23+ FLIP PHONE</p>
-    <span>$234.67</span>
+    </div>
   </div>
-</div>
-
-<div class="product-summary">
-  <img src="/img/products/tablet.png">
-  <div>
-    <p>TABLET THING</p>
-    <span>$234.67</span>
-  </div>
-</div>
-
-<div class="order-total">
-  <p class="subtotal">Sub total <span>$254.67</span></p>
-  <p class="shipping-fee">Shipping Fee <span>FREE</span></p>
-  <hr>
-  <h4 class="total">Total <span>$254.67</span></h4>
-</div>
-</div>
-
-<!-- RIGHT : SHIPPING DETAILS -->
-<div class="shipping-details">
-
-<h3>Shipping</h3>
-
-<h4>Contact Details</h4>
-<p><strong>First Name:</strong> FIRST NAME</p>
-<p><strong>Last Name:</strong> LAST NAME</p>
-<p><strong>Email:</strong> ADDRESS@GMAIL.COM</p>
-<p><strong>Phone:</strong> +2131111111</p>
-
-<h4>Shipping Details</h4>
-<p><strong>Address:</strong> 123 Main Street</p>
-<p><strong>City:</strong> City</p>
-<p><strong>State:</strong> State</p>
-<p><strong>Postal Code:</strong> 11223</p>
-
-<h4>Delivery Options</h4>
-<p>Standard 5-7 Business days — FREE</p>
-
-<h4>Payment Methods</h4>
-<p>Pay on delivery</p>
-
-<button class="continue-btn">CONFIRM ORDER</button>
-
-</div>
-</div>
-</div>
 
 </div>
 </body>
