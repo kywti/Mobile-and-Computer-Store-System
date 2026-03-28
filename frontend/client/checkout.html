@@ -115,10 +115,32 @@
                 <label><input type="radio" name="delivery"> Same day (+15$)</label>
 
                 <h3>Payment Methods</h3>
-                <label><input type="radio" name="payment" checked> Pay on delivery</label>
-                <label><input type="radio" name="payment"> Online payment (EDAHABIA)</label>
 
-                <button class="continue-btn">CONTINUE</button>
+<label>
+  <input type="radio" name="payment" value="cod" checked>
+  Pay on delivery
+</label>
+
+<label>
+  <input type="radio" name="payment" value="edahabia" id="edahabia-radio">
+  Online payment (EDAHABIA)
+</label>
+
+
+<div class="card-fields" id="cardFields">
+
+    <input class="card-input" type="text" placeholder="Card Number">
+
+    <div class="row">
+        <input class="card-input" type="text" placeholder="MM/YY">
+        <input class="card-input" type="text" placeholder="CVV">
+    </div>
+
+</div>
+      
+    
+
+        <button class="continue-btn">CONTINUE</button>
 
         </div>
 
@@ -127,6 +149,31 @@
     </div>
 
     </div>
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    const paymentRadios = document.querySelectorAll('input[name="payment"]');
+    const edahabiaRadio = document.getElementById("edahabia-radio");
+    const cardFields = document.getElementById("cardFields");
+
+    function toggleCardFields() {
+        if (edahabiaRadio.checked) {
+            cardFields.classList.add("active");
+        } else {
+            cardFields.classList.remove("active");
+        }
+    }
+
+    // run once when page loads
+    toggleCardFields();
+
+    // run every time user changes payment option
+    paymentRadios.forEach(radio => {
+        radio.addEventListener("change", toggleCardFields);
+    });
+
+});
+</script>
 
 </body>
 </html>
