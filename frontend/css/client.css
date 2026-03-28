@@ -7,6 +7,7 @@ body {
   height: 100%;
   margin: 0;
   overflow-y: auto;
+  font-family: "Electrolize";
 }
 
 p,
@@ -56,6 +57,10 @@ button {
   min-width: 900px;
   display: flex;
   flex-direction: column;
+}
+
+.header {
+  margin-bottom: 30px;
 }
 
 .header-top {
@@ -318,6 +323,7 @@ button:hover {
   gap: 330px;
   height: 200px;
   padding-top: 30px;
+  margin-top: 30px;
 }
 
 .bottom-area-text {
@@ -480,6 +486,12 @@ button:hover {
   display: flex;
 }
 
+.variant-button {
+  height: 40px;
+  width: 40px;
+  border: solid black 1px;
+}
+
 .pdp-product-specs {
   display: flex;
   flex-direction: column;
@@ -520,6 +532,39 @@ button:hover {
   margin-left: 20px;
 }
 
+.product-colors-button {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.color-button {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+
+  padding: 8px 16px;
+  border: 1px solid black;
+  border-radius: 8px;
+
+  transition: all 0.1s ease;
+}
+
+.color-button input {
+  display: none;
+}
+
+.color-button:hover {
+  background: black;
+  color: white;
+}
+
+.color-button:has(input:checked) {
+  background: black;
+  color: white;
+  font-weight: bold;
+}
+
 .quantity-buttons {
   display: flex;
   justify-content: space-evenly;
@@ -546,23 +591,176 @@ button:hover {
 .payment-icon {
   width: 40px;
 }
-<<<<<<< HEAD
-.product-ad {
-  background-color: black;
-}
-/* ===== EDAHABIA CARD ANIMATION ===== */
 
-.card-fields{
-  max-height:0;
-  overflow:hidden;
-  opacity:0;
-  transition: all 0.4s ease;
+/*  SHOPPING CART!!!!!!!!! */
+
+.basket-header {
+  display: flex;
+  align-items: center;
 }
 
-.card-fields.active{
-  max-height:200px;
-  opacity:1;
-  margin-top:10px;
+.p1 {
+  margin: 40px 0px 20px 300px;
+  font-size: 20px;
+  font-family: "Audiowide";
 }
-=======
->>>>>>> 7a47c214dee250fdbf53002a8df640e2a476aebf
+
+.p2 {
+  margin: 40px 0px 20px 10px;
+  color: rgb(101, 124, 129);
+  font-size: 13px;
+  font-family: "Audiowide";
+}
+
+.sc-elements {
+  display: flex;
+  width: 100%;
+}
+
+.left-container {
+  display: flex;
+  flex: 0 0 200px;
+  justify-content: center;
+  height: 300px;
+  padding: 0px 20px;
+}
+
+.left-container img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+  margin-left: 30px;
+}
+
+.basket {
+  min-width: 300px;
+  flex: 2;
+}
+
+.basket-item {
+  border: solid black 1px;
+  border-radius: 6px;
+  margin: 20px 30px 10px 30px;
+
+  display: flex;
+  align-items: center;
+  min-width: 390px;
+  max-width: 100%;
+  min-height: 130px;
+}
+
+.basket-item img {
+  width: 80px;
+  height: auto;
+  margin: 0px 20px 0px 20px;
+}
+
+.sc-product-name {
+  font-size: 18px;
+  margin: 20px 0px 0px 0px;
+  font-family: "Audiowide";
+}
+
+.sc-product-price {
+  font-size: 15px;
+  margin: 0px 0px 20px 0px;
+}
+
+.item-layout {
+  display: flex;
+  flex-direction: column;
+  flex: 2;
+}
+
+.sc-bottom-buttons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+
+.sc-separator {
+  flex: 2;
+}
+
+.sc-edit-quantity {
+  height: 20px;
+  width: 20px;
+  border-radius: 2px;
+  border: solid, black, 1px;
+  margin: 0px;
+}
+
+.delete-button {
+  margin: 0px;
+  width: 45px;
+  height: 35px;
+  margin-right: 40px;
+}
+
+.delete-button:hover img {
+  content: url("/img/icons/delete-white.png");
+  width: 25px;
+  height: 25px;
+}
+
+.delete-button img {
+  width: 25px;
+  height: 25px;
+}
+
+.right-container {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px 20px;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+}
+
+.order-summary {
+  background-color: rgb(12, 12, 12);
+  color: white;
+  padding: 15px 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 8px;
+}
+
+.order-summary-label {
+  font-size: 18px;
+  margin-bottom: 25px;
+}
+
+.order-summary-separator {
+  margin: 0px;
+}
+
+.order-price-container {
+  display: flex;
+  gap: 90px;
+}
+
+.checkout-button {
+  margin-right: 0px;
+  background-color: rgb(12, 12, 12);
+  color: white;
+  height: 50px;
+  font-size: 16px;
+}
+
+.sc-right-ad {
+  display: flex;
+  flex: 0 0 200px;
+  justify-content: center;
+  height: 400px;
+  padding: 20px 20px;
+}
+
+.sc-right-ad img {
+  max-width: 100%;
+  height: auto;
+  object-fit: contain;
+}
