@@ -23,13 +23,15 @@ button {
 }
 
 .home-page-bg,
-.product-details-page-bg {
+.product-details-page-bg,
+.product-page-bg,
+.order-history-page-bg,
+.shopping-cart-page-bg {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
 
-  background-image: url("/img/backgrounds/HomePageBg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -37,6 +39,11 @@ button {
 
   min-height: 100vh;
   width: 99vw;
+}
+
+.home-page-bg,
+.product-page-bg {
+  background-image: url("/img/backgrounds/HomePageBg.jpg");
 }
 
 .top-slogan {
@@ -179,7 +186,8 @@ button:hover {
 
 .section-title {
   font-family: "Audiowide";
-  font-size: 22px;
+  margin-top: 20px;
+  font-size: 24px;
 }
 
 .ads-container {
@@ -278,46 +286,34 @@ button:hover {
   display: flex;
   width: 100%;
   justify-content: space-between;
-}
-
-.sort-search-bar {
-  display: flex;
   align-items: center;
-  flex-direction: row;
-  padding: 1px;
-  width: 400px;
 }
 
 .filler {
-  width: 400px;
+  width: 130px;
 }
 
-.sort-button,
-.sort-input {
-  border: solid;
-  border-color: black;
-  border-radius: 6px;
-  border-width: 1px;
-}
-
-.sort-input {
-  height: 38px;
-}
-
-.sort-button {
-  height: 44px;
-  width: 44px;
+.see-more-button {
+  height: 35px;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 10px;
+  font-size: 15px;
+  width: 130px;
 }
 
-.sort-button:hover img {
-  content: url("/img/icons/filter-white.png");
+.see-more-button img {
+  width: 15px;
+  height: auto;
+}
+
+.see-more-button:hover img {
+  content: url("/img/icons/search-white.png");
 }
 
 .bottom-area {
-  margin-bottom: 120px;
+  margin-bottom: 80px;
   flex-direction: row;
   justify-content: space-evenly;
   gap: 330px;
@@ -341,7 +337,7 @@ button:hover {
   grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
   padding: 20px 0;
   width: 85%;
-  gap: 30px;
+  gap: 32px;
 }
 
 .product {
@@ -351,14 +347,21 @@ button:hover {
   justify-content: space-between;
 
   width: 100%;
-  height: 100%;
+  height: 300px;
 
   min-width: 0;
 }
 
 .product-picture {
-  width: 90%;
-  height: 170px;
+  display: flex;
+  flex: 1;
+  max-height: 140px;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-picture img {
+  width: 70%;
   object-fit: contain;
 }
 
@@ -366,8 +369,9 @@ button:hover {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 90%;
+  width: 100%;
   margin: 0px;
+  height: 160px;
 }
 
 .product-category {
@@ -441,7 +445,9 @@ button:hover {
 
 /*  PRODUCT DETAILS!!!!!!!!! */
 
-.product-details-page-bg {
+.product-details-page-bg,
+.order-history-page-bg,
+.shopping-cart-page-bg {
   background-image: url("/img/backgrounds/product-details-bg.jpg");
 }
 .main-area {
@@ -459,12 +465,18 @@ button:hover {
   flex-direction: column;
 }
 
+.product-details-header {
+  margin: 20px 0px 0px 50px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
 .pdp-product-details {
   display: flex;
 }
 
 .back-button {
-  margin: 20px 0px 0px 30px;
   width: 100px;
 }
 
@@ -601,7 +613,7 @@ button:hover {
 
 .p1 {
   margin: 40px 0px 20px 300px;
-  font-size: 20px;
+  font-size: 24px;
   font-family: "Audiowide";
 }
 
@@ -769,8 +781,7 @@ button:hover {
 
 .order-history-header {
   font-family: "Audiowide";
-  font-size: 32px;
-  font-weight: bold;
+  font-size: 24px;
   margin: 30px 0px 0px 50px;
 }
 
@@ -820,7 +831,7 @@ button:hover {
 
 .oh-sort-search-bar {
   display: flex;
-  width: auto;
+  width: 230px;
 }
 
 .oh-sort-search-bar input {
@@ -829,6 +840,8 @@ button:hover {
   font-size: 15px;
   flex: 0;
   margin-right: 5px;
+  border: solid black 1px;
+  border-radius: 3px;
 }
 
 .oh-sort-search-bar button {
@@ -945,4 +958,24 @@ button:hover {
 
 .order {
   display: flex;
+}
+
+/*  PRODUCTS!!!!!!!!! */
+
+.products-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.p-products-header {
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px 0px 0px 0px;
+}
+
+.p-filler {
+  width: 230px;
 }

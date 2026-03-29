@@ -3,7 +3,7 @@
     "id": 1,
     "name": "HP Omnibook XE3",
     "price": 148955,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Operating System": "Microsoft Windows 2000",
@@ -32,7 +32,7 @@
     "id": 2,
     "name": "Apple iMac G3",
     "price": 158885,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Operating System": "Mac OS 9.1 and Mac OS X 10.0.4",
@@ -123,7 +123,7 @@
     "id": 3,
     "name": "Apple Power Mac G4",
     "price": 46345,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Operating System": "Mac OS 9",
@@ -164,7 +164,7 @@
     "id": 4,
     "name": "ASUS Eee PC 900",
     "price": 72825,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Operating System": "Microsoft Windows XP Home",
@@ -194,16 +194,16 @@
         "stock": 200
       }
     ],
-    "manufacturer": ""
+    "manufacturer": "N/A"
   },
   {
     "id": 5,
     "name": "Dell Inspiron 700m",
     "price": 13240,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
-      "Operating System": "",
+      "Operating System": "N/A",
       "CPU": "Intel Pentium M 725 (1.6GHz - 1.8GHz Dothan core)",
       "Memory": "512MB DDR SDRAM",
       "Display": "12.1\" TFT LCD, 1280x800 resolution",
@@ -220,7 +220,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": ""
+    "manufacturer": "Dell"
   },
   {
     "id": -1,
