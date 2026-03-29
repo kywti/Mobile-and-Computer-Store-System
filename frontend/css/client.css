@@ -786,6 +786,7 @@ button:hover {
   width: 90px;
   height: 40px;
   font-size: 14px;
+  margin-bottom: 10px;
 }
 .export-button img {
   width: 18px;
@@ -844,36 +845,104 @@ button:hover {
 .orders-header {
   display: flex;
   font-size: 18px;
-  margin: 0px 50px 0px 50px;
+  margin: 0px 50px 0px 70px;
   gap: 30px;
 }
 
 .f1 {
-  background-color: blue;
-  width: 230px;
+  width: 250px;
 }
 .f2 {
-  background-color: red;
-  width: 150px;
+  width: 130px;
 }
 .f3 {
-  background-color: blue;
-  width: 100px;
+  width: 120px;
 }
 .f4 {
-  background-color: red;
+  width: 220px;
 }
 .f5 {
-  background-color: blue;
+  width: 150px;
 }
 .f6 {
-  background-color: red;
+  width: 190px;
 }
 
 .orders-list {
   display: flex;
   flex-direction: column;
+  margin: 0px 50px 70px 50px;
+  gap: 20px;
 }
+
+.order {
+  display: flex;
+  gap: 30px;
+  border: solid #aaa 1px;
+  border-radius: 6px;
+  align-items: center;
+  padding-left: 20px;
+}
+
+.if1 {
+  display: flex;
+  width: 260px;
+  align-items: center;
+  gap: 10px;
+}
+.if1 img {
+  width: 45px;
+  height: auto;
+}
+.if2 {
+  display: flex;
+  width: 120px;
+  align-items: center;
+  gap: 10px;
+}
+.if2 img {
+  width: 40px;
+  height: auto;
+}
+.if3 {
+  width: 120px;
+}
+.if4 {
+  width: 220px;
+}
+
+.if5 {
+  width: 150px;
+  display: flex;
+}
+.pending,
+.delivered,
+.processing,
+.of-delivery,
+.canceled {
+  color: white;
+  padding: 5px 10px;
+}
+.pending {
+  background-color: #94a2bf;
+}
+.delivered {
+  background-color: #01162b;
+}
+.processing {
+  background-color: #004874;
+}
+.of-delivery {
+  background-color: #6a90b4;
+}
+.canceled {
+  background-color: #b46a6a;
+}
+
+.if6 {
+  width: 190px;
+}
+
 .order {
   display: flex;
 }
