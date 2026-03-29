@@ -19,10 +19,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": [
-          "img/products-img/laptops/HP-Omnibook-XE3.jpg",
-          "img/products-img/laptops/hp-OmniBook-XE3-1.jpg"
-        ],
+        "images": ["/img/laptops/hp-OmniBook-XE3-1.jpg"],
         "stock": 200
       }
     ],
@@ -48,72 +45,72 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/laptops/Apple-iMac-G3.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3.jpg"],
         "stock": 200
       },
       {
         "color": "Blue Dalmatian",
-        "images": "img/products-img/laptops/Apple-iMac-G3-blue-dalmatian.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-blue-dalmatian.jpg"],
         "stock": 200
       },
       {
         "color": "Blueberry",
-        "images": "img/products-img/laptops/Apple-iMac-G3-blueberry.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-blueberry.jpg"],
         "stock": 200
       },
       {
         "color": "Bondi",
-        "images": "img/products-img/laptops/Apple-iMac-G3-bondi.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-bondi.jpg"],
         "stock": 200
       },
       {
         "color": "Flower Power",
-        "images": "img/products-img/laptops/Apple-iMac-G3-flower-power.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-flower-power.jpg"],
         "stock": 200
       },
       {
         "color": "Grape",
-        "images": "img/products-img/laptops/Apple-iMac-G3-grape.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-grape.jpg"],
         "stock": 200
       },
       {
         "color": "Graphite",
-        "images": "img/products-img/laptops/Apple-iMac-G3-graphite.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-graphite.jpg"],
         "stock": 200
       },
       {
         "color": "Indigo",
-        "images": "img/products-img/laptops/Apple-iMac-G3-indigo.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-indigo.jpg"],
         "stock": 200
       },
       {
         "color": "Lime",
-        "images": "img/products-img/laptops/Apple-iMac-G3-lime.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-lime.jpg"],
         "stock": 200
       },
       {
         "color": "Ruby",
-        "images": "img/products-img/laptops/Apple-iMac-G3-ruby.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-ruby.jpg"],
         "stock": 200
       },
       {
         "color": "Sage",
-        "images": "img/products-img/laptops/Apple-iMac-G3-sage.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-sage.jpg"],
         "stock": 200
       },
       {
         "color": "Snow",
-        "images": "img/products-img/laptops/Apple-iMac-G3-snow.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-snow.jpg"],
         "stock": 200
       },
       {
         "color": "Strawberry",
-        "images": "img/products-img/laptops/Apple-iMac-G3-strawberry.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-strawberry.jpg"],
         "stock": 200
       },
       {
         "color": "Tangerine",
-        "images": "img/products-img/laptops/Apple-iMac-G3-tangerine.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-tangerine.jpg"],
         "stock": 200
       }
     ],
@@ -139,22 +136,22 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/laptops/Apple-power-mac-g4-grey.jpg",
+        "images": ["/img/laptops/Apple-power-mac-g4-grey.jpg"],
         "stock": 200
       },
       {
         "color": "Blue",
-        "images": "img/products-img/laptops/Apple-power-mac-g4-blue.jpg",
+        "images": ["/img/laptops/Apple-power-mac-g4-blue.jpg"],
         "stock": 200
       },
       {
         "color": "White",
-        "images": "img/products-img/laptops/Apple-power-mac-g4-white.jpg",
+        "images": ["/img/laptops/Apple-power-mac-g4-white.jpg"],
         "stock": 200
       },
       {
         "color": "Grey",
-        "images": "img/products-img/laptops/Apple-power-mac-g4-grey.jpg",
+        "images": ["/img/laptops/Apple-power-mac-g4-grey.jpg"],
         "stock": 200
       }
     ],
@@ -180,17 +177,17 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/laptops/asus-eee-pc-900.jpg",
+        "images": ["/img/laptops/asus-eee-pc-900.jpg"],
         "stock": 200
       },
       {
         "color": "Black",
-        "images": "img/products-img/laptops/asus-eee-pc-900-black.jpg",
+        "images": ["/img/laptops/asus-eee-pc-900-black.jpg"],
         "stock": 200
       },
       {
         "color": "Pink",
-        "images": "img/products-img/laptops/asus-eee-pc-900-pink.jpg",
+        "images": ["/img/laptops/asus-eee-pc-900-pink.jpg"],
         "stock": 200
       }
     ],
@@ -216,36 +213,10 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/laptops/Dell-Inspiron-700m.PNG",
+        "images": ["/img/laptops/Dell-Inspiron-700m.PNG"],
         "stock": 200
       }
     ],
     "manufacturer": "Dell"
-  },
-  {
-    "id": -1,
-    "name": "",
-    "price": 0,
-    "description": "",
-    "rating": 4.5,
-    "specs": {
-      "Operating System": "",
-      "CPU": "",
-      "Memory": "",
-      "Display": "",
-      "Storage": "",
-      "Battery": "",
-      "Dimensions": "",
-      "Weight": "",
-      "Graphics": ""
-    },
-    "variants": [
-      {
-        "color": "",
-        "images": "img/products-img/laptops/",
-        "stock": 200
-      }
-    ],
-    "manufacturer": ""
   }
 ]

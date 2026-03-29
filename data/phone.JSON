@@ -18,22 +18,22 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "../img/phones/alcatel-ot-810.jpg",
+        "images": ["/img/phones/alcatel-ot-810.jpg"],
         "stock": 200
       },
       {
         "color": "Light Chrome",
-        "images": "../img/phones/Alcatel OT-810-Light-Chrome.jpg",
+        "images": ["/img/phones/Alcatel OT-810-Light-Chrome.jpg"],
         "stock": 200
       },
       {
         "color": "Mystery Pink",
-        "images": "../img/phones/Alcatel OT-810-Mystery-Pink.webp",
+        "images": ["/img/phones/Alcatel OT-810-Mystery-Pink.webp"],
         "stock": 200
       },
       {
         "color": "Victorian Blush",
-        "images": "../img/phones/Alcatel OT-810-Victorian-Blush.jpg",
+        "images": ["/img/phones/Alcatel OT-810-Victorian-Blush.jpg"],
         "stock": 200
       }
     ],
@@ -58,7 +58,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/i-mate-PDA2k.jpg",
+        "images": ["/img/phones/i-mate-PDA2k.jpg"],
         "stock": 200
       }
     ],
@@ -84,7 +84,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/MITAC-MIO-DIGI-WALKER-168.jpg",
+        "images": ["/img/phones/MITAC-MIO-DIGI-WALKER-168.jpg"],
         "stock": 200
       }
     ],
@@ -110,22 +110,22 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/motorola-t720.jpg",
+        "images": ["/img/phones/motorola-t720.jpg"],
         "stock": 200
       },
       {
         "color": "Grey",
-        "images": "img/products-img/phones/motorola-t720-grey.jpg",
+        "images": ["/img/phones/motorola-t720-grey.jpg"],
         "stock": 200
       },
       {
         "color": "Pacific",
-        "images": "img/products-img/phones/motorola-t720-pacific.jpg",
+        "images": ["/img/phones/motorola-t720-pacific.jpg"],
         "stock": 200
       },
       {
         "color": "White",
-        "images": "img/products-img/phones/motorola-t720-white.jpg",
+        "images": ["/img/phones/motorola-t720-white.jpg"],
         "stock": 200
       }
     ],
@@ -150,15 +150,15 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/motorola-v505.jpg"
+        "images": ["/img/phones/motorola-v505.jpg"]
       },
       {
         "color": "Blue",
-        "images": "img/products-img/phones/motorola-v505-blue.jpg"
+        "images": ["/img/phones/motorola-v505-blue.jpg"]
       },
       {
         "color": "Silver",
-        "images": "img/products-img/phones/motorola-v505-silver.jpg"
+        "images": ["/img/phones/motorola-v505-silver.jpg"]
       }
     ],
     "manufacturer": "Motorola"
@@ -183,31 +183,31 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Nokia-3650.jpg"
+        "images": ["/img/phones/Nokia-3650.jpg"]
       },
       {
         "color": "Blue",
-        "images": "img/products-img/phones/nokia-3650-blue.jpg"
+        "images": ["/img/phones/nokia-3650-blue.jpg"]
       },
       {
         "color": "Grey",
-        "images": "img/products-img/phones/nokia-3650-gray.jpg"
+        "images": ["/img/phones/nokia-3650-gray.jpg"]
       },
       {
         "color": "Green",
-        "images": "img/products-img/phones/nokia-3650-green.jpg"
+        "images": ["/img/phones/nokia-3650-green.jpg"]
       },
       {
         "color": "Pink",
-        "images": "img/products-img/phones/nokia-3650-pink.jpg"
+        "images": ["/img/phones/nokia-3650-pink.jpg"]
       },
       {
         "color": "Red",
-        "images": "img/products-img/phones/Nokia-3650-red.jpg"
+        "images": ["/img/phones/Nokia-3650-red.jpg"]
       },
       {
         "color": "Yellow",
-        "images": "img/products-img/phones/nokia-3650-yellow.jpg"
+        "images": ["/img/phones/nokia-3650-yellow.jpg"]
       }
     ],
     "manufacturer": "Nokia Corporation"
@@ -233,7 +233,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Nokia-N90.jpg"
+        "images": ["/img/phones/Nokia-N90.jpg"]
       }
     ],
     "manufacturer": "Nokia Corporation"
@@ -258,7 +258,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Samsung-SGH-A300.jpg",
+        "images": ["/img/phones/Samsung-SGH-A300.jpg"],
         "stock": 200
       }
     ],
@@ -284,17 +284,17 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Samsung-SGH-E620.jpg",
+        "images": ["/img/phones/Samsung-SGH-E620.jpg"],
         "stock": 200
       },
       {
         "color": "Black",
-        "images": "img/products-img/phones/Samsung-SGH-E620-black.jpg",
+        "images": ["/img/phones/Samsung-SGH-E620-black.jpg"],
         "stock": 200
       },
       {
         "color": "Silver",
-        "images": "img/products-img/phones/Samsung-SGH-E620-silver.jpg",
+        "images": ["/img/phones/Samsung-SGH-E620-silver.jpg"],
         "stock": 200
       }
     ],
@@ -320,22 +320,22 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sanyo-VI-2300.jpg",
+        "images": ["/img/phones/Sanyo-VI-2300.jpg"],
         "stock": 200
       },
       {
         "color": "Blue",
-        "images": "img/products-img/phones/Sanyo-VI-2300-blue.jpg",
+        "images": ["/img/phones/Sanyo-VI-2300-blue.jpg"],
         "stock": 200
       },
       {
         "color": "Black",
-        "images": "img/products-img/phones/Sanyo-VI-2300-black.jpg",
+        "images": ["/img/phones/Sanyo-VI-2300-black.jpg"],
         "stock": 200
       },
       {
         "color": "Silver",
-        "images": "img/products-img/phones/Sanyo-VI-2300-silver.jpg",
+        "images": ["/img/phones/Sanyo-VI-2300-silver.jpg"],
         "stock": 200
       }
     ],
@@ -361,7 +361,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-Clié-PEG-NR70V.PNG",
+        "images": ["/img/phones/Sony-Clié-PEG-NR70V.PNG"],
         "stock": 200
       }
     ],
@@ -387,7 +387,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-CLIE-PEG-NX70V.jpg",
+        "images": ["/img/phones/Sony-CLIE-PEG-NX70V.jpg"],
         "stock": 200
       }
     ],
@@ -413,17 +413,17 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-Ericsson-C1002S.jpg",
+        "images": ["/img/phones/Sony-Ericsson-C1002S.jpg"],
         "stock": 200
       },
       {
         "color": "Orange",
-        "images": "img/products-img/phones/Sony-Ericsson-C1002S.jpg",
+        "images": ["/img/phones/Sony-Ericsson-C1002S.jpg"],
         "stock": 200
       },
       {
         "color": "White",
-        "images": "img/products-img/phones/Sony-Ericsson-C1002S-white.jpg",
+        "images": ["/img/phones/Sony-Ericsson-C1002S-white.jpg"],
         "stock": 200
       }
     ],
@@ -449,17 +449,17 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-Ericon-Xperia-X10.jpg",
+        "images": ["/img/phones/Sony-Ericon-Xperia-X10.jpg"],
         "stock": 200
       },
       {
         "color": "Black",
-        "images": "img/products-img/phones/Sony-Ericon-Xperia-X10-Black.jpg",
+        "images": ["/img/phones/Sony-Ericon-Xperia-X10-Black.jpg"],
         "stock": 200
       },
       {
         "color": "White",
-        "images": "img/products-img/phones/Sony-Ericon-Xperia-X10-Luster-White.jpg",
+        "images": ["/img/phones/Sony-Ericon-Xperia-X10-Luster-White.jpg"],
         "stock": 200
       }
     ],
@@ -485,7 +485,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-Ericsson-P910i.jpg",
+        "images": ["/img/phones/Sony-Ericsson-P910i.jpg"],
         "stock": 200
       }
     ],
@@ -511,27 +511,27 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-Ericsson-Z520i.jpg",
+        "images": ["/img/phones/Sony-Ericsson-Z520i.jpg"],
         "stock": 200
       },
       {
         "color": "Blue",
-        "images": "img/products-img/phones/Sony-Ericsson-Z520i-blue.jpg",
+        "images": ["/img/phones/Sony-Ericsson-Z520i-blue.jpg"],
         "stock": 200
       },
       {
         "color": "Pink",
-        "images": "img/products-img/phones/Sony-Ericsson-Z520i-pink.jpg",
+        "images": ["/img/phones/Sony-Ericsson-Z520i-pink.jpg"],
         "stock": 200
       },
       {
         "color": "Silver",
-        "images": "img/products-img/phones/Sony-Ericsson-Z520i-silver.jpg",
+        "images": ["/img/phones/Sony-Ericsson-Z520i-silver.jpg"],
         "stock": 200
       },
       {
         "color": "White",
-        "images": "img/products-img/phones/Sony-Ericsson-Z520i-white.jpg",
+        "images": ["/img/phones/Sony-Ericsson-Z520i-white.jpg"],
         "stock": 200
       }
     ],
@@ -557,36 +557,10 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/T-Mobile-Sidekick.PNG",
+        "images": ["/img/phones/T-Mobile-Sidekick.PNG"],
         "stock": 200
       }
     ],
     "manufacturer": "Danger"
-  },
-  {
-    "id": -1,
-    "name": "",
-    "price": 0,
-    "description": "",
-    "rating": 4.5,
-    "specs": {
-      "Network": "",
-      "Operating System": "",
-      "CPU": "",
-      "Memory": "",
-      "Display": "",
-      "Battery": "",
-      "Weight": "",
-      "Graphics": "",
-      "Keyboard": ""
-    },
-    "variants": [
-      {
-        "color": "",
-        "images": "img/products-img/phones/",
-        "stock": 200
-      }
-    ],
-    "manufacturer": ""
   }
 ]
