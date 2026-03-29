@@ -7,111 +7,100 @@
 </head>
 
 <body>
-<div class="home-page-bg">
+  <div class="product-details-page-bg">
 
-  <p class="top-slogan">SOME INSPIRING TEXT</p>
+    <p class="top-slogan">SOME INSPIRING TEXT</p>
 
-  <!-- HEADER -->
-  <div class="header">
+    <!-- HEADER -->
+    <div class="header">
+      <div class="header-top">
+        <p class="logo">LOGO</p>
 
-    <div class="header-top">
-      <p class="logo">LOGO</p>
+        <form class="header-search-bar">
+          <input type="text" placeholder="What are you looking for?">
+          <button type="submit" class="search-button">
+            <img class="icon" src="/img/icons/search.png" alt="search">
+          </button>
+        </form>
 
-      <form class="header-search-bar">
-        <input type="text" placeholder="What are you looking for ?">
-        <button type="submit" class="search-button">
-          <img class="icon" src="/img/icons/search.png" alt="search">
+        <button class="shopping-cart-button">
+          <img class="icon" src="/img/icons/shopping-cart.png" alt="cart">
         </button>
-      </form>
+        <button class="profile-button">
+          <img class="icon" src="/img/icons/profile.png" alt="profile">
+        </button>
+      </div>
 
-      <button class="profile-button">
-        <img class="icon" src="/img/icons/profile.png" alt="profile">
-      </button>
-
-      <button class="shopping-cart-button">
-        <img class="icon" src="/img/icons/shopping-cart.png" alt="cart">
-      </button>
+      <div class="header-bottom">
+        <button class="header-button">HOME</button>
+        <button class="header-button">PHONES</button>
+        <button class="header-button">LAPTOPS</button>
+        <button class="header-button">TABLETS</button>
+        <button class="header-button">ACCESSORIES</button>
+      </div>
     </div>
 
-    <div class="header-bottom">
-      <button class="header-button">HOME</button>
-      <button class="header-button">PHONES</button>
-      <button class="header-button">LAPTOPS</button>
-      <button class="header-button">TABLETS</button>
-      <button class="header-button">ACCESSORIES</button>
-    </div>
+    <!-- MAIN -->
+    <div class="main-area">
+      <h2 class="section-title">ORDER CONFIRMATION</h2>
 
-  </div>
+      <div class="order-container">
+        <!-- LEFT -->
+        <div class="order-summary">
+          <h3>Order Summary</h3>
+          <div class="product-summary">
+            <img src="/img/phones/Sony-Ericsson-Z520i.jpg" alt="">
+            <div>
+              <p>SAMSUNG S23+ FLIP PHONE</p>
+              <span>$234.67</span>
+            </div>
+          </div>
 
-  <!-- MAIN -->
-  <div class="home-page-main-area-top">
+          <div class="product-summary">
+            <img src="/img/products/tablet.png" alt="">
+            <div>
+              <p>TABLET THING</p>
+              <span>$234.67</span>
+            </div>
+          </div>
 
-    <h2 class="section-title">ORDER CONFIRMATION</h2>
-
-    <div class="order-container">
-
-      <!-- LEFT -->
-      <div class="order-summary">
-        <h3>Order Summary</h3>
-
-        <div class="product-summary">
-          <img src="/img/phones/Sony-Ericsson-Z520i.jpg" alt="">
-          <div>
-            <p>SAMSUNG S23+ FLIP PHONE</p>
-            <span>$234.67</span>
+          <div class="order-total">
+            <p>Sub total <span>$254.67</span></p>
+            <p>Shipping Fee <span>FREE</span></p>
+            <hr>
+            <h4>Total <span>$254.67</span></h4>
           </div>
         </div>
 
-        <div class="product-summary">
-          <img src="/img/products/tablet.png" alt="">
-          <div>
-            <p>TABLET THING</p>
-            <span>$234.67</span>
-          </div>
-        </div>
+        <!-- RIGHT -->
+        <div class="shipping-details">
+          <h3>Shipping</h3>
 
-        <div class="order-total">
-          <p>Sub total <span>$254.67</span></p>
-          <p>Shipping Fee <span>FREE</span></p>
-          <hr>
-          <h4>Total <span>$254.67</span></h4>
+          <h4>Contact Details</h4>
+          <p><strong>First Name:</strong> FIRST NAME</p>
+          <p><strong>Last Name:</strong> LAST NAME</p>
+          <p><strong>Email:</strong> ADDRESS@GMAIL.COM</p>
+          <p><strong>Phone:</strong> +2131111111</p>
+
+          <h4>Shipping Details</h4>
+          <p><strong>Address:</strong> 123 Main Street</p>
+          <p><strong>City:</strong> City</p>
+          <p><strong>State:</strong> State</p>
+          <p><strong>Postal Code:</strong> 11223</p>
+
+          <h4>Delivery Options</h4>
+          <p>Standard 5-7 Business days — FREE</p>
+
+          <h4>Payment Methods</h4>
+          <p>Pay on delivery</p>
+
+          <button class="add-to-cart-button">CONFIRM ORDER</button>
         </div>
       </div>
-
-      <!-- RIGHT -->
-      <div class="shipping-details">
-
-        <h3>Shipping</h3>
-
-        <h4>Contact Details</h4>
-        <p><strong>First Name:</strong> FIRST NAME</p>
-        <p><strong>Last Name:</strong> LAST NAME</p>
-        <p><strong>Email:</strong> ADDRESS@GMAIL.COM</p>
-        <p><strong>Phone:</strong> +2131111111</p>
-
-        <h4>Shipping Details</h4>
-        <p><strong>Address:</strong> 123 Main Street</p>
-        <p><strong>City:</strong> City</p>
-        <p><strong>State:</strong> State</p>
-        <p><strong>Postal Code:</strong> 11223</p>
-
-        <h4>Delivery Options</h4>
-        <p>Standard 5-7 Business days — FREE</p>
-
-        <h4>Payment Methods</h4>
-        <p>Pay on delivery</p>
-
-        <button class="continue-btn">CONFIRM ORDER</button>
-
-      </div>
-
     </div>
-  </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
+    <!-- FOOTER -->
     <div class="bottom-area">
-
       <div class="bottom-area-text">
         <p class="bottom-area-text-top">About</p>
         <p>About Us</p>
@@ -120,24 +109,20 @@
         <p>Brand Blog</p>
         <p>Press</p>
       </div>
-
       <div class="bottom-area-text">
         <p class="bottom-area-text-top">Support</p>
         <p>Repairs</p>
         <p>Contact Us</p>
         <p>FAQ</p>
       </div>
-
       <div class="bottom-area-text">
         <p class="bottom-area-text-top">Legal</p>
         <p>Terms and Conditions</p>
         <p>Cookies Policy</p>
         <p>Privacy Policy</p>
       </div>
-
     </div>
-  </div>
 
-</div>
+  </div>
 </body>
 </html>
