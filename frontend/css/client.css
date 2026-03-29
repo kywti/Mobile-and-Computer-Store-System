@@ -646,11 +646,11 @@ button:hover {
   align-items: center;
   min-width: 390px;
   max-width: 100%;
-  min-height: 130px;
+  min-height: 120px;
 }
 
 .basket-item img {
-  width: 80px;
+  width: 70px;
   height: auto;
   margin: 0px 20px 0px 20px;
 }
@@ -763,4 +763,117 @@ button:hover {
   max-width: 100%;
   height: auto;
   object-fit: contain;
+}
+
+/*  ORDER HISTORY!!!!!!!!! */
+
+.order-history-header {
+  font-family: "Audiowide";
+  font-size: 32px;
+  font-weight: bold;
+  margin: 30px 0px 0px 50px;
+}
+
+.export-button-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 30px;
+}
+
+.export-button {
+  background-color: black;
+  color: white;
+  width: 90px;
+  height: 40px;
+  font-size: 14px;
+}
+.export-button img {
+  width: 18px;
+  margin-right: 5px;
+  height: auto;
+}
+
+.export-button:hover {
+  background-color: white;
+  border: solid black 1px;
+  color: black;
+}
+
+.export-button:hover img {
+  content: url("/img/icons/export.png");
+}
+
+.oh-navigation-bar {
+  display: flex;
+  margin: 10px 50px;
+}
+
+.oh-navigation-bar-separator {
+  flex: 2;
+}
+
+.oh-filter-button {
+  font-size: 14px;
+  height: 35px;
+}
+
+.oh-sort-search-bar {
+  display: flex;
+  width: auto;
+}
+
+.oh-sort-search-bar input {
+  height: 30px;
+  width: 180px;
+  font-size: 15px;
+  flex: 0;
+  margin-right: 5px;
+}
+
+.oh-sort-search-bar button {
+  height: 33px;
+  width: 33px;
+  font-size: 15px;
+  margin-right: 0px;
+}
+.oh-sort-search-bar button img {
+  width: 20px;
+  height: auto;
+}
+
+.orders-header {
+  display: flex;
+  font-size: 18px;
+  margin: 0px 50px 0px 50px;
+  gap: 30px;
+}
+
+.f1 {
+  background-color: blue;
+  width: 230px;
+}
+.f2 {
+  background-color: red;
+  width: 150px;
+}
+.f3 {
+  background-color: blue;
+  width: 100px;
+}
+.f4 {
+  background-color: red;
+}
+.f5 {
+  background-color: blue;
+}
+.f6 {
+  background-color: red;
+}
+
+.orders-list {
+  display: flex;
+  flex-direction: column;
+}
+.order {
+  display: flex;
 }
