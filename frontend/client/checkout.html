@@ -1,35 +1,33 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>Checkout</title>
-<link rel="stylesheet" href="../css/checkout.css">
+  <title>Checkout</title>
+ <link rel="stylesheet" href="../css/checkout.css?v=2">
 </head>
 
 <body>
-<div class="home-page-bg">
+<div class="checkout-page-bg">
 
-  <!-- TOP SLOGAN -->
   <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
 
-  <!-- HEADER -->
+  <!-- HEADER (UNCHANGED) -->
   <div class="header">
     <div class="header-top">
       <p class="logo">LOGO</p>
 
       <form class="header-search-bar">
-        <input type="text" placeholder="Search products">
-        <button type="submit">
-          <img class="icon" src="/img/icons/search.png" alt="search">
+        <input placeholder="What are you looking for?">
+        <button class="search-button">
+          <img class="icon" src="/img/icons/search.png">
         </button>
       </form>
 
       <button class="profile-button">
-        <img class="icon" src="/img/icons/profile.png" alt="profile">
+        <img class="icon" src="/img/icons/profile.png">
       </button>
 
       <button class="shopping-cart-button">
-        <img class="icon" src="/img/icons/shopping-cart.png" alt="cart">
+        <img class="icon" src="/img/icons/shopping-cart.png">
       </button>
     </div>
 
@@ -42,107 +40,117 @@
     </div>
   </div>
 
-  <!-- WHITE CARD -->
-  <div class="white-card">
 
-    <h2 class="section-title">CHECKOUT</h2>
+  <!-- MAIN WHITE CONTAINER -->
+  <div class="main-area">
 
-    <div class="order-container">
+    <h2 class="section-title">CHECKING OUT</h2>
 
-      <!-- LEFT: ORDER SUMMARY -->
+    <div class="checkout-wrapper">
+
+      <!-- LEFT SIDE -->
       <div class="order-summary">
         <h3>Order Summary</h3>
 
-        <div class="product-summary">
-          <img src="/img/phones/Sony-Ericsson-Z520i.jpg" alt="">
-          <div>
+        <div class="product">
+          <img src="/img/phones/Sony-Ericsson-Z520i.jpg">
+          <div class="product-info">
             <p>SAMSUNG S23+ FLIP PHONE</p>
             <span>$234.67</span>
           </div>
+          <img class="delete-icon" src="/img/icons/delete.png">
         </div>
 
-        <div class="product-summary">
-          <img src="/img/products/tablet.png" alt="">
-          <div>
+        <div class="product">
+          <img src="/img/products/tablet.png">
+          <div class="product-info">
             <p>TABLET THING</p>
             <span>$234.67</span>
           </div>
+          <img class="delete-icon" src="/img/icons/delete.png">
         </div>
 
-        <div class="order-total">
+        <div class="total-box">
           <p>Sub total <span>$254.67</span></p>
           <p>Shipping Fee <span>FREE</span></p>
-          <hr>
+          <div class="line"></div>
           <h4>Total <span>$254.67</span></h4>
         </div>
       </div>
 
-      <!-- RIGHT: FORM -->
-      <div class="checkout-form">
-        <h3>Shipping</h3>
-        <h4>Shipping Details</h4>
 
-        <div class="input-group">
-          <label>Address</label>
-          <input type="text">
-        </div>
+      <!-- RIGHT SIDE -->
+      <div class="checkout-form">
+
+        <h3>Shipping</h3>
+        <p class="small-title">Shipping Details</p>
+
+        <label>Address</label>
+        <input type="text">
 
         <div class="row">
-          <div class="input-group">
+          <div>
             <label>City</label>
             <input type="text">
           </div>
-          <div class="input-group">
+          <div>
             <label>State</label>
             <input type="text">
           </div>
         </div>
 
-        <div class="input-group">
-          <label>Postal Code</label>
-          <input type="text">
+        <label>Postal Code</label>
+        <input type="text">
+
+
+        <h3>Delivery Options</h3>
+        <label class="radio"><input type="radio" name="d" checked> Standard 5-7 days <span>FREE</span></label>
+        <label class="radio"><input type="radio" name="d"> 2-4 days <span>+$5</span></label>
+        <label class="radio"><input type="radio" name="d"> Same day <span>+$15</span></label>
+
+
+        <h3>Payment Methods</h3>
+        <label class="radio"><input type="radio" name="p" checked> Pay on delivery</label>
+        <label class="radio"><input type="radio" name="p"> Online payment (EDAHABIA)</label>
+
+        <div class="card-box">
+          <input placeholder="Card Number">
+          <div class="row">
+            <input placeholder="MM/YY">
+            <input placeholder="CVV">
+          </div>
         </div>
 
-        <h4>Delivery Options</h4>
-        <label><input type="radio" name="delivery" checked> Standard 5-7 days (FREE)</label>
-        <label><input type="radio" name="delivery"> 2-4 days (+5$)</label>
-        <label><input type="radio" name="delivery"> Same day (+15$)</label>
+        <button class="place-order">PLACE ORDER</button>
 
-        <h4>Payment Methods</h4>
-        <label><input type="radio" name="payment" checked> Pay on delivery</label>
-        <label><input type="radio" name="payment"> Online payment (EDAHABIA)</label>
-
-        <button class="continue-btn">PLACE ORDER</button>
       </div>
-
     </div>
   </div>
 
-  <!-- FOOTER -->
-  <div class="footer">
-    <div class="bottom-area">
-      <div class="bottom-area-text">
-        <p class="bottom-area-text-top">About</p>
-        <p>About Us</p>
-        <p>Careers</p>
-        <p>Franchising</p>
-        <p>Brand Blog</p>
-        <p>Press</p>
-      </div>
 
-      <div class="bottom-area-text">
-        <p class="bottom-area-text-top">Support</p>
-        <p>Repairs</p>
-        <p>Contact Us</p>
-        <p>FAQ</p>
-      </div>
+  <!-- FOOTER (UNCHANGED) -->
+  <div class="bottom-area">
+    <div class="bottom-area-text">
+      <p class="bottom-area-text-top">About</p>
+      <p>About Us</p>
+      <p>Careers</p>
+      <p>Franchising</p>
+      <p>Brand Blog</p>
+      <p>Press</p>
+    </div>
 
-      <div class="bottom-area-text">
-        <p class="bottom-area-text-top">Legal</p>
-        <p>Terms and Conditions</p>
-        <p>Cookies Policy</p>
-        <p>Privacy Policy</p>
-      </div>
+    <div class="bottom-area-text">
+      <p class="bottom-area-text-top">Support</p>
+      <p>Repairs</p>
+      <p>Contact Us</p>
+      <p>FAQ</p>
+    </div>
+
+    <div class="bottom-area-text">
+      <p class="bottom-area-text-top">Legal</p>
+      <p>Terms and Conditions</p>
+      <p>Cookies Policy</p>
+      <p>Privacy Policy</p>
     </div>
   </div>
 

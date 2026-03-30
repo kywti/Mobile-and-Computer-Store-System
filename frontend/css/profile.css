@@ -2,231 +2,306 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 @import url("https://fonts.cdnfonts.com/css/digital-numbers");
 
-/* RESET */
-* {
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
-  font-family:"Electrolize";
+html,
+body {
+  height: 100%;
+  margin: 0;
+  overflow-y: auto;
+  font-family: "Electrolize";
 }
 
-/* BACKGROUND */
-.home-page-bg {
-  min-height:100vh;
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  background: url("/img/backgrounds/HomePageBg.jpg") center/cover fixed;
+p,
+button,
+input {
+  font-family: "Electrolize";
 }
 
-/* TOP SLOGAN */
+button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* EXACT SAME BACKGROUND AS PRODUCT PAGE */
+.product-details-page-bg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background-image: url("/img/backgrounds/product-details-bg.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  min-height: 100vh;
+  width: 99vw;
+}
+
 .top-slogan {
-  margin:40px 0 25px;
-  color:white;
-  font-size:34px;
-  font-family:"Audiowide";
-  text-align:center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+  color: white;
+  font-size: 35px;
+  font-family: "Audiowide";
 }
 
-/* HEADER */
+/* HEADER - 100% IDENTICAL */
+.header,
+.bottom-area {
+  height: 170px;
+  background-color: rgba(0, 0, 0, 0.76);
+  width: 70%;
+  min-width: 900px;
+  display: flex;
+  flex-direction: column;
+}
+
 .header {
-  width:70%;
-  min-width:900px;
-  background: rgba(0,0,0,0.8);
-  display:flex;
-  flex-direction:column;
-  border-radius:10px 10px 0 0;
+  margin-bottom: 30px;
 }
 
-/* HEADER TOP */
 .header-top {
-  display:flex;
-  align-items:center;
-  padding: 15px 30px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 10px;
+  margin-bottom: -10px;
   height: 120px;
 }
 
 .logo {
-  color:white;
-  font-size:35px;
-  font-family:"Audiowide";
-  margin-right:30px;
+  color: white;
+  font-size: 35px;
+  font-family: "Audiowide";
+  padding-right: 30px;
 }
 
-/* SEARCH BAR */
 .header-search-bar {
   display: flex;
-  flex: 1;
-}
-
-.header-search-bar input {
-flex: 1;
-  height: 48px;
-  border-radius: 8px;
-  border: none;
-  padding-left: 20px;
-  font-size: 20px;
-}
-
-/* ICON BUTTONS */
-.icon-btn {
- margin-left: 10px;
-  border-radius: 8px;
-  border: none;
-  background: white;
-  cursor: pointer;
-  padding: 8px;
-}
-
-.icon-btn:hover {
-  transform:scale(1.05);
-}
-
-.icon { 
-    width: 30px;
-  height: 30px;
-   }
-
-/* HEADER MENU */
-.header-bottom {
-  display: flex;
-  justify-content: space-evenly;
+  flex-grow: 2;
+  flex-direction: row;
   align-items: center;
+  padding: 1px;
+}
+
+input {
+  flex-grow: 2;
+  border: none;
+  font-size: 22px;
+  padding-left: 20px;
+  border-radius: 8px;
+  margin-right: 10px;
+  height: 48px;
+}
+
+input:focus {
+  outline: none;
+}
+
+button {
+  background: white;
+  border: none;
+  color: black;
+  font-size: 20px;
+  cursor: pointer;
+  margin-right: 20px;
+  padding-left: 10px;
+  padding-right: 10px;
+  border-radius: 8px;
   height: 50px;
 }
 
+button:hover {
+  background: rgb(19, 19, 19);
+  color: white;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+.header-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
 .header-button {
-   background: transparent;
-  border: none;
+  background-color: transparent;
   color: white;
   font-family: "Digital Numbers";
   font-size: 13px;
-  cursor: pointer;
 }
 
-/* WHITE CARD */
-.white-card {
-  width:70%;
-  min-width:900px;
-  background:white;
-  margin-top:30px;
-  padding:40px 50px;
-  border-radius:8px;
-  box-shadow:0 0 25px rgba(0,0,0,0.25);
-  display:flex;
-  flex-direction:column;
-  align-items:center;
+.header-button:hover {
+  background-color: white;
+  color: black;
 }
 
-/* PROFILE IMAGE */
+.search-button:hover img {
+  content: url("/img/icons/search-white.png");
+}
+
+.shopping-cart-button:hover img {
+  content: url("/img/icons/shopping-cart-white.png");
+}
+
+.profile-button:hover img {
+  content: url("/img/icons/profile-white.png");
+}
+
+/* MAIN AREA - 100% IDENTICAL TO PRODUCT PAGE */
+.main-area {
+  margin-bottom: 25px;
+  background-color: white;
+  width: 70%;
+  min-width: 900px;
+  height: auto;
+  min-height: 650px;
+  display: flex;
+  margin-bottom: 0px;
+  flex-direction: column;
+    justify-content: center;
+  align-items: center;  
+}
+
+.pdp-product-details {
+  display: flex;
+}
+
+/* PROFILE SPECIFIC STYLES */
+.profile-content {
+  flex: 1;
+  padding: 60px 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 53px;
+  width: 100%;
+    max-width: 500px;
+   justify-content: center; 
+}
+
+.profile-section h2 {
+  font-family: "Audiowide";
+  font-size: 32px;
+  color: black;
+  margin: 0;
+    text-align: center;
+}
+
+.profile-section h3 {
+  font-family: "Audiowide";
+  font-size: 22px;
+  color: rgb(61, 61, 61);
+    text-align: center;
+}
+
 .profile-img-box {
-  width:150px;
-  height:150px;
-  background:#0a0a0a;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  border-radius:12px;
-  box-shadow:0 0 20px rgba(0,102,255,0.4),
-              inset 0 0 10px rgba(255,255,255,0.05);
-  margin-bottom:20px;
+  width: 180px;
+  height: 180px;
+  background: rgb(12, 12, 12);
+  border-radius: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;    
 }
 
 .profile-img {
-  width:95px;
+  width: 110px;
+  height: auto;
 }
 
-/* TITLES */
-.white-card h2 {
-  font-family:"Audiowide";
-  font-size:28px;
-  margin-bottom:25px;
-}
-
-.white-card h3 {
-  font-family:"Audiowide";
-  font-size:16px;
-  margin:25px 0 15px;
-}
-
-/* INPUTS */
 .row {
-  display:flex;
-  gap:15px;
-  margin-bottom:12px;
+  display: flex;
+  gap: 20px;
+  width: 100%;
+  max-width: 400px;
+    justify-content: center;
 }
 
-.row input, .full-input {
-  height:45px;
-  border:1px solid #bbb;
-  border-radius:6px;
-  padding-left:12px;
-  font-size:14px;
-  transition:0.2s;
+.row input,
+.full-input {
+  flex: 1;
+  height: 48px;
+  border: 2px solid #e0e0e0;
+  border-radius: 10px;
+  padding-left: 20px;
+  font-size: 16px;
+  font-family: "Electrolize";
 }
 
-.row input:focus, .full-input:focus {
-  outline:none;
-  border:1px solid black;
+.row input:focus,
+.full-input:focus {
+  outline: none;
+  border-color: black;
 }
 
 .full-input {
-  width:420px;
-  margin-top:10px;
+  width: 100%;
+  max-width: 450px;
+  margin:  0;
 }
 
-/* BUTTONS */
 .small-btn {
-  margin-top:8px;
-  background:black;
-  color:white;
-  border:none;
-  font-size:13px;
-  padding:7px 14px;
-  border-radius:6px;
-  cursor:pointer;
-  letter-spacing:1px;
-  transition:0.2s;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 20px;
+  font-size: 14px;
+  font-family: "Electrolize";
+  cursor: pointer;
+  width: 160px;
+  height: 42px;
+  margin: 15px auto ;
+  align-self: center;
 }
 
-.small-btn:hover { background:#222; }
+.small-btn:hover {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
 
 .action-btn {
-  margin-top:15px;
-  background:black;
-  color:white;
-  border:none;
-  width:230px;
-  height:45px;
-  border-radius:6px;
-  cursor:pointer;
-  font-size:14px;
-  letter-spacing:1px;
-  transition:0.2s;
+  background: black;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-family: "Electrolize";
+  cursor: pointer;
+  width: 280px;
+  height: 52px;
+  margin: 10px 0;
+    align-items: center; 
 }
 
-.action-btn:hover { background:#222; }
-
-/* FOOTER */
-.footer {
-  width:70%;
-  min-width:900px;
-  margin-top:40px;
-  background: rgba(0,0,0,0.8);
+.action-btn:hover {
+  background: rgb(19, 19, 19);
 }
 
+/* BOTTOM AREA - 100% IDENTICAL */
 .bottom-area {
-  display:flex;
-  justify-content:space-between;
-  padding:40px 60px;
-  color:white;
+  margin-bottom: 120px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 330px;
+  height: 200px;
+  padding-top: 30px;
+  margin-top: 30px;
 }
 
 .bottom-area-text {
-  font-size:12px;
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
 }
 
 .bottom-area-text-top {
-  font-size:16px;
-  margin-bottom:10px;
+  font-size: 16px;
 }
