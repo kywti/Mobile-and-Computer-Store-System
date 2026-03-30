@@ -1,159 +1,153 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8">
   <title>Checkout</title>
- <link rel="stylesheet" href="../css/checkout.css?v=2">
+  <link rel="stylesheet" href="../css/checkout.css?v=3">
 </head>
-
 <body>
-<div class="checkout-page-bg">
 
-  <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
+  <!-- MAIN BACKGROUND -->
+  <div class="checkout-page-bg">
+    <div class="page-container">
 
-  <!-- HEADER (UNCHANGED) -->
-  <div class="header">
-    <div class="header-top">
-      <p class="logo">LOGO</p>
+      <!-- TOP SLOGAN -->
+      <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
 
-      <form class="header-search-bar">
-        <input placeholder="What are you looking for?">
-        <button class="search-button">
-          <img class="icon" src="/img/icons/search.png">
-        </button>
-      </form>
-
-      <button class="profile-button">
-        <img class="icon" src="/img/icons/profile.png">
-      </button>
-
-      <button class="shopping-cart-button">
-        <img class="icon" src="/img/icons/shopping-cart.png">
-      </button>
-    </div>
-
-    <div class="header-bottom">
-      <button class="header-button">Home</button>
-      <button class="header-button">Phones</button>
-      <button class="header-button">Laptops</button>
-      <button class="header-button">Tablets</button>
-      <button class="header-button">Accessories</button>
-    </div>
-  </div>
-
-
-  <!-- MAIN WHITE CONTAINER -->
-  <div class="main-area">
-
-    <h2 class="section-title">CHECKING OUT</h2>
-
-    <div class="checkout-wrapper">
-
-      <!-- LEFT SIDE -->
-      <div class="order-summary">
-        <h3>Order Summary</h3>
-
-        <div class="product">
-          <img src="/img/phones/Sony-Ericsson-Z520i.jpg">
-          <div class="product-info">
-            <p>SAMSUNG S23+ FLIP PHONE</p>
-            <span>$234.67</span>
-          </div>
-          <img class="delete-icon" src="/img/icons/delete.png">
+      <!-- HEADER -->
+      <div class="header">
+        <div class="header-top">
+          <p class="logo">LOGO</p>
+          <form class="header-search-bar">
+            <input placeholder="What are you looking for?">
+            <button class="search-button">
+              <img class="icon" src="/img/icons/search.png">
+            </button>
+          </form>
+          <button class="profile-button">
+            <img class="icon" src="/img/icons/profile.png">
+          </button>
+          <button class="shopping-cart-button">
+            <img class="icon" src="/img/icons/shopping-cart.png">
+          </button>
         </div>
 
-        <div class="product">
-          <img src="/img/products/tablet.png">
-          <div class="product-info">
-            <p>TABLET THING</p>
-            <span>$234.67</span>
-          </div>
-          <img class="delete-icon" src="/img/icons/delete.png">
-        </div>
-
-        <div class="total-box">
-          <p>Sub total <span>$254.67</span></p>
-          <p>Shipping Fee <span>FREE</span></p>
-          <div class="line"></div>
-          <h4>Total <span>$254.67</span></h4>
+        <div class="header-bottom">
+          <button class="header-button">Home</button>
+          <button class="header-button">Phones</button>
+          <button class="header-button">Laptops</button>
+          <button class="header-button">Tablets</button>
+          <button class="header-button">Accessories</button>
         </div>
       </div>
 
+      <!-- MAIN AREA -->
+      <div class="main-area">
+        <h2 class="section-title">CHECKING OUT</h2>
 
-      <!-- RIGHT SIDE -->
-      <div class="checkout-form">
+        <div class="checkout-wrapper">
 
-        <h3>Shipping</h3>
-        <p class="small-title">Shipping Details</p>
+          <!-- ORDER SUMMARY -->
+          <div class="order-summary">
+            <h3>Order Summary</h3>
 
-        <label>Address</label>
-        <input type="text">
+            <div class="product">
+              <img src="/img/phones/Sony-Ericsson-Z520i.jpg">
+              <div class="product-info">
+                <p>SAMSUNG S23+ FLIP PHONE</p>
+                <span>$234.67</span>
+              </div>
+              <img class="delete-icon" src="/img/icons/delete.png">
+            </div>
 
-        <div class="row">
-          <div>
-            <label>City</label>
+            <div class="product">
+              <img src="/img/products/tablet.png">
+              <div class="product-info">
+                <p>TABLET THING</p>
+                <span>$234.67</span>
+              </div>
+              <img class="delete-icon" src="/img/icons/delete.png">
+            </div>
+
+            <div class="total-box">
+              <p>Sub total <span>$254.67</span></p>
+              <p>Shipping Fee <span>FREE</span></p>
+              <div class="line"></div>
+              <h4>Total <span>$254.67</span></h4>
+            </div>
+          </div>
+
+          <!-- CHECKOUT FORM -->
+          <div class="checkout-form">
+            <h3>Shipping</h3>
+            <p class="small-title">Shipping Details</p>
+
+            <label>Address</label>
             <input type="text">
-          </div>
-          <div>
-            <label>State</label>
+
+            <div class="row">
+              <div>
+                <label>City</label>
+                <input type="text">
+              </div>
+              <div>
+                <label>State</label>
+                <input type="text">
+              </div>
+            </div>
+
+            <label>Postal Code</label>
             <input type="text">
+
+            <h3>Delivery Options</h3>
+            <label class="radio"><input type="radio" name="d" checked> Standard 5-7 days <span>FREE</span></label>
+            <label class="radio"><input type="radio" name="d"> 2-4 days <span>+$5</span></label>
+            <label class="radio"><input type="radio" name="d"> Same day <span>+$15</span></label>
+
+            <h3>Payment Methods</h3>
+            <label class="radio"><input type="radio" name="p" checked> Pay on delivery</label>
+            <label class="radio"><input type="radio" name="p"> Online payment (EDAHABIA)</label>
+
+            <div class="card-box">
+              <input placeholder="Card Number">
+              <div class="row">
+                <input placeholder="MM/YY">
+                <input placeholder="CVV">
+              </div>
+            </div>
+
+            <button class="place-order">PLACE ORDER</button>
           </div>
+
         </div>
-
-        <label>Postal Code</label>
-        <input type="text">
-
-
-        <h3>Delivery Options</h3>
-        <label class="radio"><input type="radio" name="d" checked> Standard 5-7 days <span>FREE</span></label>
-        <label class="radio"><input type="radio" name="d"> 2-4 days <span>+$5</span></label>
-        <label class="radio"><input type="radio" name="d"> Same day <span>+$15</span></label>
-
-
-        <h3>Payment Methods</h3>
-        <label class="radio"><input type="radio" name="p" checked> Pay on delivery</label>
-        <label class="radio"><input type="radio" name="p"> Online payment (EDAHABIA)</label>
-
-        <div class="card-box">
-          <input placeholder="Card Number">
-          <div class="row">
-            <input placeholder="MM/YY">
-            <input placeholder="CVV">
-          </div>
-        </div>
-
-        <button class="place-order">PLACE ORDER</button>
-
       </div>
+
+      <!-- FOOTER -->
+      <div class="bottom-area">
+        <div class="bottom-area-text">
+          <p class="bottom-area-text-top">About</p>
+          <p>About Us</p>
+          <p>Careers</p>
+          <p>Franchising</p>
+          <p>Brand Blog</p>
+          <p>Press</p>
+        </div>
+        <div class="bottom-area-text">
+          <p class="bottom-area-text-top">Support</p>
+          <p>Repairs</p>
+          <p>Contact Us</p>
+          <p>FAQ</p>
+        </div>
+        <div class="bottom-area-text">
+          <p class="bottom-area-text-top">Legal</p>
+          <p>Terms and Conditions</p>
+          <p>Cookies Policy</p>
+          <p>Privacy Policy</p>
+        </div>
+      </div>
+
     </div>
   </div>
 
-
-  <!-- FOOTER (UNCHANGED) -->
-  <div class="bottom-area">
-    <div class="bottom-area-text">
-      <p class="bottom-area-text-top">About</p>
-      <p>About Us</p>
-      <p>Careers</p>
-      <p>Franchising</p>
-      <p>Brand Blog</p>
-      <p>Press</p>
-    </div>
-
-    <div class="bottom-area-text">
-      <p class="bottom-area-text-top">Support</p>
-      <p>Repairs</p>
-      <p>Contact Us</p>
-      <p>FAQ</p>
-    </div>
-
-    <div class="bottom-area-text">
-      <p class="bottom-area-text-top">Legal</p>
-      <p>Terms and Conditions</p>
-      <p>Cookies Policy</p>
-      <p>Privacy Policy</p>
-    </div>
-  </div>
-
-</div>
 </body>
 </html>
