@@ -23,7 +23,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/tablets/HP-Compaq-tc1100.webp",
+        "images": ["/img/tablets/HP-Compaq-tc1100.webp"],
         "stock": 200
       }
     ],
@@ -48,7 +48,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/tablets/hp-pavilion-tx1000_9rj3.jpg",
+        "images": ["/img/tablets/hp-pavilion-tx1000_9rj3.jpg"],
         "stock": 200
       }
     ],
@@ -56,7 +56,7 @@
   },
   {
     "id": 3,
-    "name": "Palm Z22 Color Touchscreen USB 32MB Memory PalmOS Lightweight PDA - For Parts",
+    "name": "Palm Z22 Color Touchscreen ",
     "price": 1060,
     "description": "Palm Z22 Color Touchscreen USB 32MB Memory PalmOS Lightweight PDA - For Parts",
     "rating": 4.5,
@@ -64,7 +64,7 @@
       "Operating System": "Palm OS Garnet 5.4.9 (not upgradable)",
       "CPU": "200 MHz Samsung S3C2410 ARM920T-based processor",
       "Memory": "32 MB NVRAM (20 MB available to user, 4 MB dynamic heap",
-      "Storage": "",
+      "Storage": "N/A",
       "Display": "160x160 STN screen capable of displaying 4,096 colors (12 bit)",
       "Connectivity": "Infrared, USB",
       "Battery": "Internal rechargeable Lithium-ion battery, lasting up to 8 hours of active use or up to a week with casual use.",
@@ -73,35 +73,10 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/tablets/PALM-ZIRE-22-PDA.jpg",
+        "images": ["/img/tablets/PALM-ZIRE-22-PDA.jpg"],
         "stock": 200
       }
     ],
     "manufacturer": "Palm"
-  },
-  {
-    "id": -1,
-    "name": "",
-    "price": 0,
-    "description": "",
-    "rating": 4.5,
-    "specs": {
-      "Operating System": "",
-      "CPU": "",
-      "Memory": "",
-      "Storage": "",
-      "Display": "",
-      "Graphics": "",
-      "Battery": "",
-      "Weight": ""
-    },
-    "variants": [
-      {
-        "color": "",
-        "images": "img/products-img/tablets/",
-        "stock": 200
-      }
-    ],
-    "manufacturer": ""
   }
 ]

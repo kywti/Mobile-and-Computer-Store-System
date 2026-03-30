@@ -3,7 +3,7 @@
     "id": 1,
     "name": "HP Omnibook XE3",
     "price": 148955,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Operating System": "Microsoft Windows 2000",
@@ -19,10 +19,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": [
-          "img/products-img/laptops/HP-Omnibook-XE3.jpg",
-          "img/products-img/laptops/hp-OmniBook-XE3-1.jpg"
-        ],
+        "images": ["/img/laptops/hp-OmniBook-XE3-1.jpg"],
         "stock": 200
       }
     ],
@@ -32,7 +29,7 @@
     "id": 2,
     "name": "Apple iMac G3",
     "price": 158885,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Operating System": "Mac OS 9.1 and Mac OS X 10.0.4",
@@ -48,72 +45,72 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/laptops/Apple-iMac-G3.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3.jpg"],
         "stock": 200
       },
       {
         "color": "Blue Dalmatian",
-        "images": "img/products-img/laptops/Apple-iMac-G3-blue-dalmatian.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-blue-dalmatian.jpg"],
         "stock": 200
       },
       {
         "color": "Blueberry",
-        "images": "img/products-img/laptops/Apple-iMac-G3-blueberry.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-blueberry.jpg"],
         "stock": 200
       },
       {
         "color": "Bondi",
-        "images": "img/products-img/laptops/Apple-iMac-G3-bondi.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-bondi.jpg"],
         "stock": 200
       },
       {
         "color": "Flower Power",
-        "images": "img/products-img/laptops/Apple-iMac-G3-flower-power.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-flower-power.jpg"],
         "stock": 200
       },
       {
         "color": "Grape",
-        "images": "img/products-img/laptops/Apple-iMac-G3-grape.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-grape.jpg"],
         "stock": 200
       },
       {
         "color": "Graphite",
-        "images": "img/products-img/laptops/Apple-iMac-G3-graphite.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-graphite.jpg"],
         "stock": 200
       },
       {
         "color": "Indigo",
-        "images": "img/products-img/laptops/Apple-iMac-G3-indigo.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-indigo.jpg"],
         "stock": 200
       },
       {
         "color": "Lime",
-        "images": "img/products-img/laptops/Apple-iMac-G3-lime.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-lime.jpg"],
         "stock": 200
       },
       {
         "color": "Ruby",
-        "images": "img/products-img/laptops/Apple-iMac-G3-ruby.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-ruby.jpg"],
         "stock": 200
       },
       {
         "color": "Sage",
-        "images": "img/products-img/laptops/Apple-iMac-G3-sage.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-sage.jpg"],
         "stock": 200
       },
       {
         "color": "Snow",
-        "images": "img/products-img/laptops/Apple-iMac-G3-snow.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-snow.jpg"],
         "stock": 200
       },
       {
         "color": "Strawberry",
-        "images": "img/products-img/laptops/Apple-iMac-G3-strawberry.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-strawberry.jpg"],
         "stock": 200
       },
       {
         "color": "Tangerine",
-        "images": "img/products-img/laptops/Apple-iMac-G3-tangerine.jpg",
+        "images": ["/img/laptops/Apple-iMac-G3-tangerine.jpg"],
         "stock": 200
       }
     ],
@@ -123,7 +120,7 @@
     "id": 3,
     "name": "Apple Power Mac G4",
     "price": 46345,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Operating System": "Mac OS 9",
@@ -139,22 +136,22 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/laptops/Apple-power-mac-g4-grey.jpg",
+        "images": ["/img/laptops/Apple-power-mac-g4-grey.jpg"],
         "stock": 200
       },
       {
         "color": "Blue",
-        "images": "img/products-img/laptops/Apple-power-mac-g4-blue.jpg",
+        "images": ["/img/laptops/Apple-power-mac-g4-blue.jpg"],
         "stock": 200
       },
       {
         "color": "White",
-        "images": "img/products-img/laptops/Apple-power-mac-g4-white.jpg",
+        "images": ["/img/laptops/Apple-power-mac-g4-white.jpg"],
         "stock": 200
       },
       {
         "color": "Grey",
-        "images": "img/products-img/laptops/Apple-power-mac-g4-grey.jpg",
+        "images": ["/img/laptops/Apple-power-mac-g4-grey.jpg"],
         "stock": 200
       }
     ],
@@ -164,7 +161,7 @@
     "id": 4,
     "name": "ASUS Eee PC 900",
     "price": 72825,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Operating System": "Microsoft Windows XP Home",
@@ -180,30 +177,30 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/laptops/asus-eee-pc-900.jpg",
+        "images": ["/img/laptops/asus-eee-pc-900.jpg"],
         "stock": 200
       },
       {
         "color": "Black",
-        "images": "img/products-img/laptops/asus-eee-pc-900-black.jpg",
+        "images": ["/img/laptops/asus-eee-pc-900-black.jpg"],
         "stock": 200
       },
       {
         "color": "Pink",
-        "images": "img/products-img/laptops/asus-eee-pc-900-pink.jpg",
+        "images": ["/img/laptops/asus-eee-pc-900-pink.jpg"],
         "stock": 200
       }
     ],
-    "manufacturer": ""
+    "manufacturer": "N/A"
   },
   {
     "id": 5,
     "name": "Dell Inspiron 700m",
     "price": 13240,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
-      "Operating System": "",
+      "Operating System": "N/A",
       "CPU": "Intel Pentium M 725 (1.6GHz - 1.8GHz Dothan core)",
       "Memory": "512MB DDR SDRAM",
       "Display": "12.1\" TFT LCD, 1280x800 resolution",
@@ -216,36 +213,10 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/laptops/Dell-Inspiron-700m.PNG",
+        "images": ["/img/laptops/Dell-Inspiron-700m.PNG"],
         "stock": 200
       }
     ],
-    "manufacturer": ""
-  },
-  {
-    "id": -1,
-    "name": "",
-    "price": 0,
-    "description": "",
-    "rating": 4.5,
-    "specs": {
-      "Operating System": "",
-      "CPU": "",
-      "Memory": "",
-      "Display": "",
-      "Storage": "",
-      "Battery": "",
-      "Dimensions": "",
-      "Weight": "",
-      "Graphics": ""
-    },
-    "variants": [
-      {
-        "color": "",
-        "images": "img/products-img/laptops/",
-        "stock": 200
-      }
-    ],
-    "manufacturer": ""
+    "manufacturer": "Dell"
   }
 ]

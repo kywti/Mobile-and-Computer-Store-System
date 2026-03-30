@@ -1,0 +1,79 @@
+[
+  {
+    "id": -1,
+    "name": "",
+    "price": 0,
+    "description": "",
+    "rating": 4.5,
+    "specs": {
+      "Operating System": "",
+      "CPU": "",
+      "Memory": "",
+      "Display": "",
+      "Storage": "",
+      "Battery": "",
+      "Dimensions": "",
+      "Weight": "",
+      "Graphics": ""
+    },
+    "variants": [
+      {
+        "color": "",
+        "images": "/img/laptops/",
+        "stock": 200
+      }
+    ],
+    "manufacturer": ""
+  },
+  {
+    "id": -1,
+    "name": "",
+    "price": 0,
+    "description": "",
+    "rating": 4.5,
+    "specs": {
+      "Network": "",
+      "Operating System": "",
+      "CPU": "",
+      "Memory": "",
+      "Display": "",
+      "Battery": "",
+      "Weight": "",
+      "Graphics": "",
+      "Keyboard": ""
+    },
+    "variants": [
+      {
+        "color": "",
+        "images": "/img/phones/",
+        "stock": 200
+      }
+    ],
+    "manufacturer": ""
+  },
+  {
+    "id": -1,
+    "name": "",
+    "price": 0,
+    "description": "",
+    "rating": 4.5,
+    "specs": {
+      "Operating System": "",
+      "CPU": "",
+      "Memory": "",
+      "Storage": "",
+      "Display": "",
+      "Graphics": "",
+      "Battery": "",
+      "Weight": ""
+    },
+    "variants": [
+      {
+        "color": "",
+        "images": "/img/tablets/",
+        "stock": 200
+      }
+    ],
+    "manufacturer": ""
+  }
+]

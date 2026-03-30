@@ -18,22 +18,22 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "../img/phones/alcatel-ot-810.jpg",
+        "images": ["/img/phones/alcatel-ot-810.jpg"],
         "stock": 200
       },
       {
         "color": "Light Chrome",
-        "images": "../img/phones/Alcatel OT-810-Light-Chrome.jpg",
+        "images": ["/img/phones/Alcatel OT-810-Light-Chrome.jpg"],
         "stock": 200
       },
       {
         "color": "Mystery Pink",
-        "images": "../img/phones/Alcatel OT-810-Mystery-Pink.webp",
+        "images": ["/img/phones/Alcatel OT-810-Mystery-Pink.webp"],
         "stock": 200
       },
       {
         "color": "Victorian Blush",
-        "images": "../img/phones/Alcatel OT-810-Victorian-Blush.jpg",
+        "images": ["/img/phones/Alcatel OT-810-Victorian-Blush.jpg"],
         "stock": 200
       }
     ],
@@ -43,7 +43,7 @@
     "id": 2,
     "name": "i-mate PDA2k",
     "price": 99300,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM",
@@ -58,7 +58,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/i-mate-PDA2k.jpg",
+        "images": ["/img/phones/i-mate-PDA2k.jpg"],
         "stock": 200
       }
     ],
@@ -68,14 +68,14 @@
     "id": 3,
     "name": "MITAC MIO DIGI WALKER 168",
     "price": 99300,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Microsoft Windows Mobile 2003 for Pocket PC Premium Edition (Ozone)",
       "CPU": "Intel XScale PXA255, 2003, 32 bit, single-core, 32 Kbyte I-Cache, 32 Kbyte D-Cache",
       "Memory": "SDRAM 100 MHzClock 64 MiB RAM",
-      "Display": "2.74x4.44x0.64\"",
+      "Display": "2.74x4.44x0.64\"N/A",
       "Battery": "Li-Ion 1350 mAh battery",
       "Weight": "147 g",
       "Graphics": "NVIDIA MediaQ",
@@ -84,7 +84,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/MITAC-MIO-DIGI-WALKER-168.jpg",
+        "images": ["/img/phones/MITAC-MIO-DIGI-WALKER-168.jpg"],
         "stock": 200
       }
     ],
@@ -94,7 +94,7 @@
     "id": 4,
     "name": "Motorola T720",
     "price": 5300,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM",
@@ -104,28 +104,28 @@
       "Display": "120 x 160 pixels, 9 lines, 4:3 ratio",
       "Battery": "Removable Li-Ion 1100 mAh battery (98481/SNN5595)",
       "Weight": "100 g",
-      "Graphics": "",
-      "Keyboard": ""
+      "Graphics": "N/A",
+      "Keyboard": "N/A"
     },
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/motorola-t720.jpg",
+        "images": ["/img/phones/motorola-t720.jpg"],
         "stock": 200
       },
       {
         "color": "Grey",
-        "images": "img/products-img/phones/motorola-t720-grey.jpg",
+        "images": ["/img/phones/motorola-t720-grey.jpg"],
         "stock": 200
       },
       {
         "color": "Pacific",
-        "images": "img/products-img/phones/motorola-t720-pacific.jpg",
+        "images": ["/img/phones/motorola-t720-pacific.jpg"],
         "stock": 200
       },
       {
         "color": "White",
-        "images": "img/products-img/phones/motorola-t720-white.jpg",
+        "images": ["/img/phones/motorola-t720-white.jpg"],
         "stock": 200
       }
     ],
@@ -135,7 +135,7 @@
     "id": 5,
     "name": "Motorola v505",
     "price": 26500,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM",
@@ -150,15 +150,15 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/motorola-v505.jpg"
+        "images": ["/img/phones/motorola-v505.jpg"]
       },
       {
         "color": "Blue",
-        "images": "img/products-img/phones/motorola-v505-blue.jpg"
+        "images": ["/img/phones/motorola-v505-blue.jpg"]
       },
       {
         "color": "Silver",
-        "images": "img/products-img/phones/motorola-v505-silver.jpg"
+        "images": ["/img/phones/motorola-v505-silver.jpg"]
       }
     ],
     "manufacturer": "Motorola"
@@ -167,7 +167,7 @@
     "id": 6,
     "name": "Nokia 3650",
     "price": 13240,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM",
@@ -177,37 +177,37 @@
       "Display": "130×57×26 mm (5.1×2.2×1.0 in), 139 cm3",
       "Battery": "Removable Li-Ion 850 mAh battery (BL-5C)",
       "Weight": "130 g",
-      "Graphics": ""
+      "Graphics": "N/A"
     },
     "stock": 200,
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Nokia-3650.jpg"
+        "images": ["/img/phones/Nokia-3650.jpg"]
       },
       {
         "color": "Blue",
-        "images": "img/products-img/phones/nokia-3650-blue.jpg"
+        "images": ["/img/phones/nokia-3650-blue.jpg"]
       },
       {
         "color": "Grey",
-        "images": "img/products-img/phones/nokia-3650-gray.jpg"
+        "images": ["/img/phones/nokia-3650-gray.jpg"]
       },
       {
         "color": "Green",
-        "images": "img/products-img/phones/nokia-3650-green.jpg"
+        "images": ["/img/phones/nokia-3650-green.jpg"]
       },
       {
         "color": "Pink",
-        "images": "img/products-img/phones/nokia-3650-pink.jpg"
+        "images": ["/img/phones/nokia-3650-pink.jpg"]
       },
       {
         "color": "Red",
-        "images": "img/products-img/phones/Nokia-3650-red.jpg"
+        "images": ["/img/phones/Nokia-3650-red.jpg"]
       },
       {
         "color": "Yellow",
-        "images": "img/products-img/phones/nokia-3650-yellow.jpg"
+        "images": ["/img/phones/nokia-3650-yellow.jpg"]
       }
     ],
     "manufacturer": "Nokia Corporation"
@@ -216,7 +216,7 @@
     "id": 7,
     "name": "Nokie N90",
     "price": 26480,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM/UMTS",
@@ -226,14 +226,14 @@
       "Display": "TFT, 256K colors, 2.1 \", 35 x 41 mm, 14.0 cm2 (~24.6% screen-to-body ratio), 352 x 416 pixels (~259 ppi density), Second external TFT, 65K colors display (128 x 128 pixels), 90 deg rotating screen, 5-way navigation key, Side joystick",
       "Battery": "Removable Li-Ion 760 mAh battery (BL-5B)",
       "Weight": "173 g",
-      "Graphics": "",
-      "Keyboard": ""
+      "Graphics": "N/A",
+      "Keyboard": "N/A"
     },
     "stock": 200,
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Nokia-N90.jpg"
+        "images": ["/img/phones/Nokia-N90.jpg"]
       }
     ],
     "manufacturer": "Nokia Corporation"
@@ -242,23 +242,23 @@
     "id": 8,
     "name": "Samsung SGH-A300",
     "price": 6620,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM",
       "Operating System": "Proprietary Samsung embedded software",
-      "CPU": "",
+      "CPU": "N/A",
       "Memory": "100 entries, 5 contact groups, 10 dialed, 10 received, 10 missed calls",
       "Display": "Grayscale graphic, 4 shades, 128 x 128 pixels, 1:1 ratio, Second external display 80 x 48 pixels, Four way navigation keys, Dynamic font size, Softkeys",
       "Battery": "Removable Li-Ion 900 mAh battery",
       "Weight": "77 g",
-      "Graphics": "",
-      "Keyboard": ""
+      "Graphics": "N/A",
+      "Keyboard": "N/A"
     },
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Samsung-SGH-A300.jpg",
+        "images": ["/img/phones/Samsung-SGH-A300.jpg"],
         "stock": 200
       }
     ],
@@ -273,28 +273,28 @@
     "specs": {
       "Network": "GSM",
       "Operating System": "Proprietary Samsung embedded software",
-      "CPU": "",
+      "CPU": "N/A",
       "Memory": "No Card Slot, 1000 x 10 fields, Photo call, 20 dialed, 20 received, 20 missed calls, 16 MB for photos and MP3, 4MB for Java apps, 3MB for email",
       "Display": "TFT, 256K colors, 176 x 220 pixels, Second external TFT display, 265K colors (96 x 96 pixels)",
       "Battery": "Removable Li-Ion 800 mAh battery",
       "Weight": "85 g",
-      "Graphics": "",
-      "Keyboard": ""
+      "Graphics": "N/A",
+      "Keyboard": "N/A"
     },
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Samsung-SGH-E620.jpg",
+        "images": ["/img/phones/Samsung-SGH-E620.jpg"],
         "stock": 200
       },
       {
         "color": "Black",
-        "images": "img/products-img/phones/Samsung-SGH-E620-black.jpg",
+        "images": ["/img/phones/Samsung-SGH-E620-black.jpg"],
         "stock": 200
       },
       {
         "color": "Silver",
-        "images": "img/products-img/phones/Samsung-SGH-E620-silver.jpg",
+        "images": ["/img/phones/Samsung-SGH-E620-silver.jpg"],
         "stock": 200
       }
     ],
@@ -304,38 +304,38 @@
     "id": 10,
     "name": "Sanyo VI-2300",
     "price": 25160,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
-      "Network": "",
+      "Network": "N/A",
       "Operating System": "Proprietary (Brew)",
-      "CPU": "",
-      "Memory": "",
+      "CPU": "N/A",
+      "Memory": "N/A",
       "Display": "128 x 128 pixels LCD (STN)",
       "Battery": "1000 mAh, Li - Ion Removable",
       "Weight": "102 g",
-      "Graphics": "",
-      "Keyboard": ""
+      "Graphics": "N/A",
+      "Keyboard": "N/A"
     },
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sanyo-VI-2300.jpg",
+        "images": ["/img/phones/Sanyo-VI-2300.jpg"],
         "stock": 200
       },
       {
         "color": "Blue",
-        "images": "img/products-img/phones/Sanyo-VI-2300-blue.jpg",
+        "images": ["/img/phones/Sanyo-VI-2300-blue.jpg"],
         "stock": 200
       },
       {
         "color": "Black",
-        "images": "img/products-img/phones/Sanyo-VI-2300-black.jpg",
+        "images": ["/img/phones/Sanyo-VI-2300-black.jpg"],
         "stock": 200
       },
       {
         "color": "Silver",
-        "images": "img/products-img/phones/Sanyo-VI-2300-silver.jpg",
+        "images": ["/img/phones/Sanyo-VI-2300-silver.jpg"],
         "stock": 200
       }
     ],
@@ -345,23 +345,23 @@
     "id": 11,
     "name": "Sony CLIÉ PEG-NR70V handheld personal digital assistant (PDA)",
     "price": 26480,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
-      "Network": "",
+      "Network": "N/A",
       "Operating System": "Palm OS 4.1",
       "CPU": "66 MHz Motorola DragonBall Super VZ",
       "Memory": "16 MB RAM",
       "Display": "320x480 pixel, 16-bit TFT color screen",
       "Battery": "Non-removable Lithium ion rechargeable battery",
       "Weight": "200 g",
-      "Graphics": "",
+      "Graphics": "N/A",
       "Keyboard": "QWERTY keyboard + Graffiti area"
     },
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-Clié-PEG-NR70V.PNG",
+        "images": ["/img/phones/Sony-Clié-PEG-NR70V.PNG"],
         "stock": 200
       }
     ],
@@ -371,7 +371,7 @@
     "id": 12,
     "name": "Sony CLIÉ PEG-NX70V",
     "price": 26480,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "CompactFlash (CF) Type II slot",
@@ -387,7 +387,7 @@
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-CLIE-PEG-NX70V.jpg",
+        "images": ["/img/phones/Sony-CLIE-PEG-NX70V.jpg"],
         "stock": 200
       }
     ],
@@ -397,33 +397,33 @@
     "id": 13,
     "name": "Sony Ericsson C1002S",
     "price": 1325,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "cdmaOne (CDMA)",
       "Operating System": "proprietary, non-smart operating system",
-      "CPU": "",
+      "CPU": "N/A",
       "Memory": "data capacity of 200KB for user content and dedicated storage for emails (approximately 58KB for outbox and 125KB for inbox)",
       "Display": "1.9\" 65,536-color TFT LCD with a resolution of pixels",
       "Battery": "Continuous Talk Time: Approximately 200 minutes",
       "Weight": "105 g",
-      "Graphics": "",
-      "Keyboard": ""
+      "Graphics": "N/A",
+      "Keyboard": "N/A"
     },
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-Ericsson-C1002S.jpg",
+        "images": ["/img/phones/Sony-Ericsson-C1002S.jpg"],
         "stock": 200
       },
       {
         "color": "Orange",
-        "images": "img/products-img/phones/Sony-Ericsson-C1002S.jpg",
+        "images": ["/img/phones/Sony-Ericsson-C1002S.jpg"],
         "stock": 200
       },
       {
         "color": "White",
-        "images": "img/products-img/phones/Sony-Ericsson-C1002S-white.jpg",
+        "images": ["/img/phones/Sony-Ericsson-C1002S-white.jpg"],
         "stock": 200
       }
     ],
@@ -433,7 +433,7 @@
     "id": 14,
     "name": "Sony Ericsson Xperia X10",
     "price": 3975,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM / HSPA",
@@ -444,22 +444,22 @@
       "Battery": "Removable Li-Po 1500 mAh battery (BST-41)",
       "Weight": "135 g",
       "Graphics": "Adreno 200",
-      "Keyboard": ""
+      "Keyboard": "N/A"
     },
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-Ericon-Xperia-X10.jpg",
+        "images": ["/img/phones/Sony-Ericon-Xperia-X10.jpg"],
         "stock": 200
       },
       {
         "color": "Black",
-        "images": "img/products-img/phones/Sony-Ericon-Xperia-X10-Black.jpg",
+        "images": ["/img/phones/Sony-Ericon-Xperia-X10-Black.jpg"],
         "stock": 200
       },
       {
         "color": "White",
-        "images": "img/products-img/phones/Sony-Ericon-Xperia-X10-Luster-White.jpg",
+        "images": ["/img/phones/Sony-Ericon-Xperia-X10-Luster-White.jpg"],
         "stock": 200
       }
     ],
@@ -469,7 +469,7 @@
     "id": 15,
     "name": "Sony Ericsson P910i",
     "price": 10595,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM",
@@ -479,13 +479,13 @@
       "Display": "TFT resistive touchscreen, 256K colors, 2.9\", 40 x 62 mm, 24.8 cm2, 208 x 320 pixels (~37.2% screen-to-body ratio), 3:2 ratio (~132 ppi density), Handwriting recognition, JogDial",
       "Battery": "1260 mAh",
       "Weight": "150 g",
-      "Graphics": "",
-      "Keyboard": ""
+      "Graphics": "N/A",
+      "Keyboard": "N/A"
     },
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-Ericsson-P910i.jpg",
+        "images": ["/img/phones/Sony-Ericsson-P910i.jpg"],
         "stock": 200
       }
     ],
@@ -495,7 +495,7 @@
     "id": 16,
     "name": "Sony Ericsson Z520",
     "price": 6620,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM",
@@ -505,33 +505,33 @@
       "Display": "TFT, 65K colors, 1.8\", 29 x 35 mm, 10.2 cm2 (~23.8% screen-to-body ratio), 128 x 160 pixels (~114 ppi density), Second external CSTN display 4096 colors (101 x 80 pixels), Wallpapers, screensavers",
       "Battery": "900mAh (Standard).",
       "Weight": "96 g",
-      "Graphics": "",
-      "Keyboard": ""
+      "Graphics": "N/A",
+      "Keyboard": "N/A"
     },
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/Sony-Ericsson-Z520i.jpg",
+        "images": ["/img/phones/Sony-Ericsson-Z520i.jpg"],
         "stock": 200
       },
       {
         "color": "Blue",
-        "images": "img/products-img/phones/Sony-Ericsson-Z520i-blue.jpg",
+        "images": ["/img/phones/Sony-Ericsson-Z520i-blue.jpg"],
         "stock": 200
       },
       {
         "color": "Pink",
-        "images": "img/products-img/phones/Sony-Ericsson-Z520i-pink.jpg",
+        "images": ["/img/phones/Sony-Ericsson-Z520i-pink.jpg"],
         "stock": 200
       },
       {
         "color": "Silver",
-        "images": "img/products-img/phones/Sony-Ericsson-Z520i-silver.jpg",
+        "images": ["/img/phones/Sony-Ericsson-Z520i-silver.jpg"],
         "stock": 200
       },
       {
         "color": "White",
-        "images": "img/products-img/phones/Sony-Ericsson-Z520i-white.jpg",
+        "images": ["/img/phones/Sony-Ericsson-Z520i-white.jpg"],
         "stock": 200
       }
     ],
@@ -541,52 +541,26 @@
     "id": 17,
     "name": "T-Mobile Sidekick / T-Mobile Sidekick",
     "price": 33105,
-    "description": "",
+    "description": "N/A",
     "rating": 4.5,
     "specs": {
       "Network": "GSM 1900 MHz (PCS)",
       "Operating System": "Proprietary DangerOS",
-      "CPU": "",
+      "CPU": "N/A",
       "Memory": "128MB",
       "Display": "2.6 x 4.5 x 1.1\", 240 x 160 pixels LCD (Grayscale)",
       "Battery": "Li - Ion",
       "Weight": "176 g",
-      "Graphics": "",
+      "Graphics": "N/A",
       "Keyboard": "Scrollwheel, Pop out keyboard"
     },
     "variants": [
       {
         "color": "Standard",
-        "images": "img/products-img/phones/T-Mobile-Sidekick.PNG",
+        "images": ["/img/phones/T-Mobile-Sidekick.PNG"],
         "stock": 200
       }
     ],
     "manufacturer": "Danger"
-  },
-  {
-    "id": -1,
-    "name": "",
-    "price": 0,
-    "description": "",
-    "rating": 4.5,
-    "specs": {
-      "Network": "",
-      "Operating System": "",
-      "CPU": "",
-      "Memory": "",
-      "Display": "",
-      "Battery": "",
-      "Weight": "",
-      "Graphics": "",
-      "Keyboard": ""
-    },
-    "variants": [
-      {
-        "color": "",
-        "images": "img/products-img/phones/",
-        "stock": 200
-      }
-    ],
-    "manufacturer": ""
   }
 ]
