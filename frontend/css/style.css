@@ -149,3 +149,146 @@ button:hover {
   font-size: 16px;
 }
 */
+/* ---------- BACKGROUND ---------- */
+body {
+  background-image: url("/img/backgrounds/product-details-bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Electrolize", monospace;
+  position: relative;
+}
+
+/* dark overlay like figma */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.25);
+  backdrop-filter: blur(1px);
+}
+
+/* ---------- CENTER CONTAINER ---------- */
+.auth-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* ---------- WHITE CARD ---------- */
+.auth-box {
+  background: #fff;
+  width: 440px;
+  padding: 55px 45px;
+  border-radius: 6px;
+  box-shadow: 0 25px 70px rgba(0,0,0,0.35);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ---------- LOGO ---------- */
+.logo-brand {
+  font-family: "Audiowide";
+  font-size: 30px;
+  letter-spacing: 3px;
+  margin-bottom: 18px;
+}
+
+/* ---------- TITLE ---------- */
+.auth-box h2 {
+  font-family: "Audiowide";
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+/* ---------- SMALL TEXT ---------- */
+.top-text {
+  font-size: 13px;
+  color: #777;
+  margin-bottom: 28px;
+}
+
+.top-text a {
+  color: black;
+  font-weight: 600;
+  text-decoration: underline;
+}
+
+/* ---------- INPUTS ---------- */
+.input-group {
+  width: 100%;
+  margin-bottom: 18px;
+}
+
+.input-group label {
+  font-size: 13px;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.input-group input {
+  width: 100%;
+  height: 40px;              /* thinner like figma */
+  border: 1px solid #cfcfcf;
+  border-radius: 3px;
+  padding: 0 14px;
+  background: #f6f6f6;
+  font-size: 14px;
+}
+
+.input-group input:focus {
+  background: white;
+  border-color: black;
+  outline: none;
+}
+
+/* ---------- PASSWORD EYE ---------- */
+.password-wrapper {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* ---------- FORGOT ---------- */
+.forgot {
+  width: 100%;
+  text-align: left;
+  font-size: 12px;
+  margin-top: 6px;
+  margin-bottom: 28px;
+  color: #555;
+  text-decoration: underline;
+  cursor: pointer;
+}
+
+/* ---------- BUTTON ---------- */
+button {
+  width: 170px;              /* smaller centered button */
+  height: 42px;
+  background: black;
+  color: white;
+  font-family: "Audiowide";
+  font-size: 14px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #111;
+}
