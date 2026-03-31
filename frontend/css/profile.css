@@ -2,9 +2,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 @import url("https://fonts.cdnfonts.com/css/digital-numbers");
 
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
-html, body {
+html,
+body {
   height: 100%;
   margin: 0;
   padding: 0;
@@ -12,7 +15,15 @@ html, body {
   font-family: "Electrolize", monospace;
 }
 
-p, button, input, label, h2, h3, h4 { font-family: "Electrolize", monospace; margin: 0; padding: 0; }
+p,
+button,
+input,
+label,
+h2,
+h3,
+h4 {
+  font-family: "Electrolize", monospace;
+}
 
 button {
   display: flex;
@@ -91,9 +102,13 @@ button {
   margin-right: 10px;
 }
 
-.header-search-bar input:focus { outline: none; }
+.header-search-bar input:focus {
+  outline: none;
+}
 
-.search-button, .shopping-cart-button, .profile-button {
+.search-button,
+.shopping-cart-button,
+.profile-button {
   background: white;
   color: black;
   font-size: 20px;
@@ -102,16 +117,27 @@ button {
   height: 50px;
 }
 
-.search-button:hover, .shopping-cart-button:hover, .profile-button:hover {
+.search-button:hover,
+.shopping-cart-button:hover,
+.profile-button:hover {
   background: rgb(19, 19, 19);
   color: white;
 }
 
-.icon { width: 30px; height: 30px; }
+.icon {
+  width: 30px;
+  height: 30px;
+}
 
-.search-button:hover img { content: url("/img/icons/search-white.png"); }
-.shopping-cart-button:hover img { content: url("/img/icons/shopping-cart-white.png"); }
-.profile-button:hover img { content: url("/img/icons/profile-white.png"); }
+.search-button:hover img {
+  content: url("/img/icons/search-white.png");
+}
+.shopping-cart-button:hover img {
+  content: url("/img/icons/shopping-cart-white.png");
+}
+.profile-button:hover img {
+  content: url("/img/icons/profile-white.png");
+}
 
 .header-bottom {
   display: flex;
@@ -135,9 +161,35 @@ button {
   color: black;
 }
 
+.bottom-area {
+  background-color: rgba(0, 0, 0, 0.76);
+
+  width: 70%;
+  min-width: 900px;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 80px;
+  flex-direction: row;
+  justify-content: space-evenly;
+  gap: 330px;
+  height: 230px;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+
+.bottom-area-text {
+  color: white;
+  cursor: pointer;
+  font-size: 10px;
+}
+
+.bottom-area-text-top {
+  font-size: 16px;
+}
+
 /* MAIN AREA - IDENTICAL */
 .main-area {
-  margin-bottom: 25px;
   background-color: white;
   width: 70%;
   min-width: 900px;
@@ -168,7 +220,7 @@ button {
   width: 180px;
   height: 180px;
   background: linear-gradient(135deg, rgb(12, 12, 12) 0%, rgb(25, 25, 25) 100%);
-  border-radius: 20px;
+  border-radius: 6px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -183,7 +235,7 @@ button {
   height: 100%;
   object-fit: cover;
   object-position: center;
-  border-radius: 16px;
+  border-radius: 4px;
   transition: all 0.3s ease;
 }
 
@@ -214,24 +266,27 @@ button {
   justify-content: center;
 }
 
-.info-row.full-width { max-width: 450px; }
+.info-row.full-width {
+  max-width: 450px;
+}
 
 .info-box {
   flex: 1;
   background: #f4f4f4;
-  padding: 15px;
+  padding: 5px;
   border-radius: 12px;
   border: 2px solid #e0e0e0;
   text-align: center;
 }
 
-.info-box.full-width { width: 100%; }
+.info-box.full-width {
+  width: 100%;
+}
 
 .info-label {
   display: block;
   font-size: 13px;
   color: #666;
-  font-weight: 500;
   margin-bottom: 5px;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -240,7 +295,6 @@ button {
 .info-value {
   display: block;
   font-size: 16px;
-  font-weight: bold;
   color: #000;
   font-family: "Audiowide", sans-serif;
 }
@@ -250,7 +304,7 @@ button {
   color: white;
   font-size: 14px;
   padding: 10px 20px;
-  width: 180px;
+  width: 200px;
   height: 42px;
   margin: 8px auto 0; /* TIGHT MARGIN */
   border-radius: 8px;
@@ -281,32 +335,10 @@ button {
   height: 50px;
   width: 100%;
   font-family: "Electrolize";
-  font-weight: 500;
   transition: all 0.3s ease;
 }
 
-.action-btn:hover { background: #131313; color: white; }
-
-/* BOTTOM AREA - IDENTICAL */
-.bottom-area {
-  height: 200px;
-  background-color: rgba(0, 0, 0, 0.76);
-  width: 70%;
-  min-width: 900px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-evenly;
-  gap: 330px;
-  padding-top: 30px;
-  margin: 30px 0 120px 0;
-}
-
-.bottom-area-text {
+.action-btn:hover {
+  background: #131313;
   color: white;
-  cursor: pointer;
-  font-size: 10px;
-}
-
-.bottom-area-text-top {
-  font-size: 16px;
 }

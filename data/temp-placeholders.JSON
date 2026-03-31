@@ -1,6 +1,7 @@
 [
   {
     "id": -1,
+    "category": "laptop",
     "name": "",
     "price": 0,
     "description": "",
@@ -27,6 +28,7 @@
   },
   {
     "id": -1,
+    "category": "phone",
     "name": "",
     "price": 0,
     "description": "",
@@ -53,6 +55,7 @@
   },
   {
     "id": -1,
+    "category": "tablet",
     "name": "",
     "price": 0,
     "description": "",

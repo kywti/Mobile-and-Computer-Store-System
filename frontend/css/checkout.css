@@ -23,7 +23,6 @@ h2,
 h3,
 h4 {
   font-family: "Electrolize", monospace;
-  margin: 0;
   padding: 0;
 }
 
@@ -169,7 +168,6 @@ button {
 
 /* MAIN AREA */
 .main-area {
-  margin-bottom: 25px;
   background-color: white;
   width: 70%;
   min-width: 900px;
@@ -208,7 +206,7 @@ button {
 .order-summary {
   width: 330px;
   padding: 25px;
-  background: #f8f8f8;
+  background: #f4f4f4;
   border-radius: 12px;
 }
 
@@ -288,7 +286,7 @@ button {
 .checkout-form {
   flex: 1;
   padding: 30px 40px;
-  background: #f8f8f8;
+  background: #f4f4f4;
   border-radius: 12px;
 }
 
@@ -442,18 +440,21 @@ button {
   background: #131313;
 }
 
-/* FOOTER */
 .bottom-area {
-  height: 200px;
   background-color: rgba(0, 0, 0, 0.76);
+
   width: 70%;
   min-width: 900px;
   display: flex;
+  flex-direction: column;
+
+  margin-bottom: 80px;
   flex-direction: row;
   justify-content: space-evenly;
   gap: 330px;
+  height: 230px;
   padding-top: 30px;
-  margin: 30px 0 120px 0;
+  margin-top: 30px;
 }
 
 .bottom-area-text {
@@ -474,11 +475,11 @@ button {
     width: 95%;
     min-width: auto;
   }
-  
+
   .order-container {
     flex-direction: column;
   }
-  
+
   .order-summary,
   .checkout-form {
     width: 100%;
