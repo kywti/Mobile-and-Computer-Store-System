@@ -1,37 +1,29 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Checkout</title>
-  <link rel="stylesheet" href="../css/checkout.css?v=3">
-</head>
-<body>
-
-  <!-- MAIN BACKGROUND -->
-  <div class="checkout-page-bg">
-    <div class="page-container">
-
-      <!-- TOP SLOGAN -->
+<!doctype html>
+<html>
+  <head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="../css/checkout.css" />
+  </head>
+  <body>
+    <div class="product-details-page-bg">
       <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
 
-      <!-- HEADER -->
       <div class="header">
         <div class="header-top">
           <p class="logo">LOGO</p>
           <form class="header-search-bar">
-            <input placeholder="What are you looking for?">
+            <input placeholder="What are you looking for?" />
             <button class="search-button">
-              <img class="icon" src="/img/icons/search.png">
+              <img class="icon" src="/img/icons/search.png" />
             </button>
           </form>
-          <button class="profile-button">
-            <img class="icon" src="/img/icons/profile.png">
-          </button>
           <button class="shopping-cart-button">
-            <img class="icon" src="/img/icons/shopping-cart.png">
+            <img class="icon" src="/img/icons/shopping-cart.png" />
+          </button>
+          <button class="profile-button">
+            <img class="icon" src="/img/icons/profile.png" />
           </button>
         </div>
-
         <div class="header-bottom">
           <button class="header-button">Home</button>
           <button class="header-button">Phones</button>
@@ -41,88 +33,105 @@
         </div>
       </div>
 
-      <!-- MAIN AREA -->
+   
       <div class="main-area">
-        <h2 class="section-title">CHECKING OUT</h2>
+        <div class="pdp-product-details checkout-content">
+          
+          <h2 class="section-title">CHECKOUT</h2>
 
-        <div class="checkout-wrapper">
-
-          <!-- ORDER SUMMARY -->
-          <div class="order-summary">
-            <h3>Order Summary</h3>
-
-            <div class="product">
-              <img src="/img/phones/Sony-Ericsson-Z520i.jpg">
-              <div class="product-info">
-                <p>SAMSUNG S23+ FLIP PHONE</p>
-                <span>$234.67</span>
+          <div class="order-container">
+            <div class="order-summary">
+              <h3>Order Summary</h3>
+              <div class="product-summary">
+                <img src="/img/phones/Sony-Ericsson-Z520i.jpg" alt="Product">
+                <div>
+                  <p>SAMSUNG S23+ FLIP PHONE</p>
+                  <span>$234.67</span>
+                </div>
               </div>
-              <img class="delete-icon" src="/img/icons/delete.png">
+              <div class="product-summary">
+                <img src="/img/products/tablet.png" alt="Product">
+                <div>
+                  <p>TABLET THING</p>
+                  <span>$234.67</span>
+                </div>
+              </div>
+              <div class="order-total">
+                <p><span>Sub total</span><span>$469.34</span></p>
+                <p><span>Shipping Fee</span><span>FREE</span></p>
+                <hr />
+                <h4><span>Total</span><span>$469.34</span></h4>
+              </div>
             </div>
 
-            <div class="product">
-              <img src="/img/products/tablet.png">
-              <div class="product-info">
-                <p>TABLET THING</p>
-                <span>$234.67</span>
-              </div>
-              <img class="delete-icon" src="/img/icons/delete.png">
-            </div>
+            <div class="checkout-form">
+              <h3>Shipping</h3>
 
-            <div class="total-box">
-              <p>Sub total <span>$254.67</span></p>
-              <p>Shipping Fee <span>FREE</span></p>
-              <div class="line"></div>
-              <h4>Total <span>$254.67</span></h4>
+              <h4>Shipping Details</h4>
+              <div class="form-group">
+                <label>Address</label>
+                <input type="text" placeholder="Enter full address">
+              </div>
+              <div class="form-row">
+                <div class="form-group">
+                  <label>City</label>
+                  <input type="text" placeholder="City">
+                </div>
+                <div class="form-group">
+                  <label>State</label>
+                  <input type="text" placeholder="State">
+                </div>
+              </div>
+              <div class="form-group">
+                <label>Postal Code</label>
+                <input type="text" placeholder="Postal Code">
+              </div>
+
+              <h4>Delivery Options</h4>
+              <label class="simple-radio">
+                <input type="radio" name="delivery" checked>
+                <span>Standard 5-7 Business days — FREE</span>
+              </label>
+              <label class="simple-radio">
+                <input type="radio" name="delivery">
+                <span>2-4 Business days — +$5</span>
+              </label>
+              <label class="simple-radio">
+                <input type="radio" name="delivery">
+                <span>Same day delivery — +$15</span>
+              </label>
+
+              <h4>Payment Methods</h4>
+              <label class="simple-radio">
+                <input type="radio" name="payment" checked>
+                <span>Pay on delivery</span>
+              </label>
+              <label class="simple-radio">
+                <input type="radio" name="payment" id="online-payment">
+                <span>Online payment (EDAHABIA)</span>
+                <img class="payment-icon" src="/img/icons/eddahabia.webp" />
+              </label>
+
+              <div class="card-form" id="cardForm">
+                <div class="form-group card-input-group">
+                  <input type="text" placeholder="Card Number">
+                </div>
+                <div class="form-row">
+                  <div class="form-group card-input-group">
+                    <input type="text" placeholder="MM/YY">
+                  </div>
+                  <div class="form-group card-input-group">
+                    <input type="text" placeholder="CVV">
+                  </div>
+                </div>
+              </div>
+
+              <button class="add-to-cart-button">PLACE ORDER</button>
             </div>
           </div>
-
-          <!-- CHECKOUT FORM -->
-          <div class="checkout-form">
-            <h3>Shipping</h3>
-            <p class="small-title">Shipping Details</p>
-
-            <label>Address</label>
-            <input type="text">
-
-            <div class="row">
-              <div>
-                <label>City</label>
-                <input type="text">
-              </div>
-              <div>
-                <label>State</label>
-                <input type="text">
-              </div>
-            </div>
-
-            <label>Postal Code</label>
-            <input type="text">
-
-            <h3>Delivery Options</h3>
-            <label class="radio"><input type="radio" name="d" checked> Standard 5-7 days <span>FREE</span></label>
-            <label class="radio"><input type="radio" name="d"> 2-4 days <span>+$5</span></label>
-            <label class="radio"><input type="radio" name="d"> Same day <span>+$15</span></label>
-
-            <h3>Payment Methods</h3>
-            <label class="radio"><input type="radio" name="p" checked> Pay on delivery</label>
-            <label class="radio"><input type="radio" name="p"> Online payment (EDAHABIA)</label>
-
-            <div class="card-box">
-              <input placeholder="Card Number">
-              <div class="row">
-                <input placeholder="MM/YY">
-                <input placeholder="CVV">
-              </div>
-            </div>
-
-            <button class="place-order">PLACE ORDER</button>
-          </div>
-
         </div>
       </div>
 
-      <!-- FOOTER -->
       <div class="bottom-area">
         <div class="bottom-area-text">
           <p class="bottom-area-text-top">About</p>
@@ -145,9 +154,8 @@
           <p>Privacy Policy</p>
         </div>
       </div>
-
     </div>
-  </div>
 
-</body>
+    <script src="../js/checkout.js"></script>
+  </body>
 </html>

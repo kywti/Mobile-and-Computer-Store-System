@@ -2,27 +2,28 @@
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 @import url("https://fonts.cdnfonts.com/css/digital-numbers");
 
-html,
-body {
+* { box-sizing: border-box; }
+
+html, body {
   height: 100%;
   margin: 0;
+  padding: 0;
   overflow-y: auto;
-  font-family: "Electrolize";
+  font-family: "Electrolize", monospace;
 }
 
-p,
-button,
-input {
-  font-family: "Electrolize";
-}
+p, button, input, label, h2, h3, h4 { font-family: "Electrolize", monospace; margin: 0; padding: 0; }
 
 button {
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  cursor: pointer;
+  border-radius: 8px;
+  font-family: "Electrolize";
 }
 
-/* EXACT SAME BACKGROUND AS PRODUCT PAGE */
 .product-details-page-bg {
   display: flex;
   flex-direction: column;
@@ -38,25 +39,21 @@ button {
 }
 
 .top-slogan {
-  margin-top: 40px;
-  margin-bottom: 30px;
+  margin: 40px 0 30px 0;
   color: white;
   font-size: 35px;
   font-family: "Audiowide";
+  text-align: center;
 }
 
-/* HEADER - 100% IDENTICAL */
-.header,
-.bottom-area {
+/* HEADER - IDENTICAL */
+.header {
   height: 170px;
   background-color: rgba(0, 0, 0, 0.76);
   width: 70%;
   min-width: 900px;
   display: flex;
   flex-direction: column;
-}
-
-.header {
   margin-bottom: 30px;
 }
 
@@ -64,10 +61,9 @@ button {
   display: flex;
   flex-direction: row;
   align-items: center;
-  padding-left: 30px;
-  padding-right: 10px;
-  margin-bottom: -10px;
+  padding: 0 30px;
   height: 120px;
+  margin-bottom: -10px;
 }
 
 .logo {
@@ -80,52 +76,49 @@ button {
 .header-search-bar {
   display: flex;
   flex-grow: 2;
-  flex-direction: row;
   align-items: center;
   padding: 1px;
+  margin: 0 10px;
 }
 
-input {
+.header-search-bar input {
   flex-grow: 2;
   border: none;
   font-size: 22px;
-  padding-left: 20px;
+  padding: 0 20px;
   border-radius: 8px;
-  margin-right: 10px;
   height: 48px;
+  margin-right: 10px;
 }
 
-input:focus {
-  outline: none;
-}
+.header-search-bar input:focus { outline: none; }
 
-button {
+.search-button, .shopping-cart-button, .profile-button {
   background: white;
-  border: none;
   color: black;
   font-size: 20px;
-  cursor: pointer;
   margin-right: 20px;
-  padding-left: 10px;
-  padding-right: 10px;
-  border-radius: 8px;
+  padding: 0 10px;
   height: 50px;
 }
 
-button:hover {
+.search-button:hover, .shopping-cart-button:hover, .profile-button:hover {
   background: rgb(19, 19, 19);
   color: white;
 }
 
-.icon {
-  width: 30px;
-  height: 30px;
-}
+.icon { width: 30px; height: 30px; }
+
+.search-button:hover img { content: url("/img/icons/search-white.png"); }
+.shopping-cart-button:hover img { content: url("/img/icons/shopping-cart-white.png"); }
+.profile-button:hover img { content: url("/img/icons/profile-white.png"); }
 
 .header-bottom {
   display: flex;
   align-items: center;
   justify-content: space-evenly;
+  height: 50px;
+  padding: 0 20px;
 }
 
 .header-button {
@@ -133,6 +126,8 @@ button:hover {
   color: white;
   font-family: "Digital Numbers";
   font-size: 13px;
+  height: 40px;
+  padding: 0 20px;
 }
 
 .header-button:hover {
@@ -140,19 +135,7 @@ button:hover {
   color: black;
 }
 
-.search-button:hover img {
-  content: url("/img/icons/search-white.png");
-}
-
-.shopping-cart-button:hover img {
-  content: url("/img/icons/shopping-cart-white.png");
-}
-
-.profile-button:hover img {
-  content: url("/img/icons/profile-white.png");
-}
-
-/* MAIN AREA - 100% IDENTICAL TO PRODUCT PAGE */
+/* MAIN AREA - IDENTICAL */
 .main-area {
   margin-bottom: 25px;
   background-color: white;
@@ -161,104 +144,118 @@ button:hover {
   height: auto;
   min-height: 650px;
   display: flex;
-  margin-bottom: 0px;
   flex-direction: column;
-    justify-content: center;
-  align-items: center;  
+  padding: 50px 60px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
 }
 
-.pdp-product-details {
-  display: flex;
-}
-
-/* PROFILE SPECIFIC STYLES */
 .profile-content {
   flex: 1;
-  padding: 60px 40px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 53px;
-  width: 100%;
-    max-width: 500px;
-   justify-content: center; 
+  gap: 15px; /* TIGHT */
 }
 
-.profile-section h2 {
+.section-title {
   font-family: "Audiowide";
   font-size: 32px;
-  color: black;
-  margin: 0;
-    text-align: center;
-}
-
-.profile-section h3 {
-  font-family: "Audiowide";
-  font-size: 22px;
-  color: rgb(61, 61, 61);
-    text-align: center;
+  text-align: center;
+  color: #000;
 }
 
 .profile-img-box {
   width: 180px;
   height: 180px;
-  background: rgb(12, 12, 12);
-  border-radius: 16px;
+  background: linear-gradient(135deg, rgb(12, 12, 12) 0%, rgb(25, 25, 25) 100%);
+  border-radius: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
-  margin: 0 auto;    
+  padding: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
 }
 
 .profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.profile-img[src*="/img/icons/profile.png"] {
   width: 110px;
   height: auto;
+  object-fit: contain;
 }
 
-.row {
+.profile-content h3 {
+  font-family: "Audiowide";
+  font-size: 22px;
+  color: rgb(61, 61, 61);
+  text-align: center;
+}
+
+/* INFO + BUTTONS - TIGHT */
+.info-row {
   display: flex;
-  gap: 20px;
+  gap: 15px;
   width: 100%;
   max-width: 400px;
-    justify-content: center;
+  justify-content: center;
 }
 
-.row input,
-.full-input {
+.info-row.full-width { max-width: 450px; }
+
+.info-box {
   flex: 1;
-  height: 48px;
+  background: #f4f4f4;
+  padding: 15px;
+  border-radius: 12px;
   border: 2px solid #e0e0e0;
-  border-radius: 10px;
-  padding-left: 20px;
+  text-align: center;
+}
+
+.info-box.full-width { width: 100%; }
+
+.info-label {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  font-weight: 500;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-value {
+  display: block;
   font-size: 16px;
-  font-family: "Electrolize";
-}
-
-.row input:focus,
-.full-input:focus {
-  outline: none;
-  border-color: black;
-}
-
-.full-input {
-  width: 100%;
-  max-width: 450px;
-  margin:  0;
+  font-weight: bold;
+  color: #000;
+  font-family: "Audiowide", sans-serif;
 }
 
 .small-btn {
   background: black;
   color: white;
-  border: none;
-  border-radius: 8px;
-  padding: 10px 20px;
   font-size: 14px;
-  font-family: "Electrolize";
-  cursor: pointer;
-  width: 160px;
+  padding: 10px 20px;
+  width: 180px;
   height: 42px;
-  margin: 15px auto ;
-  align-self: center;
+  margin: 8px auto 0; /* TIGHT MARGIN */
+  border-radius: 8px;
+  font-family: "Electrolize";
+  transition: all 0.3s ease;
 }
 
 .small-btn:hover {
@@ -267,33 +264,41 @@ button:hover {
   border: 2px solid black;
 }
 
+.centered-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 280px;
+  margin-top: 10px; /* VERY CLOSE */
+}
+
 .action-btn {
   background: black;
-  color: white;
+  color: white !important;
   border: none;
   border-radius: 10px;
   font-size: 16px;
+  height: 50px;
+  width: 100%;
   font-family: "Electrolize";
-  cursor: pointer;
-  width: 280px;
-  height: 52px;
-  margin: 10px 0;
-    align-items: center; 
+  font-weight: 500;
+  transition: all 0.3s ease;
 }
 
-.action-btn:hover {
-  background: rgb(19, 19, 19);
-}
+.action-btn:hover { background: #131313; color: white; }
 
-/* BOTTOM AREA - 100% IDENTICAL */
+/* BOTTOM AREA - IDENTICAL */
 .bottom-area {
-  margin-bottom: 120px;
+  height: 200px;
+  background-color: rgba(0, 0, 0, 0.76);
+  width: 70%;
+  min-width: 900px;
+  display: flex;
   flex-direction: row;
   justify-content: space-evenly;
   gap: 330px;
-  height: 200px;
   padding-top: 30px;
-  margin-top: 30px;
+  margin: 30px 0 120px 0;
 }
 
 .bottom-area-text {
