@@ -61,7 +61,7 @@
               <span id="lastName" class="info-value">Doe</span>
             </div>
           </div>
-          <button class="small-btn">Change username</button>
+          <button class="small-btn" onclick="openModal('username')">Change username</button>
 
           <div class="info-row full-width">
             <div class="info-box full-width">
@@ -69,7 +69,7 @@
               <span id="email" class="info-value">john@email.com</span>
             </div>
           </div>
-          <button class="small-btn">Change email address</button>
+          <button class="small-btn" onclick="openModal('email')">Change email address</button>
 
           <div class="info-row full-width">
             <div class="info-box full-width">
@@ -77,7 +77,7 @@
               <span class="info-value">*************</span>
             </div>
           </div>
-          <button class="small-btn">Change password</button>
+           <button class="small-btn" onclick="openModal('password')">Change password</button>
 
           <div class="centered-action-buttons">
             <button class="action-btn" onclick="goToOrderHistory()">
@@ -111,6 +111,45 @@
         </div>
       </div>
     </div>
+       <!-- Username Modal -->
+    <div id="usernameModal" class="modal-overlay">
+      <div class="modal">
+        <button class="close-btn" onclick="closeModal('username')">&times;</button>
+        <h3>Change Username</h3>
+        <input type="text" id="newUsername" placeholder="Enter new username" />
+        <div class="modal-buttons">
+          <button class="cancel-btn" onclick="closeModal('username')">Cancel</button>
+          <button class="confirm-btn" onclick="confirmUsernameChange()">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal-overlay">
+      <div class="modal">
+        <button class="close-btn" onclick="closeModal('email')">&times;</button>
+        <h3>Change Email</h3>
+        <input type="email" id="newEmail" placeholder="Enter new email" />
+        <div class="modal-buttons">
+          <button class="cancel-btn" onclick="closeModal('email')">Cancel</button>
+          <button class="confirm-btn" onclick="confirmEmailChange()">Confirm</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Password Modal -->
+    <div id="passwordModal" class="modal-overlay">
+      <div class="modal">
+        <button class="close-btn" onclick="closeModal('password')">&times;</button>
+        <h3>Change Password</h3>
+        <input type="password" id="newPassword" placeholder="Enter new password" />
+        <div class="modal-buttons">
+          <button class="cancel-btn" onclick="closeModal('password')">Cancel</button>
+          <button class="confirm-btn" onclick="confirmPasswordChange()">Confirm</button>
+        </div>
+      </div>
+    </div>
+
 
     <script src="../js/profile.js" defer></script>
     <script src="../js/index.js" defer></script>
