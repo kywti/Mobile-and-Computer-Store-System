@@ -1,5 +1,36 @@
 const grid = document.querySelector(".products-grid");
 
+const phonesBtn = document.querySelector(".phones-header-button");
+if (phonesBtn) {
+  phonesBtn.addEventListener("click", () => {
+    window.location.href = "products.html?category=phone";
+  });
+}
+
+const laptopsBtn = document.querySelector(".laptops-header-button");
+if (laptopsBtn) {
+  laptopsBtn.addEventListener("click", () => {
+    window.location.href = "products.html?category=laptop";
+  });
+}
+
+const tabletsBtn = document.querySelector(".tablets-header-button");
+if (tabletsBtn) {
+  tabletsBtn.addEventListener("click", () => {
+    window.location.href = "products.html?category=tablet";
+  });
+}
+
+const accessoriesBtn = document.querySelector(".accessories-header-button");
+if (accessoriesBtn) {
+  accessoriesBtn.addEventListener("click", () => {
+    window.location.href = "products.html?category=accessory";
+  });
+}
+
+const params = new URLSearchParams(window.location.search);
+const categoryFilter = params.get("category");
+
 const ads = [
   "/img/ads/ad-10.jpg",
   "/img/ads/ad-11.jpg",
@@ -19,17 +50,25 @@ const ads = [
 
 let adIndex = 0;
 
-Promise.all([
-  fetch("/data/phone.json").then((res) => res.json()),
-  fetch("/data/laptop.json").then((res) => res.json()),
-  fetch("/data/tablet.json").then((res) => res.json()),
-]).then(([phones, laptops, tablet]) => {
-  const allProducts = [...phones, ...laptops, ...tablet];
+fetch("/data/product.json")
+  .then((res) => res.json())
+  .then((products) => {
+    let filteredProducts = products;
 
-  const shuffled = shuffleArray(allProducts);
+    if (categoryFilter) {
+      filteredProducts = products.filter(
+        (p) => p.category.toLowerCase() === categoryFilter.toLowerCase(),
+      );
+    }
 
-  displayProducts(shuffled);
-});
+    if (filteredProducts.length === 0) {
+      grid.innerHTML = "<p>No products found.</p>";
+      return;
+    }
+
+    const shuffled = shuffleArray(filteredProducts);
+    displayProducts(shuffled);
+  });
 
 function displayProducts(products) {
   products.forEach((product, index) => {

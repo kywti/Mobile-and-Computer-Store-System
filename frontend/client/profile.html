@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Profile</title>
@@ -25,22 +25,28 @@
           </button>
         </div>
         <div class="header-bottom">
-          <button class="header-button">Home</button>
-          <button class="header-button">Phones</button>
-          <button class="header-button">Laptops</button>
-          <button class="header-button">Tablets</button>
-          <button class="header-button">Accessories</button>
+          <button class="header-button home-header-button">Home</button>
+          <button class="header-button phones-header-button">Phones</button>
+          <button class="header-button laptops-header-button">Laptops</button>
+          <button class="header-button tablets-header-button">Tablets</button>
+          <button class="header-button accessories-header-button">
+            Accessories
+          </button>
         </div>
       </div>
 
       <div class="main-area">
         <div class="pdp-product-details profile-content">
-          
           <h2 class="section-title">PROFILE</h2>
 
           <!-- PROFILE PHOTO -->
           <div class="profile-img-box">
-            <img src="/img/icons/client-pfp.jpg" class="profile-img" alt="Profile photo" onerror="this.src='/img/icons/profile.png'">
+            <img
+              src="/img/icons/client-pfp.jpg"
+              class="profile-img"
+              alt="Profile photo"
+              onerror="this.src = '/img/icons/profile.png'"
+            />
           </div>
 
           <h3>YOUR INFORMATION</h3>
@@ -74,10 +80,11 @@
           <button class="small-btn">Change password</button>
 
           <div class="centered-action-buttons">
-            <button class="action-btn" onclick="goToOrderHistory()">Check order history</button>
+            <button class="action-btn" onclick="goToOrderHistory()">
+              Check order history
+            </button>
             <button class="action-btn" onclick="logout()">LOG OUT</button>
           </div>
-
         </div>
       </div>
 
@@ -106,5 +113,7 @@
     </div>
 
     <script src="../js/profile.js" defer></script>
+    <script src="../js/index.js" defer></script>
+    <script src="../js/products.js" defer></script>
   </body>
 </html>

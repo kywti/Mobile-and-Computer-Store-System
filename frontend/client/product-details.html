@@ -26,54 +26,33 @@
           </button>
         </div>
         <div class="header-bottom">
-          <button class="header-button">Home</button>
-          <button class="header-button">Phones</button>
-          <button class="header-button">Laptops</button>
-          <button class="header-button">Tablets</button>
-          <button class="header-button">Accessories</button>
+          <button class="header-button home-header-button">Home</button>
+          <button class="header-button phones-header-button">Phones</button>
+          <button class="header-button laptops-header-button">Laptops</button>
+          <button class="header-button tablets-header-button">Tablets</button>
+          <button class="header-button accessories-header-button">
+            Accessories
+          </button>
         </div>
       </div>
       <div class="main-area">
         <div class="product-details-header">
-          <button class="back-button">Back</button>
+          <button class="back-button" id="pdp-back-button">Back</button>
           <p class="section-title">Product Details</p>
         </div>
         <div class="pdp-product-details">
           <div class="product-variants">
-            <img class="product-image" src="/img/phones/Nokia-3650.jpg" />
-            <div class="variants-images">
-              <button class="variant-button"></button>
-              <button class="variant-button"></button>
-              <button class="variant-button"></button>
-              <button class="variant-button"></button>
-            </div>
+            <img class="product-image" id="product-image" />
+            <div class="variants-images"></div>
           </div>
           <div class="pdp-product-specs">
-            <p class="pdp-product-category">PHONE</p>
-            <p class="pdp-product-rating">4,5/5</p>
-            <p class="pdp-product-name">SAMSUNG SS34 FLIP PHONE</p>
-            <p class="pdp-product-description">
-              Great value. Browse the web, shop online and complete everyday
-              tasks. This phone has got you covered.
-            </p>
-            <p class="pdp-product-price">$234,67</p>
-            <p>
-              PRODUCT DETAILS Operating system Windows 11 Home Processor Intel®
-              Core™ Ultra 5 125U Memory8 GB RAM Storage512 GB SSD Display60.5 cm
-              (23.8 "), FHD (1920 x 1080) Graphics Intel® Graphics Included HP
-              710 White Wireless Keyboard and Mouse Combo
-            </p>
-            <div class="product-colors-button">
-              <label class="color-button">
-                <input type="radio" name="color" value="white" />
-                White
-              </label>
-
-              <label class="color-button">
-                <input type="radio" name="color" value="black" />
-                Black
-              </label>
-            </div>
+            <p class="pdp-product-category" id="product-category"></p>
+            <p class="pdp-product-rating" id="product-rating"></p>
+            <p class="pdp-product-name" id="product-name"></p>
+            <p class="pdp-product-description" id="product-description"></p>
+            <p class="pdp-product-price" id="product-price"></p>
+            <p></p>
+            <div class="product-colors-button" id="product-colors-button"></div>
             <div class="bottom-buttons">
               <div class="quantity-buttons">
                 <button class="edit-quantity">-</button>
@@ -111,6 +90,7 @@
       </div>
     </div>
 
+    <script src="../js/product-details.js" defer></script>
     <script src="../js/index.js" defer></script>
   </body>
 </html>
