@@ -111,7 +111,7 @@ function createProduct(product) {
       </a>
 
       <div class="product-buying-info">
-        <p class="product-price">DZD ${product.price}</p>
+        <p class="product-price">DZD ${product.price.toLocaleString()}</p>
         <div class="product-buying-buttons">
         <a href="product-details.html?id=${product.id}" class="product-link">
           <p class="product-details-link">see product</p>
@@ -123,6 +123,12 @@ function createProduct(product) {
       </div>
     </div>
   `;
+
+  const button = div.querySelector(".add-to-basket-button");
+
+  button.addEventListener("click", () => {
+    window.location.href = `product-details.html?id=${product.id}`;
+  });
 
   return div;
 }

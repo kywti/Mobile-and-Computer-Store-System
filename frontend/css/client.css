@@ -477,7 +477,7 @@ button:hover {
   min-width: 900px;
 
   height: auto;
-  min-height: 650px;
+  min-height: 950px;
 
   display: flex;
   margin-bottom: 0px;
@@ -678,9 +678,10 @@ button:hover {
 
 .left-container {
   display: flex;
+  flex-direction: column;
+  gap: 30px;
   flex: 0 0 200px;
-  justify-content: center;
-  height: 300px;
+  height: 800px;
   padding: 0px 20px;
 }
 
@@ -713,7 +714,7 @@ button:hover {
   min-height: 120px;
 }
 
-.basket-item img {
+.sc-product-image {
   width: 70px;
   height: auto;
   margin: 0px 20px 0px 20px;
@@ -729,6 +730,12 @@ button:hover {
   font-size: 15px;
   margin: 0px 0px 20px 0px;
 }
+
+/*.sc-item-details {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+}*/
 
 .item-layout {
   display: flex;
@@ -1055,3 +1062,13 @@ button:hover {
   color: inherit;
   display: block;
 }
+
+/* SHOPPING CART*/
+
+/*
+.sc-product-image {
+  width: 90px;
+  height: 90px;
+  display: flex;
+}
+*/
