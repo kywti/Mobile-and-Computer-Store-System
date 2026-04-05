@@ -9,14 +9,33 @@ backButton.addEventListener("click", () => {
   window.location.href = "products.html";
 });
 
-
-
 fetch("/data/product.json")
   .then((res) => res.json())
   .then((products) => {
     const product = products.find((p) => p.id === productId);
     displayProduct(product);
   });
+
+let quantity = 1;
+
+const quantityDisplay = document.querySelector(".quantity-display");
+const plusBtn = document.querySelector(".pdp-plus");
+const minusBtn = document.querySelector(".pdp-minus");
+
+plusBtn.addEventListener("click", () => {
+  quantity++;
+  quantityDisplay.textContent = quantity;
+});
+
+minusBtn.addEventListener("click", () => {
+  if (quantity > 1) {
+    quantity--;
+    quantityDisplay.textContent = quantity;
+  }
+});
+
+let selectedColor = null;
+let selectedImage = null;
 
 function displayProduct(product) {
   if (!product) return;
@@ -33,7 +52,8 @@ function displayProduct(product) {
   document.getElementById("product-description").textContent =
     product.description;
 
-  document.getElementById("product-price").textContent = "DZD " + product.price;
+  document.getElementById("product-price").textContent =
+    "DZD " + product.price.toLocaleString();
 
   const variantButtons = []; // store buttons
 
@@ -62,8 +82,10 @@ function displayProduct(product) {
     colorVarButton.addEventListener("click", () => {
       changeMainImage(variant.images[0]);
 
-      variantButtons.forEach((btn) => btn.classList.remove("selected"));
+      selectedColor = variant.color;
+      selectedImage = variant.images[0];
 
+      variantButtons.forEach((btn) => btn.classList.remove("selected"));
       colorVarButton.classList.add("selected");
 
       radioInput.checked = true;
@@ -72,11 +94,30 @@ function displayProduct(product) {
     radioInput.addEventListener("change", () => {
       changeMainImage(variant.images[0]);
 
+      selectedColor = variant.color;
+      selectedImage = variant.images[0];
+
       variantButtons.forEach((btn) => btn.classList.remove("selected"));
       colorVarButton.classList.add("selected");
     });
 
     colorVarsImg.appendChild(colorVarButton);
+  });
+
+  selectedColor = product.variants[0].color;
+  selectedImage = product.variants[0].images[0];
+
+  const button = document.querySelector(".add-to-cart-button");
+
+  button.addEventListener("click", () => {
+    addToCart({
+      id: product.id,
+      name: product.name,
+      price: product.price,
+      image: selectedImage,
+      color: selectedColor,
+      quantity: quantity,
+    });
   });
 }
 
