@@ -9,7 +9,7 @@ backButton.addEventListener("click", () => {
   window.location.href = "products.html";
 });
 
-fetch("/data/product.json")
+fetch("../../data/product.json")
   .then((res) => res.json())
   .then((products) => {
     const product = products.find((p) => p.id === productId);
@@ -53,9 +53,9 @@ function displayProduct(product) {
     product.description;
 
   document.getElementById("product-price").textContent =
-    "DZD " + product.price.toLocaleString();
+    "DZD " + product.price.toLocaleString("en-US");
 
-  const variantButtons = []; // store buttons
+  const variantButtons = [];
 
   product.variants.forEach((variant) => {
     const colorVarLabel = document.createElement("label");

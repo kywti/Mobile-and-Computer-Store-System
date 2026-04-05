@@ -20,7 +20,7 @@ function displayCart() {
               <div class="item-layout">
                 <div class="sc-item-details">
                   <p class="sc-product-name">${item.name}</p>
-                  <p class="sc-product-price"> DZD ${item.price.toLocaleString()}</p>
+                  <p class="sc-product-price"> DZD ${item.price.toLocaleString("en-US")}</p>
                 </div>
                 <div class="sc-bottom-buttons">
                   <p>Quantity</p>
@@ -31,7 +31,7 @@ function displayCart() {
                   </div>
                   <div class="sc-separator"></div>
                   <button class="delete-button">
-                    <img class="icon" src="/img/icons/delete.png" />
+                    <img class="icon" src="../../img/icons/delete.png" />
                   </button>
                 </div>
               </div>`;
@@ -59,7 +59,7 @@ function displayCart() {
     container.appendChild(div);
   });
 
-  total.textContent = "DZD " + getTotalPrice().toLocaleString();
+  total.textContent = "DZD " + getTotalPrice().toLocaleString("en-US");
 }
 
 displayCart();

@@ -57,7 +57,7 @@ button:hover {
 
 .home-page-bg,
 .product-page-bg {
-  background-image: url("/img/backgrounds/HomePageBg.jpg");
+  background-image: url("../../img/backgrounds/HomePageBg.jpg");
 }
 
 .top-slogan {
@@ -172,15 +172,15 @@ button:hover {
 }
 
 .search-button:hover img {
-  content: url("/img/icons/search-white.png");
+  content: url("../../img/icons/search-white.png");
 }
 
 .shopping-cart-button:hover img {
-  content: url("/img/icons/shopping-cart-white.png");
+  content: url("../../img/icons/shopping-cart-white.png");
 }
 
 .profile-button:hover img {
-  content: url("/img/icons/profile-white.png");
+  content: url("../../img/icons/profile-white.png");
 }
 
 .search-button,
@@ -337,7 +337,7 @@ button:hover {
 }
 
 .see-more-button:hover img {
-  content: url("/img/icons/search-white.png");
+  content: url("../../img/icons/search-white.png");
 }
 
 .products-grid {
@@ -453,7 +453,7 @@ button:hover {
 }
 
 .add-to-basket-button:hover img {
-  content: url("/img/icons/shopping-basket.png");
+  content: url("../../img/icons/shopping-basket.png");
 }
 
 .product-ad img {
@@ -467,7 +467,7 @@ button:hover {
 .product-details-page-bg,
 .order-history-page-bg,
 .shopping-cart-page-bg {
-  background-image: url("/img/backgrounds/product-details-bg.jpg");
+  background-image: url("../../img/backgrounds/product-details-bg.jpg");
 }
 .main-area {
   margin-bottom: 25px;
@@ -772,7 +772,7 @@ button:hover {
 }
 
 .delete-button:hover img {
-  content: url("/img/icons/delete-white.png");
+  content: url("../../img/icons/delete-white.png");
   width: 25px;
   height: 25px;
 }
@@ -874,7 +874,7 @@ button:hover {
 }
 
 .export-button:hover img {
-  content: url("/img/icons/export.png");
+  content: url("../../img/icons/export.png");
 }
 
 .oh-navigation-bar {
@@ -925,7 +925,7 @@ button:hover {
 }
 
 .oh-sort-search-bar button:hover img {
-  content: url("/img/icons/filter-white.png");
+  content: url("../../img/icons/filter-white.png");
 }
 
 .orders-header {

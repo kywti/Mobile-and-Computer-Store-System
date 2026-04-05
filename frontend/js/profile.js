@@ -36,9 +36,7 @@ function logout() {
           document.getElementById('firstName').textContent = names[0] || '';
           document.getElementById('lastName').textContent = names.slice(1).join(' ') || '';
           closeModal('username');
-          alert('Username updated successfully!');
         } else {
-          alert('Please enter a valid username');
         }
       }
 

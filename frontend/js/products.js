@@ -32,25 +32,25 @@ const params = new URLSearchParams(window.location.search);
 const categoryFilter = params.get("category");
 
 const ads = [
-  "/img/ads/ad-10.jpg",
-  "/img/ads/ad-11.jpg",
-  "/img/ads/ad-12.webp",
-  "/img/ads/ad-13.webp",
-  "/img/ads/ad-14.jpg",
-  "/img/ads/ad-9.jpg",
-  "/img/ads/ad-8.webp",
-  "/img/ads/ad-7.webp",
-  "/img/ads/ad-6.webp",
-  "/img/ads/ad-5.webp",
-  "/img/ads/ad-4.jpg",
-  "/img/ads/ad-3.jpg",
-  "/img/ads/ad-2.jpg",
-  "/img/ads/ad-1.jpg",
+  "../../img/ads/ad-10.jpg",
+  "../../img/ads/ad-11.jpg",
+  "../../img/ads/ad-12.webp",
+  "../../img/ads/ad-13.webp",
+  "../../img/ads/ad-14.jpg",
+  "../../img/ads/ad-9.jpg",
+  "../../img/ads/ad-8.webp",
+  "../../img/ads/ad-7.webp",
+  "../../img/ads/ad-6.webp",
+  "../../img/ads/ad-5.webp",
+  "../../img/ads/ad-4.jpg",
+  "../../img/ads/ad-3.jpg",
+  "../../img/ads/ad-2.jpg",
+  "../../img/ads/ad-1.jpg",
 ];
 
 let adIndex = 0;
 
-fetch("/data/product.json")
+fetch("../../data/product.json")
   .then((res) => res.json())
   .then((products) => {
     let filteredProducts = products;
@@ -111,13 +111,13 @@ function createProduct(product) {
       </a>
 
       <div class="product-buying-info">
-        <p class="product-price">DZD ${product.price.toLocaleString()}</p>
+        <p class="product-price">DZD ${product.price.toLocaleString("en-US")}</p>
         <div class="product-buying-buttons">
         <a href="product-details.html?id=${product.id}" class="product-link">
           <p class="product-details-link">see product</p>
         </a>
           <button class="add-to-basket-button">
-            <img src="/img/icons/shopping-basket-white.png" />
+            <img src="../../img/icons/shopping-basket-white.png" />
           </button>
         </div>
       </div>

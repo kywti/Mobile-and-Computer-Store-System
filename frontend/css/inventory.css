@@ -38,7 +38,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-image: url("/img/backgrounds/adminbackground.jpg");
+  background-image: url("../../img/backgrounds/adminbackground.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -136,12 +136,12 @@ button {
 }
 
 .search-button:hover img {
-  content: url("/img/icons/search-white.png");
+  content: url("../../img/icons/search-white.png");
 }
 
 
 .profile-button:hover img {
-  content: url("/img/icons/profile-white.png");
+  content: url("../../img/icons/profile-white.png");
 }
 
 .search-button,
@@ -401,7 +401,8 @@ tr:hover td {
   text-align: left;
   font-size: 14px;
   transition: background 0.2s;
-  color: #333;
+  color: white;
+   font-weight: 500;
 }
 
 .dropdown-item img {

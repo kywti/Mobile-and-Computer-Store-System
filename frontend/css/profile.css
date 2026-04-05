@@ -40,7 +40,7 @@ button {
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background-image: url("/img/backgrounds/product-details-bg.jpg");
+  background-image: url("../../img/backgrounds/product-details-bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -130,13 +130,13 @@ button {
 }
 
 .search-button:hover img {
-  content: url("/img/icons/search-white.png");
+  content: url("../../img/icons/search-white.png");
 }
 .shopping-cart-button:hover img {
-  content: url("/img/icons/shopping-cart-white.png");
+  content: url("../../img/icons/shopping-cart-white.png");
 }
 .profile-button:hover img {
-  content: url("/img/icons/profile-white.png");
+  content: url("../../img/icons/profile-white.png");
 }
 
 .header-bottom {
@@ -244,7 +244,7 @@ button {
   filter: brightness(1.1);
 }
 
-.profile-img[src*="/img/icons/profile.png"] {
+.profile-img[src*="../../img/icons/profile.png"] {
   width: 110px;
   height: auto;
   object-fit: contain;

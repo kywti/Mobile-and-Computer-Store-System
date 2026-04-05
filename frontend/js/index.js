@@ -18,7 +18,27 @@ shoppingCartButton.addEventListener("click", () => {
   window.location.href = "shopping-cart.html";
 });
 
-const checkoutButton = document.querySelector(".checkout-button");
-checkoutButton.addEventListener("click", () => {
-  window.location.href = "checkout.html";
+const phoneCategoryBtn = document.querySelector(".phone-category-button");
+phoneCategoryBtn.addEventListener("click", () => {
+  window.location.href = "products.html?category=phone";
 });
+
+const laptopCategoryBtn = document.querySelector(".laptop-category-button");
+laptopCategoryBtn.addEventListener("click", () => {
+  window.location.href = "products.html?category=laptop";
+});
+
+const accessoryCategoryBtn = document.querySelector(".accessory-category-button");
+accessoryCategoryBtn.addEventListener("click", () => {
+  window.location.href = "products.html?category=accessory";
+});
+
+const tabletCategoryBtn = document.querySelector(".tablet-category-button");
+tabletCategoryBtn.addEventListener("click", () => {
+  window.location.href = "products.html?category=tablet";
+});
+
+
+
+
+
