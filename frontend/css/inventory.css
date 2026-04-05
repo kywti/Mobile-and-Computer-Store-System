@@ -401,7 +401,6 @@ tr:hover td {
   text-align: left;
   font-size: 14px;
   transition: background 0.2s;
-  color: white;
    font-weight: 500;
 }
 
@@ -412,18 +411,20 @@ tr:hover td {
 }
 
 .dropdown-item:hover {
-  background: #f8f9fa;
+  background: #000;
+  color: white;
 }
 
-.dropdown-item.edit {
-  color: #28a745;
-  border-bottom: 1px solid #e9ecef;
-}
-
+.dropdown-item.edit,
 .dropdown-item.delete {
-  color: #dc3545;
+  color: #000;
+  font-weight: 500;
 }
-
+/* Click (ACTIVE state) */
+.dropdown-item:active {
+  background: #222;   /* slightly lighter than black */
+  color: white;
+}
 /* SECTION TITLE - LEFT ALIGNED */
 .section-title {
   font-family: "Audiowide";
@@ -490,4 +491,9 @@ tr:hover td {
   margin: 30px 0 20px 0;
   text-align: left;  /* LEFT ALIGNED */
   font-family: "Audiowide";
+}
+.add-btn-container {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
 }
