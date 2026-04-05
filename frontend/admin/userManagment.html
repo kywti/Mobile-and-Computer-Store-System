@@ -1,0 +1,265 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Inventory</title>
+    <link rel="stylesheet" href="../css/inventory.css" />
+  </head>
+
+  <body>
+    <div class="user-management-page-bg">
+
+      <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
+
+      <!-- HEADER -->
+      <header class="header">
+
+        <div class="header-top">
+          <p class="logo">LOGO</p>
+
+          <form class="header-search-bar">
+            <input placeholder="What are you looking for?" />
+            <button class="search-button">
+              <img class="icon" src="../../img/icons/search.png" />
+            </button>
+          </form>
+
+          <button class="profile-button">
+            <img class="icon" src="../../img/icons/profile.png" />
+          </button>
+        </div>
+
+        <nav class="header-bottom">
+          <button class="header-button">DASHBOARD</button>
+          <button class="header-button">ORDERS</button>
+          <button class="header-button active">INVENTORY</button>
+          <button class="header-button">CUSTOMERS</button>
+        </nav>
+
+      </header>
+
+      <!-- MAIN -->
+      <main class="main-area">
+
+        <section class="section-header">
+          <h2 class="section-title">User Management</h2>
+        </section>
+
+        <!-- STATS -->
+        <section class="stats">
+          <div class="stat-box">
+            <div class="stat-icon">👥 </div>
+            <p>Total Users</p>
+            <h3 id="total-products">0</h3>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-icon">🆕</div>
+            <p>New Users</p>
+            <h3 id="low-stock">0</h3>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-icon">⛔</div>
+            <p>Blocked Users</p>
+            <h3 id="out-stock">0</h3>
+          </div>
+        </section>
+
+        <p class="inventory-subtitle">User List</p>
+
+        <!-- INVENTORY -->
+        <section class="inventory">
+
+          <div class="inventory-top">
+
+            <div class="filters">
+              <button class="active">All Users</button>
+              <button>Admin Users</button>
+              <button>Clients</button>
+            </div>
+
+            <div class="export-wrapper">
+               <button class="export-btn">
+               <img src="../../img/icons/export-white.png" alt="Export" class="export-icon" />
+               Export
+               </button>
+            </div>
+
+            <div class="search-container">
+              <input class="search" placeholder="Search products..." />
+              <img class="search-icon" src="../../img/icons/search.png" />
+            </div>
+
+          </div>
+
+          <!-- TABLE -->
+          <div class="table-container">
+            <table>
+
+  <thead>
+    <tr>
+      <th></th>
+      <th>User Name</th>
+      <th>Email</th>
+      <th>Role</th>
+      <th>Total Orders</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+    <tr>
+            <td><img class="user-avatar" src="../../img/icons/admin-pfp.jpg" alt="User avatar" /></td>
+      <td>John Doe</td>
+      <td>john@gmail.com</td>
+      <td>Admin</td>
+      <td>12</td>
+
+      <td class="actions">
+        <button class="action-btn">
+          <img src="../../img/icons/menu-dots.png" />
+        </button>
+
+        <div class="dropdown-menu">
+           <button class="dropdown-item edit">
+      <img src="../../img/icons/edit.png" />
+      Edit Role
+    </button>
+
+    <button class="dropdown-item block">
+      <img src="../../img/icons/block.png" />
+      Block User
+    </button>
+
+    <button class="dropdown-item delete">
+      <img src="../../img/icons/delete.png" />
+      Delete User
+    </button>
+        </div>
+      </td>
+    </tr>
+
+    <tr>
+    <td><img class="user-avatar" src="../../img/icons/client-pfp.jpg" alt="User avatar" /></td>
+      <td>Sara Ali</td>
+      <td>sara@gmail.com</td>
+      <td>Client</td>
+      <td>3</td>
+
+      <td class="actions">
+        <button class="action-btn">
+          <img src="../../img/icons/menu-dots.png" />
+        </button>
+
+        <div class="dropdown-menu">
+           <button class="dropdown-item edit">
+      <img src="../../img/icons/edit.png" />
+      Edit Role
+    </button>
+
+    <button class="dropdown-item block">
+      <img src="../../img/icons/block.png" />
+      Block User
+    </button>
+
+    <button class="dropdown-item delete">
+      <img src="../../img/icons/delete.png" />
+      Delete User
+    </button>
+      </td>
+    </tr>
+
+    <tr>
+            <td><img class="user-avatar" src="../../img/icons/client-pfp.jpg" alt="User avatar" /></td>
+      <td>Mohamed Ahmed</td>
+      <td>mohamed@gmail.com</td>
+      <td>Client</td>
+      <td>7</td>
+
+      <td class="actions">
+        <button class="action-btn">
+          <img src="../../img/icons/menu-dots.png" />
+        </button>
+
+        <div class="dropdown-menu">
+          <button class="dropdown-item edit">
+      <img src="../../img/icons/edit.png" />
+      Edit Role
+    </button>
+
+    <button class="dropdown-item block">
+      <img src="../../img/icons/block.png" />
+      Block User
+    </button>
+
+    <button class="dropdown-item delete">
+      <img src="../../img/icons/delete.png" />
+      Delete User
+    </button>
+      </td>
+    </tr>
+
+  </tbody>
+
+            </table>
+           </div>
+
+        </section>
+
+      </main>
+
+    </div>
+
+     <div class="block-confirm-modal" id="blockConfirmModal">
+      <div class="block-confirm-content">
+        <div class="block-confirm-body">
+          <h4>Block User?</h4>
+          <p>Are you sure you want to block "<strong id="blockUserName"></strong>"?<br>
+          <small>They won't be able to access their account.</small></p>
+        </div>
+        
+        <div class="block-confirm-footer">
+          <button class="cancel-block-btn">Cancel</button>
+          <button class="confirm-block-btn" id="confirmBlockUser">Block User</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="delete-confirm-modal" id="deleteConfirmModal">
+      <div class="delete-confirm-content">
+        <div class="delete-confirm-body">
+          <h4>Delete User?</h4>
+          <p>Are you sure you want to delete "<strong id="deleteUserName"></strong>"?<br>
+          <small>This action cannot be undone.</small></p>
+        </div>
+        
+        <div class="delete-confirm-footer">
+          <button class="cancel-delete-btn">Cancel</button>
+          <button class="confirm-delete-btn" id="confirmDeleteUser">Delete</button>
+        </div>
+      </div>
+    </div>
+
+    
+    <div class="edit-role-modal" id="editRoleModal">
+      <div class="edit-role-content">
+        <div class="edit-role-body">
+          <h4>Change Role</h4>
+          <p>Change <strong id="editUserName"></strong> role to:</p>
+          <select id="newUserRole" class="role-select">
+            <option value="Admin">Admin</option>
+            <option value="Client">Client</option>
+          </select>
+        </div>
+        
+        <div class="edit-role-footer">
+          <button class="cancel-edit-role-btn">Cancel</button>
+          <button class="confirm-edit-role-btn" id="confirmEditRole">Update Role</button>
+        </div>
+      </div>
+    </div>
+    <script src="../js/inventory.js"></script>
+
+  </body>
+</html>

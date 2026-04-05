@@ -1,0 +1,167 @@
+<!doctype html>
+<html>
+<head>
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="../css/inventory.css">
+</head>
+
+<body>
+
+<div class="inventory-managgement-page-bg">
+
+  <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
+
+  <!-- SAME HEADER (copy EXACTLY) -->
+  <header class="header">
+
+    <div class="header-top">
+      <p class="logo">LOGO</p>
+
+      <form class="header-search-bar">
+        <input placeholder="What are you looking for?" />
+        <button class="search-button">
+          <img class="icon" src="../../img/icons/search.png">
+        </button>
+      </form>
+
+      <button class="profile-button">
+        <img class="icon" src="../../img/icons/profile.png">
+      </button>
+    </div>
+
+    <nav class="header-bottom">
+      <button class="header-button active">DASHBOARD</button>
+      <button class="header-button">ORDERS</button>
+      <button class="header-button">INVENTORY</button>
+      <button class="header-button">CUSTOMERS</button>
+    </nav>
+
+  </header>
+
+
+  <!-- MAIN AREA -->
+  <main class="main-area">
+
+    <section class="section-header">
+      <h2 class="section-title">Dashboard Overview</h2>
+    </section>
+
+    <!-- USE SAME STAT BOX STYLE -->
+  <!-- DASHBOARD STATS - Special mountain design -->
+<section class="stats dashboard-stats">
+
+  <div class="stat-box dashboard-stat">
+    <div class="stat-icon">💰</div>
+    <p>Total Revenue</p>
+    <h3>$12,345</h3>
+  </div>
+
+  <div class="stat-box dashboard-stat">
+    <div class="stat-icon">🛒</div>
+    <p>Total Orders</p>
+    <h3>2,345</h3>
+  </div>
+
+  <div class="stat-box dashboard-stat">
+    <div class="stat-icon">📦</div>
+    <p>Total Products</p>
+    <h3>934</h3>
+  </div>
+
+  <div class="stat-box dashboard-stat">
+    <div class="stat-icon">👤</div>
+    <p>Total Users</p>
+    <h3>4,321</h3>
+  </div>
+
+</section>
+        
+
+
+    <!-- GRID AREA -->
+   <div class="dashboard-row">
+
+  <!-- TOP PRODUCTS -->
+  <div class="dashboard-card small-card">
+    <h3 class="inventory-subtitle">Top Products</h3>
+
+    <ul class="top-products">
+      <li>Laptop Thing <span>DZD 12000</span></li>
+      <li>Tablet Thing <span>DZD 12000</span></li>
+      <li>Phone Thing <span>DZD 12000</span></li>
+    </ul>
+  </div>
+
+
+  <!-- SALES CHART -->
+  <div class="dashboard-card small-card chart-card">
+    <h3 class="inventory-subtitle">Sales By Category</h3>
+    <canvas id="chart"></canvas>
+  </div>
+
+
+  <!-- RECENT ORDERS -->
+  <div class="dashboard-card big-card">
+  <h3 class="inventory-subtitle">Latest Orders</h3>
+
+  <div class="orders-list">
+
+    <div class="order-item">
+      <div class="order-left">
+        <p class="order-product">Tablet Thing</p>
+        <span class="order-date">Aug 3</span>
+      </div>
+
+      <span class="order-status pending">Pending</span>
+
+      <div class="order-right">
+        <p class="order-price">DZD 23,000</p>
+        <span class="order-client">John Doe</span>
+      </div>
+    </div>
+
+
+    <div class="order-item">
+      <div class="order-left">
+        <p class="order-product">Phone Thing</p>
+        <span class="order-date">Aug 2</span>
+      </div>
+
+      <span class="order-status delivered">Delivered</span>
+
+      <div class="order-right">
+        <p class="order-price">DZD 50,000</p>
+        <span class="order-client">Jane Smith</span>
+      </div>
+    </div>
+
+
+    <div class="order-item">
+      <div class="order-left">
+        <p class="order-product">Laptop Thing</p>
+        <span class="order-date">Aug 2</span>
+      </div>
+
+      <span class="order-status processing">Processing</span>
+
+      <div class="order-right">
+        <p class="order-price">DZD 120,000</p>
+        <span class="order-client">Jane Smith</span>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+  </div>
+
+</div>
+
+  </main>
+
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+<script src="../js/dashboard.js"></script>
+</body>
+</html>

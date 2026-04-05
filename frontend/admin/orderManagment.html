@@ -1,0 +1,133 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Inventory</title>
+    <link rel="stylesheet" href="../css/inventory.css" />
+  </head>
+
+  <body>
+    <div class="user-management-page-bg">
+
+      <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
+
+      <!-- HEADER -->
+      <header class="header">
+
+        <div class="header-top">
+          <p class="logo">LOGO</p>
+
+          <form class="header-search-bar">
+            <input placeholder="What are you looking for?" />
+            <button class="search-button">
+              <img class="icon" src="../../img/icons/search.png" />
+            </button>
+          </form>
+
+          <button class="profile-button">
+            <img class="icon" src="../../img/icons/profile.png" />
+          </button>
+        </div>
+
+        <nav class="header-bottom">
+          <button class="header-button">DASHBOARD</button>
+          <button class="header-button">ORDERS</button>
+          <button class="header-button active">INVENTORY</button>
+          <button class="header-button">CUSTOMERS</button>
+        </nav>
+
+      </header>
+
+      <!-- MAIN -->
+      <main class="main-area">
+
+        <section class="section-header">
+          <h2 class="section-title">Order Management</h2>
+        </section>
+
+        <!-- STATS -->
+        <section class="stats">
+          <div class="stat-box">
+            <div class="stat-icon">👥 </div>
+            <p>New Orders</p>
+            <h3 id="total-products">0</h3>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-icon">🆕</div>
+            <p>Pending Orders</p>
+            <h3 id="low-stock">0</h3>
+          </div>
+
+          <div class="stat-box">
+            <div class="stat-icon">⛔</div>
+            <p>Cancelled Orders</p>
+            <h3 id="out-stock">0</h3>
+          </div>
+        </section>
+
+        <p class="inventory-subtitle">Order List</p>
+
+        <!-- INVENTORY -->
+        <section class="inventory">
+
+          <div class="inventory-top">
+
+            <div class="filters">
+              <button class="active">All Order</button>
+              <button>Pending</button>
+              <button>Processing</button>*
+              <button>Out For Delivery</button>
+              <button>Delivered</button>
+              <button>Cancelled</button>
+            </div>
+
+            <div class="export-wrapper">
+               <button class="export-btn">
+               <img src="../../img/icons/export-white.png" alt="Export" class="export-icon" />
+               Export
+               </button>
+            </div>
+
+            <div class="search-container">
+              <input class="search" placeholder="Search products..." />
+              <img class="search-icon" src="../../img/icons/search.png" />
+            </div>
+
+          </div>
+
+          
+          <div class="table-container">
+            <table>
+
+            <thead>
+              <tr>
+      <th></th>
+      <th>Product name</th>
+      <th>Client</th>
+      <th>Date</th>
+      <th>Order ID</th>
+      <th>Status</th>
+      <th>Price</th>
+      <th>ACtion</th>
+    </tr>
+  </thead>
+
+  <tbody>
+
+   
+   
+
+            </table>
+           </div>
+
+        </section>
+
+      </main>
+
+    </div>
+
+    <!-- ✅ LINK YOUR JS FILE -->
+    <script src="../js/inventory.js"></script>
+
+  </body>
+</html>
