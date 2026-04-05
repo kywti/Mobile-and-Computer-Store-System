@@ -60,12 +60,12 @@ button {
   text-align: center;
 }
 
-/* HEADER */
 .header {
-  height: 170px;
+  height: auto;
+  min-height: 170px;
   background-color: rgba(0, 0, 0, 0.76);
   width: 70%;
-  min-width: 900px;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
   margin-bottom: 30px;
@@ -76,7 +76,8 @@ button {
   flex-direction: row;
   align-items: center;
   padding: 0 30px;
-  height: 120px;
+  min-height: 120px;
+  height: auto;
   margin-bottom: -10px;
 }
 
@@ -150,8 +151,8 @@ button {
   justify-content: space-evenly;
   height: 50px;
   padding: 0 20px;
+  flex-wrap: wrap;
 }
-
 .header-button {
   background-color: transparent;
   color: white;
@@ -170,9 +171,8 @@ button {
 .main-area {
   background-color: white;
   width: 70%;
-  min-width: 900px;
+  min-width: 500px;
   height: auto;
-  min-height: 650px;
   display: flex;
   flex-direction: column;
   padding: 50px 60px;
@@ -444,14 +444,13 @@ button {
   background-color: rgba(0, 0, 0, 0.76);
 
   width: 70%;
-  min-width: 900px;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
 
   margin-bottom: 80px;
   flex-direction: row;
-  justify-content: space-evenly;
-  gap: 330px;
+  justify-content: space-around;
   height: 230px;
   padding-top: 30px;
   margin-top: 30px;
@@ -469,13 +468,6 @@ button {
 
 /* RESPONSIVE */
 @media (max-width: 950px) {
-  .header,
-  .main-area,
-  .bottom-area {
-    width: 95%;
-    min-width: auto;
-  }
-
   .order-container {
     flex-direction: column;
   }
@@ -483,5 +475,39 @@ button {
   .order-summary,
   .checkout-form {
     width: 100%;
+  }
+}
+
+@media (max-width: 998px) {
+  .logo {
+    font-size: 22px;
+    padding: 0px;
+  }
+
+  .header-search-bar input {
+    font-size: 16px;
+    height: 38px;
+  }
+
+  .search-button,
+  .shopping-cart-button,
+  .profile-button {
+    height: 40px;
+    padding: 0 8px;
+  }
+
+  .search-button {
+    margin-right: 0px;
+  }
+
+  .icon {
+    width: 22px;
+    height: 22px;
+  }
+
+  .header-bottom .header-button {
+    font-size: 11px;
+    height: 32px;
+    padding: 0 10px;
   }
 }
