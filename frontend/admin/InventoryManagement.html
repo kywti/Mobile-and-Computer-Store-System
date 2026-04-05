@@ -1,85 +1,99 @@
 <!doctype html>
 <html>
   <head>
-    <title>Order Confirmation</title>
+    <title>Inventory</title>
     <link rel="stylesheet" href="../css/inventory.css" />
   </head>
+
   <body>
     <div class="inventory-managgement-page-bg">
+
       <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
 
-      <div class="header">
+      <!-- HEADER -->
+      <header class="header">
+
         <div class="header-top">
           <p class="logo">LOGO</p>
+
           <form class="header-search-bar">
             <input placeholder="What are you looking for?" />
             <button class="search-button">
-              <img class="icon" src="/img/icons/search.png" />
+              <img class="icon" src="../../img/icons/search.png" />
             </button>
           </form>
+
           <button class="profile-button">
-            <img class="icon" src="/img/icons/profile.png" />
+            <img class="icon" src="../../img/icons/profile.png" />
           </button>
         </div>
-        <div class="header-bottom">
-          <button class="header-button home-header-button">DASHBOARD</button>
-          <button class="header-button phones-header-button">ORDERS</button>
-          <button class="header-button laptops-header-button active">INVENTORY</button>
-          <button class="header-button tablets-header-button">CUSTOMERS</button>
-        </div>
-      </div>
-      
-      <!-- MAIN CONTENT -->
-      <div class="main-area">
-        <div class="section-header">
-          <h2 class="section-title">Inventory Management</h2>
-          <button class="add-product-btn">+ Add Product</button>
-        </div>
 
-        <div class="stats">
+        <nav class="header-bottom">
+          <button class="header-button">DASHBOARD</button>
+          <button class="header-button">ORDERS</button>
+          <button class="header-button active">INVENTORY</button>
+          <button class="header-button">CUSTOMERS</button>
+        </nav>
+
+      </header>
+
+      <!-- MAIN -->
+      <main class="main-area">
+
+        <section class="section-header">
+          <h2 class="section-title">Inventory Management</h2>
+        </section>
+
+        <!-- STATS -->
+        <section class="stats">
           <div class="stat-box">
             <div class="stat-icon">📦</div>
             <p>Total Products</p>
-            <h3>934</h3>
+            <h3 id="total-products">0</h3>
           </div>
 
           <div class="stat-box">
             <div class="stat-icon">⚠️</div>
             <p>Low Stock</p>
-            <h3>23</h3>
+            <h3 id="low-stock">0</h3>
           </div>
 
           <div class="stat-box">
             <div class="stat-icon">❌</div>
             <p>Out Of Stock</p>
-            <h3>4</h3>
+            <h3 id="out-stock">0</h3>
           </div>
-        </div>
+        </section>
 
-        <p class="inventory-subtitle">Product Inventory</p>  
+        <p class="inventory-subtitle">Product Inventory</p>
 
-        
-        <!-- TABLE -->
-        <div class="inventory">
+        <!-- INVENTORY -->
+        <section class="inventory">
+
           <div class="inventory-top">
+
             <div class="filters">
               <button class="active">All Products</button>
               <button>In Stock</button>
               <button>Low Stock</button>
               <button>Out Of Stock</button>
             </div>
+
             <div class="search-container">
               <input class="search" placeholder="Search products..." />
-              <img class="search-icon" src="/img/icons/search.png" alt="Search" />
+              <img class="search-icon" src="../../img/icons/search.png" />
             </div>
+
           </div>
 
+          <!-- TABLE -->
           <div class="table-container">
             <table>
+
               <thead>
                 <tr>
                   <th></th>
-                  <th>Product Name</th>
+                  <th>Product</th>
                   <th>Category</th>
                   <th>Stock</th>
                   <th>Status</th>
@@ -88,86 +102,26 @@
                   <th>Actions</th>
                 </tr>
               </thead>
-              <tbody>
-                <tr>
-                  <td class="product-image">
-                    <img src="/img/products/tablet.jpg" alt="Tablet Thing" />
-                  </td>
-                  <td>Tablet Thing</td>
-                  <td>Tablet</td>
-                  <td>200</td>
-                  <td class="in">In Stock</td>
-                  <td>DZD 2,000</td>
-                  <td>Palm, Inc.</td>
-                  <td class="actions">
-                    <button class="action-btn">
-                      <img src="/img/icons/menu-dots.png" alt="Actions" />
-                    </button>
-                    <div class="dropdown-menu">
-                      <button class="dropdown-item edit">
-                        <img src="/img/icons/edit.png" alt="Edit" /> Edit
-                      </button>
-                      <button class="dropdown-item delete">
-                        <img src="/img/icons/delete.png" alt="Delete" /> Delete
-                      </button>
-                    </div>
-                  </td>
-                </tr>
 
-                <tr>
-                  <td class="product-image">
-                    <img src="/img/products/laptop.jpg" alt="Laptop Thing" />
-                  </td>
-                  <td>Laptop Thing</td>
-                  <td>Laptop</td>
-                  <td>0</td>
-                  <td class="out">Out Of Stock</td>
-                  <td>DZD 5,800</td>
-                  <td>Sony</td>
-                  <td class="actions">
-                    <button class="action-btn">
-                      <img src="/img/icons/menu-dots.png" alt="Actions" />
-                    </button>
-                    <div class="dropdown-menu">
-                      <button class="dropdown-item edit">
-                        <img src="/img/icons/edit.png" alt="Edit" /> Edit
-                      </button>
-                      <button class="dropdown-item delete">
-                        <img src="/img/icons/delete.png" alt="Delete" /> Delete
-                      </button>
-                    </div>
-                  </td>
-                </tr>
+              <!-- ✅ EMPTY (JS WILL FILL IT) -->
+              <tbody id="product-table-body"></tbody>
 
-                <tr>
-                  <td class="product-image">
-                    <img src="/img/products/phone.jpg" alt="Phone Thing" />
-                  </td>
-                  <td>Phone Thing</td>
-                  <td>Phone</td>
-                  <td>50</td>
-                  <td class="low">Low Stock</td>
-                  <td>DZD 12,800</td>
-                  <td>Mio Tech</td>
-                  <td class="actions">
-                    <button class="action-btn">
-                      <img src="/img/icons/menu-dots.png" alt="Actions" />
-                    </button>
-                    <div class="dropdown-menu">
-                      <button class="dropdown-item edit">
-                        <img src="/img/icons/edit.png" alt="Edit" /> Edit
-                      </button>
-                      <button class="dropdown-item delete">
-                        <img src="/img/icons/delete.png" alt="Delete" /> Delete
-                      </button>
-                    </div>
-                  </td>
-                </tr>
-              </tbody>
             </table>
           </div>
+
+        </section>
+
+        <!-- ADD BUTTON -->
+        <div class="add-btn-container">
+          <button class="add-product-btn">+ Add Product</button>
         </div>
-      </div>
+
+      </main>
+
     </div>
+
+    <!-- ✅ LINK YOUR JS FILE -->
+    <script src="../js/inventory.js"></script>
+
   </body>
 </html>
