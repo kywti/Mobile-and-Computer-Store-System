@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 @import url("https://fonts.cdnfonts.com/css/digital-numbers");
 
@@ -37,7 +37,7 @@ button {
 }
 
 /* MAIN BACKGROUND */
-.product-details-page-bg {
+/*.checkout-page-bg {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -52,7 +52,7 @@ button {
 }
 
 /* TOP SLOGAN */
-.top-slogan {
+/*.top-slogan {
   margin: 40px 0 30px 0;
   color: white;
   font-size: 35px;
@@ -203,14 +203,14 @@ button {
 }
 
 /* ORDER SUMMARY */
-.order-summary {
+.order-summary-checkout {
   width: 330px;
   padding: 25px;
   background: #f4f4f4;
   border-radius: 12px;
 }
 
-.order-summary h3 {
+.order-summary-checkout h3 {
   font-family: "Audiowide";
   font-size: 24px;
   margin-bottom: 20px;
@@ -368,7 +368,7 @@ button {
   color: black;
 }
 
-.payment-icon {
+.payment-icon-checkout-pg {
   width: 30px;
   height: auto;
   margin-left: 8px;
@@ -424,7 +424,7 @@ button {
 }
 
 /* MAIN BUTTON */
-.add-to-cart-button {
+.add-to-cart-button-checkout-pg {
   background-color: black;
   color: white;
   width: 100%;
@@ -436,11 +436,11 @@ button {
   transition: background-color 0.2s ease;
 }
 
-.add-to-cart-button:hover {
+.add-to-cart-button-checkout-pg:hover {
   background: #131313;
 }
 
-.bottom-area {
+/*.bottom-area {
   background-color: rgba(0, 0, 0, 0.76);
 
   width: 70%;
@@ -464,7 +464,7 @@ button {
 
 .bottom-area-text-top {
   font-size: 16px;
-}
+}*/
 
 /* RESPONSIVE */
 @media (max-width: 950px) {

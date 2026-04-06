@@ -17,7 +17,11 @@ body {
 
 p,
 button,
-input {
+input,
+label,
+h2,
+h3,
+h4 {
   font-family: "Electrolize";
 }
 
@@ -40,7 +44,10 @@ button:hover {
 .product-details-page-bg,
 .product-page-bg,
 .order-history-page-bg,
-.shopping-cart-page-bg {
+.shopping-cart-page-bg ,
+.checkout-page-bg,
+.confirmation-page-bg,
+.profile-page-bg{
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -468,7 +475,11 @@ button:hover {
 
 .product-details-page-bg,
 .order-history-page-bg,
-.shopping-cart-page-bg {
+.shopping-cart-page-bg,
+.checkout-page-bg,
+.confirmation-page-bg,
+.profile-page-bg
+ {
   background-image: url("../../img/backgrounds/product-details-bg.jpg");
 }
 .main-area {
@@ -1141,4 +1152,558 @@ tr:hover td {
     height: auto;
     align-items: center;
   }
+}
+/*checkout*/
+.checkout-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+.order-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 40px;
+  flex: 1;
+}
+.product-summary {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: white;
+  padding: 12px;
+  border-radius: 10px;
+  border: 2px solid #e8e8e8;
+  margin-bottom: 10px;
+}
+
+.product-summary img {
+  width: 55px;
+  height: 55px;
+  object-fit: contain;
+}
+
+.product-summary > div {
+  flex: 1;
+}
+
+.product-summary p {
+  font-family: "Audiowide";
+  font-size: 14px;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.product-summary span {
+  font-size: 18px;
+  font-weight: bold;
+  color: #000;
+  display: block;
+}
+
+.order-total {
+  background: linear-gradient(145deg, #1a1a1a, #0d0d0d);
+  color: white;
+  padding: 18px;
+  border-radius: 12px;
+  margin-top: 20px;
+}
+
+.order-total p {
+  display: flex;
+  justify-content: space-between;
+  margin: 8px 0;
+  font-size: 14px;
+}
+
+.order-total h4 {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+  font-size: 22px;
+  font-weight: bold;
+}
+
+.order-total hr {
+  height: 2px;
+  background: rgba(255, 255, 255, 0.2);
+  border: none;
+  margin: 15px 0;
+}
+.checkout-form {
+  flex: 1;
+  padding: 30px 40px;
+  background: #f4f4f4;
+  border-radius: 12px;
+}
+
+.checkout-form h3 {
+  font-family: "Audiowide";
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+.checkout-form h4 {
+  font-family: "Audiowide";
+  font-size: 18px;
+  color: #666;
+  margin: 25px 0 15px 0;
+}
+.checkout-form {
+  flex: 1;
+  padding: 30px 40px;
+  background: #f4f4f4;
+  border-radius: 12px;
+}
+
+.checkout-form h3 {
+  font-family: "Audiowide";
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+.checkout-form h4 {
+  font-family: "Audiowide";
+  font-size: 18px;
+  color: #666;
+  margin: 25px 0 15px 0;
+}
+
+/* FORM ELEMENTS */
+.form-group {
+  margin-bottom: 15px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5px;
+  font-weight: 500;
+}
+
+.form-group input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 15px;
+  font-family: "Electrolize";
+  transition: border-color 0.2s ease;
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: #333;
+}
+
+.form-row {
+  display: flex;
+  gap: 15px;
+}
+
+.form-row .form-group {
+  flex: 1;
+}
+.simple-radio {
+  display: flex;
+  align-items: center;
+  padding: 8px 0;
+  cursor: pointer;
+  font-size: 15px;
+  color: #333;
+  transition: color 0.2s ease;
+}
+
+.simple-radio:hover {
+  color: #000;
+}
+
+.simple-radio input {
+  width: auto;
+  margin-right: 12px;
+  accent-color: black;
+  cursor: pointer;
+}
+
+.simple-radio input:checked ~ span {
+  font-weight: bold;
+  color: black;
+}
+
+.payment-icon-checkout-pg {
+  width: 30px;
+  height: auto;
+  margin-left: 8px;
+}
+.card-form {
+  display: none;
+  margin: 20px 0 30px 0;
+  padding: 25px;
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.card-form.active {
+  display: block;
+}
+
+.card-form .form-row {
+  gap: 15px;
+  margin-top: 15px;
+}
+
+.card-input-group {
+  margin-bottom: 0;
+}
+
+.card-input-group label {
+  display: none;
+}
+
+.card-input-group input {
+  font-size: 16px;
+  letter-spacing: 1px;
+  padding: 15px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  font-family: "Electrolize";
+}
+
+.card-input-group input:focus {
+  border-color: #333;
+  outline: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-input-group input::placeholder {
+  font-weight: 500;
+  color: #666;
+  letter-spacing: 1px;
+}
+.add-to-cart-button-checkout-pg {
+  background-color: black;
+  color: white;
+  width: 100%;
+  font-size: 20px;
+  height: 55px;
+  margin-top: 30px;
+  font-family: "Audiowide";
+  font-weight: bold;
+  transition: background-color 0.2s ease;
+}
+
+.add-to-cart-button-checkout-pg:hover {
+  background: #131313;
+}
+.order-summary-checkout {
+  width: 330px;
+  padding: 25px;
+  background: #f4f4f4;
+  border-radius: 12px;
+}
+
+.order-summary-checkout h3 {
+  font-family: "Audiowide";
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #000;
+}
+/*confirmation*/
+.shipping-details {
+  flex: 1;
+  padding: 30px 40px;
+  background: #f4f4f4;
+  border-radius: 12px;
+}
+
+.shipping-details h3 {
+  font-family: "Audiowide";
+  font-size: 24px;
+  margin-bottom: 25px;
+  color: #000;
+}
+
+.shipping-details h4 {
+  font-family: "Audiowide";
+  font-size: 18px;
+  color: #666;
+  margin: 25px 0 15px 0;
+}
+
+.shipping-details p {
+  margin-bottom: 12px;
+  font-size: 15px;
+  color: #333;
+  line-height: 1.5;
+}
+
+.shipping-details p strong {
+  color: #000;
+  font-weight: 600;
+}
+/*profile*/
+.profile-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px; /* TIGHT */
+}
+
+.profile-img-box {
+  width: 180px;
+  height: 180px;
+  background: linear-gradient(135deg, rgb(12, 12, 12) 0%, rgb(25, 25, 25) 100%);
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  border: 2px solid rgba(255, 255, 255, 0.1);
+  overflow: hidden;
+}
+
+.profile-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: scale(1.05);
+  filter: brightness(1.1);
+}
+
+.profile-img[src*="../../img/icons/profile.png"] {
+  width: 110px;
+  height: auto;
+  object-fit: contain;
+}
+
+.profile-content h3 {
+  font-family: "Audiowide";
+  font-size: 22px;
+  color: rgb(61, 61, 61);
+  text-align: center;
+}
+info-row {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  max-width: 400px;
+  justify-content: center;
+}
+
+.info-row.full-width {
+  max-width: 450px;
+}
+
+.info-box {
+  flex: 1;
+  background: #f4f4f4;
+  padding: 5px;
+  border-radius: 12px;
+  border: 2px solid #e0e0e0;
+  text-align: center;
+}
+
+.info-box.full-width {
+  width: 100%;
+}
+
+.info-label {
+  display: block;
+  font-size: 13px;
+  color: #666;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.info-value {
+  display: block;
+  font-size: 16px;
+  color: #000;
+  font-family: "Audiowide", sans-serif;
+}
+
+.small-btn {
+  background: black;
+  color: white;
+  font-size: 14px;
+  padding: 10px 20px;
+  width: 200px;
+  height: 42px;
+  margin: 8px auto 0; /* TIGHT MARGIN */
+  border-radius: 8px;
+  font-family: "Electrolize";
+  transition: all 0.3s ease;
+}
+
+.small-btn:hover {
+  background: white;
+  color: black;
+  border: 2px solid black;
+}
+
+.centered-action-buttons {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  width: 280px;
+  margin-top: 10px; /* VERY CLOSE */
+}
+
+.action-btn {
+  background: black;
+  color: white !important;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  height: 50px;
+  width: 100%;
+  font-family: "Electrolize";
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #131313;
+  color: white;
+}
+/* Modal Styles */
+.modal-overlay {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background: #ffffff; /* White background */
+  border-radius: 12px;
+  padding: 35px;
+  max-width: 420px;
+  width: 90%;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  position: relative;
+  animation: modalSlideIn 0.4s ease-out;
+  border: 1px solid #f0f0f0;
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-50px) scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.modal h3 {
+  margin: 0 0 25px 0;
+  color: #ffffff; /* White text */
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.modal input {
+  width: 100%;
+  padding: 15px 18px;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  font-size: 16px;
+  margin-bottom: 25px;
+  box-sizing: border-box;
+  background: #f8f9fa;
+  color: #333;
+  transition: all 0.3s ease;
+}
+
+.modal input::placeholder {
+  color: #888;
+}
+
+.modal input:focus {
+  outline: none;
+  border-color: #000000;
+  background: #ffffff;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+}
+.confirm-btn,
+.cancel-btn {
+  padding: 14px 28px;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: #ffffff; /* White text on black buttons */
+  min-width: 100px;
+}
+
+.confirm-btn {
+  background: #000000; /* Black button */
+}
+
+.confirm-btn:hover {
+  background: #333333;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.cancel-btn {
+  background: #333333; /* Darker black button */
+}
+
+.cancel-btn:hover {
+  background: #555555;
+  transform: translateY(-2px);
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #ffffff; /* White X */
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.close-btn:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: rotate(90deg);
 }

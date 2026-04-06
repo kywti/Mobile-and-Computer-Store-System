@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
+/*@import url("https://fonts.googleapis.com/css2?family=Electrolize&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Audiowide&display=swap");
 @import url("https://fonts.cdnfonts.com/css/digital-numbers");
 
@@ -35,9 +35,9 @@ button {
   border-radius: 8px;
   font-family: "Electrolize";
 }
-
+*/
 /* MAIN BACKGROUND - SAME AS OTHERS */
-.product-details-page-bg {
+/*.confirmation-page-bg {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -57,9 +57,9 @@ button {
   font-size: 35px;
   font-family: "Audiowide";
   text-align: center;
-}
+}*/
 
-.header {
+/*.header {
   height: auto;
   min-height: 170px;
   background-color: rgba(0, 0, 0, 0.76);
@@ -165,7 +165,7 @@ button {
 .header-button:hover {
   background-color: white;
   color: black;
-}
+}*/
 
 /* MAIN AREA - IDENTICAL */
 .main-area {
@@ -203,14 +203,14 @@ button {
 }
 
 /* ORDER SUMMARY - LEFT */
-.order-summary {
+.order-summary-checkout {
   width: 330px;
   padding: 25px;
   background: #f4f4f4;
   border-radius: 12px;
 }
 
-.order-summary h3 {
+.order-summary-checkout h3 {
   font-family: "Audiowide";
   font-size: 24px;
   margin-bottom: 20px;
