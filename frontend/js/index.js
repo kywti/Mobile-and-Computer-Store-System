@@ -1,22 +1,34 @@
 const profileButton = document.querySelector(".profile-button");
+if(profileButton) {
 profileButton.addEventListener("click", () => {
   window.location.href = "profile.html";
 });
+}
+
 
 const homeButton = document.querySelector(".home-header-button");
+if(homeButton) {
 homeButton.addEventListener("click", () => {
   window.location.href = "client.html";
 });
+}
+
 
 const seeMoreButton = document.querySelector(".see-more-button");
+if(seeMoreButton) {
 seeMoreButton.addEventListener("click", () => {
   window.location.href = "products.html";
 });
+}
+
 
 const shoppingCartButton = document.querySelector(".shopping-cart-button");
+if(shoppingCartButton) {
 shoppingCartButton.addEventListener("click", () => {
   window.location.href = "shopping-cart.html";
 });
+}
+
 
 const phoneCategoryBtn = document.querySelector(".phone-category-button");
 phoneCategoryBtn.addEventListener("click", () => {

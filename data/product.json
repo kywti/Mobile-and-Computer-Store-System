@@ -151,19 +151,26 @@
       "Battery": "3.7V Lithium-ion battery",
       "Weight": "105 g"
     },
+<<<<<<< HEAD
     "stock": 0,
+=======
+    
+>>>>>>> cea258522c9b9fc1205fa3056c1ebf036094d50f
     "variants": [
       {
         "color": "Standard",
-        "images": ["../../img/phones/motorola-v505.jpg"]
+        "images": ["../../img/phones/motorola-v505.jpg"],
+        "stock": 200
       },
       {
         "color": "Blue",
-        "images": ["../../img/phones/motorola-v505-blue.jpg"]
+        "images": ["../../img/phones/motorola-v505-blue.jpg"],
+        "stock": 200
       },
       {
         "color": "Silver",
-        "images": ["../../img/phones/motorola-v505-silver.jpg"]
+        "images": ["../../img/phones/motorola-v505-silver.jpg"],
+        "stock": 200
       }
     ],
     "manufacturer": "Motorola"
@@ -185,31 +192,40 @@
       "Weight": "130 g",
       "Graphics": "N/A"
     },
+<<<<<<< HEAD
     "stock": 0,
+=======
+>>>>>>> cea258522c9b9fc1205fa3056c1ebf036094d50f
     "variants": [
       {
         "color": "Standard",
-        "images": ["../../img/phones/Nokia-3650.jpg"]
+        "images": ["../../img/phones/Nokia-3650.jpg"],
+        "stock": 200
       },
       {
         "color": "Blue",
-        "images": ["../../img/phones/nokia-3650-blue.jpg"]
+        "images": ["../../img/phones/nokia-3650-blue.jpg"],
+        "stock": 200
       },
       {
         "color": "Grey",
-        "images": ["../../img/phones/nokia-3650-gray.jpg"]
+        "images": ["../../img/phones/nokia-3650-gray.jpg"],
+        "stock": 200
       },
       {
         "color": "Green",
-        "images": ["../../img/phones/nokia-3650-green.jpg"]
+        "images": ["../../img/phones/nokia-3650-green.jpg"],
+        "stock": 200
       },
       {
         "color": "Pink",
-        "images": ["../../img/phones/nokia-3650-pink.jpg"]
+        "images": ["../../img/phones/nokia-3650-pink.jpg"],
+        "stock": 200
       },
       {
         "color": "Yellow",
-        "images": ["../../img/phones/nokia-3650-yellow.jpg"]
+        "images": ["../../img/phones/nokia-3650-yellow.jpg"],
+        "stock": 200
       }
     ],
     "manufacturer": "Nokia Corporation"
@@ -232,11 +248,11 @@
       "Graphics": "N/A",
       "Keyboard": "N/A"
     },
-    "stock": 200,
     "variants": [
       {
         "color": "Standard",
-        "images": ["../../img/phones/Nokia-N90.jpg"]
+        "images": ["../../img/phones/Nokia-N90.jpg"],
+        "stock": 200
       }
     ],
     "manufacturer": "Nokia Corporation"
@@ -630,67 +646,67 @@
       {
         "color": "Blue Dalmatian",
         "images": ["../../img/laptops/Apple-iMac-G3-blue-dalmatian.jpg"],
-        "stock": 200
+        "stock": 150
       },
       {
         "color": "Blueberry",
         "images": ["../../img/laptops/Apple-iMac-G3-blueberry.jpg"],
-        "stock": 200
+        "stock": 30
       },
       {
         "color": "Bondi",
         "images": ["../../img/laptops/Apple-iMac-G3-bondi.jpg"],
-        "stock": 200
+        "stock": 180
       },
       {
         "color": "Flower Power",
         "images": ["../../img/laptops/Apple-iMac-G3-flower-power.jpg"],
-        "stock": 200
+        "stock": 87
       },
       {
         "color": "Grape",
         "images": ["../../img/laptops/Apple-iMac-G3-grape.jpg"],
-        "stock": 200
+        "stock": 145
       },
       {
         "color": "Graphite",
         "images": ["../../img/laptops/Apple-iMac-G3-graphite.jpg"],
-        "stock": 200
+        "stock": 65
       },
       {
         "color": "Indigo",
         "images": ["../../img/laptops/Apple-iMac-G3-indigo.jpg"],
-        "stock": 200
+        "stock": 112
       },
       {
         "color": "Lime",
         "images": ["../../img/laptops/Apple-iMac-G3-lime.jpg"],
-        "stock": 200
+        "stock": 22
       },
       {
         "color": "Ruby",
         "images": ["../../img/laptops/Apple-iMac-G3-ruby.jpg"],
-        "stock": 200
+        "stock": 15
       },
       {
         "color": "Sage",
         "images": ["../../img/laptops/Apple-iMac-G3-sage.jpg"],
-        "stock": 200
+        "stock": 96
       },
       {
         "color": "Snow",
         "images": ["../../img/laptops/Apple-iMac-G3-snow.jpg"],
-        "stock": 200
+        "stock": 159
       },
       {
         "color": "Strawberry",
         "images": ["../../img/laptops/Apple-iMac-G3-strawberry.jpg"],
-        "stock": 200
+        "stock": 36
       },
       {
         "color": "Tangerine",
         "images": ["../../img/laptops/Apple-iMac-G3-tangerine.jpg"],
-        "stock": 200
+        "stock": 58
       }
     ],
     "manufacturer": "Apple"
@@ -772,7 +788,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "N/A"
+    "manufacturer": "Asus"
   },
   {
     "id": 22,

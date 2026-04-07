@@ -42,6 +42,8 @@ function displayProduct(product) {
 
   document.getElementById("product-image").src = product.variants[0].images[0];
 
+
+
   document.getElementById("product-category").textContent =
     product.category || "Phone";
 
@@ -55,6 +57,7 @@ function displayProduct(product) {
   document.getElementById("product-price").textContent =
     "DZD " + product.price.toLocaleString("en-US");
 
+updateStock(product.variants[0].stock);
   const variantButtons = [];
 
   product.variants.forEach((variant) => {
@@ -85,6 +88,8 @@ function displayProduct(product) {
       selectedColor = variant.color;
       selectedImage = variant.images[0];
 
+      updateStock(variant.stock);
+
       variantButtons.forEach((btn) => btn.classList.remove("selected"));
       colorVarButton.classList.add("selected");
 
@@ -96,6 +101,7 @@ function displayProduct(product) {
 
       selectedColor = variant.color;
       selectedImage = variant.images[0];
+      updateStock(variant.stock);
 
       variantButtons.forEach((btn) => btn.classList.remove("selected"));
       colorVarButton.classList.add("selected");
@@ -123,4 +129,9 @@ function displayProduct(product) {
 
 function changeMainImage(newSrc) {
   document.getElementById("product-image").src = newSrc;
+}
+
+function updateStock(stock) {
+  document.getElementById("product-stock").textContent =
+    "In stock: " + stock;
 }
