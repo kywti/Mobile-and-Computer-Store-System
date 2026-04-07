@@ -630,67 +630,67 @@
       {
         "color": "Blue Dalmatian",
         "images": ["../../img/laptops/Apple-iMac-G3-blue-dalmatian.jpg"],
-        "stock": 200
+        "stock": 150
       },
       {
         "color": "Blueberry",
         "images": ["../../img/laptops/Apple-iMac-G3-blueberry.jpg"],
-        "stock": 200
+        "stock": 30
       },
       {
         "color": "Bondi",
         "images": ["../../img/laptops/Apple-iMac-G3-bondi.jpg"],
-        "stock": 200
+        "stock": 180
       },
       {
         "color": "Flower Power",
         "images": ["../../img/laptops/Apple-iMac-G3-flower-power.jpg"],
-        "stock": 200
+        "stock": 87
       },
       {
         "color": "Grape",
         "images": ["../../img/laptops/Apple-iMac-G3-grape.jpg"],
-        "stock": 200
+        "stock": 145
       },
       {
         "color": "Graphite",
         "images": ["../../img/laptops/Apple-iMac-G3-graphite.jpg"],
-        "stock": 200
+        "stock": 65
       },
       {
         "color": "Indigo",
         "images": ["../../img/laptops/Apple-iMac-G3-indigo.jpg"],
-        "stock": 200
+        "stock": 112
       },
       {
         "color": "Lime",
         "images": ["../../img/laptops/Apple-iMac-G3-lime.jpg"],
-        "stock": 200
+        "stock": 22
       },
       {
         "color": "Ruby",
         "images": ["../../img/laptops/Apple-iMac-G3-ruby.jpg"],
-        "stock": 200
+        "stock": 15
       },
       {
         "color": "Sage",
         "images": ["../../img/laptops/Apple-iMac-G3-sage.jpg"],
-        "stock": 200
+        "stock": 96
       },
       {
         "color": "Snow",
         "images": ["../../img/laptops/Apple-iMac-G3-snow.jpg"],
-        "stock": 200
+        "stock": 159
       },
       {
         "color": "Strawberry",
         "images": ["../../img/laptops/Apple-iMac-G3-strawberry.jpg"],
-        "stock": 200
+        "stock": 36
       },
       {
         "color": "Tangerine",
         "images": ["../../img/laptops/Apple-iMac-G3-tangerine.jpg"],
-        "stock": 200
+        "stock": 58
       }
     ],
     "manufacturer": "Apple"
@@ -772,7 +772,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "N/A"
+    "manufacturer": "Asus"
   },
   {
     "id": 22,

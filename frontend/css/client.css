@@ -1153,6 +1153,18 @@ tr:hover td {
     align-items: center;
   }
 }
+
+
+@media (max-width: 950px) {
+  .order-container {
+    flex-direction: column;
+  }
+
+  .order-summary,
+  .checkout-form {
+    width: 100%;
+  }
+}
 /*checkout*/
 .checkout-content {
   flex: 1;

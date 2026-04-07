@@ -1,6 +1,15 @@
 const container = document.querySelector(".basket");
 const total = document.querySelector(".total-price");
 
+const checkoutBtn = document.querySelector(".checkout-button");
+
+if (checkoutBtn) {
+  checkoutBtn.addEventListener("click", () => {
+    window.location.href = "checkout.html";
+  });
+}
+
+
 function displayCart() {
   const cart = getCart();
 

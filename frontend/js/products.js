@@ -67,6 +67,7 @@ fetch("../../data/product.json")
     }
 
     const shuffled = shuffleArray(filteredProducts);
+    
     displayProducts(shuffled);
   });
 
