@@ -530,8 +530,7 @@ tr:hover td {
 
 /* EXPORT BUTTON */
 .export-wrapper {
-  margin-left: auto;
-  margin-right: 20px; /* SPACE FROM SEARCH */
+ align-self: flex-start; 
 }
 
 /* EXPORT BUTTON */
@@ -847,8 +846,9 @@ tr:hover td {
 }
 
 /* ADD PRODUCT MODAL */
-/* BIGGER WINDOW - SAME CONTENT SIZE */
-.add-product-modal {
+/* ADD/EDIT MODAL - PERFECTLY CENTERED + WORKING EXIT */
+.add-product-modal,
+.edit-product-modal {
   display: none;
   position: fixed;
   top: 0;
@@ -858,26 +858,84 @@ tr:hover td {
   background: rgba(0, 0, 0, 0.7);
   z-index: 10000;
   backdrop-filter: blur(5px);
+  align-items: center;  /* ✅ CENTER VERTICALLY */
+  justify-content: center; /* ✅ CENTER HORIZONTALLY */
 }
 
-.add-product-modal.active {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+.add-product-modal.active,
+.edit-product-modal.active {
+  display: flex !important; /* ✅ FORCE DISPLAY */
 }
 
+/* MODAL CONTENT - PERFECT CENTER */
 .modal-content {
   background: white;
-  width: 65%; /* BIGGER WINDOW */
-  max-width: 850px; /* BIGGER */
+  width: 65%;
+  max-width: 850px;
   max-height: 90vh;
   border-radius: 15px;
   box-shadow: 0 25px 70px rgba(0, 0, 0, 0.4);
   display: flex;
   flex-direction: column;
   overflow: hidden;
-  position: relative; /* FOR X POSITIONING */
+  position: relative;
+  margin: 20px; /* ✅ PREVENT EDGE TOUCH */
 }
+
+/* FIXED WORKING EXIT BUTTON */
+.close-modal {
+  position: absolute !important;
+  top: 20px !important;
+  right: 25px !important;
+  background: #f0f0f0 !important;
+  border: 2px solid #ddd !important;
+  color: #666 !important;
+  font-size: 22px !important;
+  font-weight: bold !important;
+  cursor: pointer !important;
+  padding: 0 !important;
+  width: 40px !important;
+  height: 40px !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: all 0.3s ease !important;
+  z-index: 10001 !important; /* ✅ ABOVE EVERYTHING */
+}
+
+.close-modal:hover {
+  background: #ff4444 !important;
+  color: white !important;
+  border-color: #ff4444 !important;
+  transform: rotate(90deg) scale(1.1) !important;
+}
+
+/* MODAL BODY - CENTERED CONTENT */
+.modal-body {
+  display: flex;
+  gap: 25px;
+  padding: 30px;
+  flex: 1;
+  max-width: 750px;
+  margin: 0 auto;
+  align-self: center;
+  overflow-y: auto; /* ✅ SCROLL IF NEEDED */
+}
+
+/* MODAL FOOTER - CENTERED BUTTON */
+.modal-footer {
+  padding: 25px;
+  display: flex;
+  justify-content: center;
+  border-top: 1px solid #eee;
+  max-width: 750px;
+  margin: 0 auto;
+}
+
+
+
+
 
 /* FIXED X BUTTON - TOP RIGHT CORNER */
 .modal-header {
@@ -895,46 +953,7 @@ tr:hover td {
   padding-right: 50px; /* SPACE FOR X BUTTON */
 }
 
-/* X BUTTON - TOP RIGHT ABSOLUTE POSITION */
-.close-modal {
-  position: absolute !important;
-  top: 18px !important;
-  right: 20px !important;
-  background: #f0f0f0 !important;
-  border: 2px solid #ddd !important;
-  color: #666 !important;
-  font-size: 20px !important;
-  font-weight: bold !important;
-  cursor: pointer !important;
-  padding: 0 !important;
-  width: 35px !important;
-  height: 35px !important;
-  border-radius: 50% !important;
-  display: flex !important;
-  align-items: center !important;
-  justify-content: center !important;
-  transition: all 0.3s ease !important;
-  z-index: 10 !important;
-}
 
-.close-modal:hover {
-  background: #ff4444 !important;
-  color: white !important;
-  border-color: #ff4444 !important;
-  transform: scale(1.1) !important;
-}
-
-/* CONTENT KEEPS SAME SIZE - CENTERED */
-.modal-body {
-  display: flex;
-  gap: 25px;
-  padding: 25px;
-  flex: 1;
-  /* CENTER CONTENT IN BIGGER WINDOW */
-  max-width: 700px;
-  margin: 0 auto;
-  align-self: center;
-}
 
 .image-section {
   flex: 1;
@@ -1273,4 +1292,319 @@ tr:hover td {
 .confirm-edit-role-btn:hover {
   background: #333;
   transform: translateY(-1px);
+}
+
+.inventory-product-img {
+  width: 40px;
+  height: auto;
+}
+/* COMPACT DELETE MODAL - MINIMAL WHITESPACE */
+#deleteConfirmModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10002;
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+}
+
+#deleteConfirmModal.active {
+  display: flex !important;
+}
+
+/* COMPACT SIZE - 380px */
+.delete-confirm-content {
+  background: white;
+  width: 380px;
+  max-width: 90vw;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin: 20px;
+}
+
+/* TIGHT PADDING - NO EXTRA SPACE */
+.delete-confirm-body {
+  padding: 25px 20px; /* ✅ TIGHT */
+  text-align: center;
+}
+
+/* SMALL ICON */
+.delete-confirm-body::before {
+  content: '🗑️';
+  display: block;
+  font-size: 36px; /* ✅ SMALLER */
+  margin-bottom: 10px; /* ✅ TIGHT */
+  color: #dc3545;
+}
+
+/* TITLE - TIGHT MARGIN */
+.delete-confirm-body h4 {
+  margin: 0 0 8px 0; /* ✅ TIGHT */
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Audiowide";
+}
+
+/* PRODUCT NAME - COMPACT */
+/* COMPACT DELETE MODAL - NO PRODUCT NAME HIGHLIGHT */
+#deleteConfirmModal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10002;
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+}
+
+#deleteConfirmModal.active {
+  display: flex !important;
+}
+
+/* COMPACT SIZE - 380px */
+.delete-confirm-content {
+  background: white;
+  width: 380px;
+  max-width: 90vw;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin: 20px;
+}
+
+/* TIGHT PADDING */
+.delete-confirm-body {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+/* SMALL ICON */
+.delete-confirm-body::before {
+  content: '🗑️';
+  display: block;
+  font-size: 36px;
+  margin-bottom: 10px;
+  color: #dc3545;
+}
+
+/* TITLE */
+.delete-confirm-body h4 {
+  margin: 0 0 8px 0;
+  color: #000;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: "Audiowide";
+}
+
+/* ✅ NO HIGHLIGHT - JUST NORMAL PRODUCT NAME */
+#deleteProductName {
+  font-weight: 600;
+  color: #333; /* ✅ NORMAL COLOR */
+  font-size: 16px;
+  margin: 0 0 12px 0;
+}
+
+/* TEXT */
+.delete-confirm-body p {
+  margin: 0 0 20px 0;
+  color: #666;
+  line-height: 1.4;
+  font-size: 14px;
+}
+
+/* BUTTONS */
+.delete-confirm-footer {
+  padding: 20px 20px 25px 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  border-top: 1px solid #eee;
+  background: #f8f9fa;
+}
+
+.cancel-delete-btn,
+.confirm-delete-btn {
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  flex: 1;
+  max-width: 130px;
+}
+
+.cancel-delete-btn {
+  background: #6c757d;
+  color: white;
+}
+
+.cancel-delete-btn:hover {
+  background: #5a6268;
+}
+
+.confirm-delete-btn {
+  background: #dc3545 !important;
+  color: white !important;
+  font-weight: bold;
+  font-family: "Audiowide";
+}
+
+.confirm-delete-btn:hover {
+  background: #c82333 !important;
+}
+/* ================================
+   COMPACT MODALS (BLOCK + EDIT ROLE)
+   SAME STYLE AS DELETE MODAL
+================================ */
+
+/* overlay already exists — just ensure same behavior */
+.block-confirm-modal,
+.edit-role-modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7);
+  z-index: 10002;
+  backdrop-filter: blur(5px);
+  align-items: center;
+  justify-content: center;
+}
+
+.block-confirm-modal.active,
+.edit-role-modal.active {
+  display: flex !important;
+}
+
+/* SAME SMALL BOX */
+.block-confirm-content,
+.edit-role-content {
+  background: white;
+  width: 380px;
+  max-width: 90vw;
+  border-radius: 12px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+  overflow: hidden;
+  margin: 20px;
+}
+
+/* BODY SAME COMPACT STYLE */
+.block-confirm-body,
+.edit-role-body {
+  padding: 25px 20px;
+  text-align: center;
+}
+
+/* ICON (optional for consistency) */
+.block-confirm-body::before {
+  content: '⛔';
+  display: block;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+.edit-role-body::before {
+  content: '✏️';
+  display: block;
+  font-size: 36px;
+  margin-bottom: 10px;
+}
+
+/* TITLE */
+.block-confirm-body h4,
+.edit-role-body h4 {
+  margin: 0 0 8px 0;
+  font-size: 20px;
+  font-family: "Audiowide";
+  color: #000;
+}
+
+/* TEXT */
+.block-confirm-body p,
+.edit-role-body p {
+  margin: 0 0 15px 0;
+  font-size: 14px;
+  color: #666;
+  line-height: 1.4;
+}
+
+/* ROLE SELECT (EDIT ONLY) */
+.role-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  font-size: 15px;
+  font-family: "Electrolize";
+  margin-top: 10px;
+}
+
+.role-select:focus {
+  outline: none;
+  border-color: #000;
+}
+
+/* FOOTER SAME AS DELETE */
+.block-confirm-footer,
+.edit-role-footer {
+  padding: 20px;
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  border-top: 1px solid #eee;
+  background: #f8f9fa;
+}
+
+/* BUTTONS SAME STYLE */
+.cancel-block-btn,
+.cancel-edit-role-btn {
+  background: #6c757d;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  flex: 1;
+  max-width: 130px;
+  cursor: pointer;
+}
+
+.cancel-block-btn:hover,
+.cancel-edit-role-btn:hover {
+  background: #5a6268;
+}
+
+.confirm-block-btn,
+.confirm-edit-role-btn {
+  background: #000;
+  color: white;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  font-family: "Audiowide";
+  flex: 1;
+  max-width: 130px;
+  cursor: pointer;
+}
+
+.confirm-block-btn:hover,
+.confirm-edit-role-btn:hover {
+  background: #333;
 }

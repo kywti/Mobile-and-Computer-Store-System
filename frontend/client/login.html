@@ -6,8 +6,8 @@
     <link rel="stylesheet" href="../css/style.css">
 </head>
 <body>
-<div class="auth-container">
-    <div class="auth-box">
+<main class="auth-container">
+    <section class="auth-box">
         <h1 class="logo-brand">LOGO BRAND</h1>
         <h2>Create an account</h2>
         <p class="top-text">
@@ -65,21 +65,7 @@
 
             <button type="submit">SIGN UP</button>
         </form>
-    </div>
-</div>
-
-<script>
-function togglePassword() {
-    const password = document.getElementById("password");
-    const icon = document.querySelector(".toggle-password");
-    if (password.type === "password") {
-        password.type = "text";
-        icon.textContent = "🙈";
-    } else {
-        password.type = "password";
-        icon.textContent = "👁";
-    }
-}
-</script>
+    </section>
+</main>
 </body>
 </html>

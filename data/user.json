@@ -1,0 +1,42 @@
+[
+  {
+    "firstName": "Manel",
+    "lastName": "Ghebbache",
+    "address": "Setif, Algeria",
+    "email": "malak.touati@gmail.com",
+    "role": "ADMIN",
+    "totalOrders": 12
+  },
+  {
+    "firstName": "Yacine",
+    "lastName": "Bensalem",
+    "address": "Algiers, Algeria",
+    "email": "yacine.bensalem@gmail.com",
+    "role": "CLIENT",
+    "totalOrders": 5
+  },
+  {
+    "firstName": "Sara",
+    "lastName": "Kaci",
+    "address": "Oran, Algeria",
+    "email": "sara.kaci@gmail.com",
+    "role": "CLIENT",
+    "totalOrders": 8
+  },
+  {
+    "firstName": "Amine",
+    "lastName": "Zerrouki",
+    "address": "Constantine, Algeria",
+    "email": "amine.zerrouki@gmail.com",
+    "role": "ADMIN",
+    "totalOrders": 20
+  },
+  {
+    "firstName": "Lina",
+    "lastName": "Bouzid",
+    "address": "Annaba, Algeria",
+    "email": "lina.bouzid@gmail.com",
+    "role": "CLIENT",
+    "totalOrders": 3
+  }
+]

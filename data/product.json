@@ -20,22 +20,22 @@
       {
         "color": "Standard",
         "images": ["../../img/phones/alcatel-ot-810.jpg"],
-        "stock": 200
+        "stock": 50
       },
       {
         "color": "Light Chrome",
         "images": ["../../img/phones/Alcatel OT-810-Light-Chrome.jpg"],
-        "stock": 200
+        "stock":50
       },
       {
         "color": "Mystery Pink",
         "images": ["../../img/phones/Alcatel OT-810-Mystery-Pink.webp"],
-        "stock": 200
+        "stock": 50
       },
       {
         "color": "Victorian Blush",
         "images": ["../../img/phones/Alcatel OT-810-Victorian-Blush.jpg"],
-        "stock": 200
+        "stock": 50
       }
     ],
     "manufacturer": "Alcatel Mobile"
@@ -61,7 +61,7 @@
       {
         "color": "Standard",
         "images": ["../../img/phones/i-mate-PDA2k.jpg"],
-        "stock": 200
+        "stock": 0
       }
     ],
     "manufacturer": "HTC Corporation"
@@ -151,7 +151,7 @@
       "Battery": "3.7V Lithium-ion battery",
       "Weight": "105 g"
     },
-    "stock": 200,
+    "stock": 0,
     "variants": [
       {
         "color": "Standard",
@@ -185,7 +185,7 @@
       "Weight": "130 g",
       "Graphics": "N/A"
     },
-    "stock": 200,
+    "stock": 0,
     "variants": [
       {
         "color": "Standard",
@@ -396,7 +396,7 @@
       {
         "color": "Standard",
         "images": ["../../img/phones/Sony-CLIE-PEG-NX70V.jpg"],
-        "stock": 200
+        "stock": 30
       }
     ],
     "manufacturer": "Sony Corporation"
