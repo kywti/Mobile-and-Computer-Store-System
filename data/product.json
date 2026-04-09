@@ -25,7 +25,7 @@
       {
         "color": "Light Chrome",
         "images": ["../../img/phones/Alcatel OT-810-Light-Chrome.jpg"],
-        "stock":50
+        "stock": 50
       },
       {
         "color": "Mystery Pink",
@@ -151,11 +151,7 @@
       "Battery": "3.7V Lithium-ion battery",
       "Weight": "105 g"
     },
-<<<<<<< HEAD
-    "stock": 0,
-=======
-    
->>>>>>> cea258522c9b9fc1205fa3056c1ebf036094d50f
+
     "variants": [
       {
         "color": "Standard",
@@ -192,10 +188,6 @@
       "Weight": "130 g",
       "Graphics": "N/A"
     },
-<<<<<<< HEAD
-    "stock": 0,
-=======
->>>>>>> cea258522c9b9fc1205fa3056c1ebf036094d50f
     "variants": [
       {
         "color": "Standard",

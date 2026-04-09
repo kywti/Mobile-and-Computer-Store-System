@@ -1,5 +1,5 @@
-const params = new URLSearchParams(window.location.search);
-const productId = parseInt(params.get("id"));
+const pdparams = new URLSearchParams(window.location.search);
+const productId = parseInt(pdparams.get("id"));
 const colorVarsChoice = document.querySelector(".product-colors-button");
 const colorVarsImg = document.querySelector(".variants-images");
 
@@ -42,8 +42,6 @@ function displayProduct(product) {
 
   document.getElementById("product-image").src = product.variants[0].images[0];
 
-
-
   document.getElementById("product-category").textContent =
     product.category || "Phone";
 
@@ -57,7 +55,7 @@ function displayProduct(product) {
   document.getElementById("product-price").textContent =
     "DZD " + product.price.toLocaleString("en-US");
 
-updateStock(product.variants[0].stock);
+  updateStock(product.variants[0].stock);
   const variantButtons = [];
 
   product.variants.forEach((variant) => {
@@ -71,7 +69,9 @@ updateStock(product.variants[0].stock);
 
     const radioInput = colorVarLabel.querySelector("input");
 
-    colorVarsChoice.append(colorVarLabel);
+    if (colorVarsChoice) {
+      colorVarsChoice.append(colorVarLabel);
+    }
 
     const colorVarButton = document.createElement("button");
     colorVarButton.className = "variant-button";
@@ -132,6 +132,5 @@ function changeMainImage(newSrc) {
 }
 
 function updateStock(stock) {
-  document.getElementById("product-stock").textContent =
-    "In stock: " + stock;
+  document.getElementById("product-stock").textContent = "In stock: " + stock;
 }
