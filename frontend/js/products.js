@@ -50,26 +50,28 @@ const ads = [
 
 let adIndex = 0;
 
-fetch("../../data/product.json")
-  .then((res) => res.json())
-  .then((products) => {
-    let filteredProducts = products;
+if (grid) {
+  fetch("../../data/product.json")
+    .then((res) => res.json())
+    .then((products) => {
+      let filteredProducts = products;
 
-    if (categoryFilter) {
-      filteredProducts = products.filter(
-        (p) => p.category.toLowerCase() === categoryFilter.toLowerCase(),
-      );
-    }
+      if (categoryFilter) {
+        filteredProducts = products.filter(
+          (p) => p.category.toLowerCase() === categoryFilter.toLowerCase(),
+        );
+      }
 
-    if (filteredProducts.length === 0) {
-      grid.innerHTML = "<p>No products found.</p>";
-      return;
-    }
+      if (filteredProducts.length === 0) {
+        grid.innerHTML = "<p>No products found.</p>";
+        return;
+      }
 
-    const shuffled = shuffleArray(filteredProducts);
-    
-    displayProducts(shuffled);
-  });
+      const shuffled = shuffleArray([...filteredProducts]);
+      displayProducts(shuffled);
+    })
+    .catch((err) => console.error(err));
+}
 
 function displayProducts(products) {
   products.forEach((product, index) => {

@@ -1,6 +1,7 @@
 [
   {
     "id": 1,
+<<<<<<< HEAD
     "customerId": 2,
     "customerName": "Yacine Bensalem",
     "products": [
@@ -67,3 +68,12 @@
     "status": "pending"
   }
 ]
+=======
+    "client": 2,
+    "date": "2026-04-09",
+    "status": "pending",
+    "price": 12000,
+    "products": [10, 23, 45]
+  }
+]
+>>>>>>> 3dcc44812de620df238788c5a7f0792a2cd283ec

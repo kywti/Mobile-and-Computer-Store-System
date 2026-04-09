@@ -44,10 +44,10 @@ button:hover {
 .product-details-page-bg,
 .product-page-bg,
 .order-history-page-bg,
-.shopping-cart-page-bg ,
+.shopping-cart-page-bg,
 .checkout-page-bg,
 .confirmation-page-bg,
-.profile-page-bg{
+.profile-page-bg {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -478,8 +478,7 @@ button:hover {
 .shopping-cart-page-bg,
 .checkout-page-bg,
 .confirmation-page-bg,
-.profile-page-bg
- {
+.profile-page-bg {
   background-image: url("../../img/backgrounds/product-details-bg.jpg");
 }
 .main-area {
@@ -1154,7 +1153,6 @@ tr:hover td {
   }
 }
 
-
 @media (max-width: 950px) {
   .order-container {
     flex-direction: column;
@@ -1722,6 +1720,7 @@ info-row {
 /* ================= AUTH PAGE (SAFE MERGE) ================= */
 /* ================= AUTH PAGE (SAFE MERGE) ================= */
 
+<<<<<<< HEAD
 /* Merge global reset safely */
 * {
   margin: 0;
@@ -1938,3 +1937,12 @@ info-row {
     gap: 20px;
   }
 }
+=======
+#cardForm {
+  display: none;
+}
+
+#cardForm.active {
+  display: block;
+}
+>>>>>>> 3dcc44812de620df238788c5a7f0792a2cd283ec
