@@ -1719,5 +1719,222 @@ info-row {
   background: rgba(255, 255, 255, 0.2);
   transform: rotate(90deg);
 }
+/* ================= AUTH PAGE (SAFE MERGE) ================= */
+/* ================= AUTH PAGE (SAFE MERGE) ================= */
 
+/* Merge global reset safely */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+/* AUTH PAGE BACKGROUND (scoped, NOT body) */
+.auth-page {
+  background-image: url("../../img/backgrounds/signup.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Electrolize", monospace;
+  position: relative;
+}
+
+/* Dark overlay */
+.auth-page::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.4);
+  backdrop-filter: blur(2px);
+  z-index: 1;
+}
+
+/* Container */
+.auth-container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 420px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card */
+.auth-box {
+  background: #fff;
+  width: 100%;
+  max-width: 380px;
+  padding: 40px 35px;
+  border-radius: 8px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Logo */
+.logo-brand {
+  font-family: "Audiowide", sans-serif;
+  font-size: 28px;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  color: #000;
+}
+
+/* Title */
+.auth-box h2 {
+  font-family: "Audiowide", sans-serif;
+  font-size: 20px;
+  margin-bottom: 12px;
+  color: #333;
+}
+
+/* Text */
+.top-text {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.top-text a {
+  color: #000;
+  font-weight: 600;
+  text-decoration: none;
+  border-bottom: 1px solid #000;
+}
+
+.top-text a:hover {
+  color: #333;
+}
+
+/* Row */
+.row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.row .input-group-ww {
+  flex: 1;
+  margin-bottom: 0;
+}
+
+/* Inputs */
+.input-group-ww {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.input-group-ww label {
+  font-size: 13px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  display: block;
+  color: #444;
+}
+
+.input-group-ww input {
+  width: 100%;
+  height: 48px;
+  border: 2px solid #e1e1e1;
+  border-radius: 6px;
+  padding: 0 16px;
+  background: #fafafa;
+  font-size: 15px;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+.input-group-ww input:focus {
+  background: #fff;
+  border-color: #000;
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+}
+
+/* Forgot */
+.forgot {
+  width: 100%;
+  text-align: left;
+  font-size: 13px;
+  margin: 8px 0 25px 0;
+  color: #666;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.forgot:hover {
+  color: #000;
+}
+
+/* Checkbox */
+.checkbox-group {
+  margin-bottom: 25px;
+  width: 100%;
+}
+
+.checkbox {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  font-size: 13px;
+  color: #555;
+  cursor: pointer;
+}
+
+.checkbox input {
+  width: 18px;
+  height: 18px;
+  margin-right: 10px;
+  margin-top: 2px;
+  accent-color: #000;
+}
+
+.checkbox a {
+  color: #000;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* AUTH BUTTON ONLY */
+.auth-box button {
+  width: 100%;
+  height: 48px;
+  background: #000;
+  color: #fff;
+  font-family: "Audiowide", sans-serif;
+  font-size: 16px;
+  border-radius: 6px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.auth-box button:hover {
+  background: #222;
+  transform: translateY(-1px);
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+  .auth-container {
+    padding: 15px;
+  }
+
+  .auth-box {
+    padding: 30px 25px;
+  }
+
+  .row {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
