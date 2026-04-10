@@ -55,3 +55,7 @@ function getTotalPrice() {
     return total + item.price * item.quantity;
   }, 0);
 }
+
+function clearCart() {
+  localStorage.removeItem("cart");
+}

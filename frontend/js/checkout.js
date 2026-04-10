@@ -1,3 +1,9 @@
+const user = getCurrentUser();
+
+if (!user) {
+  window.location.href = "sign_in.html";
+}
+
 const checkoutContainer = document.querySelector(".checkout-cart");
 const totalDisplay = document.querySelector(".order-total h4 span:last-child");
 const subTotalDisplay = document.querySelector(".sub-total span:last-child");
@@ -52,6 +58,36 @@ function updateTotal() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
+  /*if (!requireLogin("checkout.html")) return;
+  const form = document.querySelector(".checkout-form");
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      return;
+    }
+
+    window.location.href = "confirmation.html";
+  });*/
+  const user = getCurrentUser();
+
+  if (!user) {
+    localStorage.setItem("redirectAfterLogin", window.location.href);
+    window.location.href = "/frontend/client/sign_in.html";
+    return;
+  }
+
+  const form = document.querySelector(".checkout-form");
+
+  if (!form) return;
+
+  form.addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    window.location.href = "confirmation.html";
+  });
   displayCheckout();
 
   const deliveryOptions = document.querySelectorAll('input[name="delivery"]');

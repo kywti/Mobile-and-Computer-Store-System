@@ -15,10 +15,16 @@ if (headerForm) {
 const profileButton = document.querySelector(".profile-button");
 if (profileButton) {
   profileButton.addEventListener("click", () => {
-    window.location.href = "profile.html";
+    const user = getCurrentUser();
+
+    if (!user) {
+      localStorage.setItem("redirectAfterLogin", "profile.html");
+      window.location.href = "sign_in.html";
+    } else {
+      window.location.href = "profile.html";
+    }
   });
 }
-
 const homeButton = document.querySelector(".home-header-button");
 if (homeButton) {
   homeButton.addEventListener("click", () => {
