@@ -1,163 +1,140 @@
-document.addEventListener('DOMContentLoaded', initDashboard);
+let allUsers = [];
+let allProducts = [];
+let allOrders = [];
 
-let products = [];
-let users = [];
-let orders = [];
+document.addEventListener('DOMContentLoaded', init);
 
-async function initDashboard() {
-  try {
-    // Load all data
-    const [productsData, usersData, ordersData] = await Promise.all([
-      fetch("../../data/product.json").then(r => r.json()),
-      fetch("../../data/users.json").then(r => r.json()),
-      fetch("../../data/order.json").then(r => r.json())
-    ]);
+function init() {
+  loadData();
+}
 
-    products = productsData;
-    users = usersData;
-    orders = ordersData;
+function loadData() {
+  Promise.all([
+    fetch("../../data/users.json").then(res => res.json()),
+    fetch("../../data/products.json").then(res => res.json()),
+    fetch("../../data/orders.json").then(res => res.json())
+  ])
+  .then(([users, products, orders]) => {
+    allUsers = users;
+    allProducts = products;
+    allOrders = orders;
 
-    // Update dashboard
     updateStats();
     renderTopProducts();
     renderLatestOrders();
-    renderSalesChart();
-  } catch (error) {
-    console.error('Error loading dashboard data:', error);
-  }
+    renderChart();
+
+  })
+  .catch(err => {
+    console.error("Error loading dashboard data:", err);
+  });
 }
 
+
+// =========================
+// STATS SECTION
+// =========================
 function updateStats() {
-  // Total Revenue
-  const totalRevenue = orders.reduce((sum, order) => sum + order.total, 0);
-  document.querySelector('.dashboard-stat:nth-child(1) h3').textContent = `DZD ${totalRevenue.toLocaleString()}`;
+  const totalRevenue = allOrders.reduce((sum, o) => sum + o.total, 0);
 
-  // Total Orders
-  document.querySelector('.dashboard-stat:nth-child(2) h3').textContent = orders.length;
-
-  // Total Products
-  document.querySelector('.dashboard-stat:nth-child(3) h3').textContent = products.length;
-
-  // Total Users
-  document.querySelector('.dashboard-stat:nth-child(4) h3').textContent = users.length;
+  document.getElementById("total-users").textContent = allUsers.length;
+  document.getElementById("total-products").textContent = allProducts.length;
+  document.getElementById("total-orders").textContent = allOrders.length;
+  document.getElementById("total-revenue").textContent = totalRevenue.toLocaleString() + " DZD";
 }
 
+
+// =========================
+// TOP PRODUCTS
+// =========================
 function renderTopProducts() {
-  // Calculate total sales per product
-  const productSales = {};
-  
-  orders.forEach(order => {
+  const sales = {};
+
+  allOrders.forEach(order => {
     order.products.forEach(item => {
-      if (!productSales[item.id]) {
-        productSales[item.id] = { name: item.name, totalSold: 0, totalRevenue: 0 };
-      }
-      productSales[item.id].totalSold += item.quantity;
-      productSales[item.id].totalRevenue += item.quantity * item.price;
+      sales[item.id] = (sales[item.id] || 0) + item.quantity;
     });
   });
 
-  // Get top 3 products by revenue
-  const topProducts = Object.values(productSales)
-    .sort((a, b) => b.totalRevenue - a.totalRevenue)
-    .slice(0, 3);
+  const sorted = Object.entries(sales)
+    .sort((a, b) => b[1] - a[1])
+    .slice(0, 5);
 
-  const topProductsList = document.querySelector('.top-products');
-  topProductsList.innerHTML = '';
+  const container = document.getElementById("top-products");
+  container.innerHTML = "";
 
-  topProducts.forEach(product => {
-    const li = document.createElement('li');
-    li.innerHTML = `${product.name} <span>DZD ${product.totalRevenue.toLocaleString()}</span>`;
-    topProductsList.appendChild(li);
+  sorted.forEach(([id, qty]) => {
+    const product = allProducts.find(p => p.id == id);
+    if (!product) return;
+
+    const li = document.createElement("li");
+    li.innerHTML = `${product.name} <span>${qty} sold</span>`;
+    container.appendChild(li);
   });
 }
 
+
+// =========================
+// LATEST ORDERS
+// =========================
 function renderLatestOrders() {
-  // Sort orders by date (newest first)
-  const latestOrders = orders
-    .sort((a, b) => new Date(b.date) - new Date(a.date))
-    .slice(0, 3);
+  const container = document.getElementById("latest-orders");
+  container.innerHTML = "";
 
-  const ordersList = document.querySelector('.orders-list');
-  ordersList.innerHTML = '';
+  const latest = [...allOrders].slice(-3).reverse();
 
-  latestOrders.forEach(order => {
-    const orderItem = document.createElement('div');
-    orderItem.className = 'order-item';
+  latest.forEach(order => {
+    const div = document.createElement("div");
+    div.classList.add("order-item");
 
-    const statusClass = {
-      'pending': 'pending',
-      'processing': 'processing',
-      'delivered': 'delivered'
-    }[order.status] || 'pending';
+    const firstProduct = order.products[0];
 
-    const date = new Date(order.date).toLocaleDateString('en-US', { 
-      month: 'short', 
-      day: 'numeric' 
-    });
-
-    // Get first product name
-    const firstProduct = order.products[0]?.name || 'Multiple items';
-
-    orderItem.innerHTML = `
+    div.innerHTML = `
       <div class="order-left">
-        <p class="order-product">${firstProduct}</p>
-        <span class="order-date">${date}</span>
+        <p class="order-product">${firstProduct.name}</p>
+        <span class="order-date">${order.date}</span>
       </div>
-      <span class="order-status ${statusClass}">${order.status.charAt(0).toUpperCase() + order.status.slice(1)}</span>
+
+      <span class="order-status ${order.status.toLowerCase()}">
+        ${order.status}
+      </span>
+
       <div class="order-right">
-        <p class="order-price">DZD ${order.total.toLocaleString()}</p>
+        <p class="order-price">${order.total.toLocaleString()} DZD</p>
         <span class="order-client">${order.customerName}</span>
       </div>
     `;
-    
-    ordersList.appendChild(orderItem);
+
+    container.appendChild(div);
   });
 }
 
-function renderSalesChart() {
-  // Calculate sales by category
-  const categorySales = {};
-  
-  products.forEach(product => {
-    categorySales[product.category] = categorySales[product.category] || { total: 0, count: 0 };
-  });
 
-  orders.forEach(order => {
+// =========================
+// CHART (CATEGORY SALES)
+// =========================
+function renderChart() {
+  const categorySales = {};
+
+  allOrders.forEach(order => {
     order.products.forEach(item => {
-      const product = products.find(p => p.id === item.id);
-      if (product) {
-        const category = product.category;
-        categorySales[category] = categorySales[category] || { total: 0, count: 0 };
-        categorySales[category].total += item.quantity * item.price;
-        categorySales[category].count += item.quantity;
-      }
+      const product = allProducts.find(p => p.id == item.id);
+      if (!product) return;
+
+      const category = product.category;
+
+      categorySales[category] =
+        (categorySales[category] || 0) + item.quantity;
     });
   });
 
-  const ctx = document.getElementById('chart').getContext('2d');
-  new Chart(ctx, {
-    type: 'doughnut',
+  new Chart(document.getElementById("chart"), {
+    type: "doughnut",
     data: {
       labels: Object.keys(categorySales),
       datasets: [{
-        data: Object.values(categorySales).map(sales => sales.total),
-        backgroundColor: [
-          '#FF6384',
-          '#36A2EB',
-          '#FFCE56',
-          '#4BC0C0',
-          '#9966FF'
-        ]
+        data: Object.values(categorySales)
       }]
-    },
-    options: {
-      responsive: true,
-      maintainAspectRatio: false,
-      plugins: {
-        legend: {
-          position: 'bottom'
-        }
-      }
     }
   });
 }
