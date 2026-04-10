@@ -30,6 +30,7 @@ if (accessoriesBtn) {
 
 const params = new URLSearchParams(window.location.search);
 const categoryFilter = params.get("category");
+const searchQuery = params.get("search");
 
 const ads = [
   "../../img/ads/ad-10.jpg",
@@ -56,9 +57,47 @@ if (grid) {
     .then((products) => {
       let filteredProducts = products;
 
-      if (categoryFilter) {
-        filteredProducts = products.filter(
-          (p) => p.category.toLowerCase() === categoryFilter.toLowerCase(),
+      const category = params.get("category");
+      const search = params.get("search");
+      const minPrice = params.get("minPrice");
+      const maxPrice = params.get("maxPrice");
+      const manufacturer = params.get("manufacturer");
+
+      // CATEGORY
+      if (category) {
+        filteredProducts = filteredProducts.filter(
+          (p) => p.category.toLowerCase() === category.toLowerCase(),
+        );
+      }
+
+      // SEARCH
+      if (search) {
+        const q = search.toLowerCase();
+
+        filteredProducts = filteredProducts.filter(
+          (p) =>
+            p.name.toLowerCase().includes(q) ||
+            (p.manufacturer && p.manufacturer.toLowerCase().includes(q)),
+        );
+      }
+
+      // MANUFACTURER
+      if (manufacturer) {
+        filteredProducts = filteredProducts.filter(
+          (p) => p.manufacturer?.toLowerCase() === manufacturer.toLowerCase(),
+        );
+      }
+
+      // MIN PRICE
+      if (minPrice) {
+        filteredProducts = filteredProducts.filter(
+          (p) => p.price >= Number(minPrice),
+        );
+      }
+
+      if (maxPrice) {
+        filteredProducts = filteredProducts.filter(
+          (p) => p.price <= Number(maxPrice),
         );
       }
 
@@ -67,7 +106,7 @@ if (grid) {
         return;
       }
 
-      const shuffled = shuffleArray([...filteredProducts]);
+      const shuffled = shuffleArray(filteredProducts);
       displayProducts(shuffled);
     })
     .catch((err) => console.error(err));
@@ -90,6 +129,58 @@ function shuffleArray(array) {
     [array[i], array[j]] = [array[j], array[i]];
   }
   return array;
+}
+
+/*
+function filterProducts(products) {
+  if (!searchQuery) return products;
+
+  return products.filter((p) =>
+    p.name.toLowerCase().includes(searchQuery.toLowerCase()),
+  );
+}
+*/
+const brandFilter = document.getElementById("brandFilter");
+if (brandFilter) {
+  brandFilter.addEventListener("change", () => {
+    const manufacturer = brandFilter.value;
+
+    const url = new URL(window.location.href);
+
+    if (manufacturer) url.searchParams.set("manufacturer", manufacturer);
+    else url.searchParams.delete("manufacturer");
+
+    window.location.href = url;
+  });
+}
+
+const priceFilter = document.getElementById("priceFilter");
+
+if (priceFilter) {
+  priceFilter.addEventListener("change", () => {
+    const value = priceFilter.value;
+
+    const url = new URL(window.location.href);
+
+    // remove old params first
+    url.searchParams.delete("minPrice");
+    url.searchParams.delete("maxPrice");
+
+    if (value === "0-5000") {
+      url.searchParams.set("minPrice", 0);
+      url.searchParams.set("maxPrice", 5000);
+    } else if (value === "5000-20000") {
+      url.searchParams.set("minPrice", 5000);
+      url.searchParams.set("maxPrice", 20000);
+    } else if (value === "20000-50000") {
+      url.searchParams.set("minPrice", 20000);
+      url.searchParams.set("maxPrice", 50000);
+    } else if (value === "50000+") {
+      url.searchParams.set("minPrice", 50000);
+    }
+
+    window.location.href = url;
+  });
 }
 
 function createProduct(product) {
@@ -134,6 +225,28 @@ function createProduct(product) {
   });
 
   return div;
+}
+const filterInput = document.getElementById("filterInput");
+const filterBtn = document.getElementById("filterBtn");
+
+function applyFilter() {
+  const value = filterInput.value.trim();
+
+  if (!value) return;
+
+  window.location.href = `products.html?search=${encodeURIComponent(value)}`;
+}
+
+if (filterBtn) {
+  filterBtn.addEventListener("click", applyFilter);
+}
+
+if (filterInput) {
+  filterInput.addEventListener("keydown", (e) => {
+    if (e.key === "Enter") {
+      applyFilter();
+    }
+  });
 }
 
 function createAd() {

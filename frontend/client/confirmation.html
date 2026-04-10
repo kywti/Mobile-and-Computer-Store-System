@@ -36,65 +36,53 @@
       </header>
 
       <main  class="main-area">
+         <h2 class="section-title">ORDER CONFIRMATION</h2>
         <section class="pdp-product-details confirmation-content">
-          <h2 class="section-title">ORDER CONFIRMATION</h2>
 
           <div class="order-container">
             <section class="order-summary-checkout">
               <h3>Order Summary</h3>
 
-              <div class="product-summary">
-                <img src="../../img/phones/Sony-Ericsson-Z520i.jpg" alt="Product" />
-                <div>
-                  <p>SAMSUNG S23+ FLIP PHONE</p>
-                  <span>$234.67</span>
-                </div>
-              </div>
+               <div class="checkout-cart">
 
-              <div class="product-summary">
-                <img src="../../img/products/tablet.png" alt="Product" />
-                <div>
-                  <p>TABLET THING</p>
-                  <span>$234.67</span>
-                </div>
               </div>
-
+              
+              
               <div class="order-total">
-                <p><span>Sub total</span><span>$254.67</span></p>
-                <p><span>Shipping Fee</span><span>FREE</span></p>
+                <p class="sub-total"><span>Sub total</span><span>DZD 0</span></p>
+                <p class="shipping-fee"><span>Shipping Fee</span><span>FREE</span></p>
                 <hr />
-                <h4><span>Total</span><span>$254.67</span></h4>
+                <h4><span>Total</span><span>DZD 0</span></h4>
               </div>
-            </div>
+
+            </section>
 
             <section  class="shipping-details">
               <h3>Shipping</h3>
 
               <h4>Contact Details</h4>
-              <p><strong>First Name:</strong> FIRST NAME</p>
-              <p><strong>Last Name:</strong> LAST NAME</p>
-              <p><strong>Email:</strong> ADDRESS@GMAIL.COM</p>
-              <p><strong>Phone:</strong> +2131111111</p>
+              <p ><strong>Full Name:</strong> <span id="conf-name"></span></p>
+              <p ><strong>Email:</strong> <span id="conf-email"></span></p>
 
               <h4>Shipping Details</h4>
-              <p><strong>Address:</strong> 123 Main Street</p>
-              <p><strong>City:</strong> City</p>
-              <p><strong>State:</strong> State</p>
-              <p><strong>Postal Code:</strong> 11223</p>
+              <p ><strong>Address:</strong> <span id="conf-address"></span></p>
+              <p ><strong>City:</strong> <span id="conf-city"></span></p>
+              <p ><strong>State:</strong> <span id="conf-state"></span></p>
+              <p ><strong>Postal Code:</strong> <span id="conf-postal-code"></span></p>
 
               <h4>Delivery Options</h4>
-              <p>Standard 5-7 Business days — FREE</p>
+              <p id="conf-delivery-options"></p>
 
               <h4>Payment Methods</h4>
-              <p>Pay on delivery</p>
+              <p id="conf-payment-methods"></p>
 
-              <button class="add-to-cart-button-checkout-pg">CONFIRM ORDER</button>
+              <button id="confirm-order" class="add-to-cart-button-checkout-pg">CONFIRM ORDER</button>
             </section>
           </div>
-        </section>
+        
       </main>
 
-      <footer class="bottom-area">
+    <footer class="bottom-area">
         <div class="bottom-area-text">
           <p class="bottom-area-text-top">About</p>
           <p>About Us</p>
@@ -118,7 +106,16 @@
       </div>
     </footer>
 
+<div id="successModal" class="conf-modal hidden">
+  <div class="modal-content">
+    <h2>Order Placed Successfully!</h2>
+    <p>Thank you for your purchase.</p>
+    <button id="goHomeBtn">Go to Homepage</button>
+  </div>
+</div>
+
     <script src="../js/index.js" defer></script>
+        <script src="../js/cart.js" defer></script>
     <script src="../js/confirmation.js" defer></script>
   </body>
 </html>

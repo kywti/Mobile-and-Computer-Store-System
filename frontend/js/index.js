@@ -1,3 +1,17 @@
+const headerForm = document.querySelector(".header-search-bar");
+
+if (headerForm) {
+  headerForm.addEventListener("submit", (e) => {
+    e.preventDefault(); // 🚨 STOP FORM RELOAD
+
+    const input = document.getElementById("headerSearch");
+    const query = input?.value.trim();
+
+    if (!query) return;
+
+    window.location.href = `products.html?search=${encodeURIComponent(query)}`;
+  });
+}
 const profileButton = document.querySelector(".profile-button");
 if (profileButton) {
   profileButton.addEventListener("click", () => {

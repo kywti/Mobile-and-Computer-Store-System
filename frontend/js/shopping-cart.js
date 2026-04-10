@@ -9,7 +9,6 @@ if (checkoutBtn) {
   });
 }
 
-
 function displayCart() {
   const cart = getCart();
 

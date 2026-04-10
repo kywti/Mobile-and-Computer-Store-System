@@ -38,7 +38,7 @@
         "stock": 50
       }
     ],
-    "manufacturer": "Alcatel Mobile"
+    "manufacturer": "Alcatel"
   },
   {
     "id": 2,
@@ -64,7 +64,7 @@
         "stock": 0
       }
     ],
-    "manufacturer": "HTC Corporation"
+    "manufacturer": "HTC"
   },
   {
     "id": 3,
@@ -220,7 +220,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "Nokia Corporation"
+    "manufacturer": "Nokia"
   },
   {
     "id": 7,
@@ -247,7 +247,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "Nokia Corporation"
+    "manufacturer": "Nokia"
   },
   {
     "id": 8,
@@ -274,7 +274,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "Samsung Group"
+    "manufacturer": "Samsung"
   },
   {
     "id": 9,
@@ -311,7 +311,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "Samsung Group"
+    "manufacturer": "Samsung"
   },
   {
     "id": 10,
@@ -353,7 +353,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "Sanyo Electric"
+    "manufacturer": "Sanyo"
   },
   {
     "id": 11,
@@ -380,7 +380,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "Sony Corporation"
+    "manufacturer": "Sony"
   },
   {
     "id": 12,
@@ -407,7 +407,7 @@
         "stock": 30
       }
     ],
-    "manufacturer": "Sony Corporation"
+    "manufacturer": "Sony"
   },
   {
     "id": 13,
@@ -444,7 +444,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "Sony Corporation"
+    "manufacturer": "Sony"
   },
   {
     "id": 14,
@@ -481,7 +481,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "Sony Corporation"
+    "manufacturer": "Sony"
   },
   {
     "id": 15,
@@ -508,7 +508,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "Sony Corporation"
+    "manufacturer": "Sony"
   },
   {
     "id": 16,
@@ -555,7 +555,7 @@
         "stock": 200
       }
     ],
-    "manufacturer": "Sony Corporation"
+    "manufacturer": "Sony"
   },
   {
     "id": 17,

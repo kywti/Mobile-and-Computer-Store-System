@@ -155,12 +155,18 @@ document.addEventListener("DOMContentLoaded", () => {
       return;
     }
 
-    alert("Order placed successfully!");
+    const selectedDelivery = document.querySelector(
+      'input[name="delivery"]:checked',
+    );
+    const selectedPayment = document.querySelector(
+      'input[name="payment"]:checked',
+    );
 
     localStorage.setItem(
       "checkoutData",
       JSON.stringify({
-        clientId: 123,
+        clientId: 1,
+        email: form.querySelector('input[type="email"]').value,
         address: document.querySelector(
           'input[placeholder="Enter full address"]',
         ).value,
@@ -168,10 +174,10 @@ document.addEventListener("DOMContentLoaded", () => {
         state: document.querySelector('input[placeholder="State"]').value,
         postalCode: document.querySelector('input[placeholder="Postal Code"]')
           .value,
-        deliveryOption: document.querySelector('input[name="delivery"]:checked')
-          .value,
-        paymentMethod: document.querySelector('input[name="payment"]:checked')
-          .id,
+
+        deliveryOption: selectedDelivery.nextElementSibling.textContent,
+        paymentMethod: selectedPayment.nextElementSibling.textContent,
+
         cart: getCart(),
       }),
     );

@@ -13,7 +13,7 @@
           <p class="logo">LOGO</p>
 
           <form class="header-search-bar">
-            <input placeholder="What are you looking for?" />
+            <input id="headerSearch" placeholder="What are you looking for?" />
             <button class="search-button">
               <img class="icon" src="../../img/icons/search.png" />
             </button>
@@ -41,12 +41,37 @@
             <div class="p-filler"></div>
             <p class="section-title products-title">ALL PRODUCTS</p>
             <form class="oh-sort-search-bar">
-              <input placeholder="Search and Filter" class="sort-input" />
-              <button class="sort-button">
+              <input id="filterInput" placeholder="Search and Filter" class="sort-input" />
+              <select id="brandFilter">
+                <option value="">All brands</option>
+                <option value="alcatel">Alcatel</option>
+                <option value="apple">Apple</option>
+                <option value="asus">Asus</option>
+                <option value="danger">Danger</option>
+                <option value="dell">Dell</option>
+                <option value="hp">HP</option>
+                <option value="htc">HTC</option>
+                <option value="mitac">MiTAC</option>
+                <option value="motorola">Motorola</option>
+                <option value="nokia">Nokia</option>
+                <option value="palm">Palm</option>
+                <option value="samsung">Samsung</option>
+                <option value="sanyo">Sanyo</option>
+                <option value="sony">Sony</option>
+              </select>
+              <select id="priceFilter">
+                <option value="">All Prices</option>
+                <option value="0-5000">Under 5,000</option>
+                <option value="5000-20000">5,000 - 20,000</option>
+                <option value="20000-50000">20,000 - 50,000</option>
+                <option value="50000+">50,000+</option>
+              </select>
+              <button id="filterBtn" class="sort-button">
                 <img class="icon" src="../../img/icons/filter.png" />
               </button>
             </form>
           </section>
+          
 
           <section class="products-grid"></section>
         </section>

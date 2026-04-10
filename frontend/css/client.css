@@ -371,6 +371,7 @@ button:hover {
   cursor: pointer;
 
   transition: box-shadow 0.3s ease;
+  max-width: 250px;
 }
 
 .product:hover {
@@ -914,7 +915,9 @@ button:hover {
 
 .oh-sort-search-bar {
   display: flex;
-  width: 230px;
+  width: 440px;
+  gap: 5px;
+  flex-wrap: wrap;
 }
 
 .oh-sort-search-bar input {
@@ -1164,11 +1167,13 @@ tr:hover td {
   }
 }
 /*checkout*/
-.checkout-content {
+.checkout-content,
+.confirmation-content {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
+
 .order-container {
   display: flex;
   justify-content: space-between;
@@ -1504,7 +1509,7 @@ tr:hover td {
   color: rgb(61, 61, 61);
   text-align: center;
 }
-info-row {
+.info-row {
   display: flex;
   gap: 15px;
   width: 100%;
@@ -1720,7 +1725,6 @@ info-row {
 /* ================= AUTH PAGE (SAFE MERGE) ================= */
 /* ================= AUTH PAGE (SAFE MERGE) ================= */
 
-<<<<<<< HEAD
 /* Merge global reset safely */
 * {
   margin: 0;
@@ -1749,7 +1753,7 @@ info-row {
   content: "";
   position: fixed;
   inset: 0;
-  background: rgba(0,0,0,0.4);
+  background: rgba(0, 0, 0, 0.4);
   backdrop-filter: blur(2px);
   z-index: 1;
 }
@@ -1772,7 +1776,7 @@ info-row {
   max-width: 380px;
   padding: 40px 35px;
   border-radius: 8px;
-  box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -1857,7 +1861,7 @@ info-row {
   background: #fff;
   border-color: #000;
   outline: none;
-  box-shadow: 0 0 0 3px rgba(0,0,0,0.1);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
 }
 
 /* Forgot */
@@ -1937,12 +1941,42 @@ info-row {
     gap: 20px;
   }
 }
-=======
-#cardForm {
-  display: none;
+
+.conf-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.6);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  z-index: 1000;
 }
 
-#cardForm.active {
-  display: block;
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  background: white;
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
 }
->>>>>>> 3dcc44812de620df238788c5a7f0792a2cd283ec
+
+.modal-content button {
+  background-color: black;
+  color: white;
+  padding: 20px;
+}
+
+.modal-content button:hover {
+  background-color: rgb(255, 255, 255);
+  color: black;
+  border: solid black 1px;
+  padding: 20px;
+}
+
+.hidden {
+  display: none;
+}
