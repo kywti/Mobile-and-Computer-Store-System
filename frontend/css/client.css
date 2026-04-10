@@ -907,10 +907,20 @@ button:hover {
 }
 
 .oh-filter-button {
-  font-size: 14px;
   height: 35px;
   margin-right: 15px;
-  background-color: white;
+
+  padding: 8px;
+  background: #f8f9fa;
+  color: #495057;
+  border: 1px solid #ddd;
+  font-size: 14px;
+  border-radius: 4px;
+}
+.oh-filter-button.active {
+  background-color: #000;
+  color: #fff;
+  border-color: #000;
 }
 
 .oh-sort-search-bar {
@@ -986,7 +996,7 @@ button:hover {
 .pending,
 .delivered,
 .processing,
-.of-delivery,
+.out.for.delivery,
 .canceled {
   color: white;
   padding: 5px 10px;
@@ -1000,7 +1010,7 @@ button:hover {
 .processing {
   background-color: #004874;
 }
-.of-delivery {
+.out.for.delivery {
   background-color: #6a90b4;
 }
 .canceled {

@@ -1,9 +1,3 @@
-const user = getCurrentUser();
-
-if (!user) {
-  window.location.href = "sign_in.html";
-}
-
 const checkoutContainer = document.querySelector(".checkout-cart");
 const totalDisplay = document.querySelector(".order-total h4 span:last-child");
 const subTotalDisplay = document.querySelector(".sub-total span:last-child");
@@ -83,11 +77,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
   if (!form) return;
 
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    window.location.href = "confirmation.html";
-  });
   displayCheckout();
 
   const deliveryOptions = document.querySelectorAll('input[name="delivery"]');
@@ -182,6 +171,32 @@ document.addEventListener("DOMContentLoaded", () => {
       emailInput.setCustomValidity("");
     }
   });
+  function saveOrder() {
+    const user = JSON.parse(localStorage.getItem("user"));
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    const orders = JSON.parse(localStorage.getItem("orders")) || [];
+
+    const newOrder = {
+      orderId: "#" + Date.now(),
+      email: user.email,
+      date: new Date().toLocaleDateString(),
+      status: "Pending",
+      items: cart,
+      total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
+
+      // 🔥 ADD THESE
+      address: document.querySelector('input[placeholder="Enter full address"]')
+        .value,
+      city: document.querySelector('input[placeholder="City"]').value,
+      state: document.querySelector('input[placeholder="State"]').value,
+      postalCode: document.querySelector('input[placeholder="Postal Code"]')
+        .value,
+    };
+
+    orders.push(newOrder);
+    localStorage.setItem("orders", JSON.stringify(orders));
+    localStorage.removeItem("cart");
+  }
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -190,33 +205,39 @@ document.addEventListener("DOMContentLoaded", () => {
       form.reportValidity();
       return;
     }
-
     const selectedDelivery = document.querySelector(
       'input[name="delivery"]:checked',
     );
+
     const selectedPayment = document.querySelector(
       'input[name="payment"]:checked',
     );
 
-    localStorage.setItem(
-      "checkoutData",
-      JSON.stringify({
-        clientId: 1,
-        email: form.querySelector('input[type="email"]').value,
-        address: document.querySelector(
-          'input[placeholder="Enter full address"]',
-        ).value,
-        city: document.querySelector('input[placeholder="City"]').value,
-        state: document.querySelector('input[placeholder="State"]').value,
-        postalCode: document.querySelector('input[placeholder="Postal Code"]')
-          .value,
+    const checkoutData = {
+      email: form.querySelector('input[type="email"]').value,
+      address: document.querySelector('input[placeholder="Enter full address"]')
+        .value,
+      city: document.querySelector('input[placeholder="City"]').value,
+      state: document.querySelector('input[placeholder="State"]').value,
+      postalCode: document.querySelector('input[placeholder="Postal Code"]')
+        .value,
 
-        deliveryOption: selectedDelivery.nextElementSibling.textContent,
-        paymentMethod: selectedPayment.nextElementSibling.textContent,
+      deliveryOption: selectedDelivery
+        ? selectedDelivery.nextElementSibling.textContent
+        : "Standard",
 
-        cart: getCart(),
-      }),
-    );
+      paymentMethod: selectedPayment
+        ? selectedPayment.nextElementSibling.textContent
+        : "Pay on delivery",
+
+      cart: getCart(),
+    };
+
+    // 🔥 SAVE IT HERE
+    localStorage.setItem("checkoutData", JSON.stringify(checkoutData));
+
+    // save order (your existing function)
+    saveOrder();
 
     window.location.href = "confirmation.html";
   });
