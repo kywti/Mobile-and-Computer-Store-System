@@ -1969,6 +1969,8 @@ table {
 .filters {
   display: flex;
   gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
 
 .filters button {
@@ -2077,7 +2079,7 @@ table {
   justify-content: space-between;
   align-items: center;
   margin: 30px 0 20px 0;
-  gap: 0; /* NO GAP - PRECISE POSITIONING */
+  gap: 10px; /* NO GAP - PRECISE POSITIONING */
 }
 /* DASHBOARD GRID */
 
