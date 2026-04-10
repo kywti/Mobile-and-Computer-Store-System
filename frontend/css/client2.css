@@ -44,12 +44,12 @@ button:hover {
 .product-details-page-bg,
 .product-page-bg,
 .order-history-page-bg,
-.shopping-cart-page-bg ,
+.shopping-cart-page-bg,
 .checkout-page-bg,
 .confirmation-page-bg,
 .profile-page-bg,
 .inventory-managgement-page-bg,
-.user-management-page-bg{
+.user-management-page-bg {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -67,7 +67,6 @@ button:hover {
 .inventory-managgement-page-bg,
 .user-management-page-bg {
   background-image: url("../../img/backgrounds/adminbackground.jpg");
-
 }
 .home-page-bg,
 .product-page-bg {
@@ -485,8 +484,7 @@ button:hover {
 .shopping-cart-page-bg,
 .checkout-page-bg,
 .confirmation-page-bg,
-.profile-page-bg
- {
+.profile-page-bg {
   background-image: url("../../img/backgrounds/product-details-bg.jpg");
 }
 .main-area {
@@ -500,7 +498,7 @@ button:hover {
   height: auto;
 
   display: flex;
-  margin-bottom: 0px;
+  margin-bottom: 50px;
   flex-direction: column;
 }
 
@@ -1161,7 +1159,6 @@ tr:hover td {
   }
 }
 
-
 @media (max-width: 950px) {
   .order-container {
     flex-direction: column;
@@ -1727,11 +1724,10 @@ info-row {
   transform: rotate(90deg);
 }
 
-
 /* BACKGROUND */
 .inventory-managgement-page-bg,
 .user-management-page-bg {
- display: flex;
+  display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
@@ -1744,18 +1740,7 @@ info-row {
   width: 99vw;
 }
 
-
-
-
-
-
-
-
-
-
-
-*/
-.search-button:hover,
+*/ .search-button:hover,
 .profile-button:hover {
   background: rgb(19, 19, 19);
   color: white;
@@ -1835,6 +1820,7 @@ info-row {
   justify-content: space-between;
   align-items: center;
   margin: 30px 0 20px 0;
+  flex-wrap: wrap;
 }
 
 .search-container {
@@ -1873,7 +1859,7 @@ info-row {
   overflow-x: auto;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-   border: 1px solid #e0e0e0;
+  border: 1px solid #e0e0e0;
 }
 
 table {
@@ -1881,7 +1867,6 @@ table {
   border-collapse: collapse;
   background: white;
 }
-
 
 .product-image-inv img {
   width: 40px;
@@ -1957,7 +1942,7 @@ table {
 
 .dropdown-item:hover {
   background: #000 !important; /* BLACK BACKGROUND */
-  color: white !important;    /* WHITE TEXT */
+  color: white !important; /* WHITE TEXT */
 }
 
 .dropdown-item:active,
@@ -1974,15 +1959,11 @@ table {
   color: #333 !important; /* ALL SAME BLACK TEXT */
 }
 
-
-
 .dropdown-item img {
   width: 16px;
   height: 16px;
   margin-right: 8px;
 }
-
-
 
 /* FILTERS - Left side */
 .filters {
@@ -2026,7 +2007,7 @@ table {
   font-weight: 600;
   color: #000;
   margin: 30px 0 20px 0;
-  text-align: left;  /* LEFT ALIGNED */
+  text-align: left; /* LEFT ALIGNED */
   font-family: "Audiowide";
 }
 .add-btn-container {
@@ -2059,7 +2040,7 @@ table {
 
 /* EXPORT BUTTON */
 .export-wrapper {
- align-self: flex-start; 
+  align-self: flex-start;
 }
 
 /* EXPORT BUTTON */
@@ -2100,30 +2081,34 @@ table {
 }
 /* DASHBOARD GRID */
 
-.dashboard-row{
-  display:grid;
-  grid-template-columns: 240px 240px 1fr;  /* SMALL | SMALL | BIG */
-  gap:22px;
-  margin-top:30px;
-  align-items:stretch;
+.dashboard-row {
+  display: flex;
+  grid-template-columns: 240px 240px 1fr; /* SMALL | SMALL | BIG */
+  gap: 22px;
+  margin-top: 30px;
+  align-items: stretch;
+}
+
+.big-card {
+  flex: 1;
 }
 
 /* CARD BASE */
-.dashboard-card{
-  background:#f5f5f5;
-  padding:18px;
-  border-radius:15px;
-  box-shadow:0 4px 15px rgba(0,0,0,0.1);
-  border:1px solid #e0e0e0;
-  display:flex;
-  flex-direction:column;
+.dashboard-card {
+  background: #f5f5f5;
+  padding: 18px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e0e0e0;
+  display: flex;
+  flex-direction: column;
   background: linear-gradient(145deg, #f8f8f8 0%, #f5f5f5 100%);
   position: relative;
-  overflow:hidden;
+  overflow: hidden;
   height: 340px; /* SAME HEIGHT FOR ALL CARDS */
 }
 .dashboard-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
@@ -2133,37 +2118,37 @@ table {
 }
 
 /* CHART CENTER */
-.chart-card{
-  display:flex;
-  flex-direction:column;
-  align-items:center;
-  justify-content:center;
+.chart-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
   gap: 15px; /* Added gap for better spacing */
 }
 
-.chart-card canvas{
-  width:200px !important;  /* LARGER CHART */
-  height:200px !important;
+.chart-card canvas {
+  width: 200px !important; /* LARGER CHART */
+  height: 200px !important;
   margin: 0; /* Remove margin */
 }
 /* TOP PRODUCTS LIST */
-.top-products{
-  list-style:none;
-  padding:0;
+.top-products {
+  list-style: none;
+  padding: 0;
   margin: 20px 0 0 0; /* More top margin */
-  font-size:14px; /* Slightly larger text */
+  font-size: 14px; /* Slightly larger text */
   flex-grow: 1; /* Take available space */
   display: flex;
   flex-direction: column;
   justify-content: space-between; /* Evenly distribute items */
 }
 
-.top-products li{
-  display:flex;
-  justify-content:space-between;
-  padding:12px 0;  /* More padding */
-  border-bottom:1px solid #ddd;
-  background: rgba(255,255,255,0.7);
+.top-products li {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0; /* More padding */
+  border-bottom: 1px solid #ddd;
+  background: rgba(255, 255, 255, 0.7);
   margin-bottom: 8px;
   border-radius: 8px;
   padding: 12px;
@@ -2171,7 +2156,7 @@ table {
 }
 
 .top-products li:hover {
-  background: rgba(255,255,255,0.9);
+  background: rgba(255, 255, 255, 0.9);
   transform: translateX(4px);
 }
 
@@ -2193,75 +2178,75 @@ table {
   counter-reset: item;
 }
 /* ===== LATEST ORDERS (CARD LIST) ===== */
-.orders-list{
-  display:flex;
-  flex-direction:column;
-  gap:8px;
-  overflow-y:auto;
-  padding-right:6px;
+.orders-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  overflow-y: auto;
+  padding-right: 6px;
 }
 
 /* ORDER ROW */
 .order-item {
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-  background:rgba(255,255,255,0.8); /* Slightly transparent for depth */
-  padding:12px 16px;  /* Match top products padding */
-  border-radius:10px;
-  border:1px solid #e5e5e5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.8); /* Slightly transparent for depth */
+  padding: 12px 16px; /* Match top products padding */
+  border-radius: 10px;
+  border: 1px solid #e5e5e5;
   transition: all 0.2s ease;
   margin-bottom: 8px;
 }
 
 .order-item:hover {
   transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
 
 .order-item:last-child {
   margin-bottom: 0;
 }
 /* LEFT SIDE */
-.order-left{
-  display:flex;
-  flex-direction:column;
-  gap:2px;
+.order-left {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
 }
 
-.order-product{
-  font-weight:600;
-  margin:0;
-  font-size:14px;            /* smaller text */
+.order-product {
+  font-weight: 600;
+  margin: 0;
+  font-size: 14px; /* smaller text */
 }
 
-.order-date{
-  font-size:11px;
-  color:#777;
+.order-date {
+  font-size: 11px;
+  color: #777;
 }
 
 /* RIGHT SIDE */
-.order-right{
-  text-align:right;
+.order-right {
+  text-align: right;
 }
 
-.order-price{
-  font-weight:bold;
-  margin:0;
-  font-size:13px;
+.order-price {
+  font-weight: bold;
+  margin: 0;
+  font-size: 13px;
 }
 
-.order-client{
-  font-size:11px;
-  color:#777;
+.order-client {
+  font-size: 11px;
+  color: #777;
 }
 
 /* STATUS BADGES SMALL */
-.order-status{
-  padding:4px 10px;
-  border-radius:15px;
-  font-size:10px;
-  font-weight:600;
+.order-status {
+  padding: 4px 10px;
+  border-radius: 15px;
+  font-size: 10px;
+  font-weight: 600;
 }
 /* ========================================
    DASHBOARD STATS - MOUNTAIN GRADIENT STYLE
@@ -2277,15 +2262,17 @@ table {
 }
 
 .dashboard-stat {
-  background: linear-gradient(145deg, 
-    #f8f8f8 0%, 
-    rgba(255,255,255,0.8) 25%, 
-    #f5f5f5 60%, 
-    #e8e8e8 100%) !important;
+  background: linear-gradient(
+    145deg,
+    #f8f8f8 0%,
+    rgba(255, 255, 255, 0.8) 25%,
+    #f5f5f5 60%,
+    #e8e8e8 100%
+  ) !important;
   padding: 40px 30px !important; /* BIGGER */
   border-radius: 25px !important;
   width: 230px !important; /* BIGGER */
-  height: 160px !important; /* TALL mountain */
+  height: 190px !important; /* TALL mountain */
   box-shadow: 0 12px 35px rgba(0, 0, 0, 0.2) !important;
   border: 2px solid #d5d5d5 !important;
   position: relative !important;
@@ -2295,19 +2282,24 @@ table {
 
 /* BLACK TOP BAR */
 .dashboard-stat::before {
-  content: '' !important;
+  content: "" !important;
   position: absolute !important;
   top: 0 !important;
   left: 0 !important;
   right: 0 !important;
   height: 8px !important; /* THICK black bar */
-  background: linear-gradient(90deg, #000 0%, #1a1a1a 40%, #000 100%) !important;
+  background: linear-gradient(
+    90deg,
+    #000 0%,
+    #1a1a1a 40%,
+    #000 100%
+  ) !important;
   z-index: 3 !important;
 }
 
 /* MOUNTAIN BOTTOM SHADOW */
 .dashboard-stat::after {
-  content: '' !important;
+  content: "" !important;
   position: absolute !important;
   bottom: -15px !important;
   left: 50% !important;
@@ -2316,7 +2308,7 @@ table {
   height: 0 !important;
   border-left: 30px solid transparent !important;
   border-right: 30px solid transparent !important;
-  border-top: 20px solid rgba(200,200,200,0.6) !important;
+  border-top: 20px solid rgba(200, 200, 200, 0.6) !important;
 }
 
 /* BIGGER CONTENT */
@@ -2349,13 +2341,19 @@ table {
 
 .dashboard-stat:hover .stat-icon {
   transform: scale(1.15) !important;
-  text-shadow: 0 4px 12px rgba(0,0,0,0.3) !important;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.3) !important;
   animation: bounce 0.6s ease !important;
 }
 
 @keyframes bounce {
-  0%, 60%, 100% { transform: scale(1.15); }
-  30% { transform: scale(1.25); }
+  0%,
+  60%,
+  100% {
+    transform: scale(1.15);
+  }
+  30% {
+    transform: scale(1.25);
+  }
 }
 
 /* ADD PRODUCT MODAL */
@@ -2371,7 +2369,7 @@ table {
   background: rgba(0, 0, 0, 0.7);
   z-index: 10000;
   backdrop-filter: blur(5px);
-  align-items: center;  /* ✅ CENTER VERTICALLY */
+  align-items: center; /* ✅ CENTER VERTICALLY */
   justify-content: center; /* ✅ CENTER HORIZONTALLY */
 }
 
@@ -2446,10 +2444,6 @@ table {
   margin: 0 auto;
 }
 
-
-
-
-
 /* FIXED X BUTTON - TOP RIGHT CORNER */
 .modal-header {
   padding: 20px 25px 20px 25px;
@@ -2465,8 +2459,6 @@ table {
   color: #000;
   padding-right: 50px; /* SPACE FOR X BUTTON */
 }
-
-
 
 .image-section {
   flex: 1;
@@ -2547,11 +2539,11 @@ table {
   transform: translateY(-1px);
 }
 
-.product-name-input{
+.product-name-input {
   margin-top: 8px;
 }
 
-.product-name-input label{
+.product-name-input label {
   display: block;
   font-weight: 600;
   color: #333;
@@ -2559,7 +2551,7 @@ table {
   font-size: 14px;
 }
 
-.product-name-input input{
+.product-name-input input {
   width: 100%;
   padding: 12px 15px;
   border: 2px solid #ddd;
@@ -2568,7 +2560,7 @@ table {
   font-family: "Electrolize";
 }
 
-.product-name-input input:focus{
+.product-name-input input:focus {
   outline: none;
   border-color: #000;
 }
@@ -2665,7 +2657,6 @@ table {
   background: #333 !important; /* SAME HOVER AS ADD */
   transform: translateY(-2px) !important;
 }
-
 
 /* BASE MODAL STYLES (shared by all 3 modals) */
 .block-confirm-modal,
@@ -2849,7 +2840,7 @@ table {
 
 /* SMALL ICON */
 .delete-confirm-body::before {
-  content: '🗑️';
+  content: "🗑️";
   display: block;
   font-size: 36px; /* ✅ SMALLER */
   margin-bottom: 10px; /* ✅ TIGHT */
@@ -2904,7 +2895,7 @@ table {
 
 /* SMALL ICON */
 .delete-confirm-body::before {
-  content: '🗑️';
+  content: "🗑️";
   display: block;
   font-size: 36px;
   margin-bottom: 10px;
@@ -3025,14 +3016,14 @@ table {
 
 /* ICON (optional for consistency) */
 .block-confirm-body::before {
-  content: '⛔';
+  content: "⛔";
   display: block;
   font-size: 36px;
   margin-bottom: 10px;
 }
 
 .edit-role-body::before {
-  content: '✏️';
+  content: "✏️";
   display: block;
   font-size: 36px;
   margin-bottom: 10px;
@@ -3120,4 +3111,13 @@ table {
 .confirm-block-btn:hover,
 .confirm-edit-role-btn:hover {
   background: #333;
+}
+
+@media (max-width: 1186px) {
+  .dashboard-row {
+    flex-direction: column;
+  }
+  .dashboard-card {
+    margin: 0px 70px;
+  }
 }

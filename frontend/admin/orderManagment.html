@@ -7,12 +7,9 @@
 
   <body>
     <div class="user-management-page-bg">
-
       <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
 
-      
       <header class="header">
-
         <div class="header-top">
           <p class="logo">LOGO</p>
 
@@ -31,14 +28,12 @@
         <nav class="header-bottom">
           <button class="header-button">DASHBOARD</button>
           <button class="header-button active">ORDERS</button>
-          <button class="header-button ">INVENTORY</button>
-          <button class="header-button ">CUSTOMERS</button>
+          <button class="header-button">INVENTORY</button>
+          <button class="header-button">CUSTOMERS</button>
         </nav>
-
       </header>
 
       <main class="main-area">
-
         <section class="section-header">
           <h2 class="section-title">Order Management</h2>
         </section>
@@ -46,7 +41,7 @@
         <!-- STATS -->
         <section class="stats">
           <div class="stat-box">
-            <div class="stat-icon">👥 </div>
+            <div class="stat-icon">👥</div>
             <p>New Orders</p>
             <h3 id="total-products">0</h3>
           </div>
@@ -68,9 +63,7 @@
 
         <!-- INVENTORY -->
         <section class="inventory">
-
           <div class="inventory-top">
-
             <div class="filters">
               <button class="active">All Order</button>
               <button>Pending</button>
@@ -81,51 +74,44 @@
             </div>
 
             <div class="export-wrapper">
-               <button class="export-btn">
-               <img src="../../img/icons/export-white.png" alt="Export" class="export-icon" />
-               Export
-               </button>
+              <button class="export-btn">
+                <img
+                  src="../../img/icons/export-white.png"
+                  alt="Export"
+                  class="export-icon"
+                />
+                Export
+              </button>
             </div>
 
             <div class="search-container">
               <input class="search" placeholder="Search products..." />
               <img class="search-icon" src="../../img/icons/search.png" />
             </div>
-
           </div>
 
-          
           <div class="table-container">
             <table>
+              <thead>
+                <tr>
+                  <th></th>
+                  <th>Product name</th>
+                  <th>Client</th>
+                  <th>Date</th>
+                  <th>Order ID</th>
+                  <th>Status</th>
+                  <th>Price</th>
+                  <th>Action</th>
+                </tr>
+              </thead>
 
-            <thead>
-              <tr>
-      <th></th>
-      <th>Product name</th>
-      <th>Client</th>
-      <th>Date</th>
-      <th>Order ID</th>
-      <th>Status</th>
-      <th>Price</th>
-      <th>Action</th>
-    </tr>
-  </thead>
-
-  <tbody id="order-total-body"></tbody>
-
-   
-   
-
+              <tbody id="order-total-body"></tbody>
             </table>
-           </div>
-
+          </div>
         </section>
-
       </main>
-
     </div>
 
     <script src="../js/order.js"></script>
-
   </body>
 </html>
