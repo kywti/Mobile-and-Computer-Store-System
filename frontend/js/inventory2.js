@@ -32,15 +32,15 @@ function loadProducts() {
 }
 
 function flattenProductData(product) {
-  let stock = 200;
+  let stock ;
   let image = '';
 
   if (product.variants?.length) {
     const v = product.variants[0];
-    stock = v.stock || product.stock || 200;
+    stock = v.stock ?? product.stock ?? 0;
     image = v.images?.[0] || '';
   } else {
-    stock = product.stock || 200;
+    stock = product.stock ?? 0;
   }
 
   return {
