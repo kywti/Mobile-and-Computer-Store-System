@@ -1,62 +1,56 @@
-// ==========================
-// ELEMENTS
-// ==========================
-const orderTableBody = document.getElementById('order-total-body');
-const totalOrdersEl = document.getElementById('total-products');
-const pendingOrdersEl = document.getElementById('low-stock');
-const cancelledOrdersEl = document.getElementById('out-stock');
+const orderTableBody = document.getElementById("order-total-body");
+const totalOrdersEl = document.getElementById("total-products");
+const pendingOrdersEl = document.getElementById("low-stock");
+const cancelledOrdersEl = document.getElementById("out-stock");
 
-const searchInput = document.querySelector('.search');
-const filterButtons = document.querySelectorAll('.filters button');
+const searchInput = document.querySelector(".search");
+const filterButtons = document.querySelectorAll(".filters button");
+
+const exportBtn = document.querySelector(".export-btn");
+
+if (exportBtn) {
+  exportBtn.addEventListener("click", exportCSV);
+}
 
 let allOrders = [];
-let currentFilter = 'All Orders';
+let currentFilter = "All Orders";
 
-document.addEventListener('DOMContentLoaded', init);
+document.addEventListener("DOMContentLoaded", init);
 
-// ==========================
-// INIT
-// ==========================
 function init() {
   loadOrders();
   setupEventListeners();
 }
 
-// ==========================
-// LOAD ORDERS
-// ==========================
 function loadOrders() {
-   fetch("../../data/order.json")
-    .then(res => res.json())
-    .then(orders => {
+  fetch("../../data/order.json")
+    .then((res) => res.json())
+    .then((orders) => {
       allOrders = orders.map(flattenOrderData);
       updateStats();
       renderTable(allOrders);
     })
     .catch(() => {
-      orderTableBody.innerHTML = '<tr><td colspan="8">Error loading orders</td></tr>';
+      orderTableBody.innerHTML =
+        '<tr><td colspan="8">Error loading orders</td></tr>';
     });
 }
 
-// ==========================
-// FLATTEN ORDER DATA
-// ==========================
 function flattenOrderData(order) {
-  const firstProduct = order.products?.[0] || {};
+  const productNames = order.products
+    .map((p) => `${p.name} (x${p.quantity})`)
+    .join(", ");
 
   return {
-    id: order.id,
-    productName: firstProduct.name || "Unknown product",
+    id: order.orderId,
+    productName: productNames,
     customer: order.customerName,
     date: formatDate(order.date),
     status: capitalize(order.status),
-    total: order.total
+    total: order.total,
   };
 }
 
-// ==========================
-// HELPERS
-// ==========================
 function capitalize(str) {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
@@ -68,38 +62,36 @@ function formatDate(dateStr) {
 
 function getStatusClass(status) {
   return {
-    'Pending': 'low-stock',
-    'Completed': 'in-stock',
-    'Cancelled': 'out-of-stock'
+    Pending: "low-stock",
+    Completed: "in-stock",
+    Canceled: "out-of-stock",
   }[status];
 }
 
-// ==========================
-// STATS
-// ==========================
 function updateStats() {
   totalOrdersEl.textContent = allOrders.length;
-  pendingOrdersEl.textContent = allOrders.filter(o => o.status === 'Pending').length;
-  cancelledOrdersEl.textContent = allOrders.filter(o => o.status === 'Cancelled').length;
+  pendingOrdersEl.textContent = allOrders.filter(
+    (o) => o.status === "Pending",
+  ).length;
+  cancelledOrdersEl.textContent = allOrders.filter(
+    (o) => o.status === "Canceled",
+  ).length;
 }
 
-// ==========================
-// RENDER TABLE
-// ==========================
 function renderTable(orders) {
-  orderTableBody.innerHTML = '';
+  orderTableBody.innerHTML = "";
 
   if (!orders.length) {
     orderTableBody.innerHTML = '<tr><td colspan="8">No orders found</td></tr>';
     return;
   }
 
-  orders.forEach(order => {
+  orders.forEach((order) => {
     const statusClass = getStatusClass(order.status);
 
-    const row = document.createElement('tr');
+    const row = document.createElement("tr");
     row.innerHTML = `
-      <td><img class="inventory-product-img" src="../../img/products/default.png"></td>
+    
       <td>${order.productName}</td>
       <td>${order.customer}</td>
       <td>${order.date}</td>
@@ -109,7 +101,7 @@ function renderTable(orders) {
       <td>
         <div class="actions">
           <button class="action-btn more-btn">
-            <img src="../../img/icons/menu-dots.png">
+            <img src="../../img/icons/menu-dots-white.png">
           </button>
           <div class="dropdown-menu">
             <button class="dropdown-item delete-btn" data-id="${order.id}">
@@ -125,38 +117,43 @@ function renderTable(orders) {
   attachTableEventListeners();
 }
 
-// ==========================
-// FILTERS
-// ==========================
 function filterOrders(orders, filter) {
-  if (filter === 'Pending') return orders.filter(o => o.status === 'Pending');
-  if (filter === 'Completed') return orders.filter(o => o.status === 'Completed');
-  if (filter === 'Cancelled') return orders.filter(o => o.status === 'Cancelled');
+  if (filter === "Pending") return orders.filter((o) => o.status === "Pending");
+
+  if (filter === "Processing")
+    return orders.filter((o) => o.status === "Processing");
+
+  if (filter === "Out For Delivery")
+    return orders.filter((o) => o.status === "Out For Delivery");
+
+  if (filter === "Delivered")
+    return orders.filter((o) => o.status === "Delivered");
+
+  if (filter === "Canceled")
+    return orders.filter((o) => o.status === "Canceled"); // matches JSON spelling
+
   return orders;
 }
 
-// ==========================
-// SEARCH
-// ==========================
 function applySearch(orders) {
   const term = searchInput.value.toLowerCase().trim();
   if (!term) return orders;
 
-  return orders.filter(o =>
-    o.productName.toLowerCase().includes(term) ||
-    o.customer.toLowerCase().includes(term)
-  );
+  return orders.filter((o) => {
+    return (
+      o.id.toString().includes(term) ||
+      o.productName.toLowerCase().includes(term) ||
+      o.customer.toLowerCase().includes(term) ||
+      o.status.toLowerCase().includes(term)
+    );
+  });
 }
 
-// ==========================
-// EVENTS
-// ==========================
 function setupEventListeners() {
-
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', function () {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
+  filterButtons.forEach((btn) => {
+    btn.addEventListener("click", function () {
+      filterButtons.forEach((b) => b.classList.remove("active"));
+      this.classList.add("active");
       currentFilter = this.textContent;
 
       let filtered = filterOrders(allOrders, currentFilter);
@@ -165,54 +162,73 @@ function setupEventListeners() {
     });
   });
 
-  searchInput.addEventListener('input', debounce(() => {
-    let filtered = filterOrders(allOrders, currentFilter);
-    filtered = applySearch(filtered);
-    renderTable(filtered);
-  }, 300));
+  searchInput.addEventListener(
+    "input",
+    debounce(() => {
+      let filtered = filterOrders(allOrders, currentFilter);
+      filtered = applySearch(filtered);
+      renderTable(filtered);
+    }, 300),
+  );
 }
 
-// ==========================
-// TABLE BUTTONS
-// ==========================
 function attachTableEventListeners() {
-
-  document.querySelectorAll('.delete-btn').forEach(btn => {
-    btn.addEventListener('click', function (e) {
+  document.querySelectorAll(".delete-btn").forEach((btn) => {
+    btn.addEventListener("click", function (e) {
       e.stopPropagation();
       const id = parseInt(this.dataset.id);
       deleteOrder(id);
     });
   });
 
-  document.querySelectorAll('.more-btn').forEach(btn => {
-    btn.addEventListener('click', function (e) {
+  document.querySelectorAll(".more-btn").forEach((btn) => {
+    btn.addEventListener("click", function (e) {
       e.stopPropagation();
       closeAllDropdowns();
       const menu = this.nextElementSibling;
-      menu.style.opacity = '1';
-      menu.style.visibility = 'visible';
-      menu.style.transform = 'translateY(0)';
+      menu.style.opacity = "1";
+      menu.style.visibility = "visible";
+      menu.style.transform = "translateY(0)";
     });
   });
 
-  document.addEventListener('click', closeAllDropdowns);
+  document.addEventListener("click", closeAllDropdowns);
 }
 
 function deleteOrder(id) {
-  allOrders = allOrders.filter(o => o.id !== id);
+  allOrders = allOrders.filter((o) => o.id !== id);
   updateStats();
   renderTable(allOrders);
 }
 
-// ==========================
-// UTIL
-// ==========================
+function exportCSV() {
+  const rows = allOrders.map((o) => {
+    return [o.id, o.customer, o.date, o.status, o.productName, o.total];
+  });
+
+  let csv = "Order ID,Customer,Date,Status,Product,Total\n";
+
+  rows.forEach((r) => {
+    csv += `"${r[0]}","${r[1]}","${r[2]}","${r[3]}","${r[4]}","${r[5]}"\n`;
+  });
+
+  const blob = new Blob([csv], { type: "text/csv" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "orders_export.csv";
+
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
 function closeAllDropdowns() {
-  document.querySelectorAll('.dropdown-menu').forEach(menu => {
-    menu.style.opacity = '0';
-    menu.style.visibility = 'hidden';
-    menu.style.transform = 'translateY(-10px)';
+  document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+    menu.style.opacity = "0";
+    menu.style.visibility = "hidden";
+    menu.style.transform = "translateY(-10px)";
   });
 }
 

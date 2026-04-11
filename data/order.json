@@ -1,73 +1,97 @@
 [
   {
     "id": 1,
+    "orderId": 123456,
     "customerId": 2,
     "customerName": "Yacine Bensalem",
     "products": [
-      {"id": 1, "name": "alcatel OT-810", "quantity": 2, "price": 29130},
-      {"id": 18, "name": "HP Omnibook XE3", "quantity": 1, "price": 148955}
+      { "id": 1, "name": "alcatel OT-810", "quantity": 2, "price": 29130 },
+      { "id": 18, "name": "HP Omnibook XE3", "quantity": 1, "price": 148955 }
     ],
     "total": 182145,
     "date": "2024-08-03",
-    "status": "pending"
+    "status": "Pending"
   },
   {
     "id": 2,
+    "orderId": 888888,
     "customerId": 3,
     "customerName": "Sara Kaci",
     "products": [
-      {"id": 19, "name": "Apple iMac G3", "quantity": 1, "price": 158885}
+      { "id": 19, "name": "Apple iMac G3", "quantity": 1, "price": 158885 }
     ],
     "total": 158885,
     "date": "2024-08-02",
-    "status": "delivered"
+    "status": "Out For Delivery"
   },
   {
     "id": 3,
+    "orderId": 222222,
     "customerId": 4,
     "customerName": "Amine Zerrouki",
     "products": [
-      {"id": 20, "name": "Apple Power Mac G4", "quantity": 3, "price": 46345}
+      { "id": 20, "name": "Apple Power Mac G4", "quantity": 3, "price": 46345 }
     ],
     "total": 139035,
     "date": "2024-08-02",
-    "status": "processing"
+    "status": "Processing"
   },
   {
     "id": 4,
+    "orderId": 111111,
     "customerId": 5,
     "customerName": "Lina Bouzid",
     "products": [
-      {"id": 21, "name": "ASUS Eee PC 900", "quantity": 1, "price": 72825}
+      { "id": 21, "name": "ASUS Eee PC 900", "quantity": 1, "price": 72825 }
     ],
     "total": 72825,
     "date": "2024-08-01",
-    "status": "delivered"
+    "status": "Delivered"
   },
   {
     "id": 5,
+    "orderId": 454647,
     "customerId": 2,
     "customerName": "Yacine Bensalem",
     "products": [
-      {"id": 4, "name": "Motorola T720", "quantity": 5, "price": 5300}
+      { "id": 4, "name": "Motorola T720", "quantity": 5, "price": 5300 }
     ],
     "total": 26500,
     "date": "2024-07-31",
-    "status": "delivered"
+    "status": "Delivered"
   },
   {
     "id": 6,
+    "orderId": 343536,
     "customerId": 3,
     "customerName": "Sara Kaci",
     "products": [
-      {"id": 23, "name": "HP Compaq tc1100 tablet", "quantity": 2, "price": 18500}
+      {
+        "id": 23,
+        "name": "HP Compaq tc1100 tablet",
+        "quantity": 2,
+        "price": 18500
+      }
     ],
     "total": 37000,
     "date": "2024-07-30",
-    "status": "pending"
+    "status": "Canceled"
+  },
+  {
+    "id": 7,
+    "orderId": 232425,
+    "customerId": 3,
+    "customerName": "Sara Kaci",
+    "products": [
+      {
+        "id": 23,
+        "name": "HP Compaq tc1100 tablet",
+        "quantity": 2,
+        "price": 18500
+      }
+    ],
+    "total": 37000,
+    "date": "2024-07-30",
+    "status": "Pending"
   }
 ]
-<<<<<<< Updated upstream
-=======
-
->>>>>>> Stashed changes

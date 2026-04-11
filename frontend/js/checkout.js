@@ -233,10 +233,8 @@ document.addEventListener("DOMContentLoaded", () => {
       cart: getCart(),
     };
 
-    // 🔥 SAVE IT HERE
     localStorage.setItem("checkoutData", JSON.stringify(checkoutData));
 
-    // save order (your existing function)
     saveOrder();
 
     window.location.href = "confirmation.html";
