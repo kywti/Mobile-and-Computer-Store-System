@@ -3,7 +3,6 @@ const productId = parseInt(pdparams.get("id"));
 const colorVarsChoice = document.querySelector(".product-colors-button");
 const colorVarsImg = document.querySelector(".variants-images");
 
-//Button Event Listeners
 const backButton = document.getElementById("pdp-back-button");
 backButton.addEventListener("click", () => {
   window.location.href = "products.html";
@@ -80,7 +79,7 @@ function displayProduct(product) {
     <img class="variant-picture" src="${variant.images[0]}" alt="Variant picture"/>
   `;
 
-    variantButtons.push(colorVarButton); // store it
+    variantButtons.push(colorVarButton); 
 
     colorVarButton.addEventListener("click", () => {
       changeMainImage(variant.images[0]);

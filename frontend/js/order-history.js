@@ -125,7 +125,6 @@ document.addEventListener("DOMContentLoaded", () => {
       );
     }
 
-    // SEARCH FILTER
     if (searchQuery.trim() !== "") {
       filtered = filtered.filter((order) => {
         const productNames = order.items

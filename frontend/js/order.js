@@ -161,7 +161,7 @@ function filterOrders(orders, filter) {
     return orders.filter((o) => o.status === "Delivered");
 
   if (filter === "Canceled")
-    return orders.filter((o) => o.status === "Canceled"); // matches JSON spelling
+    return orders.filter((o) => o.status === "Canceled"); 
 
   return orders;
 }
@@ -211,7 +211,6 @@ function attachTableEventListeners() {
     });
   });
 
-  // ✅ FIXED: move edit listener here
   document.querySelectorAll(".edit-status-btn").forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.stopPropagation();

@@ -287,7 +287,7 @@ function setupImageUpload() {
       const reader = new FileReader();
 
       reader.onload = (e) => {
-        newProductImage = e.target.result; // ✅ SAVE IMAGE
+        newProductImage = e.target.result; 
 
         addPreview.innerHTML = `<img src="${newProductImage}" alt="Preview">`;
         addPreview.classList.add("has-image");
@@ -310,7 +310,7 @@ function setupImageUpload() {
       const reader = new FileReader();
 
       reader.onload = (e) => {
-        editedProductImage = e.target.result; // ✅ SAVE IMAGE
+        editedProductImage = e.target.result;
         editPreview.innerHTML = `<img src="${editedProductImage}" alt="Preview">`;
         editPreview.classList.add("has-image");
       };
@@ -442,7 +442,6 @@ function setupModalListeners() {
         product.stock = quantity || 0;
         product.category = capitalize(category);
 
-        // ✅ update image ONLY if new one selected
         if (editedProductImage) {
           product.image = editedProductImage;
         }

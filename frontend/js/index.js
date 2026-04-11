@@ -2,7 +2,7 @@ const headerForm = document.querySelector(".header-search-bar");
 
 if (headerForm) {
   headerForm.addEventListener("submit", (e) => {
-    e.preventDefault(); // 🚨 STOP FORM RELOAD
+    e.preventDefault(); 
 
     const input = document.getElementById("headerSearch");
     const query = input?.value.trim();

@@ -63,14 +63,12 @@ if (grid) {
       const maxPrice = params.get("maxPrice");
       const manufacturer = params.get("manufacturer");
 
-      // CATEGORY
       if (category) {
         filteredProducts = filteredProducts.filter(
           (p) => p.category.toLowerCase() === category.toLowerCase(),
         );
       }
 
-      // SEARCH
       if (search) {
         const q = search.toLowerCase();
 
@@ -81,14 +79,12 @@ if (grid) {
         );
       }
 
-      // MANUFACTURER
       if (manufacturer) {
         filteredProducts = filteredProducts.filter(
           (p) => p.manufacturer?.toLowerCase() === manufacturer.toLowerCase(),
         );
       }
 
-      // MIN PRICE
       if (minPrice) {
         filteredProducts = filteredProducts.filter(
           (p) => p.price >= Number(minPrice),
@@ -131,15 +127,6 @@ function shuffleArray(array) {
   return array;
 }
 
-/*
-function filterProducts(products) {
-  if (!searchQuery) return products;
-
-  return products.filter((p) =>
-    p.name.toLowerCase().includes(searchQuery.toLowerCase()),
-  );
-}
-*/
 const brandFilter = document.getElementById("brandFilter");
 if (brandFilter) {
   brandFilter.addEventListener("change", () => {
@@ -162,7 +149,6 @@ if (priceFilter) {
 
     const url = new URL(window.location.href);
 
-    // remove old params first
     url.searchParams.delete("minPrice");
     url.searchParams.delete("maxPrice");
 
