@@ -9,22 +9,13 @@ const addProductBtn = document.querySelector('.add-product-btn');
 
 let allProducts = [];
 let currentFilter = 'All Products';
+let editingProductId = null;
 
 document.addEventListener('DOMContentLoaded', init);
 
 function init() {
   loadProducts();
   setupEventListeners();
-  setupModalListeners(); // ✅ FIXED: Modal listeners
-   setInitialFilter();
-}
-
-  // Set first filter button as active
-  const firstFilterBtn = document.querySelector('.filters button');
-  if (firstFilterBtn) {
-    firstFilterBtn.classList.add('active');
-    currentFilter = firstFilterBtn.textContent;
-  }
 }
 
 function loadProducts() {
@@ -41,7 +32,7 @@ function loadProducts() {
 }
 
 function flattenProductData(product) {
-  let stock ;
+  let stock = 0;
   let image = '';
 
   if (product.variants?.length) {
@@ -64,7 +55,7 @@ function flattenProductData(product) {
 }
 
 function capitalize(str) {
-  return str.charAt(0).toUpperCase() + str.slice(1);
+  return str ? str.charAt(0).toUpperCase() + str.slice(1).toLowerCase() : '';
 }
 
 function getStatus(stock) {
@@ -148,31 +139,110 @@ function applySearch(products) {
   );
 }
 
-// ============================================================================
-// ✅ FIXED: MODAL FUNCTIONS WITH IMAGE SUPPORT
-// ============================================================================
+function setupEventListeners() {
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', function () {
+      filterButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+      currentFilter = this.textContent;
+      let filtered = filterProducts(allProducts, currentFilter);
+      filtered = applySearch(filtered);
+      renderTable(filtered);
+    });
+  });
+
+  searchInput.addEventListener('input', debounce(() => {
+    let filtered = filterProducts(allProducts, currentFilter);
+    filtered = applySearch(filtered);
+    renderTable(filtered);
+  }, 300));
+
+  if (addProductBtn) {
+    addProductBtn.addEventListener('click', openAddModal);
+  }
+}
+
+function attachTableEventListeners() {
+  document.querySelectorAll('.edit-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const id = parseInt(this.dataset.id);
+      const product = allProducts.find(p => p.id === id);
+      if (product) {
+        editingProductId = id;
+        openEditModal(product);
+      }
+    });
+  });
+
+  document.querySelectorAll('.delete-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      const id = parseInt(this.dataset.id);
+      const product = allProducts.find(p => p.id === id);
+      if (product) {
+        openDeleteModal(product);
+      }
+    });
+  });
+
+  document.querySelectorAll('.more-btn').forEach(btn => {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      closeAllDropdowns();
+      const menu = this.nextElementSibling;
+      menu.style.opacity = '1';
+      menu.style.visibility = 'visible';
+      menu.style.transform = 'translateY(0)';
+    });
+  });
+
+  document.addEventListener('click', closeAllDropdowns);
+}
+
+function closeAllDropdowns() {
+  document.querySelectorAll('.dropdown-menu').forEach(menu => {
+    menu.style.opacity = '0';
+    menu.style.visibility = 'hidden';
+    menu.style.transform = 'translateY(-10px)';
+  });
+}
+
 function openAddModal() {
+  resetAddModal();
   document.getElementById('addProductModal').style.display = 'flex';
 }
 
+function resetAddModal() {
+  document.getElementById('productName').value = '';
+  document.getElementById('productSupplier').value = '';
+  document.getElementById('productPrice').value = '';
+  document.getElementById('productQuantity').value = '';
+  document.getElementById('productCategory').value = '';
+  document.getElementById('imagePreview').innerHTML = `
+    <div class="no-image-text">
+      <div style="font-size: 18px; margin-bottom: 5px;">➕Add Product Image</div>
+      <div style="font-size: 12px; color: #999;">Click "Load Image" below</div>
+    </div>
+  `;
+}
+
 function openEditModal(product) {
-  // Fill all form fields
   document.getElementById('editProductName').value = product.name;
   document.getElementById('editProductSupplier').value = product.supplier;
   document.getElementById('editProductPrice').value = product.price;
   document.getElementById('editProductQuantity').value = product.stock;
   document.getElementById('editProductCategory').value = product.category.toLowerCase();
-  
-  // ✅ FIXED: Show product image in preview
+
   const editImagePreview = document.getElementById('editImagePreview');
   if (product.image && product.image !== '') {
-    editImagePreview.innerHTML = `<img src="${product.image}" onerror="this.src='../../img/icons/no-image.png'" alt="${product.name}">`;
+    editImagePreview.innerHTML = `<img src="${product.image}" alt="${product.name}">`;
     editImagePreview.classList.add('has-image');
   } else {
     editImagePreview.innerHTML = `
       <div class="no-image-text">
-        <div>No Image</div>
-        <div>Click to upload</div>
+        <div style="font-size: 18px; margin-bottom: 5px;">➕ Update Product Image</div>
+        <div style="font-size: 12px; color: #999;">Click "Load Image" below</div>
       </div>
     `;
     editImagePreview.classList.remove('has-image');
@@ -186,116 +256,43 @@ function openDeleteModal(product) {
   document.getElementById('deleteConfirmModal').style.display = 'flex';
 }
 
-// ============================================================================
-// ✅ FIXED: ALL EVENT LISTENERS
-// ============================================================================
-/*function setupEventListeners() {
-  // Filter buttons
-  filterButtons.forEach(btn => {
-    btn.addEventListener('click', function () {
-      filterButtons.forEach(b => b.classList.remove('active'));
-      this.classList.add('active');
-      currentFilter = this.textContent;
-      let filtered = filterProducts(allProducts, currentFilter);
-      filtered = applySearch(filtered);
-      renderTable(filtered);
-    });
-  });
+function setupImageUpload() {
+  const addImageInput = document.getElementById('productImage');
+  const addLoadBtn = document.querySelector('#addProductModal .load-image-btn');
+  const addPreview = document.getElementById('imagePreview');
 
-  // Search input
-  searchInput.addEventListener('input', debounce(() => {
-    let filtered = filterProducts(allProducts, currentFilter);
-    filtered = applySearch(filtered);
-    renderTable(filtered);
-  }, 300));
-
-  // Add product button
-  if (addProductBtn) {
-    addProductBtn.addEventListener('click', openAddModal);
-  }
-}
-*/
-function setupEventListeners() {
-  // ✅ 1. Filter buttons - use event delegation (most reliable)
-  document.addEventListener('click', function(e) {
-    if (e.target.closest('.filters button')) {
-      const btn = e.target.closest('.filters button');
-      
-      // Remove active from all filter buttons
-      document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
-      
-      // Add active to clicked button
-      btn.classList.add('active');
-      
-      // Update filter and render
-      currentFilter = btn.textContent;
-      let filtered = filterProducts(allProducts, currentFilter);
-      filtered = applySearch(filtered);
-      renderTable(filtered);
+  addLoadBtn.addEventListener('click', () => addImageInput.click());
+  addImageInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        addPreview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+        addPreview.classList.add('has-image');
+      };
+      reader.readAsDataURL(file);
     }
   });
 
-  // ✅ 2. Search input - direct attachment
-  const searchInput = document.querySelector('.search');
-  if (searchInput) {
-    searchInput.addEventListener('input', debounce(() => {
-      let filtered = filterProducts(allProducts, currentFilter);
-      filtered = applySearch(filtered);
-      renderTable(filtered);
-    }, 300));
-  }
+  const editImageInput = document.getElementById('editProductImage');
+  const editLoadBtn = document.querySelector('#editProductModal .load-image-btn');
+  const editPreview = document.getElementById('editImagePreview');
 
-  // ✅ 3. Add product button
-  const addProductBtn = document.querySelector('.add-product-btn');
-  if (addProductBtn) {
-    addProductBtn.addEventListener('click', openAddModal);
-  }
-}
-/*function setupModalListeners() {
-  // ✅ FIXED: Close buttons (X buttons)
-  document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('close-modal')) {
-      e.target.closest('.add-product-modal, .edit-product-modal, .delete-confirm-modal').style.display = 'none';
-    }
-      // ✅ CANCEL BUTTON - CLOSES MODAL
-  document.querySelector('.cancel-delete-btn')?.addEventListener('click', function() {
-    document.getElementById('deleteConfirmModal').style.display = 'none';
-  });
-    // ✅ CONFIRM BUTTON - CLOSES + DELETE LOGIC
-  document.querySelector('.confirm-delete-btn')?.addEventListener('click', function() {
-    // Add your delete logic here
-    console.log('Product deleted!');
-    
-    // Close modal
-    document.getElementById('deleteConfirmModal').style.display = 'none';
-    
-    // Refresh table (example)
-    renderTable(allProducts);
-  });
-
-  });
-
-
-  document.addEventListener('keydown', function(e) {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.add-product-modal, .edit-product-modal, .delete-confirm-modal').forEach(modal => {
-        modal.style.display = 'none';
-      });
+  editLoadBtn.addEventListener('click', () => editImageInput.click());
+  editImageInput.addEventListener('change', (e) => {
+    const file = e.target.files[0];
+    if (file) {
+      const reader = new FileReader();
+      reader.onload = (e) => {
+        editPreview.innerHTML = `<img src="${e.target.result}" alt="Preview">`;
+        editPreview.classList.add('has-image');
+      };
+      reader.readAsDataURL(file);
     }
   });
-
-  // ✅ FIXED: Click outside closes modals
-  document.querySelectorAll('.add-product-modal, .edit-product-modal, .delete-confirm-modal').forEach(modal => {
-    modal.addEventListener('click', function(e) {
-      if (e.target === this) {
-        this.style.display = 'none';
-      }
-    });
-  });
 }
-*/
+
 function setupModalListeners() {
-  // ✅ FIXED: Close buttons (X buttons) - using event delegation
   document.addEventListener('click', function(e) {
     if (e.target.classList.contains('close-modal')) {
       const modal = e.target.closest('.add-product-modal, .edit-product-modal, .delete-confirm-modal');
@@ -303,20 +300,23 @@ function setupModalListeners() {
     }
   });
 
-  // ✅ FIXED: Delete modal buttons - using event delegation
-  document.addEventListener('click', function(e) {
-    if (e.target.classList.contains('cancel-delete-btn')) {
-      document.getElementById('deleteConfirmModal').style.display = 'none';
+  document.getElementById('confirmDeleteProduct')?.addEventListener('click', function() {
+    if (editingProductId) {
+      allProducts = allProducts.filter(p => p.id !== editingProductId);
+      updateStats();
+      let filtered = filterProducts(allProducts, currentFilter);
+      filtered = applySearch(filtered);
+      renderTable(filtered);
     }
-    
-    if (e.target.classList.contains('confirm-delete-btn')) {
-      console.log('Product deleted!');
-      document.getElementById('deleteConfirmModal').style.display = 'none';
-      renderTable(allProducts); // Refresh table
-    }
+    document.getElementById('deleteConfirmModal').style.display = 'none';
+    editingProductId = null;
   });
 
-  // ✅ ESC key closes modals
+  document.querySelector('.cancel-delete-btn')?.addEventListener('click', function() {
+    document.getElementById('deleteConfirmModal').style.display = 'none';
+    editingProductId = null;
+  });
+
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       document.querySelectorAll('.add-product-modal, .edit-product-modal, .delete-confirm-modal').forEach(modal => {
@@ -325,7 +325,6 @@ function setupModalListeners() {
     }
   });
 
-  // ✅ Click outside closes modals
   document.querySelectorAll('.add-product-modal, .edit-product-modal, .delete-confirm-modal').forEach(modal => {
     modal.addEventListener('click', function(e) {
       if (e.target === this) {
@@ -333,67 +332,30 @@ function setupModalListeners() {
       }
     });
   });
-}
-function attachTableEventListeners() {
-  // Edit buttons
-  document.querySelectorAll('.edit-btn').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const id = parseInt(this.dataset.id);
-      const product = allProducts.find(p => p.id === id);
-      if (product) {
-        openEditModal(product);
-      }
-    });
+
+  document.getElementById('confirmAddProduct')?.addEventListener('click', function() {
+    console.log('Add product clicked');
+    document.getElementById('addProductModal').style.display = 'none';
   });
 
-  // Delete buttons
-  document.querySelectorAll('.delete-btn').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      const id = parseInt(this.dataset.id);
-      const product = allProducts.find(p => p.id === id);
-      if (product) {
-        openDeleteModal(product);
-      }
-    });
-  });
-
-  // More button (dots menu)
-  document.querySelectorAll('.more-btn').forEach(btn => {
-    btn.addEventListener('click', function (e) {
-      e.stopPropagation();
-      closeAllDropdowns();
-      const menu = this.nextElementSibling;
-      menu.style.opacity = '1';
-      menu.style.visibility = 'visible';
-      menu.style.transform = 'translateY(0)';
-    });
-  });
-
-  // Close dropdowns on outside click
-  document.addEventListener('click', closeAllDropdowns);
-}
-
-function closeAllDropdowns() {
-  document.querySelectorAll('.dropdown-menu').forEach(menu => {
-    menu.style.opacity = '0';
-    menu.style.visibility = 'hidden';
-    menu.style.transform = 'translateY(-10px)';
+  document.getElementById('confirmEditProduct')?.addEventListener('click', function() {
+    console.log('Edit product clicked');
+    document.getElementById('editProductModal').style.display = 'none';
   });
 }
 
 function debounce(func, wait) {
-  let t;
-  return (...args) => {
-    clearTimeout(t);
-    t = setTimeout(() => func(...args), wait);
+  let timeout;
+  return function executedFunction(...args) {
+    const later = () => {
+      clearTimeout(timeout);
+      func(...args);
+    };
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
   };
 }
-// ✅ ROBUST SEARCH INPUT FINDER
-function getSearchInput() {
-  return document.querySelector('.search') || 
-         document.querySelector('input[placeholder*="search"]') ||
-         document.querySelector('.search-container input') ||
-         document.getElementById('productSearch');
-}
+
+init();
+setupModalListeners();
+setupImageUpload();

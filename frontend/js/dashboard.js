@@ -4,9 +4,6 @@ let allProducts = [];
 let allOrders = [];
 let allUsers = [];
 
-/* =========================
-   INIT DASHBOARD
-========================= */
 function initDashboard() {
   Promise.all([
     fetch("../../data/product.json").then(res => res.json()),
@@ -22,26 +19,20 @@ function initDashboard() {
       renderTopProducts();
       renderLatestOrders();
       renderSalesChart();
-      
-      // Add click handlers to stat boxes AFTER data is loaded
       addStatBoxClickHandlers();
     })
     .catch(err => console.error("Error loading dashboard:", err));
 }
 
-/* =========================
-   ADD CLICK HANDLERS TO STAT BOXES
-========================= */
 function addStatBoxClickHandlers() {
-  // Total Orders -> order.html
+
   const totalOrdersBox = document.querySelector('.dashboard-stat:has(#total-orders)');
   if (totalOrdersBox) {
     totalOrdersBox.style.cursor = 'pointer';
     totalOrdersBox.addEventListener('click', () => {
       window.location.href = 'orderManagment.html';
     });
-    
-    // Optional: Add hover effect
+
     totalOrdersBox.addEventListener('mouseenter', () => {
       totalOrdersBox.style.opacity = '0.8';
     });
@@ -50,7 +41,6 @@ function addStatBoxClickHandlers() {
     });
   }
 
-  // Total Products -> inventory.html
   const totalProductsBox = document.querySelector('.dashboard-stat:has(#total-products)');
   if (totalProductsBox) {
     totalProductsBox.style.cursor = 'pointer';
@@ -58,7 +48,6 @@ function addStatBoxClickHandlers() {
       window.location.href = 'InventoryManagement.html';
     });
     
-    // Optional: Add hover effect
     totalProductsBox.addEventListener('mouseenter', () => {
       totalProductsBox.style.opacity = '0.8';
     });
@@ -67,7 +56,6 @@ function addStatBoxClickHandlers() {
     });
   }
 
-  // Total Users -> user.html
   const totalUsersBox = document.querySelector('.dashboard-stat:has(#total-users)');
   if (totalUsersBox) {
     totalUsersBox.style.cursor = 'pointer';
@@ -75,7 +63,7 @@ function addStatBoxClickHandlers() {
       window.location.href = 'userManagment.html';
     });
     
-    // Optional: Add hover effect
+
     totalUsersBox.addEventListener('mouseenter', () => {
       totalUsersBox.style.opacity = '0.8';
     });
@@ -85,9 +73,7 @@ function addStatBoxClickHandlers() {
   }
 }
 
-/* =========================
-   FORMAT
-========================= */
+
 function formatDZD(amount) {
   return `${amount.toLocaleString()} DZD`;
 }
@@ -96,9 +82,6 @@ function capitalize(str = "") {
   return str.charAt(0).toUpperCase() + str.slice(1);
 }
 
-/* =========================
-   FLATTEN DATA
-========================= */
 function flattenProductData(product) {
   let stock = 0;
   let image = "";
@@ -135,9 +118,6 @@ function flattenOrderData(order) {
   };
 }
 
-/* =========================
-   STATS
-========================= */
 function updateDashboardStats() {
   const totalRevenue = allOrders.reduce((sum, o) => sum + o.total, 0);
 
@@ -149,9 +129,6 @@ function updateDashboardStats() {
   document.getElementById("total-users").textContent = allUsers.length;
 }
 
-/* =========================
-   TOP PRODUCTS
-========================= */
 function renderTopProducts() {
   const revenueMap = {};
 
@@ -208,9 +185,6 @@ function renderTopProducts() {
   });
 }
 
-/* =========================
-   LATEST ORDERS (FIXED ONLY ONCE)
-========================= */
 function renderLatestOrders() {
   const container = document.getElementById("latest-orders");
   container.innerHTML = "";
@@ -245,9 +219,6 @@ function renderLatestOrders() {
   });
 }
 
-/* =========================
-   SALES CHART
-========================= */
 function renderSalesChart() {
   const categorySales = {};
 
