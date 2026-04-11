@@ -2714,3 +2714,7 @@ table {
 .edit-status-content button {
   padding: 8px;
 }
+
+.hidden {
+  display: none;
+}
