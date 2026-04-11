@@ -16,14 +16,19 @@ fetch("../../data/product.json")
   });
 
 let quantity = 1;
+let currentStock = 0;
 
 const quantityDisplay = document.querySelector(".quantity-display");
 const plusBtn = document.querySelector(".pdp-plus");
 const minusBtn = document.querySelector(".pdp-minus");
 
 plusBtn.addEventListener("click", () => {
-  quantity++;
-  quantityDisplay.textContent = quantity;
+  if (quantity < currentStock) {
+    quantity++;
+    quantityDisplay.textContent = quantity;
+  } else {
+    alert(`Only ${currentStock} items available in stock.`);
+  }
 });
 
 minusBtn.addEventListener("click", () => {
@@ -39,7 +44,8 @@ let selectedImage = null;
 function displayProduct(product) {
   if (!product) return;
 
-  document.getElementById("product-image").src = product.variants[0].images[0];
+  document.getElementById("product-image").src =
+    product.variants[0].images[0];
 
   document.getElementById("product-category").textContent =
     product.category || "Phone";
@@ -54,17 +60,20 @@ function displayProduct(product) {
   document.getElementById("product-price").textContent =
     "DZD " + product.price.toLocaleString("en-US");
 
-  updateStock(product.variants[0].stock);
   const variantButtons = [];
+
+  // INIT FIRST VARIANT
+  currentStock = product.variants[0].stock;
+  updateStock(currentStock);
 
   product.variants.forEach((variant) => {
     const colorVarLabel = document.createElement("label");
     colorVarLabel.className = "color-button";
 
     colorVarLabel.innerHTML = `
-    <input type="radio" name="color" value="${variant.color}" />
-    ${variant.color}
-  `;
+      <input type="radio" name="color" value="${variant.color}" />
+      ${variant.color}
+    `;
 
     const radioInput = colorVarLabel.querySelector("input");
 
@@ -76,45 +85,59 @@ function displayProduct(product) {
     colorVarButton.className = "variant-button";
 
     colorVarButton.innerHTML = `
-    <img class="variant-picture" src="${variant.images[0]}" alt="Variant picture"/>
-  `;
+      <img class="variant-picture" src="${variant.images[0]}" alt="Variant picture"/>
+    `;
 
-    variantButtons.push(colorVarButton); 
+    variantButtons.push(colorVarButton);
 
-    colorVarButton.addEventListener("click", () => {
+    function selectVariant() {
       changeMainImage(variant.images[0]);
 
       selectedColor = variant.color;
       selectedImage = variant.images[0];
 
-      updateStock(variant.stock);
+      currentStock = variant.stock;
+      updateStock(currentStock);
+
+      // reset quantity when switching variant
+      quantity = 1;
+      quantityDisplay.textContent = quantity;
 
       variantButtons.forEach((btn) => btn.classList.remove("selected"));
       colorVarButton.classList.add("selected");
 
       radioInput.checked = true;
-    });
+    }
 
-    radioInput.addEventListener("change", () => {
-      changeMainImage(variant.images[0]);
-
-      selectedColor = variant.color;
-      selectedImage = variant.images[0];
-      updateStock(variant.stock);
-
-      variantButtons.forEach((btn) => btn.classList.remove("selected"));
-      colorVarButton.classList.add("selected");
-    });
+    colorVarButton.addEventListener("click", selectVariant);
+    radioInput.addEventListener("change", selectVariant);
 
     colorVarsImg.appendChild(colorVarButton);
   });
 
+  // DEFAULT SELECT FIRST VARIANT
   selectedColor = product.variants[0].color;
   selectedImage = product.variants[0].images[0];
 
   const button = document.querySelector(".add-to-cart-button");
 
   button.addEventListener("click", () => {
+    const currentVariant = product.variants.find(
+      (v) => v.color === selectedColor
+    );
+
+    if (!currentVariant) return;
+
+    if (currentVariant.stock <= 0) {
+      alert("Sorry, this product is out of stock.");
+      return;
+    }
+
+    if (quantity > currentVariant.stock) {
+      alert(`Only ${currentVariant.stock} items available.`);
+      return;
+    }
+
     addToCart({
       id: product.id,
       name: product.name,
@@ -131,5 +154,6 @@ function changeMainImage(newSrc) {
 }
 
 function updateStock(stock) {
-  document.getElementById("product-stock").textContent = "In stock: " + stock;
+  document.getElementById("product-stock").textContent =
+    "In stock: " + stock;
 }
