@@ -3123,3 +3123,27 @@ table {
     margin: 0px 70px;
   }
 }
+
+.pending,
+.delivered,
+.processing,
+.out-for-delivery,
+.canceled {
+  color: white;
+  padding: 5px 10px;
+}
+.pending {
+  background-color: #94a2bf;
+}
+.delivered {
+  background-color: #01162b;
+}
+.processing {
+  background-color: #004874;
+}
+.out-for-delivery {
+  background-color: #6a90b4;
+}
+.canceled {
+  background-color: #b46a6a;
+}

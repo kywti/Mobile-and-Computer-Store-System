@@ -62,9 +62,11 @@ function formatDate(dateStr) {
 
 function getStatusClass(status) {
   return {
-    Pending: "low-stock",
-    Completed: "in-stock",
-    Canceled: "out-of-stock",
+    Pending: "pending",
+    "Out For Delivery": "out-for-delivery",
+    Canceled: "canceled",
+    Processing: "processing",
+    Delivered: "delivered",
   }[status];
 }
 
