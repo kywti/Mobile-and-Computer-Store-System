@@ -6,14 +6,14 @@ let allUsers = [];
 
 function initDashboard() {
   Promise.all([
-    fetch("../../data/product.json").then(res => res.json()),
-    fetch("../../data/order.json").then(res => res.json()),
-    fetch("../../data/user.json").then(res => res.json())
+    fetch("../../data/product.json").then((res) => res.json()),
+    fetch("../../data/order.json").then((res) => res.json()),
+    fetch("../../data/user.json").then((res) => res.json()),
   ])
     .then(([products, orders, users]) => {
       allProducts = products.map(flattenProductData);
       allOrders = orders.map(flattenOrderData);
-      allUsers = users.map(u => ({ ...u, status: "ACTIVE" }));
+      allUsers = users.map((u) => ({ ...u, status: "ACTIVE" }));
 
       updateDashboardStats();
       renderTopProducts();
@@ -21,58 +21,61 @@ function initDashboard() {
       renderSalesChart();
       addStatBoxClickHandlers();
     })
-    .catch(err => console.error("Error loading dashboard:", err));
+    .catch((err) => console.error("Error loading dashboard:", err));
 }
 
 function addStatBoxClickHandlers() {
-
-  const totalOrdersBox = document.querySelector('.dashboard-stat:has(#total-orders)');
+  const totalOrdersBox = document.querySelector(
+    ".dashboard-stat:has(#total-orders)",
+  );
   if (totalOrdersBox) {
-    totalOrdersBox.style.cursor = 'pointer';
-    totalOrdersBox.addEventListener('click', () => {
-      window.location.href = 'orderManagment.html';
+    totalOrdersBox.style.cursor = "pointer";
+    totalOrdersBox.addEventListener("click", () => {
+      window.location.href = "orderManagment.html";
     });
 
-    totalOrdersBox.addEventListener('mouseenter', () => {
-      totalOrdersBox.style.opacity = '0.8';
+    totalOrdersBox.addEventListener("mouseenter", () => {
+      totalOrdersBox.style.opacity = "0.8";
     });
-    totalOrdersBox.addEventListener('mouseleave', () => {
-      totalOrdersBox.style.opacity = '1';
+    totalOrdersBox.addEventListener("mouseleave", () => {
+      totalOrdersBox.style.opacity = "1";
     });
   }
 
-  const totalProductsBox = document.querySelector('.dashboard-stat:has(#total-products)');
+  const totalProductsBox = document.querySelector(
+    ".dashboard-stat:has(#total-products)",
+  );
   if (totalProductsBox) {
-    totalProductsBox.style.cursor = 'pointer';
-    totalProductsBox.addEventListener('click', () => {
-      window.location.href = 'InventoryManagement.html';
+    totalProductsBox.style.cursor = "pointer";
+    totalProductsBox.addEventListener("click", () => {
+      window.location.href = "InventoryManagement.html";
     });
-    
-    totalProductsBox.addEventListener('mouseenter', () => {
-      totalProductsBox.style.opacity = '0.8';
+
+    totalProductsBox.addEventListener("mouseenter", () => {
+      totalProductsBox.style.opacity = "0.8";
     });
-    totalProductsBox.addEventListener('mouseleave', () => {
-      totalProductsBox.style.opacity = '1';
+    totalProductsBox.addEventListener("mouseleave", () => {
+      totalProductsBox.style.opacity = "1";
     });
   }
 
-  const totalUsersBox = document.querySelector('.dashboard-stat:has(#total-users)');
+  const totalUsersBox = document.querySelector(
+    ".dashboard-stat:has(#total-users)",
+  );
   if (totalUsersBox) {
-    totalUsersBox.style.cursor = 'pointer';
-    totalUsersBox.addEventListener('click', () => {
-      window.location.href = 'userManagment.html';
+    totalUsersBox.style.cursor = "pointer";
+    totalUsersBox.addEventListener("click", () => {
+      window.location.href = "userManagment.html";
     });
-    
 
-    totalUsersBox.addEventListener('mouseenter', () => {
-      totalUsersBox.style.opacity = '0.8';
+    totalUsersBox.addEventListener("mouseenter", () => {
+      totalUsersBox.style.opacity = "0.8";
     });
-    totalUsersBox.addEventListener('mouseleave', () => {
-      totalUsersBox.style.opacity = '1';
+    totalUsersBox.addEventListener("mouseleave", () => {
+      totalUsersBox.style.opacity = "1";
     });
   }
 }
-
 
 function formatDZD(amount) {
   return `${amount.toLocaleString()} DZD`;
@@ -102,7 +105,7 @@ function flattenProductData(product) {
     stock,
     price: product.price,
     supplier: product.manufacturer || "N/A",
-    image
+    image,
   };
 }
 
@@ -114,7 +117,7 @@ function flattenOrderData(order) {
     email: order.customerEmail || "",
     date: new Date(order.date),
     status: capitalize(order.status),
-    total: order.total
+    total: order.total,
   };
 }
 
@@ -132,16 +135,20 @@ function updateDashboardStats() {
 function renderTopProducts() {
   const revenueMap = {};
 
-  allOrders.forEach(order => {
-    order.products.forEach(item => {
+  allOrders.forEach((order) => {
+    order.products.forEach((item) => {
       const price = item.price || 0;
+
+      const product = allProducts.find((p) => p.id == item.id);
+
+      if (!product) return;
 
       if (!revenueMap[item.id]) {
         revenueMap[item.id] = {
-          id: item.id,
-          name: item.name,
-          image: item.image || "",
-          revenue: 0
+          id: product.id,
+          name: product.name,
+          image: product.image || "../../img/icons/no-image.png",
+          revenue: 0,
         };
       }
 
@@ -161,7 +168,7 @@ function renderTopProducts() {
     return;
   }
 
-  topProducts.forEach(p => {
+  topProducts.forEach((p) => {
     const li = document.createElement("li");
 
     const imgSrc =
@@ -189,11 +196,9 @@ function renderLatestOrders() {
   const container = document.getElementById("latest-orders");
   container.innerHTML = "";
 
-  const latest = [...allOrders]
-    .sort((a, b) => b.date - a.date)
-    .slice(0, 3);
+  const latest = [...allOrders].sort((a, b) => b.date - a.date).slice(0, 3);
 
-  latest.forEach(order => {
+  latest.forEach((order) => {
     const firstProduct = order.products?.[0] || {};
 
     const div = document.createElement("div");
@@ -222,18 +227,14 @@ function renderLatestOrders() {
 function renderSalesChart() {
   const categorySales = {};
 
-  allOrders.forEach(order => {
-    order.products.forEach(item => {
-      const product =
-        allProducts.find(p => p.id == item.id);
-
+  allOrders.forEach((order) => {
+    order.products.forEach((item) => {
+      const product = allProducts.find((p) => p.id == item.id);
       if (!product) return;
 
       const category = product.category;
-      const price = item.price || product.price || 0;
 
-      categorySales[category] =
-        (categorySales[category] || 0) + price * item.quantity;
+      categorySales[category] = (categorySales[category] || 0) + item.quantity;
     });
   });
 
@@ -249,13 +250,13 @@ function renderSalesChart() {
       labels: Object.keys(categorySales),
       datasets: [
         {
-          data: Object.values(categorySales)
-        }
-      ]
+          data: Object.values(categorySales),
+        },
+      ],
     },
     options: {
       responsive: true,
-      maintainAspectRatio: false
-    }
+      maintainAspectRatio: false,
+    },
   });
 }

@@ -23,7 +23,7 @@ function displayCart() {
     div.className = "basket-item";
 
     div.innerHTML = `<div >
-                <img class="sc-product-image" src="${item.image}" />
+                <img class="sc-product-image" src="${item.image}" alt="Product image" />
               </div>
               <div class="item-layout">
                 <div class="sc-item-details">
@@ -39,7 +39,7 @@ function displayCart() {
                   </div>
                   <div class="sc-separator"></div>
                   <button class="delete-button">
-                    <img class="icon" src="../../img/icons/delete.png" />
+                    <img class="icon" src="../../img/icons/delete.png" alt="Delete"/>
                   </button>
                 </div>
               </div>`;

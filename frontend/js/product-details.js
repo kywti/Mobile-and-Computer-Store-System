@@ -77,7 +77,7 @@ function displayProduct(product) {
     colorVarButton.className = "variant-button";
 
     colorVarButton.innerHTML = `
-    <img class="variant-picture" src="${variant.images[0]}" />
+    <img class="variant-picture" src="${variant.images[0]}" alt="Variant picture"/>
   `;
 
     variantButtons.push(colorVarButton); // store it

@@ -16,12 +16,20 @@
           <form class="header-search-bar">
             <input placeholder="What are you looking for?" />
             <button class="search-button">
-              <img class="icon" src="../../img/icons/search.png" />
+              <img
+                class="icon"
+                src="../../img/icons/search.png"
+                alt="Search icon"
+              />
             </button>
           </form>
 
           <button class="profile-button">
-            <img class="icon" src="../../img/icons/profile.png" />
+            <img
+              class="icon"
+              src="../../img/icons/profile.png"
+              alt="Profile icon"
+            />
           </button>
         </div>
 
@@ -41,19 +49,37 @@
         <!-- STATS -->
         <section class="stats">
           <div class="stat-box">
-            <div class="stat-icon">👥</div>
+            <div class="stat-icon">
+              <img
+                class="button-icon-admin"
+                src="/img/icons/checkout.png"
+                alt="New Orders icon"
+              />
+            </div>
             <p>New Orders</p>
             <h3 id="total-products"></h3>
           </div>
 
           <div class="stat-box">
-            <div class="stat-icon">🆕</div>
+            <div class="stat-icon">
+              <img
+                class="button-icon-admin"
+                src="/img/icons/pending.png"
+                alt="Pending Orders icon"
+              />
+            </div>
             <p>Pending Orders</p>
             <h3 id="low-stock"></h3>
           </div>
 
           <div class="stat-box">
-            <div class="stat-icon">⛔</div>
+            <div class="stat-icon">
+              <img
+                class="button-icon-admin"
+                src="/img/icons/block.png"
+                alt="Cancelled Orders icon"
+              />
+            </div>
             <p>Cancelled Orders</p>
             <h3 id="out-stock"></h3>
           </div>
@@ -65,7 +91,7 @@
         <section class="inventory">
           <div class="inventory-top">
             <div class="filters">
-              <button class="active">All Order</button>
+              <button class="active">All Orders</button>
               <button>Pending</button>
               <button>Processing</button>
               <button>Out For Delivery</button>
@@ -86,7 +112,11 @@
 
             <div class="search-container">
               <input class="search" placeholder="Search products..." />
-              <img class="search-icon" src="../../img/icons/search.png" />
+              <img
+                class="search-icon"
+                src="../../img/icons/search.png"
+                alt="Search icon"
+              />
             </div>
           </div>
 
@@ -111,8 +141,25 @@
       </main>
     </div>
 
+    <div class="edit-status-modal" id="editStatusModal">
+      <div class="edit-status-content">
+        <h4>Update Order Status</h4>
+
+        <select id="orderStatusSelect">
+          <option>Pending</option>
+          <option>Processing</option>
+          <option>Out For Delivery</option>
+          <option>Delivered</option>
+          <option>Canceled</option>
+        </select>
+
+        <div class="modal-buttons">
+          <button id="cancelEditStatus">Cancel</button>
+          <button id="confirmEditStatus">Update</button>
+        </div>
+      </div>
+    </div>
     <script src="../js/order.js"></script>
-     <script src="../js/adminnav.js"></script>
-     
+    <script src="../js/adminnav.js"></script>
   </body>
 </html>

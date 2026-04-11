@@ -6,6 +6,12 @@ const blockedUsersEl = document.getElementById("out-stock");
 const searchInput = document.querySelector(".search");
 const filterButtons = document.querySelectorAll(".filters button");
 
+const exportBtn = document.querySelector(".export-btn");
+
+if (exportBtn) {
+  exportBtn.addEventListener("click", exportUsersCSV);
+}
+
 let allUsers = [];
 let currentFilter = "All Users";
 let selectedUser = null;
@@ -20,11 +26,11 @@ function init() {
 
 function loadUsers() {
   fetch("../../data/user.json")
-    .then(res => res.json())
-    .then(users => {
-      allUsers = users.map(u => ({
+    .then((res) => res.json())
+    .then((users) => {
+      allUsers = users.map((u) => ({
         ...u,
-        status: "ACTIVE"
+        status: "ACTIVE",
       }));
       updateStats();
       renderTable(allUsers);
@@ -36,8 +42,10 @@ function loadUsers() {
 
 function updateStats() {
   totalUsersEl.textContent = allUsers.length;
-  newUsersEl.textContent = allUsers.filter(u => u.totalOrders <= 2).length;
-  blockedUsersEl.textContent = allUsers.filter(u => u.status === "BLOCKED").length;
+  newUsersEl.textContent = allUsers.filter((u) => u.totalOrders <= 2).length;
+  blockedUsersEl.textContent = allUsers.filter(
+    (u) => u.status === "BLOCKED",
+  ).length;
 }
 
 function renderTable(users) {
@@ -49,34 +57,40 @@ function renderTable(users) {
   }
 
   users.forEach((user, index) => {
-    const avatar = user.role === "ADMIN"
-      ? "../../img/icons/admin-pfp.jpg"
-      : "../../img/icons/client-pfp.jpg";
+    const avatar =
+      user.role === "ADMIN"
+        ? "../../img/icons/admin-pfp.jpg"
+        : "../../img/icons/client-pfp.jpg";
 
     const row = document.createElement("tr");
 
     row.innerHTML = `
-      <td><img class="user-avatar" src="${avatar}"></td>
+      <td><img class="user-avatar" src="${avatar}" alt="Profile picture"></td>
       <td>${user.firstName} ${user.lastName}</td>
       <td>${user.email}</td>
       <td>${user.role}</td>
+      <td>
+  <span class="status ${user.status.toLowerCase()}">
+    ${user.status}
+  </span>
+</td>
       <td>${user.totalOrders}</td>
       <td class="actions">
         <button class="action-btn more-btn">
-          <img src="../../img/icons/menu-dots.png">
+          <img src="../../img/icons/menu-dots.png" alt="More">
         </button>
 
         <div class="dropdown-menu">
-          <button class="dropdown-item edit" data-index="${index}">
-            <img src="../../img/icons/edit.png"> Edit Role
+          <button class="dropdown-item edit" data-email="${user.email}">
+            <img src="../../img/icons/edit.png" alt="Edit"> Edit Role
           </button>
 
-          <button class="dropdown-item block" data-index="${index}">
-            <img src="../../img/icons/block.png"> Block User
+          <button class="dropdown-item block" data-email="${user.email}">
+            <img src="../../img/icons/block.png" alt="Block"> Block User
           </button>
 
-          <button class="dropdown-item delete" data-index="${index}">
-            <img src="../../img/icons/delete.png"> Delete User
+          <button class="dropdown-item delete" data-email="${user.email}">
+            <img src="../../img/icons/delete.png" alt="Delete"> Delete User
           </button>
         </div>
       </td>
@@ -89,24 +103,27 @@ function renderTable(users) {
 }
 
 function filterUsers(users, filter) {
-  if (filter === "Admin Users") return users.filter(u => u.role === "ADMIN");
-  if (filter === "Clients") return users.filter(u => u.role === "CLIENT");
+  if (filter === "Admin Users") return users.filter((u) => u.role === "ADMIN");
+  if (filter === "Clients") return users.filter((u) => u.role === "CLIENT");
+  if (filter === "Blocked") return users.filter((u) => u.status === "BLOCKED");
+
   return users;
 }
 
 function applySearch(users) {
   const term = searchInput.value.toLowerCase();
 
-  return users.filter(u =>
-    (u.firstName + " " + u.lastName).toLowerCase().includes(term) ||
-    u.email.toLowerCase().includes(term)
+  return users.filter(
+    (u) =>
+      (u.firstName + " " + u.lastName).toLowerCase().includes(term) ||
+      u.email.toLowerCase().includes(term),
   );
 }
 
 function setupEventListeners() {
-  filterButtons.forEach(btn => {
+  filterButtons.forEach((btn) => {
     btn.addEventListener("click", function () {
-      filterButtons.forEach(b => b.classList.remove("active"));
+      filterButtons.forEach((b) => b.classList.remove("active"));
       this.classList.add("active");
 
       currentFilter = this.textContent;
@@ -118,15 +135,18 @@ function setupEventListeners() {
     });
   });
 
-  searchInput.addEventListener("input", debounce(() => {
-    let filtered = filterUsers(allUsers, currentFilter);
-    filtered = applySearch(filtered);
-    renderTable(filtered);
-  }, 300));
+  searchInput.addEventListener(
+    "input",
+    debounce(() => {
+      let filtered = filterUsers(allUsers, currentFilter);
+      filtered = applySearch(filtered);
+      renderTable(filtered);
+    }, 300),
+  );
 }
 
 function attachTableEvents() {
-  document.querySelectorAll(".more-btn").forEach(btn => {
+  document.querySelectorAll(".more-btn").forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.stopPropagation();
       closeDropdowns();
@@ -135,27 +155,27 @@ function attachTableEvents() {
     });
   });
 
-  document.querySelectorAll(".edit").forEach(btn => {
+  document.querySelectorAll(".edit").forEach((btn) => {
     btn.addEventListener("click", function () {
-      selectedUser = allUsers[this.dataset.index];
+      selectedUser = allUsers.find((u) => u.email === this.dataset.email);
       document.getElementById("editUserName").textContent =
         selectedUser.firstName + " " + selectedUser.lastName;
       document.getElementById("editRoleModal").style.display = "flex";
     });
   });
 
-  document.querySelectorAll(".block").forEach(btn => {
+  document.querySelectorAll(".block").forEach((btn) => {
     btn.addEventListener("click", function () {
-      selectedUser = allUsers[this.dataset.index];
+      selectedUser = allUsers.find((u) => u.email === this.dataset.email);
       document.getElementById("blockUserName").textContent =
         selectedUser.firstName + " " + selectedUser.lastName;
       document.getElementById("blockConfirmModal").style.display = "flex";
     });
   });
 
-  document.querySelectorAll(".delete").forEach(btn => {
+  document.querySelectorAll(".delete").forEach((btn) => {
     btn.addEventListener("click", function () {
-      selectedUser = allUsers[this.dataset.index];
+      selectedUser = allUsers.find((u) => u.email === this.dataset.email);
       document.getElementById("deleteUserName").textContent =
         selectedUser.firstName + " " + selectedUser.lastName;
       document.getElementById("deleteConfirmModal").style.display = "flex";
@@ -166,20 +186,46 @@ function attachTableEvents() {
 }
 
 function closeDropdowns() {
-  document.querySelectorAll(".dropdown-menu").forEach(menu => {
+  document.querySelectorAll(".dropdown-menu").forEach((menu) => {
     menu.style.display = "none";
   });
 }
 
+function exportUsersCSV() {
+  if (!allUsers.length) {
+    alert("No users to export");
+    return;
+  }
+
+  let csv = "Name,Email,Role,Orders,Status\n";
+
+  allUsers.forEach((user) => {
+    const name = `${user.firstName} ${user.lastName}`;
+
+    csv += `"${name}","${user.email}","${user.role}","${user.totalOrders}","${user.status}"\n`;
+  });
+
+  const blob = new Blob([csv], { type: "text/csv" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+  a.href = url;
+  a.download = "users_export.csv";
+
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+}
+
 function setupModalListeners() {
   document.querySelector(".cancel-block-btn").onclick = () =>
-    document.getElementById("blockConfirmModal").style.display = "none";
+    (document.getElementById("blockConfirmModal").style.display = "none");
 
   document.querySelector(".cancel-delete-btn").onclick = () =>
-    document.getElementById("deleteConfirmModal").style.display = "none";
+    (document.getElementById("deleteConfirmModal").style.display = "none");
 
   document.querySelector(".cancel-edit-role-btn").onclick = () =>
-    document.getElementById("editRoleModal").style.display = "none";
+    (document.getElementById("editRoleModal").style.display = "none");
 
   document.getElementById("confirmBlockUser").onclick = () => {
     selectedUser.status = "BLOCKED";
@@ -189,9 +235,11 @@ function setupModalListeners() {
   };
 
   document.getElementById("confirmDeleteUser").onclick = () => {
-    allUsers = allUsers.filter(u => u !== selectedUser);
+    allUsers = allUsers.filter((u) => u.email !== selectedUser.email);
+
     updateStats();
     renderTable(allUsers);
+
     document.getElementById("deleteConfirmModal").style.display = "none";
   };
 

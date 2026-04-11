@@ -31,7 +31,7 @@ function displayCheckout() {
     div.className = "product-summary";
 
     div.innerHTML = `
-      <img src="${item.image}" />
+      <img src="${item.image}" alt="Product image"/>
       <div>
         <p>${item.name} (${item.color})</p>
         <span>DZD ${(item.price * item.quantity).toLocaleString("en-US")}</span>

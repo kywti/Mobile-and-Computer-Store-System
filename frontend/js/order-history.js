@@ -162,14 +162,14 @@ document.addEventListener("DOMContentLoaded", () => {
       tr.innerHTML = `
         <td class="order-product">
           <div class="order-info">
-            <img src="${firstImage}" />
+            <img src="${firstImage}" alt="Product image" />
             <p>${productNames}</p>
           </div>
         </td>
 
         <td>
           <div class="client-info">
-            <img src="../../img/icons/client-pfp.jpg" />
+            <img src="../../img/icons/client-pfp.jpg" alt="Profile picture"/>
             <p>${user.firstName || user.email}</p>
           </div>
         </td>

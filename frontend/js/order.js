@@ -14,6 +14,7 @@ if (exportBtn) {
 
 let allOrders = [];
 let currentFilter = "All Orders";
+let editingOrderId = null;
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -103,11 +104,15 @@ function renderTable(orders) {
       <td>
         <div class="actions">
           <button class="action-btn more-btn">
-            <img src="../../img/icons/menu-dots-white.png">
+            <img src="../../img/icons/menu-dots-white.png" alt="More">
           </button>
           <div class="dropdown-menu">
+            <button class="dropdown-item edit-status-btn" data-id="${order.id}">
+    <img src="../../img/icons/edit.png"> Edit Status
+  </button>
+
             <button class="dropdown-item delete-btn" data-id="${order.id}">
-              <img src="../../img/icons/delete.png"> Delete Order
+              <img src="../../img/icons/delete.png" alt="Delete"> Delete Order
             </button>
           </div>
         </div>
@@ -118,6 +123,30 @@ function renderTable(orders) {
 
   attachTableEventListeners();
 }
+
+document.getElementById("confirmEditStatus").addEventListener("click", () => {
+  const newStatus = document.getElementById("orderStatusSelect").value;
+
+  const order = allOrders.find((o) => o.id === editingOrderId);
+
+  if (order) {
+    order.status = newStatus;
+  }
+
+  updateStats();
+
+  let filtered = filterOrders(allOrders, currentFilter);
+  filtered = applySearch(filtered);
+  renderTable(filtered);
+
+  document.getElementById("editStatusModal").style.display = "none";
+  editingOrderId = null;
+});
+
+document.getElementById("cancelEditStatus").addEventListener("click", () => {
+  document.getElementById("editStatusModal").style.display = "none";
+  editingOrderId = null;
+});
 
 function filterOrders(orders, filter) {
   if (filter === "Pending") return orders.filter((o) => o.status === "Pending");
@@ -173,13 +202,26 @@ function setupEventListeners() {
     }, 300),
   );
 }
-
 function attachTableEventListeners() {
   document.querySelectorAll(".delete-btn").forEach((btn) => {
     btn.addEventListener("click", function (e) {
       e.stopPropagation();
       const id = parseInt(this.dataset.id);
       deleteOrder(id);
+    });
+  });
+
+  // ✅ FIXED: move edit listener here
+  document.querySelectorAll(".edit-status-btn").forEach((btn) => {
+    btn.addEventListener("click", function (e) {
+      e.stopPropagation();
+
+      editingOrderId = parseInt(this.dataset.id);
+
+      const order = allOrders.find((o) => o.id === editingOrderId);
+      document.getElementById("orderStatusSelect").value = order.status;
+
+      document.getElementById("editStatusModal").style.display = "flex";
     });
   });
 

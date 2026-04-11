@@ -1,0 +1,164 @@
+<!doctype html>
+<html>
+  <head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/client.css" />
+    <link rel="stylesheet" href="../css/client2.css" />
+  </head>
+
+  <body>
+    <div class="inventory-managgement-page-bg">
+      <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
+
+      <header class="header">
+        <div class="header-top">
+          <p class="logo">LOGO</p>
+
+          <form class="header-search-bar">
+            <input placeholder="What are you looking for?" />
+            <button class="search-button">
+              <img
+                class="icon"
+                src="../../img/icons/search.png"
+                alt="Search icon"
+              />
+            </button>
+          </form>
+
+          <button class="profile-button">
+            <img
+              class="icon"
+              src="../../img/icons/profile.png"
+              alt="Profile icon"
+            />
+          </button>
+        </div>
+
+        <nav class="header-bottom">
+          <button class="header-button active">DASHBOARD</button>
+          <button class="header-button">ORDERS</button>
+          <button class="header-button">INVENTORY</button>
+          <button class="header-button">CUSTOMERS</button>
+        </nav>
+      </header>
+
+      <main class="main-area">
+        <section class="pdp-product-details profile-content">
+          <h2 class="section-title">PROFILE</h2>
+
+          <!-- PROFILE PHOTO -->
+          <div class="profile-img-box">
+            <img
+              src="../../img/icons/admin-pfp.jpg"
+              class="profile-img"
+              alt="Profile photo"
+              onerror="this.src = '../../img/icons/profile.png'"
+            />
+          </div>
+
+          <h3>YOUR INFORMATION</h3>
+
+          <div class="info-row">
+            <div class="info-box">
+              <span class="info-label">First Name</span>
+              <span id="firstName" class="info-value">Admin</span>
+            </div>
+            <div class="info-box">
+              <span class="info-label">Last Name</span>
+              <span id="lastName" class="info-value">Admin</span>
+            </div>
+          </div>
+          <button class="small-btn" onclick="openModal('username')">
+            Change username
+          </button>
+
+          <div class="info-row full-width">
+            <div class="info-box full-width">
+              <span class="info-label">Email</span>
+              <span id="email" class="info-value">admin@shop.com</span>
+            </div>
+          </div>
+          <button class="small-btn" onclick="openModal('email')">
+            Change email address
+          </button>
+
+          <div class="info-row full-width">
+            <div class="info-box full-width">
+              <span class="info-label">Password</span>
+              <span class="info-value">*************</span>
+            </div>
+          </div>
+          <button class="small-btn" onclick="openModal('password')">
+            Change password
+          </button>
+
+          <div class="centered-action-buttons">
+            <button class="action-btn" onclick="logout()">LOG OUT</button>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <!-- Username Modal -->
+    <div id="usernameModal" class="modal-overlay">
+      <div class="modal">
+        <button class="close-btn" onclick="closeModal('username')">
+          &times;
+        </button>
+        <h3>Change Username</h3>
+        <input type="text" id="newUsername" placeholder="Enter new username" />
+        <div class="modal-buttons">
+          <button class="cancel-btn" onclick="closeModal('username')">
+            Cancel
+          </button>
+          <button class="confirm-btn" onclick="confirmUsernameChange()">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Email Modal -->
+    <div id="emailModal" class="modal-overlay">
+      <div class="modal">
+        <button class="close-btn" onclick="closeModal('email')">&times;</button>
+        <h3>Change Email</h3>
+        <input type="email" id="newEmail" placeholder="Enter new email" />
+        <div class="modal-buttons">
+          <button class="cancel-btn" onclick="closeModal('email')">
+            Cancel
+          </button>
+          <button class="confirm-btn" onclick="confirmEmailChange()">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Password Modal -->
+    <div id="passwordModal" class="modal-overlay">
+      <div class="modal">
+        <button class="close-btn" onclick="closeModal('password')">
+          &times;
+        </button>
+        <h3>Change Password</h3>
+        <input
+          type="password"
+          id="newPassword"
+          placeholder="Enter new password"
+        />
+        <div class="modal-buttons">
+          <button class="cancel-btn" onclick="closeModal('password')">
+            Cancel
+          </button>
+          <button class="confirm-btn" onclick="confirmPasswordChange()">
+            Confirm
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="../js/profile.js" defer></script>
+    <script src="../js/adminnav.js" defer></script>
+  </body>
+</html>

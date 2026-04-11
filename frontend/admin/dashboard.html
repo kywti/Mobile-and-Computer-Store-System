@@ -1,102 +1,122 @@
 <!doctype html>
 <html>
-<head>
-  <title>Dashboard</title>
-  <link rel="stylesheet" href="../css/client2.css">
-</head>
+  <head>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="../css/client2.css" />
+  </head>
 
-<body>
+  <body>
+    <div class="inventory-managgement-page-bg">
+      <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
 
-<div class="inventory-managgement-page-bg">
+      <header class="header">
+        <div class="header-top">
+          <p class="logo">LOGO</p>
 
-  <p class="top-slogan">B R A N D &emsp;&emsp; S L O G A N</p>
+          <form class="header-search-bar">
+            <input placeholder="What are you looking for?" />
+            <button class="search-button">
+              <img
+                class="icon"
+                src="../../img/icons/search.png"
+                alt="Search icon"
+              />
+            </button>
+          </form>
 
-  <header class="header">
+          <button class="profile-button">
+            <img
+              class="icon"
+              src="../../img/icons/profile.png"
+              alt="Profile icon"
+            />
+          </button>
+        </div>
 
-    <div class="header-top">
-      <p class="logo">LOGO</p>
+        <nav class="header-bottom">
+          <button class="header-button active">DASHBOARD</button>
+          <button class="header-button">ORDERS</button>
+          <button class="header-button">INVENTORY</button>
+          <button class="header-button">CUSTOMERS</button>
+        </nav>
+      </header>
 
-      <form class="header-search-bar">
-        <input placeholder="What are you looking for?" />
-        <button class="search-button">
-          <img class="icon" src="../../img/icons/search.png">
-        </button>
-      </form>
+      <main class="main-area">
+        <section class="section-header">
+          <h2 class="section-title">Dashboard Overview</h2>
+        </section>
 
-      <button class="profile-button">
-        <img class="icon" src="../../img/icons/profile.png">
-      </button>
+        <section class="stats dashboard-stats">
+          <div class="stat-box dashboard-stat">
+            <div class="stat-icon">
+              <img
+                class="button-icon-admin"
+                src="/img/icons/wallet.png"
+                alt="Revenue icon"
+              />
+            </div>
+            <p>Total Revenue</p>
+            <h3 id="total-revenue">0</h3>
+          </div>
+
+          <div class="stat-box dashboard-stat">
+            <div class="stat-icon">
+              <img
+                class="button-icon-admin"
+                src="/img/icons/cart.png"
+                alt="Orders icon"
+              />
+            </div>
+            <p>Total Orders</p>
+            <h3 id="total-orders">0</h3>
+          </div>
+
+          <div class="stat-box dashboard-stat">
+            <div class="stat-icon">
+              <img
+                class="button-icon-admin"
+                src="/img/icons/box.png"
+                alt="Products icon"
+              />
+            </div>
+            <p>Total Products</p>
+            <h3 id="total-products">0</h3>
+          </div>
+
+          <div class="stat-box dashboard-stat">
+            <div class="stat-icon">
+              <img
+                class="button-icon-admin"
+                src="/img/icons/profile.png"
+                alt="Users icon"
+              />
+            </div>
+            <p>Total Users</p>
+            <h3 id="total-users">0</h3>
+          </div>
+        </section>
+
+        <div class="dashboard-row">
+          <div class="dashboard-card small-card">
+            <h3 class="inventory-subtitle">Top Products</h3>
+            <ul class="top-products" id="top-products"></ul>
+          </div>
+
+          <div class="dashboard-card small-card chart-card">
+            <h3 class="inventory-subtitle">Sales By Category</h3>
+            <canvas id="chart"></canvas>
+          </div>
+
+          <div class="dashboard-card big-card">
+            <h3 class="inventory-subtitle">Latest Orders</h3>
+            <div class="orders-list-inv" id="latest-orders"></div>
+          </div>
+        </div>
+      </main>
     </div>
 
-    <nav class="header-bottom">
-      <button class="header-button active">DASHBOARD</button>
-      <button class="header-button">ORDERS</button>
-      <button class="header-button">INVENTORY</button>
-      <button class="header-button">CUSTOMERS</button>
-    </nav>
-
-  </header>
-
-  <main class="main-area">
-
-    <section class="section-header">
-      <h2 class="section-title">Dashboard Overview</h2>
-    </section>
-
-    <section class="stats dashboard-stats">
-
-      <div class="stat-box dashboard-stat">
-        <div class="stat-icon">💰</div>
-        <p>Total Revenue</p>
-        <h3 id="total-revenue">0</h3>
-      </div>
-
-      <div class="stat-box dashboard-stat">
-        <div class="stat-icon">🛒</div>
-        <p>Total Orders</p>
-        <h3 id="total-orders">0</h3>
-      </div>
-
-      <div class="stat-box dashboard-stat">
-        <div class="stat-icon">📦</div>
-        <p>Total Products</p>
-        <h3 id="total-products">0</h3>
-      </div>
-
-      <div class="stat-box dashboard-stat">
-        <div class="stat-icon">👤</div>
-        <p>Total Users</p>
-        <h3 id="total-users">0</h3>
-      </div>
-
-    </section>
-
-    <div class="dashboard-row">
-
-      <div class="dashboard-card small-card">
-        <h3 class="inventory-subtitle">Top Products</h3>
-        <ul class="top-products" id="top-products"></ul>
-      </div>
-
-      <div class="dashboard-card small-card chart-card">
-        <h3 class="inventory-subtitle">Sales By Category</h3>
-        <canvas id="chart"></canvas>
-      </div>
-
-      <div class="dashboard-card big-card">
-        <h3 class="inventory-subtitle">Latest Orders</h3>
-        <div class="orders-list-inv" id="latest-orders"></div>
-      </div>
-
-    </div>
-
-  </main>
-
-</div>
-
-<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-<script src="../js/dashboard.js"></script>
- <script src="../js/adminnav.js"></script>
-
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="../js/dashboard.js"></script>
+    <script src="../js/adminnav.js"></script>
+  </body>
 </html>

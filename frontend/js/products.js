@@ -190,7 +190,7 @@ function createProduct(product) {
   div.innerHTML = `
     <a href="product-details.html?id=${product.id}" class="product-link">
       <div class="product-picture">
-        <img src="${product.variants[0].images[0]}" />
+        <img src="${product.variants[0].images[0]}" alt="Variant image"/>
       </div>
     </a>
 
@@ -211,7 +211,7 @@ function createProduct(product) {
           <p class="product-details-link">see product</p>
         </a>
           <button class="add-to-basket-button">
-            <img src="../../img/icons/shopping-basket-white.png" />
+            <img src="../../img/icons/shopping-basket-white.png" alt="Shopping basket"/>
           </button>
         </div>
       </div>
@@ -255,7 +255,7 @@ function createAd() {
 
   const currentAd = ads[adIndex];
 
-  div.innerHTML = `<img src="${currentAd}" />`;
+  div.innerHTML = `<img src="${currentAd}" alt="Ad" />`;
 
   adIndex++;
 
