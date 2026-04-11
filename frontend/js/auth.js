@@ -22,7 +22,7 @@ function login(email, password) {
     localStorage.setItem("user", JSON.stringify(adminUser));
     localStorage.removeItem("cart");
 
-    window.location.href = "dashboard.html";
+    window.location.href = "../admin/dashboard.html";
     return;
   }
 
@@ -41,7 +41,7 @@ function login(email, password) {
     localStorage.removeItem("redirectAfterLogin");
     window.location.href = redirect;
   } else {
-    window.location.href = "client.html";
+    window.location.href = "/Mobile-and-Computer-Store-System/frontend/client/client.html";
   }
 }
 
@@ -55,9 +55,9 @@ function handleLogin(username, role) {
 
   if (role === "admin") {
     localStorage.removeItem("cart");
-    window.location.href = "dashboard.html";
+     window.location.href = "../admin/dashboard.html";
   } else {
-    window.location.href = "client.html";
+    window.location.href = "/Mobile-and-Computer-Store-System/frontend/client/client.html";
   }
 }
 

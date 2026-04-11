@@ -12,7 +12,7 @@ function logout() {
   if (confirm("Are you sure you want to logout?")) {
     localStorage.removeItem("user");
     localStorage.removeItem("token");
-    window.location.href = "/frontend/client/client.html";
+    window.location.href = "/Mobile-and-Computer-Store-System/frontend/client/client.html";
   }
 }
 function openModal(type) {

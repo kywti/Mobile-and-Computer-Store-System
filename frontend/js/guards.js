@@ -14,6 +14,6 @@ function requireAdmin() {
   const user = JSON.parse(localStorage.getItem("user"));
 
   if (!user || user.role !== "admin") {
-    window.location.href = "client.html";
+    window.location.href = "/Mobile-and-Computer-Store-System/frontend/client/client.html";
   }
 }

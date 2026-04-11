@@ -648,6 +648,12 @@ button:hover {
   font-size: 20px;
   margin-right: 50px;
 }
+
+.add-to-cart-button:active {
+  background-color: white;
+  color: black;
+  border: 1px solid black;
+}
 .payment-icon {
   width: 40px;
 }
