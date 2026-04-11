@@ -1,98 +1,234 @@
-let allUsers = [];
+document.addEventListener("DOMContentLoaded", initDashboard);
+
 let allProducts = [];
 let allOrders = [];
+let allUsers = [];
 
-document.addEventListener('DOMContentLoaded', init);
-
-function init() {
-  loadData();
-}
-
-function loadData() {
+/* =========================
+   INIT DASHBOARD
+========================= */
+function initDashboard() {
   Promise.all([
-    fetch("../../data/users.json").then(res => res.json()),
-    fetch("../../data/products.json").then(res => res.json()),
-    fetch("../../data/orders.json").then(res => res.json())
+    fetch("../../data/product.json").then(res => res.json()),
+    fetch("../../data/order.json").then(res => res.json()),
+    fetch("../../data/user.json").then(res => res.json())
   ])
-  .then(([users, products, orders]) => {
-    allUsers = users;
-    allProducts = products;
-    allOrders = orders;
+    .then(([products, orders, users]) => {
+      allProducts = products.map(flattenProductData);
+      allOrders = orders.map(flattenOrderData);
+      allUsers = users.map(u => ({ ...u, status: "ACTIVE" }));
 
-    updateStats();
-    renderTopProducts();
-    renderLatestOrders();
-    renderChart();
-
-  })
-  .catch(err => {
-    console.error("Error loading dashboard data:", err);
-  });
+      updateDashboardStats();
+      renderTopProducts();
+      renderLatestOrders();
+      renderSalesChart();
+      
+      // Add click handlers to stat boxes AFTER data is loaded
+      addStatBoxClickHandlers();
+    })
+    .catch(err => console.error("Error loading dashboard:", err));
 }
 
+/* =========================
+   ADD CLICK HANDLERS TO STAT BOXES
+========================= */
+function addStatBoxClickHandlers() {
+  // Total Orders -> order.html
+  const totalOrdersBox = document.querySelector('.dashboard-stat:has(#total-orders)');
+  if (totalOrdersBox) {
+    totalOrdersBox.style.cursor = 'pointer';
+    totalOrdersBox.addEventListener('click', () => {
+      window.location.href = 'orderManagment.html';
+    });
+    
+    // Optional: Add hover effect
+    totalOrdersBox.addEventListener('mouseenter', () => {
+      totalOrdersBox.style.opacity = '0.8';
+    });
+    totalOrdersBox.addEventListener('mouseleave', () => {
+      totalOrdersBox.style.opacity = '1';
+    });
+  }
 
-// =========================
-// STATS SECTION
-// =========================
-function updateStats() {
+  // Total Products -> inventory.html
+  const totalProductsBox = document.querySelector('.dashboard-stat:has(#total-products)');
+  if (totalProductsBox) {
+    totalProductsBox.style.cursor = 'pointer';
+    totalProductsBox.addEventListener('click', () => {
+      window.location.href = 'InventoryManagement.html';
+    });
+    
+    // Optional: Add hover effect
+    totalProductsBox.addEventListener('mouseenter', () => {
+      totalProductsBox.style.opacity = '0.8';
+    });
+    totalProductsBox.addEventListener('mouseleave', () => {
+      totalProductsBox.style.opacity = '1';
+    });
+  }
+
+  // Total Users -> user.html
+  const totalUsersBox = document.querySelector('.dashboard-stat:has(#total-users)');
+  if (totalUsersBox) {
+    totalUsersBox.style.cursor = 'pointer';
+    totalUsersBox.addEventListener('click', () => {
+      window.location.href = 'userManagment.html';
+    });
+    
+    // Optional: Add hover effect
+    totalUsersBox.addEventListener('mouseenter', () => {
+      totalUsersBox.style.opacity = '0.8';
+    });
+    totalUsersBox.addEventListener('mouseleave', () => {
+      totalUsersBox.style.opacity = '1';
+    });
+  }
+}
+
+/* =========================
+   FORMAT
+========================= */
+function formatDZD(amount) {
+  return `${amount.toLocaleString()} DZD`;
+}
+
+function capitalize(str = "") {
+  return str.charAt(0).toUpperCase() + str.slice(1);
+}
+
+/* =========================
+   FLATTEN DATA
+========================= */
+function flattenProductData(product) {
+  let stock = 0;
+  let image = "";
+
+  if (product.variants?.length) {
+    const v = product.variants[0];
+    stock = v.stock ?? product.stock ?? 0;
+    image = v.images?.[0] || "";
+  } else {
+    stock = product.stock ?? 0;
+    image = product.image || "";
+  }
+
+  return {
+    id: product.id,
+    name: product.name,
+    category: capitalize(product.category),
+    stock,
+    price: product.price,
+    supplier: product.manufacturer || "N/A",
+    image
+  };
+}
+
+function flattenOrderData(order) {
+  return {
+    id: order.orderId,
+    products: order.products || [],
+    customer: order.customerName,
+    email: order.customerEmail || "",
+    date: new Date(order.date),
+    status: capitalize(order.status),
+    total: order.total
+  };
+}
+
+/* =========================
+   STATS
+========================= */
+function updateDashboardStats() {
   const totalRevenue = allOrders.reduce((sum, o) => sum + o.total, 0);
 
-  document.getElementById("total-users").textContent = allUsers.length;
-  document.getElementById("total-products").textContent = allProducts.length;
+  document.getElementById("total-revenue").textContent =
+    formatDZD(totalRevenue);
+
   document.getElementById("total-orders").textContent = allOrders.length;
-  document.getElementById("total-revenue").textContent = totalRevenue.toLocaleString() + " DZD";
+  document.getElementById("total-products").textContent = allProducts.length;
+  document.getElementById("total-users").textContent = allUsers.length;
 }
 
-
-// =========================
-// TOP PRODUCTS
-// =========================
+/* =========================
+   TOP PRODUCTS
+========================= */
 function renderTopProducts() {
-  const sales = {};
+  const revenueMap = {};
 
   allOrders.forEach(order => {
     order.products.forEach(item => {
-      sales[item.id] = (sales[item.id] || 0) + item.quantity;
+      const price = item.price || 0;
+
+      if (!revenueMap[item.id]) {
+        revenueMap[item.id] = {
+          id: item.id,
+          name: item.name,
+          image: item.image || "",
+          revenue: 0
+        };
+      }
+
+      revenueMap[item.id].revenue += price * item.quantity;
     });
   });
 
-  const sorted = Object.entries(sales)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5);
+  const topProducts = Object.values(revenueMap)
+    .sort((a, b) => b.revenue - a.revenue)
+    .slice(0, 3);
 
   const container = document.getElementById("top-products");
   container.innerHTML = "";
 
-  sorted.forEach(([id, qty]) => {
-    const product = allProducts.find(p => p.id == id);
-    if (!product) return;
+  if (!topProducts.length) {
+    container.innerHTML = "<li>No sales data</li>";
+    return;
+  }
 
+  topProducts.forEach(p => {
     const li = document.createElement("li");
-    li.innerHTML = `${product.name} <span>${qty} sold</span>`;
+
+    const imgSrc =
+      p.image && p.image.trim() !== ""
+        ? p.image
+        : "../../img/icons/no-image.png";
+
+    li.innerHTML = `
+      <div class="product-item">
+        <img src="${imgSrc}"
+             onerror="this.src='../../img/icons/no-image.png'"
+             alt="${p.name}">
+        <div class="product-info">
+          <span class="product-name">${p.name}</span>
+          <span class="product-revenue">${formatDZD(p.revenue)}</span>
+        </div>
+      </div>
+    `;
+
     container.appendChild(li);
   });
 }
 
-
-// =========================
-// LATEST ORDERS
-// =========================
+/* =========================
+   LATEST ORDERS (FIXED ONLY ONCE)
+========================= */
 function renderLatestOrders() {
   const container = document.getElementById("latest-orders");
   container.innerHTML = "";
 
-  const latest = [...allOrders].slice(-3).reverse();
+  const latest = [...allOrders]
+    .sort((a, b) => b.date - a.date)
+    .slice(0, 3);
 
   latest.forEach(order => {
-    const div = document.createElement("div");
-    div.classList.add("order-item");
+    const firstProduct = order.products?.[0] || {};
 
-    const firstProduct = order.products[0];
+    const div = document.createElement("div");
+    div.className = "order-item";
 
     div.innerHTML = `
       <div class="order-left">
-        <p class="order-product">${firstProduct.name}</p>
-        <span class="order-date">${order.date}</span>
+        <p class="order-product">${firstProduct.name || "Unknown"}</p>
+        <span class="order-date">${order.date.toLocaleDateString()}</span>
       </div>
 
       <span class="order-status ${order.status.toLowerCase()}">
@@ -100,8 +236,8 @@ function renderLatestOrders() {
       </span>
 
       <div class="order-right">
-        <p class="order-price">${order.total.toLocaleString()} DZD</p>
-        <span class="order-client">${order.customerName}</span>
+        <p class="order-price">${formatDZD(order.total)}</p>
+        <span class="order-client">${order.customer}</span>
       </div>
     `;
 
@@ -109,32 +245,46 @@ function renderLatestOrders() {
   });
 }
 
-
-// =========================
-// CHART (CATEGORY SALES)
-// =========================
-function renderChart() {
+/* =========================
+   SALES CHART
+========================= */
+function renderSalesChart() {
   const categorySales = {};
 
   allOrders.forEach(order => {
     order.products.forEach(item => {
-      const product = allProducts.find(p => p.id == item.id);
+      const product =
+        allProducts.find(p => p.id == item.id);
+
       if (!product) return;
 
       const category = product.category;
+      const price = item.price || product.price || 0;
 
       categorySales[category] =
-        (categorySales[category] || 0) + item.quantity;
+        (categorySales[category] || 0) + price * item.quantity;
     });
   });
 
-  new Chart(document.getElementById("chart"), {
+  const ctx = document.getElementById("chart").getContext("2d");
+
+  if (window.salesChart) {
+    window.salesChart.destroy();
+  }
+
+  window.salesChart = new Chart(ctx, {
     type: "doughnut",
     data: {
       labels: Object.keys(categorySales),
-      datasets: [{
-        data: Object.values(categorySales)
-      }]
+      datasets: [
+        {
+          data: Object.values(categorySales)
+        }
+      ]
+    },
+    options: {
+      responsive: true,
+      maintainAspectRatio: false
     }
   });
 }

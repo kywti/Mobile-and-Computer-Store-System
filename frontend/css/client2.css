@@ -3147,3 +3147,73 @@ table {
 .canceled {
   background-color: #b46a6a;
 }
+/* ADMIN MENU DOTS BUTTON - TRANSPARENT */
+.action-btn.more-btn {
+  background: transparent !important;
+  border: none !important;
+  padding: 8px !important;
+  border-radius: 6px !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+}
+
+.action-btn.more-btn:hover {
+  background: rgba(0, 0, 0, 0.1) !important; /* Subtle hover */
+}
+
+.action-btn.more-btn img {
+  width: 20px !important;
+  height: 20px !important;
+  filter: brightness(0.7) !important;
+}
+
+.action-btn.more-btn:hover img {
+  filter: brightness(1) !important;
+}
+
+/* =========================
+   TOP PRODUCTS IMAGE STYLE
+========================= */
+
+.product-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.product-item img {
+  width: 45px;
+  height: 45px;
+  border-radius: 10px;
+  object-fit: cover;
+  border: 2px solid #ddd;
+  background: white;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.product-item img:hover {
+  transform: scale(1.1);
+  border-color: #000;
+}
+
+.product-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 3px;
+}
+
+.product-name {
+  font-weight: 600;
+  font-size: 14px;
+  color: #111;
+}
+
+.product-revenue {
+  font-size: 12px;
+  color: #666;
+}

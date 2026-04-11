@@ -16,6 +16,15 @@ function init() {
   loadProducts();
   setupEventListeners();
   setupModalListeners(); // ✅ FIXED: Modal listeners
+   setInitialFilter();
+}
+
+  // Set first filter button as active
+  const firstFilterBtn = document.querySelector('.filters button');
+  if (firstFilterBtn) {
+    firstFilterBtn.classList.add('active');
+    currentFilter = firstFilterBtn.textContent;
+  }
 }
 
 function loadProducts() {
@@ -180,7 +189,7 @@ function openDeleteModal(product) {
 // ============================================================================
 // ✅ FIXED: ALL EVENT LISTENERS
 // ============================================================================
-function setupEventListeners() {
+/*function setupEventListeners() {
   // Filter buttons
   filterButtons.forEach(btn => {
     btn.addEventListener('click', function () {
@@ -205,8 +214,44 @@ function setupEventListeners() {
     addProductBtn.addEventListener('click', openAddModal);
   }
 }
+*/
+function setupEventListeners() {
+  // ✅ 1. Filter buttons - use event delegation (most reliable)
+  document.addEventListener('click', function(e) {
+    if (e.target.closest('.filters button')) {
+      const btn = e.target.closest('.filters button');
+      
+      // Remove active from all filter buttons
+      document.querySelectorAll('.filters button').forEach(b => b.classList.remove('active'));
+      
+      // Add active to clicked button
+      btn.classList.add('active');
+      
+      // Update filter and render
+      currentFilter = btn.textContent;
+      let filtered = filterProducts(allProducts, currentFilter);
+      filtered = applySearch(filtered);
+      renderTable(filtered);
+    }
+  });
 
-function setupModalListeners() {
+  // ✅ 2. Search input - direct attachment
+  const searchInput = document.querySelector('.search');
+  if (searchInput) {
+    searchInput.addEventListener('input', debounce(() => {
+      let filtered = filterProducts(allProducts, currentFilter);
+      filtered = applySearch(filtered);
+      renderTable(filtered);
+    }, 300));
+  }
+
+  // ✅ 3. Add product button
+  const addProductBtn = document.querySelector('.add-product-btn');
+  if (addProductBtn) {
+    addProductBtn.addEventListener('click', openAddModal);
+  }
+}
+/*function setupModalListeners() {
   // ✅ FIXED: Close buttons (X buttons)
   document.addEventListener('click', function(e) {
     if (e.target.classList.contains('close-modal')) {
@@ -230,7 +275,7 @@ function setupModalListeners() {
 
   });
 
-  // ✅ FIXED: ESC key closes modals
+
   document.addEventListener('keydown', function(e) {
     if (e.key === 'Escape') {
       document.querySelectorAll('.add-product-modal, .edit-product-modal, .delete-confirm-modal').forEach(modal => {
@@ -248,7 +293,47 @@ function setupModalListeners() {
     });
   });
 }
+*/
+function setupModalListeners() {
+  // ✅ FIXED: Close buttons (X buttons) - using event delegation
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('close-modal')) {
+      const modal = e.target.closest('.add-product-modal, .edit-product-modal, .delete-confirm-modal');
+      if (modal) modal.style.display = 'none';
+    }
+  });
 
+  // ✅ FIXED: Delete modal buttons - using event delegation
+  document.addEventListener('click', function(e) {
+    if (e.target.classList.contains('cancel-delete-btn')) {
+      document.getElementById('deleteConfirmModal').style.display = 'none';
+    }
+    
+    if (e.target.classList.contains('confirm-delete-btn')) {
+      console.log('Product deleted!');
+      document.getElementById('deleteConfirmModal').style.display = 'none';
+      renderTable(allProducts); // Refresh table
+    }
+  });
+
+  // ✅ ESC key closes modals
+  document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.add-product-modal, .edit-product-modal, .delete-confirm-modal').forEach(modal => {
+        modal.style.display = 'none';
+      });
+    }
+  });
+
+  // ✅ Click outside closes modals
+  document.querySelectorAll('.add-product-modal, .edit-product-modal, .delete-confirm-modal').forEach(modal => {
+    modal.addEventListener('click', function(e) {
+      if (e.target === this) {
+        this.style.display = 'none';
+      }
+    });
+  });
+}
 function attachTableEventListeners() {
   // Edit buttons
   document.querySelectorAll('.edit-btn').forEach(btn => {
