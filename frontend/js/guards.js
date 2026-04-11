@@ -3,7 +3,7 @@ function requireLogin(redirectTo) {
 
   if (!user) {
     localStorage.setItem("redirectAfterLogin", redirectTo);
-    window.location.href = "/auth/sign_in.html";
+    window.location.href = "sign_in.html";
     return false;
   }
 

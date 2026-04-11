@@ -22,7 +22,7 @@ function login(email, password) {
     localStorage.setItem("user", JSON.stringify(adminUser));
     localStorage.removeItem("cart");
 
-    window.location.href = "/frontend/admin/dashboard.html";
+    window.location.href = "dashboard.html";
     return;
   }
 
@@ -41,7 +41,7 @@ function login(email, password) {
     localStorage.removeItem("redirectAfterLogin");
     window.location.href = redirect;
   } else {
-    window.location.href = "/frontend/client/client.html";
+    window.location.href = "client.html";
   }
 }
 
@@ -55,9 +55,9 @@ function handleLogin(username, role) {
 
   if (role === "admin") {
     localStorage.removeItem("cart");
-    window.location.href = "/frontend/admin/dashboard.html";
+    window.location.href = "dashboard.html";
   } else {
-    window.location.href = "/frontend/client/client.html";
+    window.location.href = "client.html";
   }
 }
 
@@ -75,7 +75,7 @@ function signUp(userData) {
 
   alert("Account created!");
 
-  window.location.href = "/frontend/client/sign_in.html";
+  window.location.href = "sign_in.html";
 }
 
 const signupForm = document.querySelector("form");
@@ -119,7 +119,7 @@ function requireLogin(redirectTo) {
 
   if (!user) {
     localStorage.setItem("redirectAfterLogin", redirectTo);
-    window.location.href = "/frontend/client/sign_in.html";
+    window.location.href = "sign_in.html";
     return false;
   }
 
