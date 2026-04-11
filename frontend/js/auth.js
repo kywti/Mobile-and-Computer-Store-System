@@ -13,7 +13,6 @@ function getCurrentUser() {
 function login(email, password) {
   const users = getUsers();
 
-  // 1. HARD-CODED ADMIN FIRST
   if (email === "admin@shop.com" && password === "admin123") {
     const adminUser = {
       email: "admin@shop.com",
@@ -27,7 +26,6 @@ function login(email, password) {
     return;
   }
 
-  // 2. NORMAL USERS
   const user = users.find((u) => u.email === email && u.password === password);
 
   if (!user) {
@@ -96,7 +94,7 @@ if (signupForm && window.location.href.includes("sign_up.html")) {
       lastName,
       email,
       password,
-      role: "client", // default role
+      role: "client", 
     };
 
     signUp(user);

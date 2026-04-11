@@ -17,7 +17,6 @@ function logout() {
 }
 function openModal(type) {
   document.getElementById(type + "Modal").style.display = "flex";
-  // Pre-fill current values
   if (type === "username") {
     const fullName =
       document.getElementById("firstName").textContent +
@@ -70,7 +69,6 @@ function confirmPasswordChange() {
   }
 }
 
-// Close modals when clicking outside
 window.onclick = function (event) {
   if (event.target.classList.contains("modal-overlay")) {
     closeModal("username");
@@ -79,7 +77,6 @@ window.onclick = function (event) {
   }
 };
 
-// LOAD REAL USER DATA (no "no data")
 function loadUserData() {
   try {
     const user = JSON.parse(localStorage.getItem("user"));

@@ -47,10 +47,8 @@ function displayOrder() {
     checkoutContainer.appendChild(div);
   });
 
-  // totals
   subTotalDisplay.textContent = "DZD " + total.toLocaleString("en-US");
 
-  // extract shipping from text (quick hack)
   const shippingText = checkoutData.deliveryOption;
 
   let shippingFee = 0;

@@ -52,19 +52,6 @@ function updateTotal() {
 }
 
 document.addEventListener("DOMContentLoaded", () => {
-  /*if (!requireLogin("checkout.html")) return;
-  const form = document.querySelector(".checkout-form");
-
-  form.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    if (!form.checkValidity()) {
-      form.reportValidity();
-      return;
-    }
-
-    window.location.href = "confirmation.html";
-  });*/
   const user = getCurrentUser();
 
   if (!user) {
@@ -184,7 +171,6 @@ document.addEventListener("DOMContentLoaded", () => {
       items: cart,
       total: cart.reduce((sum, item) => sum + item.price * item.quantity, 0),
 
-      // 🔥 ADD THESE
       address: document.querySelector('input[placeholder="Enter full address"]')
         .value,
       city: document.querySelector('input[placeholder="City"]').value,
